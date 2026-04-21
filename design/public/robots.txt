@@ -4,4 +4,4 @@ Disallow: /nogooglebot/
 User-agent: *
 Allow: /
 
-Sitemap: https://dearest-staid-goat-ooml6m.teleporthq.app/sitemap.xml
+Sitemap: https://design.withviso.com/sitemap.xml
