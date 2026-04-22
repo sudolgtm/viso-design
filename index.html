@@ -1178,6 +1178,7 @@
       const params = new URLSearchParams(window.location.search);
       if (params.get('contact-submitted') === 'true') {
         document.getElementById('contact-success-msg').style.display = 'block';
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
 
         // Optional: clean the URL so refreshing doesn't re-show the message
         window.history.replaceState({}, '', window.location.pathname);
