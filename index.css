@@ -15,7 +15,7 @@
 }
 
 .footer-wrapper {
-  display: contents;
+  display: block;
 }
  
 .footer-container1 {
