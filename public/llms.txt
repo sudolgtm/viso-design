@@ -1,0 +1,38 @@
+# Viso
+
+> Viso is a web design agency helping small and medium-sized businesses improve their online presence with professional, affordable websites.
+
+## About
+Viso was founded by Jesse to help small and medium-sized businesses build a stronger online presence — without the burden of figuring it out on their own. Website builders can be a headache and never quite deliver professional results. And most design agencies aren't reasonably priced for smaller businesses — that's where Viso comes in, delivering a professional service that fits your budget.
+
+## Services
+
+### Web & Brand Design
+Your website is often the first impression you make, and a good design instantly builds trust. Modern, responsive designs that reflect your brand and drive results.
+
+### SEO & Visibility
+Strategic search optimization so your customers can discover you online.
+
+### Custom IT Solutions
+Tailored software and automation that streamline your business operations — from custom domains and integrations to AI-powered automations.
+
+### Web Support
+Spend less time problem-solving and more time running your business. Expert website support available for any changes post-launch — like having a dedicated web administrator on your team.
+
+## Process
+1. Discover — We take the time to understand your business, your goals, and your customers.
+2. Design — A visual identity and layout built around your brand and your users.
+3. Build — Clean, high-performance development that brings the design to life.
+4. Launch — Sit back and enjoy your new website, ready to make an impression from day one.
+
+## Pricing
+Viso offers affordable web design packages starting as low as $39/month, with no hidden fees. Every plan includes design, hosting, and ongoing maintenance — everything a small business needs to get online and stay there.
+
+## Target Audience
+Small and medium-sized businesses looking for an affordable, professional web presence without the complexity of managing it themselves.
+
+## Key Values
+- Small business focused
+- Transparent and reasonable pricing
+- Professional results
+- Ongoing support post-launch
