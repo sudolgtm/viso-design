@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BusyBee Dry Cleaners | Vancouver's Trusted Dry Cleaning Service</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+            --primary: #F7C948;
+            --primary-dark: #E5B400;
+            --primary-light: #FFF3C4;
+            --black: #1A1A1A;
+            --gray-900: #2D2D2D;
+            --gray-700: #4A4A4A;
+            --gray-500: #6B6B6B;
+            --gray-300: #D4D4D4;
+            --gray-100: #F5F5F5;
+            --white: #FFFFFF;
+            --success: #22C55E;
+            --section-padding: 5rem 1.5rem;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--gray-700);
+            background: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(10px);
+            transition: box-shadow 0.3s;
+        }
+        header.scrolled {
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+        .logo-icon {
+            height: 36px;
+            width: auto;
+        }
+        .logo-text span {
+            color: var(--primary-dark);
+        }
+        nav {
+            display: none;
+        }
+        nav.active {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            padding: 1rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        nav.active a {
+            padding: 0.875rem 1.5rem;
+            color: var(--gray-700);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s, background 0.2s;
+        }
+        nav.active a:hover {
+            color: var(--primary-dark);
+            background: var(--primary-light);
+        }
+        .nav-toggle {
+            display: block;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            position: relative;
+            z-index: 1001;
+        }
+        .nav-toggle img {
+            width: 28px;
+            height: 28px;
+        }
+        .desktop-nav {
+            display: none;
+            gap: 2rem;
+        }
+        .desktop-nav a {
+            color: var(--gray-700);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .desktop-nav a:hover {
+            color: var(--primary-dark);
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8rem 1.5rem 4rem;
+            overflow: hidden;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(26,26,26,0.85) 0%, rgba(26,26,26,0.6) 100%);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 700px;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(247,201,72,0.15);
+            border: 1px solid var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            margin-bottom: 1.5rem;
+        }
+        .hero-badge img {
+            width: 16px;
+            height: 16px;
+        }
+        .hero-badge span {
+            color: var(--primary);
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1.1;
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.03em;
+        }
+        .hero p {
+            font-size: 1.125rem;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-primary {
+            background: var(--primary);
+            color: var(--black);
+        }
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(247,201,72,0.3);
+        }
+        .btn img {
+            width: 18px;
+            height: 18px;
+        }
+        .hero-scroll {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.75rem;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(8px); }
+        }
+
+        /* Sections */
+        section {
+            padding: var(--section-padding);
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-dark);
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.75rem;
+        }
+        .section-label img {
+            width: 16px;
+            height: 16px;
+        }
+        .section-title {
+            font-size: clamp(1.75rem, 5vw, 2.5rem);
+            font-weight: 800;
+            color: var(--black);
+            letter-spacing: -0.02em;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Services */
+        .services {
+            background: var(--gray-100);
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+        .service-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid transparent;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            border-color: var(--primary);
+        }
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-light);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+        }
+        .service-icon img {
+            width: 28px;
+            height: 28px;
+        }
+        .service-card h3 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 0.5rem;
+        }
+        .service-card p {
+            font-size: 0.9375rem;
+            color: var(--gray-500);
+            line-height: 1.6;
+        }
+
+        /* Who It's For */
+        .who-section {
+            background: var(--white);
+        }
+        .who-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        .who-image {
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .who-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        .who-content h2 {
+            font-size: clamp(1.75rem, 5vw, 2.25rem);
+            font-weight: 800;
+            color: var(--black);
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+        .who-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        .who-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.875rem;
+            margin-bottom: 1rem;
+        }
+        .who-list img {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .who-list span {
+            font-size: 1rem;
+            color: var(--gray-700);
+        }
+        .who-list strong {
+            color: var(--black);
+        }
+
+        /* How It Works */
+        .how-it-works {
+            background: var(--gray-100);
+        }
+        .how-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        .how-step {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2rem;
+            position: relative;
+        }
+        .step-number {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary-light);
+            line-height: 1;
+        }
+        .step-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        .step-icon img {
+            width: 24px;
+            height: 24px;
+        }
+        .how-step h3 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 0.5rem;
+        }
+        .how-step p {
+            font-size: 0.9375rem;
+            color: var(--gray-500);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            position: relative;
+            background: var(--black);
+            color: var(--white);
+            overflow: hidden;
+        }
+        .testimonials-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+        .testimonials-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.15;
+        }
+        .testimonials .container {
+            position: relative;
+            z-index: 1;
+        }
+        .testimonials .section-label {
+            color: var(--primary);
+        }
+        .testimonials .section-title {
+            color: var(--white);
+        }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        .testimonial-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 2rem;
+        }
+        .stars {
+            display: flex;
+            gap: 0.25rem;
+            margin-bottom: 1rem;
+        }
+        .stars img {
+            width: 20px;
+            height: 20px;
+        }
+        .testimonial-text {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .author-avatar {
+            width: 48px;
+            height: 48px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--black);
+            font-size: 1.125rem;
+        }
+        .author-info h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--white);
+        }
+        .author-info span {
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.5);
+        }
+
+        /* Contact */
+        .contact {
+            background: var(--white);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+        .contact-info h2 {
+            font-size: clamp(1.75rem, 5vw, 2.25rem);
+            font-weight: 800;
+            color: var(--black);
+            margin-bottom: 1.5rem;
+        }
+        .contact-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--primary-light);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .contact-icon img {
+            width: 22px;
+            height: 22px;
+        }
+        .contact-item h4 {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--gray-500);
+            margin-bottom: 0.25rem;
+        }
+        .contact-item p {
+            font-size: 1rem;
+            color: var(--black);
+            font-weight: 500;
+        }
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        .hours-table tr {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--gray-300);
+        }
+        .hours-table tr:last-child {
+            border-bottom: none;
+        }
+        .hours-table td {
+            font-size: 0.9375rem;
+        }
+        .hours-table td:first-child {
+            color: var(--gray-700);
+        }
+        .hours-table td:last-child {
+            font-weight: 600;
+            color: var(--black);
+        }
+        .hours-table .closed {
+            color: #EF4444;
+        }
+        .hours-table .open {
+            color: var(--success);
+        }
+        .map-placeholder {
+            background: var(--gray-100);
+            border-radius: 20px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .map-placeholder img {
+            width: 48px;
+            height: 48px;
+            opacity: 0.5;
+        }
+        .map-placeholder span {
+            color: var(--gray-500);
+            font-size: 0.9375rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--gray-900);
+            color: rgba(255,255,255,0.6);
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-inner p {
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+        .footer-inner p:last-child {
+            margin-bottom: 0;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .footer-credit a {
+            color: var(--primary);
+        }
+
+        /* Desktop */
+        @media (min-width: 768px) {
+            .nav-toggle {
+                display: none;
+            }
+            .desktop-nav {
+                display: flex;
+            }
+            #mobileNav {
+                display: none !important;
+            }
+            nav {
+                display: block;
+            }
+            .who-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .how-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            .testimonials-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <img src="logo_cropped.png" alt="BusyBee Dry Cleaners" class="logo-icon">
+            </a>
+            <nav id="mainNav" class="desktop-nav">
+                <a href="#services">Services</a>
+                <a href="#who">Who It's For</a>
+                <a href="#how">How It Works</a>
+                <a href="#testimonials">Reviews</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <img src="https://unpkg.com/lucide-static@latest/icons/menu.svg" alt="Menu" id="toggleIcon">
+            </button>
+        </div>
+        <nav id="mobileNav">
+            <a href="#services">Services</a>
+            <a href="#who">Who It's For</a>
+            <a href="#how">How It Works</a>
+            <a href="#testimonials">Reviews</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-bg">
+            <img src="https://images.pexels.com/photos/965632/pexels-photo-965632.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Professionally cleaned garments on hangers">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <img src="https://unpkg.com/lucide-static@latest/icons/sparkles.svg" alt="">
+                <span>Vancouver's Trusted Since 1985</span>
+            </div>
+            <h1>Expert Care for Your Wardrobe</h1>
+            <p>Professional dry cleaning and alterations with meticulous attention to detail. Your garments deserve the best.</p>
+            <a href="#contact" class="btn btn-primary">
+                <img src="https://unpkg.com/lucide-static@latest/icons/arrow-right.svg" alt="">
+                Visit Us Today
+            </a>
+        </div>
+        <div class="hero-scroll">
+            <img src="https://unpkg.com/lucide-static@latest/icons/chevron-down.svg" alt="Scroll" style="width:24px;height:24px;">
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-label">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/sparkles.svg" alt="">
+                    Our Services
+                </div>
+                <h2 class="section-title">Premium Garment Care</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/shirt.svg" alt="Dry Cleaning">
+                    </div>
+                    <h3>Dry Cleaning</h3>
+                    <p>Professional dry cleaning for suits, dresses, coats, and delicate fabrics. Your garments returned fresh and perfectly pressed.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/scissors.svg" alt="Alterations">
+                    </div>
+                    <h3>Alterations</h3>
+                    <p>Expert hemming, repairs, and adjustments to ensure your clothes fit perfectly. From patches to reattaching zippers.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/package.svg" alt="Courier Pickup">
+                    </div>
+                    <h3>Courier Pickup</h3>
+                    <p>Convenient drop-off and pickup services for Purolator, FedEx, and Amazon returns at our location.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="Fast Turnaround">
+                    </div>
+                    <h3>Fast Turnaround</h3>
+                    <p>Quick 1-2 business day service on most items. We respect your time and your schedule.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="who-section" id="who">
+        <div class="container">
+            <div class="who-grid">
+                <div class="who-image fade-in">
+                    <img src="https://images.pexels.com/photos/965632/pexels-photo-965632.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Professional wardrobe care">
+                </div>
+                <div class="who-content fade-in">
+                    <div class="section-label">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/check.svg" alt="">
+                        Who It's For
+                    </div>
+                    <h2>For Those Who Value Quality</h2>
+                    <ul class="who-list">
+                        <li>
+                            <img src="https://unpkg.com/lucide-static@latest/icons/check.svg" alt="Check">
+                            <span><strong>Professionals</strong> who need impeccably pressed dress shirts and suits for work</span>
+                        </li>
+                        <li>
+                            <img src="https://unpkg.com/lucide-static@latest/icons/check.svg" alt="Check">
+                            <span><strong>Homeowners</strong> seeking expert care for coats, suits, and seasonal garments</span>
+                        </li>
+                        <li>
+                            <img src="https://unpkg.com/lucide-static@latest/icons/check.svg" alt="Check">
+                            <span><strong>Couriers & Drivers</strong> who need a reliable pickup location for packages</span>
+                        </li>
+                        <li>
+                            <img src="https://unpkg.com/lucide-static@latest/icons/check.svg" alt="Check">
+                            <span><strong>Anyone</strong> who appreciates great value and friendly, reliable service</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/arrow-right.svg" alt="">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works" id="how">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-label">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="">
+                    Simple Process
+                </div>
+                <h2 class="section-title">How It Works</h2>
+            </div>
+            <div class="how-grid">
+                <div class="how-step fade-in">
+                    <span class="step-number">01</span>
+                    <div class="step-icon">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/package.svg" alt="Drop Off">
+                    </div>
+                    <h3>Drop Off</h3>
+                    <p>Bring your garments to our location at 3558 W 41st Ave. We'll assess and tag each item.</p>
+                </div>
+                <div class="how-step fade-in">
+                    <span class="step-number">02</span>
+                    <div class="step-icon">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/shirt.svg" alt="Clean">
+                    </div>
+                    <h3>We Clean</h3>
+                    <p>Your items are professionally cleaned, pressed, and carefully inspected for quality.</p>
+                </div>
+                <div class="how-step fade-in">
+                    <span class="step-number">03</span>
+                    <div class="step-icon">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/check.svg" alt="Ready">
+                    </div>
+                    <h3>Ready to Pick Up</h3>
+                    <p>We'll notify you when your order is ready. Most items ready in 1-2 business days.</p>
+                </div>
+                <div class="how-step fade-in">
+                    <span class="step-number">04</span>
+                    <div class="step-icon">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/sparkles.svg" alt="Collect">
+                    </div>
+                    <h3>Collect & Go</h3>
+                    <p>Pick up your freshly cleaned garments and enjoy that just-pressed feeling.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+        <div class="testimonials-bg">
+            <img src="https://images.pexels.com/photos/36729961/pexels-photo-36729961.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Background">
+        </div>
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-label">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+                    Testimonials
+                </div>
+                <h2 class="section-title">What Our Customers Say</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <div class="stars">
+                        <img src="star-filled.svg" alt="Star">
+                        <img src="star-filled.svg" alt="Star">
+                        <img src="star-filled.svg" alt="Star">
+                        <img src="star-filled.svg" alt="Star">
+                        <img src="star-filled.svg" alt="Star">
+                    </div>
+                    <p class="testimonial-text">"I've been bringing all my expensive suits and coats here for years and always get stellar service. The owner is super friendly and this store is extremely efficient. Highly recommend!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">DP</div>
+                        <div class="author-info">
+                            <h4>Dhruv Padhiyar</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="stars">
+                        <img src="star-filled.svg" alt="Star">
+                        <img src="star-filled.svg" alt="Star">
+                        <img src="star-filled.svg" alt="Star">
+                        <img src="star-filled.svg" alt="Star">
+                        <img src="star-filled.svg" alt="Star">
+                    </div>
+                    <p class="testimonial-text">"I bring all my coats here to dry clean at the end of the season. They always do an amazing job, friendly people, great attention to detail, and my coats come back as good as new."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SS</div>
+                        <div class="author-info">
+                            <h4>Sagar Salat</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="stars">
+                        <img src="star-filled.svg" alt="Star">
+                        <img src="star-filled.svg" alt="Star">
+                        <img src="star-filled.svg" alt="Star">
+                        <img src="star-filled.svg" alt="Star">
+                        <img src="star-filled.svg" alt="Star">
+                    </div>
+                    <p class="testimonial-text">"After trying 3-4 dry cleaners in the area this is by far the best value. Not only good prices but good work and great service with a smile. Try it you will be happy you did!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JH</div>
+                        <div class="author-info">
+                            <h4>James Henderson</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-label">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/map-pin.svg" alt="">
+                    Visit Us
+                </div>
+                <h2 class="section-title">Get In Touch</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info fade-in">
+                    <h2>BusyBee Dry Cleaners</h2>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <img src="https://unpkg.com/lucide-static@latest/icons/map-pin.svg" alt="Address">
+                        </div>
+                        <div>
+                            <h4>Address</h4>
+                            <p>3558 W 41st Ave<br>Vancouver, BC V6N 3H5</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <img src="https://unpkg.com/lucide-static@latest/icons/phone.svg" alt="Phone">
+                        </div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>(604) 263-2215</p>
+                        </div>
+                    </div>
+                    <h3 style="margin: 2rem 0 1rem; font-size: 1.125rem; color: var(--black);">Business Hours</h3>
+                    <table class="hours-table">
+                        <tr><td>Monday</td><td>8 a.m. – 6 p.m.</td></tr>
+                        <tr><td>Tuesday</td><td>8 a.m. – 6 p.m.</td></tr>
+                        <tr><td>Wednesday</td><td>8 a.m. – 6 p.m.</td></tr>
+                        <tr><td>Thursday</td><td>8 a.m. – 6 p.m.</td></tr>
+                        <tr><td>Friday</td><td class="open">8 a.m. – 6 p.m.</td></tr>
+                        <tr><td>Saturday</td><td>9 a.m. – 5:30 p.m.</td></tr>
+                        <tr><td>Sunday</td><td class="closed">Closed</td></tr>
+                    </table>
+                </div>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m8!1m3!1d2604.3!2d-123.2176!3d49.2479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.150057!3m3!1m2!1s0x5486741a54e76d4f%3A0x5c7e9e3f2e7f8e!2s3558%20W%2041st%20Ave%2C%20Vancouver%2C%20BC%20V6N%203H5!5e0!3m1!1sen!5e0!4v1500000000000!5m2!1sen!5e0!5m2!1sen!5e0!5m2!1sen!5e0"
+                    width="100%" 
+                    height="300" 
+                    style="border:0; border-radius: 20px;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="BusyBee Dry Cleaners Location">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-inner">
+            <p>&copy; 2025 <a href="#">BusyBee Dry Cleaners</a>. All rights reserved.</p>
+            <p class="footer-credit">Made with love by <a href="https://design.withviso.com" target="_blank" rel="noopener">Viso Digital</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const header = document.getElementById('header');
+        const navToggle = document.getElementById('navToggle');
+        const mobileNav = document.getElementById('mobileNav');
+        const toggleIcon = document.getElementById('toggleIcon');
+        const mainNav = document.getElementById('mainNav');
+
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        navToggle.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+            const isOpen = mobileNav.classList.contains('active');
+            toggleIcon.src = `https://unpkg.com/lucide-static@latest/icons/${isOpen ? 'x' : 'menu'}.svg`;
+        });
+
+        mobileNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+                toggleIcon.src = 'https://unpkg.com/lucide-static@latest/icons/menu.svg';
+            });
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
