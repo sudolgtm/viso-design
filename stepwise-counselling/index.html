@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stepwise Counselling Vancouver Kitsilano Fairview Mount Pleasant North Vancouver</title>
+    <meta name="description" content="Stepwise Counselling provides individual and couples counselling in Vancouver, Burnaby, and North Vancouver. Helping with anxiety, stress, depression, relationships, and life transitions.">
+    <meta name="keywords" content="Stepwise Counselling, counselling Vancouver, therapy Vancouver, Ken Kuo, anxiety counselling, couples counselling, individual therapy, Vancouver counsellor">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #4a7c6f;
+            --primary-dark: #3a6358;
+            --secondary: #f5f5f0;
+            --text: #333333;
+            --text-light: #666666;
+            --white: #ffffff;
+            --shadow: 0 2px 10px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .header.scrolled {
+            box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .nav-toggle img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .icon-close {
+            display: none;
+        }
+
+        .nav-toggle.active .icon-menu {
+            display: none;
+        }
+
+        .nav-toggle.active .icon-close {
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--primary);
+            color: var(--white) !important;
+            padding: 10px 25px;
+            border-radius: 50px;
+            transition: var(--transition);
+        }
+
+        .nav-cta:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(74,124,111,0.3);
+        }
+
+        .nav-cta::after {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .nav-cta {
+                background: none;
+                color: var(--text) !important;
+                padding: 0;
+                border-radius: 0;
+                transform: none;
+                box-shadow: none;
+            }
+
+            .nav-cta:hover {
+                background: none;
+                color: var(--primary) !important;
+                transform: none;
+                box-shadow: none;
+            }
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            margin-top: 70px;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            color: var(--white);
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .tagline {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--white);
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .cta-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(74,124,111,0.3);
+        }
+
+        /* Section Titles */
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .section-title.light {
+            color: var(--white);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            max-width: 800px;
+            margin: 0 auto 50px;
+            font-size: 1.1rem;
+        }
+
+        /* Why Counselling */
+        .why-counselling {
+            padding: 100px 0;
+            background: var(--secondary);
+        }
+
+        .why-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .why-text blockquote {
+            background: var(--white);
+            padding: 30px;
+            border-left: 4px solid var(--primary);
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .why-text blockquote p {
+            margin-bottom: 10px;
+        }
+
+        .why-text h3 {
+            color: var(--primary);
+            margin: 30px 0 15px;
+        }
+
+        .why-text ul {
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+
+        .why-text li {
+            margin-bottom: 10px;
+        }
+
+        .why-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            display: block;
+        }
+
+        .why-quote {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary);
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        .why-quote p {
+            margin-bottom: 10px;
+        }
+
+        .why-quote p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* About Ken */
+        .about-ken {
+            padding: 100px 0;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 50px;
+            margin-top: 50px;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .about-text h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .about-text h4 {
+            color: var(--primary);
+            margin: 25px 0 15px;
+        }
+
+        .about-logos {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .about-logo {
+            height: 50px;
+            width: auto;
+        }
+
+        .about-text ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .about-text li {
+            margin-bottom: 8px;
+        }
+
+        /* Services */
+        .services {
+            padding: 100px 0;
+            background: var(--secondary);
+            position: relative;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 30px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 20px;
+            filter: invert(45%) sepia(12%) saturate(742%) hue-rotate(118deg) brightness(96%) contrast(86%);
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .services-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .services-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Who It's For */
+        .who-its-for {
+            padding: 100px 0;
+        }
+
+        .who-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .who-card {
+            text-align: center;
+            padding: 40px 30px;
+            border-radius: 10px;
+            background: var(--secondary);
+            transition: var(--transition);
+        }
+
+        .who-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .who-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 20px;
+            filter: invert(45%) sepia(12%) saturate(742%) hue-rotate(118deg) brightness(96%) contrast(86%);
+        }
+
+        .who-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            padding: 100px 0;
+            background: var(--secondary);
+        }
+
+        .steps-image {
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 50px;
+            box-shadow: var(--shadow);
+        }
+
+        .steps-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .step {
+            text-align: center;
+            padding: 40px 30px;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .step:hover {
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .step-icon {
+            width: 50px;
+            height: 50px;
+            margin: 20px auto 15px;
+            filter: invert(45%) sepia(12%) saturate(742%) hue-rotate(118deg) brightness(96%) contrast(86%);
+        }
+
+        .step h3 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        /* Resources */
+        .resources {
+            padding: 100px 0;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .resource-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 30px rgba(0,0,0,0.15);
+        }
+
+        .resource-icon {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 20px;
+            filter: invert(45%) sepia(12%) saturate(742%) hue-rotate(118deg) brightness(96%) contrast(86%);
+        }
+
+        .resource-card h3 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .resource-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .resource-card li {
+            margin-bottom: 12px;
+        }
+
+        .resource-card a {
+            color: var(--text);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .resource-card a:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonials-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .testimonials-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(74,124,111,0.9);
+        }
+
+        .testimonials-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .testimonial-card {
+            background: rgba(255,255,255,0.95);
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .stars {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 20px;
+        }
+
+        .stars img {
+            width: 20px;
+            height: 20px;
+            filter: invert(67%) sepia(58%) saturate(364%) hue-rotate(358deg) brightness(101%) contrast(97%);
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .testimonial-name {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        /* Rates */
+        .rates {
+            padding: 100px 0;
+            background: var(--secondary);
+        }
+
+        .rates-content {
+            margin-top: 50px;
+        }
+
+        .rates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .rate-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .rate-icon {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 20px;
+            filter: invert(45%) sepia(12%) saturate(742%) hue-rotate(118deg) brightness(96%) contrast(86%);
+        }
+
+        .rate-card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .rate-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .insurance-info, .cancellation-policy {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .insurance-info h3, .cancellation-policy h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .insurance-logos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px 0;
+            padding: 20px;
+            background: var(--secondary);
+            border-radius: 5px;
+        }
+
+        .insurance-logos span {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .insurance-note {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .cancellation-policy ul {
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+
+        .cancellation-policy li {
+            margin-bottom: 10px;
+        }
+
+        /* Contact */
+        .contact {
+            padding: 100px 0;
+            background: var(--secondary);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 50px;
+        }
+
+        .contact-info h3 {
+            color: var(--primary);
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+            align-items: flex-start;
+        }
+
+        .contact-icon {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            margin-top: 3px;
+            filter: invert(45%) sepia(12%) saturate(742%) hue-rotate(118deg) brightness(96%) contrast(86%);
+        }
+
+        .contact-item a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .hours {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #ddd;
+        }
+
+        .hours h4 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .contact-form-wrapper {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-form {
+            /* No card styling - inherits from wrapper */
+        }
+
+        .contact-form h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(74,124,111,0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+        }
+
+        .contact-form .cta-btn {
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-dark);
+            color: var(--white);
+            padding: 30px 0;
+        }
+
+        .footer-content {
+            text-align: center;
+        }
+
+        .footer-divider {
+            width: 60px;
+            height: 1px;
+            background: rgba(255,255,255,0.3);
+            margin: 15px auto;
+        }
+
+        .footer-content p {
+            margin: 5px 0;
+        }
+
+        .attribution {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .attribution a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .attribution a:hover {
+            text-decoration: underline;
+        }
+
+        /* Fade-in Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: var(--shadow);
+                transform: translateY(-100%);
+                opacity: 0;
+                pointer-events: none;
+                transition: var(--transition);
+                gap: 15px;
+            }
+
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .tagline {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid,
+            .who-grid,
+            .steps,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .why-content,
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            
+            .insurance-logos {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .cta-btn {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="logo">
+                <img src="logo.png" alt="Stepwise Counselling Logo">
+                <span class="logo-text">Stepwise Counselling</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <img src="https://unpkg.com/lucide-static@latest/icons/menu.svg" alt="Menu" class="icon-menu">
+                <img src="https://unpkg.com/lucide-static@latest/icons/x.svg" alt="Close" class="icon-close">
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#why-counselling">Why Counselling</a></li>
+                <li><a href="#about-ken">About Ken</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#rates">Rates</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#contact" class="nav-cta">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="hero">
+        <img src="https://static.wixstatic.com/media/5a47467975164707be86bfeac844e3a2.jpg/v1/fill/w_1472,h_828,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/5a47467975164707be86bfeac844e3a2.jpg" alt="Ocean waves background" class="hero-bg">
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+            <h1>Find Your Path Forward</h1>
+            <p class="tagline">Step by step, reclaim your inner strength and discover a more content, purpose-driven life.</p>
+            <a href="#contact" class="cta-btn">Book a Session</a>
+        </div>
+    </section>
+
+    <section class="why-counselling" id="why-counselling">
+        <div class="container">
+            <h2 class="section-title">Why Counselling?</h2>
+            <div class="why-content">
+            <div class="why-text fade-in">
+                <p>Because there are many misconceptions about therapy, you may be reluctant to try personal counselling. Even if you know the realities instead of the myths, you may feel reluctant and nervous about seeing a counsellor.</p>
+                    <p>However, overcoming that nervousness is worth it. That's because any time your quality of life isn't what you want it to be, therapy can help.</p>
+                    <p>Some people seek counselling because they have felt anxious, depressed or even angry for a long time. Others may want help for a chronic illness that is interfering with their emotional or physical well-being. Still, others may have immediate transitional problems they need help navigating - they may be going through a relational crisis, facing an empty nest, feeling overwhelmed by job stressors or sudden unemployment, financial burdens, or grieving the loss of a loved one.</p>
+                    <h3>Signs You Could Benefit from Counselling:</h3>
+                    <ul>
+                        <li>You feel an overwhelming, prolonged sense of helplessness and sadness</li>
+                        <li>Your problems don't seem to get better despite your efforts and help from family and friends</li>
+                        <li>You find it difficult to concentrate on work assignments, school, or carry out other everyday activities</li>
+                        <li>You worry excessively, expect the worst or are constantly on edge</li>
+                        <li>Your actions, such as drinking too much alcohol, using drugs or being aggressive, are harming you or others</li>
+                    </ul>
+                    <p>Therapy can help people gain a deeper understanding of themselves and the issues they are facing, discover new perspectives, learn new ways to cope, and overcome their struggles.</p>
+                </div>
+                <div class="why-image fade-in">
+                    <img src="https://static.wixstatic.com/media/11062b_921db34dc93249d2828611faca62b664~mv2.jpg/v1/fill/w_800,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_921db34dc93249d2828611faca62b664~mv2.jpg" alt="Waves">
+                    <blockquote class="why-quote">
+                        <p>"Overcoming difficulties leads to courage, self-respect, and knowing yourself." ~ Alfred Adler</p>
+                        <p>"Who looks outside, dreams; who looks inside, awakes." ~ Carl Jung</p>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-ken" id="about-ken">
+        <div class="container">
+            <h2 class="section-title">About Ken</h2>
+            <div class="about-content">
+                <div class="about-image fade-in">
+                    <img src="https://static.wixstatic.com/media/551ec0_4d40868fbb1a4e3783c23ba1c2b852dd~mv2.jpg/v1/fill/w_400,h_500,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9367SWC.jpg" alt="Kenneth Kuo">
+                </div>
+                <div class="about-text fade-in">
+                    <h3>Kenneth Kuo | B.Sc., RTC, MTC</h3>
+                    <p>Registered Therapeutic Counsellor - RTC<br>Master Therapeutic Counsellor - MTC</p>
+                    <div class="about-logos">
+                        <img src="https://static.wixstatic.com/media/551ec0_ebe962dbf8044ed39158e371835ebac2~mv2.png/v1/crop/x_24,y_17,w_269,h_75/fill/w_196,h_51,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/pt.png" alt="Psychology Today" class="about-logo">
+                        <img src="https://static.wixstatic.com/media/551ec0_033565e79f874b39a9fa50e745d47339.jpg/v1/crop/x_0,y_0,w_308,h_131/fill/w_191,h_77,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/551ec0_033565e79f874b39a9fa50e745d47339.jpg" alt="ACCT" class="about-logo">
+                    </div>
+                    <h4>Professional Affiliations</h4>
+                    <ul>
+                        <li>Association of Cooperative Counselling Therapists of Canada (ACCT) - Master Therapeutic Counsellor (Member #2169)</li>
+                        <li>Canadian Counselling & Psychotherapy Association (CCPA) - Professional Member</li>
+                    </ul>
+                    <h4>Training & Experience</h4>
+                    <ul>
+                        <li>Emotionally Focused Therapy (EFT) Externship - Vancouver Centre For Emotionally Focused Therapy</li>
+                        <li>Co-facilitator, bereavement/loss & grief, separation/divorce support groups</li>
+                        <li>Trauma Regulation and Integration Process (T.R.I.P.) Level 1 certificate</li>
+                        <li>Gottman Method Couples Therapy Level 2 certificate</li>
+                        <li>Certificate of Career Exploration & Development Skills</li>
+                        <li>Diploma of Professional Counselling</li>
+                    </ul>
+                    <h4>How I Will Work with You</h4>
+                    <p>I practice an integrative counselling approach that draws from my training in proven psychotherapy modalities: Cognitive Behavioural Therapy, Person-Centered Therapy, Gottman Method Couples Therapy, Emotionally Focused Therapy, Solution-Focused Brief Therapy, Internal Family Systems Therapy and Motivational Interviewing.</p>
+                    <p>Counselling allows for a genuine focus on you. I fully listen and seek to understand your story as you share in a caring, safe and judgement-free space.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Services</h2>
+            <p class="section-subtitle">Ken is here to help you deal with your feelings of anxiety, stress, anger, depression, low self confidence/esteem, loss and grief, guilt/shame or lost identity.</p>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/heart.svg" alt="Heart" class="service-icon">
+                    <h3>Anxiety & Stress</h3>
+                    <p>Navigate through feelings of anxiety and stress with proven therapeutic approaches.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/cloud-rain.svg" alt="Rain" class="service-icon">
+                    <h3>Depression & Hopelessness</h3>
+                    <p>Find hope and energy again through compassionate counselling support.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/users.svg" alt="Users" class="service-icon">
+                    <h3>Couples Relationship</h3>
+                    <p>Strengthen your relationship with Gottman Method and EFT approaches.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/baby.svg" alt="Baby" class="service-icon">
+                    <h3>Parenting Support</h3>
+                    <p>Navigate the challenges of parenting with confidence and clarity.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/briefcase.svg" alt="Briefcase" class="service-icon">
+                    <h3>Career Direction</h3>
+                    <p>Find direction and purpose during career changes and professional challenges.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/compass.svg" alt="Compass" class="service-icon">
+                    <h3>Cultural Identity</h3>
+                    <p>Explore and embrace your cultural identity in a safe, understanding space.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/git-branch.svg" alt="Branch" class="service-icon">
+                    <h3>Life Transitions</h3>
+                    <p>Navigate major life changes with resilience and newfound strength.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/heart-handshake.svg" alt="Heart Handshake" class="service-icon">
+                    <h3>Grief & Loss</h3>
+                    <p>Heal from loss and grief with compassionate, specialized support.</p>
+                </div>
+            </div>
+            <div class="services-image">
+                <img src="https://static.wixstatic.com/media/551ec0_68971a98805b4ad5a55ac3feb9c081a9.jpg/v1/fill/w_800,h_350,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/551ec0_68971a98805b4ad5a55ac3feb9c081a9.jpg" alt="Peaceful wellness">
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+        <img src="https://static.wixstatic.com/media/11062b_e8771669914d4b8a949e06893dfd43a0~mv2.jpg/v1/fill/w_1472,h_828,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_e8771669914d4b8a949e06893dfd43a0~mv2.jpg" alt="Beach sand background" class="testimonials-bg">
+        <div class="testimonials-overlay"></div>
+        <div class="container testimonials-content">
+            <h2 class="section-title light">Peer Reviews</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <div class="stars">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="Star">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="Star">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="Star">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="Star">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="Star">
+                    </div>
+                    <p>"Ken has a calm, inviting and deeply kind presence with clients that inspire trust to open oneself up to growth."</p>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="stars">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="Star">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="Star">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="Star">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="Star">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="Star">
+                    </div>
+                    <p>"I have been fortunate to witness his professionalism, kindness, empathy and his endless capacity to care."</p>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="stars">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="Star">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="Star">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="Star">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="Star">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="Star">
+                    </div>
+                    <p>"Ken's uniqueness comes from his ability to trust in others' strengths and abilities and he knows just the right time to step in with a little guidance."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="rates" id="rates">
+        <div class="container">
+            <h2 class="section-title">Rates</h2>
+            <div class="rates-content">
+                <div class="rates-grid">
+                    <div class="rate-card fade-in">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/user.svg" alt="Individual" class="rate-icon">
+                        <h3>Individual Sessions</h3>
+                        <p class="rate-price">Starting from $140</p>
+                        <p>60 minutes or 90 minutes</p>
+                    </div>
+                    <div class="rate-card fade-in">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/users.svg" alt="Couples" class="rate-icon">
+                        <h3>Couples Sessions</h3>
+                        <p class="rate-price">Starting from $160</p>
+                        <p>60 minutes or 90 minutes</p>
+                    </div>
+                </div>
+                <div class="insurance-info fade-in">
+                    <h3><img src="https://unpkg.com/lucide-static@latest/icons/shield-check.svg" alt="Insurance" class="rate-icon"> Insurance Coverage</h3>
+                    <p>The following insurers provide reimbursements for therapeutic counselling services provided by ACCT counsellors:</p>
+                    <div class="insurance-logos">
+                        <span>Sun Life</span>
+                        <span>Pacific Blue Cross</span>
+                        <span>Canada Life</span>
+                        <span>Green Shield Canada</span>
+                        <span>Equitable Life of Canada</span>
+                        <span>ClaimSecure</span>
+                        <span>Manulife</span>
+                    </div>
+                    <p class="insurance-note">Please check your policy's coverage and/or with your benefits plan provider, workplace human resources dept. and/or post secondary institution's student services dept. to confirm your policy's specific eligibility.</p>
+                </div>
+                <div class="cancellation-policy fade-in">
+                    <h3><img src="https://unpkg.com/lucide-static@latest/icons/calendar-x.svg" alt="Cancellation" class="rate-icon"> Cancellation Policy</h3>
+                    <p>In the event you cannot attend your next scheduled appointment with me, please notify me via phone and email at your earliest convenience so we can re-schedule.</p>
+                    <ul>
+                        <li>Less than 24 hours' notice: 50% of scheduled session rate</li>
+                        <li>Less than 12 hours' notice: 100% of scheduled session rate</li>
+                        <li>Cancellations due to sudden sickness: $30 fee</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="resources" id="resources">
+        <div class="container">
+            <h2 class="section-title">Resources</h2>
+            <p class="section-subtitle">Helpful articles and videos related to the services offered.</p>
+            <div class="resources-grid">
+                <div class="resource-card fade-in">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/git-branch.svg" alt="Transitions" class="resource-icon">
+                    <h3>Life & Career Transitions</h3>
+                    <ul>
+                        <li><a href="https://mywellbeing.com/therapy-101/8-ways-to-manage-major-life-transitions" target="_blank">8 Ways to Manage Major Life Transitions</a></li>
+                        <li><a href="https://www.forbes.com/sites/josephliu/2023/03/06/navigating-career-transitions-how-to-change-your-path-one-step-at-a-time/" target="_blank">Navigating Career Transitions</a></li>
+                    </ul>
+                </div>
+                <div class="resource-card fade-in">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/compass.svg" alt="Cultural Identity" class="resource-icon">
+                    <h3>Cultural Identity</h3>
+                    <ul>
+                        <li><a href="https://www.youtube.com/watch?v=Jx-1EthJeIg" target="_blank">Cultural Identity Video</a></li>
+                        <li><a href="http://www.commonground.org.nz/common-issues/identity/cultural-identity/" target="_blank">Understanding Cultural Identity</a></li>
+                    </ul>
+                </div>
+                <div class="resource-card fade-in">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/baby.svg" alt="Parenting" class="resource-icon">
+                    <h3>Parenting</h3>
+                    <ul>
+                        <li><a href="https://www.therapytribe.com/therapy/parenting-therapy/" target="_blank">Parenting Therapy Resources</a></li>
+                    </ul>
+                </div>
+                <div class="resource-card fade-in">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/users.svg" alt="Couples" class="resource-icon">
+                    <h3>Couples & Relationships</h3>
+                    <ul>
+                        <li><a href="https://welldoing.org/types/couples-therapy-relationship-therapy" target="_blank">Couples Therapy & Relationship Therapy</a></li>
+                    </ul>
+                </div>
+                <div class="resource-card fade-in">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/git-merge.svg" alt="Generational" class="resource-icon">
+                    <h3>Generational Dynamics</h3>
+                    <ul>
+                        <li><a href="https://www.agingcare.com/articles/the-sandwich-generation-caring-for-children-and-elderly-parents-123286.htm" target="_blank">The Sandwich Generation</a></li>
+                    </ul>
+                </div>
+                <div class="resource-card fade-in">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/briefcase.svg" alt="Career" class="resource-icon">
+                    <h3>Career Directions</h3>
+                    <ul>
+                        <li><a href="https://www.workitdaily.com/career-counselor-need/" target="_blank">Do You Need a Career Counselor?</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-grid">
+                <div class="contact-info fade-in">
+                    <h3>Locations</h3>
+                    <div class="contact-item">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/map-pin.svg" alt="Location" class="contact-icon">
+                        <div>
+                            <strong><a href="https://maps.app.goo.gl/HTVumjUTTukJ11z68" target="_blank">Vancouver</a></strong><br>
+                            Broadway & Cypress<br>
+                            (Near Fairview/Kitsilano)
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/map-pin.svg" alt="Location" class="contact-icon">
+                        <div>
+                            <strong><a href="https://maps.app.goo.gl/J5p2YKkZFEPQDQqr6" target="_blank">Burnaby</a></strong><br>
+                            Hastings & Boundary<br>
+                            (Burnaby Heights)
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/map-pin.svg" alt="Location" class="contact-icon">
+                        <div>
+                            <strong><a href="https://maps.app.goo.gl/9vQSiQTS7oZubTwF9" target="_blank">North Vancouver</a></strong><br>
+                            Lonsdale & 19th<br>
+                            (Well Clinics)
+                        </div>
+                    </div>
+                <div class="contact-item">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/mail.svg" alt="Email" class="contact-icon">
+                        <div>
+                            <strong>Email</strong><br>
+                            <a href="mailto:ken@stepwisecounselling.ca">ken@stepwisecounselling.ca</a>
+                        </div>
+                    </div>
+                    <div class="hours">
+                        <h4><img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="Hours" class="contact-icon"> Hours</h4>
+                        <p>Monday - Friday: 10:00 AM - 9:00 PM</p>
+                        <p>Saturday: 10:00 AM - 6:00 PM</p>
+                        <p>Sunday: Closed</p>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper fade-in">
+                    <form class="contact-form" action="#" method="POST">
+                        <h3>Send a Message</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Preferred Appointment Location *</label>
+                            <select id="location" name="location" required>
+                                <option value="">Select a location</option>
+                                <option value="vancouver">Vancouver (Broadway & Cypress)</option>
+                                <option value="burnaby">Burnaby (Hastings & Boundary)</option>
+                                <option value="north-vancouver">North Vancouver (Lonsdale & 19th)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; <span id="copyright-years">2016</span> Kenneth Kuo, All rights reserved.</p>
+                <div class="footer-divider"></div>
+                <p class="attribution">Made with love by <a href="https://design.withviso.com" target="_blank">Viso Solutions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile nav when a link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 70;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Sticky header on scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Fade-in on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        fadeElements.forEach(el => observer.observe(el));
+
+        // Add loaded class to body after page load
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+
+        // Dynamic copyright year
+        const currentYear = new Date().getFullYear();
+        if (currentYear > 2016) {
+            document.getElementById('copyright-years').textContent = '2016-' + currentYear;
+        }
+    </script>
+</body>
+</html>
