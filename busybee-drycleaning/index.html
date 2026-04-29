@@ -662,6 +662,37 @@
                 grid-template-columns: 1fr 1fr;
             }
         }
+        .claim-banner {
+            background: var(--primary);
+            color: var(--black);
+            text-align: center;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+            position: sticky;
+            top: 68px;
+            z-index: 999;
+        }
+        .claim-banner a {
+            color: var(--black);
+            text-decoration: underline;
+            font-weight: 700;
+        }
+        .claim-banner a:hover {
+            opacity: 0.8;
+        }
+        @media (max-width: 767px) {
+            .claim-banner {
+                top: 60px;
+                margin-top: 60px;
+                font-size: 0.85rem;
+                padding: 0.75rem 1rem;
+            }
+            header.menu-open ~ .claim-banner {
+                top: 200px;
+                margin-top: 200px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -689,6 +720,9 @@
             <a href="#contact">Contact</a>
         </nav>
     </header>
+    <div class="claim-banner">
+        Hi Busybee! Do you like the website? Contact us to claim it <a href="https://design.withviso.com">design.withviso.com</a>
+    </div>
 
     <section class="hero">
         <div class="hero-bg">
@@ -698,7 +732,7 @@
         <div class="hero-content">
             <div class="hero-badge">
                 <img src="https://unpkg.com/lucide-static@latest/icons/sparkles.svg" alt="">
-                <span>Vancouver's Trusted Since 1985</span>
+                <span>Vancouver's Trusted Dry Cleaners</span>
             </div>
             <h1>Expert Care for Your Wardrobe</h1>
             <p>Professional dry cleaning and alterations with meticulous attention to detail. Your garments deserve the best.</p>
@@ -971,24 +1005,38 @@
         const navToggle = document.getElementById('navToggle');
         const mobileNav = document.getElementById('mobileNav');
         const toggleIcon = document.getElementById('toggleIcon');
-        const mainNav = document.getElementById('mainNav');
+        const banner = document.querySelector('.claim-banner');
 
         window.addEventListener('scroll', () => {
             header.classList.toggle('scrolled', window.scrollY > 50);
         });
 
+        function updateBannerPosition() {
+            const headerHeight = header.offsetHeight;
+            banner.style.top = headerHeight + 'px';
+            banner.style.marginTop = headerHeight + 'px';
+        }
+
         navToggle.addEventListener('click', () => {
             mobileNav.classList.toggle('active');
             const isOpen = mobileNav.classList.contains('active');
             toggleIcon.src = `https://unpkg.com/lucide-static@latest/icons/${isOpen ? 'x' : 'menu'}.svg`;
+            
+            // Small delay to allow header to expand
+            setTimeout(updateBannerPosition, 10);
         });
 
         mobileNav.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileNav.classList.remove('active');
                 toggleIcon.src = 'https://unpkg.com/lucide-static@latest/icons/menu.svg';
+                setTimeout(updateBannerPosition, 10);
             });
         });
+
+        // Initial position
+        updateBannerPosition();
+        window.addEventListener('resize', updateBannerPosition);
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
