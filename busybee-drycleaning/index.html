@@ -663,6 +663,7 @@
             }
         }
         .claim-banner {
+            display: block;
             background: var(--primary);
             color: var(--black);
             text-align: center;
@@ -672,14 +673,11 @@
             position: sticky;
             top: 68px;
             z-index: 999;
+            text-decoration: none;
+            cursor: pointer;
         }
-        .claim-banner a {
-            color: var(--black);
-            text-decoration: underline;
-            font-weight: 700;
-        }
-        .claim-banner a:hover {
-            opacity: 0.8;
+        .claim-banner:hover {
+            opacity: 0.9;
         }
         @media (max-width: 767px) {
             .claim-banner {
@@ -720,9 +718,9 @@
             <a href="#contact">Contact</a>
         </nav>
     </header>
-    <div class="claim-banner">
-        Hi Busybee! Do you like the website? Contact us to claim it <a href="https://design.withviso.com">design.withviso.com</a>
-    </div>
+    <a href="https://design.withviso.com" class="claim-banner">
+        Hi Busybee! Do you like the website? <span style="text-decoration: underline;">Contact us to make it yours</span>
+    </a>
 
     <section class="hero">
         <div class="hero-bg">
