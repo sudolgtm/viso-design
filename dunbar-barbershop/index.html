@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dunbar Barbershop | Vancouver's Premier Barber Shop</title>
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <base href="https://dunbar-barbershop.withviso.com/">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+            --primary: #B40000;
+            --primary-dark: #8B0000;
+            --primary-light: #FFE6E6;
+            --black: #000000;
+            --white: #FFFFFF;
+            --gray-100: #F5F5F5;
+            --gray-300: #D4D4D4;
+            --gray-500: #6B6B6B;
+            --gray-700: #4A4A4A;
+            --section-padding: 5rem 1.5rem;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--gray-700);
+            background: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(10px);
+            transition: box-shadow 0.3s;
+        }
+        header.scrolled {
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+        .logo-icon {
+            height: 40px;
+        }
+        nav {
+            display: none;
+        }
+        .desktop-nav {
+            display: none;
+            gap: 2rem;
+        }
+        .desktop-nav a {
+            color: var(--gray-700);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .desktop-nav a:hover {
+            color: var(--primary);
+        }
+        .nav-toggle {
+            display: block;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            position: relative;
+            z-index: 1001;
+        }
+        .nav-toggle img {
+            width: 28px;
+            height: 28px;
+        }
+        #mobileNav {
+            display: none;
+            flex-direction: column;
+            padding: 1rem 1.5rem 1.5rem;
+            background: var(--white);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        #mobileNav.active {
+            display: flex;
+        }
+        #mobileNav a {
+            color: var(--gray-700);
+            text-decoration: none;
+            padding: 0.75rem 0;
+            font-weight: 500;
+            border-bottom: 1px solid var(--gray-100);
+            transition: color 0.2s;
+        }
+        #mobileNav a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 6rem 1.5rem 4rem;
+        }
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+        }
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.55);
+            z-index: -1;
+        }
+        .hero-content {
+            max-width: 800px;
+            z-index: 1;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(180,0,0,0.9);
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .hero-badge img {
+            width: 18px;
+            height: 18px;
+            filter: brightness(0) invert(1);
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        .hero p {
+            font-size: 1.15rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.875rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+        }
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        .btn img {
+            width: 20px;
+            height: 20px;
+            filter: brightness(0) invert(1);
+        }
+
+        /* Sections */
+        section {
+            padding: var(--section-padding);
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        .section-label img {
+            width: 18px;
+            height: 18px;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--black);
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        .service-card {
+            background: var(--white);
+            border: 2px solid var(--gray-100);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .service-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(180,0,0,0.1);
+        }
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1rem;
+            background: var(--primary-light);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .service-icon img {
+            width: 32px;
+            height: 32px;
+        }
+        .service-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--black);
+            margin-bottom: 0.75rem;
+        }
+        .service-card p {
+            font-size: 0.95rem;
+            color: var(--gray-500);
+        }
+
+        /* Who It's For */
+        .who-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        .who-card {
+            background: var(--gray-100);
+            border-radius: 12px;
+            padding: 2rem;
+        }
+        .who-card h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--black);
+            margin-bottom: 0.75rem;
+        }
+        .who-card p {
+            font-size: 0.95rem;
+        }
+
+        /* How It Works */
+        .how-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        .step-card {
+            text-align: center;
+            position: relative;
+        }
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin: 0 auto 1rem;
+        }
+        .step-card h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--black);
+            margin-bottom: 0.5rem;
+        }
+        .step-card p {
+            font-size: 0.95rem;
+            color: var(--gray-500);
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        .testimonial-card {
+            background: var(--gray-100);
+            border-radius: 12px;
+            padding: 2rem;
+        }
+        .stars {
+            display: flex;
+            gap: 0.25rem;
+            margin-bottom: 1rem;
+        }
+        .stars img {
+            width: 20px;
+            height: 20px;
+        }
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .author-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        .author-info h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--black);
+        }
+        .author-info span {
+            font-size: 0.85rem;
+            color: var(--gray-500);
+        }
+
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+        .contact-info h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--black);
+            margin-bottom: 1.5rem;
+        }
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .info-icon {
+            width: 24px;
+            height: 24px;
+            margin-top: 0.25rem;
+        }
+        .info-item h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--black);
+            margin-bottom: 0.25rem;
+        }
+        .info-item p {
+            font-size: 0.95rem;
+        }
+        .hours-grid {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.5rem 1rem;
+            margin-top: 1.5rem;
+        }
+        .hours-grid dt {
+            font-weight: 600;
+            color: var(--black);
+        }
+        .hours-grid dd {
+            color: var(--gray-500);
+        }
+        .map-container {
+            border-radius: 12px;
+            overflow: hidden;
+            height: 300px;
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        footer p {
+            margin-bottom: 1rem;
+        }
+        .footer-divider {
+            width: 60px;
+            height: 2px;
+            background: var(--primary);
+            margin: 1.5rem auto;
+        }
+        .footer-attribution {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+        .footer-attribution a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .footer-attribution a:hover {
+            text-decoration: underline;
+        }
+
+        /* Fade-in animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Desktop */
+        @media (min-width: 768px) {
+            .nav-toggle {
+                display: none;
+            }
+            .desktop-nav {
+                display: flex;
+            }
+            #mobileNav {
+                display: none !important;
+            }
+            nav {
+                display: block;
+            }
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .who-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .how-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            .testimonials-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <img src="/logo.svg" alt="Dunbar Barbershop" class="logo-icon">
+            </a>
+            <nav id="mainNav" class="desktop-nav">
+                <a href="#services">Services</a>
+                <a href="#who">Who It's For</a>
+                <a href="#how">How It Works</a>
+                <a href="#testimonials">Reviews</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <img src="https://unpkg.com/lucide-static@latest/icons/menu.svg" alt="Menu" id="toggleIcon">
+            </button>
+        </div>
+        <nav id="mobileNav">
+            <a href="#services">Services</a>
+            <a href="#who">Who It's For</a>
+            <a href="#how">How It Works</a>
+            <a href="#testimonials">Reviews</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-bg">
+            <img src="https://images.pexels.com/photos/1570806/pexels-photo-1570806.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="Barbershop interior">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <img src="https://unpkg.com/lucide-static@latest/icons/scissors.svg" alt="">
+                <span>Vancouver's Premier Barber Shop</span>
+            </div>
+            <h1>Classic Cuts, Modern Style</h1>
+            <p>Professional barbering services with precision and care. Your look, our expertise.</p>
+            <a href="#contact" class="btn btn-primary">
+                <img src="https://unpkg.com/lucide-static@latest/icons/arrow-right.svg" alt="">
+                Visit Us Today
+            </a>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-label">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/scissors.svg" alt="">
+                    Our Services
+                </div>
+                <h2 class="section-title">Expert Barbering Services</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/crop.svg" alt="">
+                    </div>
+                    <h3>Haircuts</h3>
+                    <p>Classic and modern cuts tailored to your style. Fades, tapers, and precision cuts.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/brush.svg" alt="">
+                    </div>
+                    <h3>Beard Trim</h3>
+                    <p>Expert beard shaping and trimming to keep your facial hair looking sharp.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/droplets.svg" alt="">
+                    </div>
+                    <h3>Hot Towel Shave</h3>
+                    <p>Traditional straight razor shave with hot towel treatment for the ultimate experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="who" id="who" style="background: var(--gray-100);">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-label">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/users.svg" alt="">
+                    Who It's For
+                </div>
+                <h2 class="section-title">Everyone Deserves a Great Cut</h2>
+            </div>
+            <div class="who-grid">
+                <div class="who-card fade-in">
+                    <h3>Professionals</h3>
+                    <p>Sharp, clean cuts that keep you looking professional for work and meetings.</p>
+                </div>
+                <div class="who-card fade-in">
+                    <h3>Students</h3>
+                    <p>Affordable, stylish cuts that fit your budget and express your personality.</p>
+                </div>
+                <div class="who-card fade-in">
+                    <h3>Anyone</h3>
+                    <p>Whether it's your first cut or your hundredth, we welcome everyone to our chair.</p>
+                </div>
+                <div class="who-card fade-in">
+                    <h3>Regulars</h3>
+                    <p>Consistent, reliable service that keeps you coming back month after month.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how" id="how">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-label">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/sparkles.svg" alt="">
+                    How It Works
+                </div>
+                <h2 class="section-title">Simple Process</h2>
+            </div>
+            <div class="how-grid">
+                <div class="step-card fade-in">
+                    <div class="step-number">1</div>
+                    <h3>Walk In</h3>
+                    <p>No appointment needed. Stop by during our business hours.</p>
+                </div>
+                <div class="step-card fade-in">
+                    <div class="step-number">2</div>
+                    <h3>Consult</h3>
+                    <p>Tell us your style preferences and we'll make it happen.</p>
+                </div>
+                <div class="step-card fade-in">
+                    <div class="step-number">3</div>
+                    <h3>Cut</h3>
+                    <p>Relax while our expert barbers work their magic.</p>
+                </div>
+                <div class="step-card fade-in">
+                    <div class="step-number">4</div>
+                    <h3>Look Great</h3>
+                    <p>Leave feeling confident with your fresh new look.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials" style="background: var(--gray-100);">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-label">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/message-square.svg" alt="">
+                    Testimonials
+                </div>
+                <h2 class="section-title">What Our Customers Say</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <div class="stars">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+                    </div>
+                    <p>"Got an amazing haircut and it took only like 10-15 minutes! My hair type (4c) is often hard to deal with but Carlo handled it great and I'm really happy with the results!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">BG</div>
+                        <div class="author-info">
+                            <h4>Ben Grindlay</h4>
+                            <span>Verified Customer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="stars">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+                    </div>
+                    <p>"Jass did an amazing job on my fade — super clean and well layered. He's very attentive and has a great sense of humor. Definitely coming back!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">PW</div>
+                        <div class="author-info">
+                            <h4>Phoenix Chuhan Wu</h4>
+                            <span>Verified Customer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="stars">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+                    </div>
+                    <p>"My first haircut of the new year, and another pleasant experience with Carlo. He is detailed in his work and knows many styles. Enjoy the good conversations!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">J</div>
+                        <div class="author-info">
+                            <h4>Joseph</h4>
+                            <span>Verified Customer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-label">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/map-pin.svg" alt="">
+                    Visit Us
+                </div>
+                <h2 class="section-title">Get In Touch</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info fade-in">
+                    <h3>Business Info</h3>
+                    <div class="info-item">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/map-pin.svg" alt="" class="info-icon">
+                        <div>
+                            <h4>Address</h4>
+                            <p>4264 Dunbar St<br>Vancouver, BC V6S 2E9</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/phone.svg" alt="" class="info-icon">
+                        <div>
+                            <h4>Phone</h4>
+                            <p>(604) 738-3165</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="" class="info-icon">
+                        <div>
+                            <h4>Hours</h4>
+                            <dl class="hours-grid">
+                                <dt>Monday</dt>
+                                <dd>9 a.m. – 6 p.m.</dd>
+                                <dt>Tuesday</dt>
+                                <dd>9 a.m. – 6 p.m.</dd>
+                                <dt>Wednesday</dt>
+                                <dd>9 a.m. – 6 p.m.</dd>
+                                <dt>Thursday</dt>
+                                <dd>9 a.m. – 6 p.m.</dd>
+                                <dt>Friday</dt>
+                                <dd>9 a.m. – 6 p.m.</dd>
+                                <dt>Saturday</dt>
+                                <dd>9 a.m. – 6 p.m.</dd>
+                                <dt>Sunday</dt>
+                                <dd>9 a.m. – 5 p.m.</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-container fade-in">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2602.8234567890123!2d-123.18912345678901!3d49.24812345678901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486732c4d4e4e4f%3A0x1234567890abcdef!2s4264+Dunbar+St%2C+Vancouver%2C+BC+V6S+2E9!5e0!3m2!1sen!2sca!4v1234567890123!5m2!1sen!2sca" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; <span id="currentYear"></span> Dunbar Barbershop. All rights reserved.</p>
+            <div class="footer-divider"></div>
+            <p class="footer-attribution">Made with love by <a href="https://design.withviso.com">Viso Solutions</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const header = document.getElementById('header');
+        const navToggle = document.getElementById('navToggle');
+        const mobileNav = document.getElementById('mobileNav');
+        const toggleIcon = document.getElementById('toggleIcon');
+
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        navToggle.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+            const isOpen = mobileNav.classList.contains('active');
+            toggleIcon.src = `https://unpkg.com/lucide-static@latest/icons/${isOpen ? 'x' : 'menu'}.svg`;
+        });
+
+        mobileNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+                toggleIcon.src = 'https://unpkg.com/lucide-static@latest/icons/menu.svg';
+            });
+        });
+
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
