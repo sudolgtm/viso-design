@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="https://buildingtec-solutions.withviso.com/">
+    <title>BuildingTec Solutions - Expert Construction Services</title>
+    <meta name="description" content="Transform your environment with expert construction services. Quality craftsmanship in roofing, drywall, plumbing, and more.">
+    
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #1a365d;
+            --primary-light: #2a4a7f;
+            --accent: #4299e1;
+            --accent-light: #63b3ed;
+            --text: #2d3748;
+            --text-light: #718096;
+            --bg-light: #f7fafc;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            animation: fadeInUp 0.6s ease forwards;
+        }
+        
+        .fade-in-delay-1 { animation-delay: 0.1s; }
+        .fade-in-delay-2 { animation-delay: 0.2s; }
+        .fade-in-delay-3 { animation-delay: 0.3s; }
+        .fade-in-delay-4 { animation-delay: 0.4s; }
+        
+        /* Header */
+        header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 15px;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+        
+        .nav-cta {
+            background: var(--accent);
+            color: var(--white) !important;
+            padding: 10px 24px;
+            border-radius: 6px;
+            transition: background 0.3s !important;
+        }
+        
+        .nav-cta:hover {
+            background: var(--primary-light) !important;
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+        }
+        
+        .mobile-menu-btn img {
+            width: 28px;
+            height: 28px;
+        }
+        
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: var(--white);
+            z-index: 999;
+            padding: 80px 30px 30px;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .mobile-nav.active {
+            display: flex;
+        }
+        
+        .mobile-nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-size: 20px;
+            font-weight: 500;
+            padding: 15px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .mobile-nav .nav-cta {
+            text-align: center;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+        
+        .mobile-nav-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .mobile-nav-close img {
+            width: 32px;
+            height: 32px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 90vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.pexels.com/photos/15798782/pexels-photo-15798782.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover no-repeat;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(26, 54, 93, 0.75);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: var(--white);
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--white);
+            padding: 16px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: var(--shadow);
+        }
+        
+        .cta-btn:hover {
+            background: var(--primary-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 80px 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .service-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 20px;
+            background: var(--bg-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .service-icon img {
+            width: 32px;
+            height: 32px;
+        }
+        
+        .service-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .service-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+        
+        /* Service Detail Sections */
+        .service-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .service-detail.reverse {
+            direction: rtl;
+        }
+        
+        .service-detail.reverse > * {
+            direction: ltr;
+        }
+        
+        .service-detail-image {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .service-detail-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .service-detail-content h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .service-detail-content p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .service-features {
+            list-style: none;
+        }
+        
+        .service-features li {
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text);
+        }
+        
+        .service-features li img {
+            width: 20px;
+            height: 20px;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: var(--bg-light);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 40px 30px;
+            box-shadow: var(--shadow);
+        }
+        
+        .stars {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .stars img {
+            width: 20px;
+            height: 20px;
+        }
+        
+        .testimonial-card p {
+            font-style: italic;
+            color: var(--text);
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .contact-item img {
+            width: 24px;
+            height: 24px;
+            margin-top: 3px;
+        }
+        
+        .contact-item a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+        
+        .contact-form {
+            background: var(--bg-light);
+            padding: 40px;
+            border-radius: 12px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text);
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .submit-btn {
+            background: var(--accent);
+            color: var(--white);
+            padding: 14px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            background: var(--primary-light);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            padding: 60px 20px 30px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-brand h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.8;
+        }
+        
+        .footer-section h4 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section ul a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section ul a:hover {
+            color: var(--white);
+        }
+        
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .footer-attribution {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.8);
+            padding-left: 20px;
+            border-left: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .footer-attribution a {
+            color: var(--accent-light);
+            text-decoration: none;
+        }
+        
+        .footer-attribution a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive */
+        @media (max-width: 968px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .service-detail {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .service-detail.reverse {
+                direction: ltr;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            section {
+                padding: 60px 20px;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .footer-attribution {
+                border-left: none;
+                padding-left: 0;
+                border-top: 1px solid rgba(255, 255, 255, 0.2);
+                padding-top: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://unpkg.com/lucide-static@latest/icons/home.svg" alt="BuildingTec Solutions" style="width: 40px; height: 40px; filter: brightness(0) saturate(100%) invert(16%) sepia(94%) saturate(1951%) hue-rotate(197deg) brightness(92%) contrast(88%);">
+                <span style="font-size: 24px; font-weight: 800; color: #1a365d; margin-left: 10px;">BuildingTec</span>
+                <span style="font-size: 24px; font-weight: 800; color: #4299e1;">Solutions</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="tel:+17788916773" class="nav-cta">Call Now</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileNav()">
+                <img src="https://unpkg.com/lucide-static@latest/icons/menu.svg" alt="Menu">
+            </button>
+        </nav>
+    </header>
+    
+    <div class="mobile-nav" id="mobileNav">
+        <button class="mobile-nav-close" onclick="toggleMobileNav()">
+            <img src="https://unpkg.com/lucide-static@latest/icons/x.svg" alt="Close">
+        </button>
+        <a href="#services" onclick="toggleMobileNav()">Services</a>
+        <a href="#testimonials" onclick="toggleMobileNav()">Reviews</a>
+        <a href="#contact" onclick="toggleMobileNav()">Contact</a>
+        <a href="tel:+17788916773" class="nav-cta">Call Now</a>
+    </div>
+    
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content fade-in">
+            <h1>BuildingTec Solutions</h1>
+            <p>Transform your environment with our expert construction services that bring your vision to life. Experience quality craftsmanship and attention to detail that will elevate your space to new heights.</p>
+            <a href="#contact" class="cta-btn">Get Free Quote</a>
+        </div>
+    </section>
+    
+    <section id="services">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Our Services</h2>
+                <p>Your one-stop shop for all contractor needs. Quality craftsmanship for every project.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-in fade-in-delay-1">
+                    <div class="service-icon">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/home.svg" alt="Roofing">
+                    </div>
+                    <h3>Roofing</h3>
+                    <p>Professional roofing installation, repair, and maintenance services to protect your property.</p>
+                </div>
+                <div class="service-card fade-in fade-in-delay-2">
+                    <div class="service-icon">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/building.svg" alt="Drywall">
+                    </div>
+                    <h3>Drywall</h3>
+                    <p>Expert drywall installation, finishing, and repair for smooth, flawless walls and ceilings.</p>
+                </div>
+                <div class="service-card fade-in fade-in-delay-3">
+                    <div class="service-icon">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/wrench.svg" alt="Plumbing">
+                    </div>
+                    <h3>Plumbing</h3>
+                    <p>Complete plumbing solutions from repairs and installations to full system upgrades.</p>
+                </div>
+                <div class="service-card fade-in fade-in-delay-4">
+                    <div class="service-icon">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/zap.svg" alt="Electrical">
+                    </div>
+                    <h3>Electrical</h3>
+                    <p>Safe and reliable electrical services for residential and commercial properties.</p>
+                </div>
+                <div class="service-card fade-in fade-in-delay-1">
+                    <div class="service-icon">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/hammer.svg" alt="General Contracting">
+                    </div>
+                    <h3>General Contracting</h3>
+                    <p>Full-service project management from planning to completion. Your one-stop construction solution.</p>
+                </div>
+                <div class="service-card fade-in fade-in-delay-2">
+                    <div class="service-icon">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/layers.svg" alt="Flooring">
+                    </div>
+                    <h3>Flooring</h3>
+                    <p>Professional installation of hardwood, tile, laminate, and vinyl flooring for every room.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="roofing" style="background: var(--bg-light);">
+        <div class="container">
+            <div class="service-detail">
+                <div class="service-detail-image fade-in">
+                    <img src="https://images.pexels.com/photos/17314421/pexels-photo-17314421.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Residential Roofing Services">
+                </div>
+                <div class="service-detail-content fade-in fade-in-delay-1">
+                    <h3>Roofing Solutions</h3>
+                    <p>Protect your home with our comprehensive roofing services. From new installations to repairs and maintenance, we ensure your roof stands strong against the elements.</p>
+                    <ul class="service-features">
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Roof installation & replacement</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Leak detection & repair</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Shingle & tile roofing</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Gutter installation & repair</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Roof inspections</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="drywall">
+        <div class="container">
+            <div class="service-detail reverse">
+                <div class="service-detail-image fade-in">
+                    <img src="https://images.pexels.com/photos/36035072/pexels-photo-36035072.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Interior Drywall Installation">
+                </div>
+                <div class="service-detail-content fade-in fade-in-delay-1">
+                    <h3>Drywall Excellence</h3>
+                    <p>Transform your interior spaces with our professional drywall services. We deliver smooth, flawless finishes that are ready for paint and decoration.</p>
+                    <ul class="service-features">
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Drywall installation</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Texture & finishing</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Water damage repair</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Ceiling repairs</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Soundproofing solutions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="plumbing" style="background: var(--bg-light);">
+        <div class="container">
+            <div class="service-detail">
+                <div class="service-detail-image fade-in">
+                    <img src="https://images.pexels.com/photos/15206136/pexels-photo-15206136.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Plumbing Services">
+                </div>
+                <div class="service-detail-content fade-in fade-in-delay-1">
+                    <h3>Plumbing Services</h3>
+                    <p>From minor repairs to complete system installations, our licensed plumbers deliver reliable solutions for all your plumbing needs.</p>
+                    <ul class="service-features">
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Pipe repair & replacement</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Drain cleaning & unclogging</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Water heater installation</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Bathroom & kitchen plumbing</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Emergency plumbing services</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="electrical">
+        <div class="container">
+            <div class="service-detail reverse">
+                <div class="service-detail-image fade-in">
+                    <img src="https://images.pexels.com/photos/36085816/pexels-photo-36085816.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Residential Electrical Work">
+                </div>
+                <div class="service-detail-content fade-in fade-in-delay-1">
+                    <h3>Electrical Work</h3>
+                    <p>Keep your property powered safely with our comprehensive electrical services. Our licensed electricians handle everything from repairs to full installations.</p>
+                    <ul class="service-features">
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Electrical panel upgrades</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Lighting installation</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Outlet & switch repair</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Whole-home rewiring</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Safety inspections</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contracting" style="background: var(--bg-light);">
+        <div class="container">
+            <div class="service-detail">
+                <div class="service-detail-image fade-in">
+                    <img src="https://images.pexels.com/photos/8486896/pexels-photo-8486896.jpeg?auto=compress&cs=tinysrgb&w=800" alt="General Contracting">
+                </div>
+                <div class="service-detail-content fade-in fade-in-delay-1">
+                    <h3>General Contracting</h3>
+                    <p>Your one-stop solution for complete construction projects. We manage everything from permits and planning to execution and final inspection.</p>
+                    <ul class="service-features">
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Project planning & management</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Permit acquisition</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Subcontractor coordination</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Quality assurance</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Timeline management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="flooring">
+        <div class="container">
+            <div class="service-detail reverse">
+                <div class="service-detail-image fade-in">
+                    <img src="https://images.pexels.com/photos/4263067/pexels-photo-4263067.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Flooring Services">
+                </div>
+                <div class="service-detail-content fade-in fade-in-delay-1">
+                    <h3>Flooring Solutions</h3>
+                    <p>Transform your floors with our expert installation services. We work with all flooring types to create beautiful, durable surfaces.</p>
+                    <ul class="service-features">
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Hardwood installation</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Tile & stone flooring</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Laminate & vinyl</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Floor refinishing</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Subfloor preparation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>What Our Clients Say</h2>
+                <p>Don't just take our word for it - hear from our satisfied customers.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in fade-in-delay-1">
+                    <div class="stars">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="Star">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="Star">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="Star">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="Star">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="Star">
+                    </div>
+                    <p>"BuildingTec Solutions transformed our home with their exceptional roofing work. Professional, timely, and the quality is outstanding. Highly recommend!"</p>
+                    <div class="testimonial-author">Michael</div>
+                </div>
+                <div class="testimonial-card fade-in fade-in-delay-2">
+                    <div class="stars">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="Star">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="Star">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="Star">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="Star">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="Star">
+                    </div>
+                    <p>"The drywall work was flawless. Smooth finish, attention to detail, and they cleaned up perfectly after the job. Will definitely use them again."</p>
+                    <div class="testimonial-author">Sarah</div>
+                </div>
+                <div class="testimonial-card fade-in fade-in-delay-3">
+                    <div class="stars">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="Star">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="Star">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="Star">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="Star">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="Star">
+                    </div>
+                    <p>"Called them for an emergency plumbing issue and they responded quickly. Fixed the problem efficiently and at a fair price. Excellent service!"</p>
+                    <div class="testimonial-author">David</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Contact Us</h2>
+                <p>Ready to start your project? Get in touch with us today.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info fade-in">
+                    <h3>Get In Touch</h3>
+                    <div class="contact-item">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/phone.svg" alt="Phone">
+                        <div>
+                            <strong>Phone</strong><br>
+                            <a href="tel:+17788916773">(778) 891-6773</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/link.svg" alt="Facebook">
+                        <div>
+                            <strong>Facebook</strong><br>
+                            <a href="https://www.facebook.com/profile.php?id=61574096252587" target="_blank">Follow us on Facebook</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/users.svg" alt="Team">
+                        <div>
+                            <strong>Serving</strong><br>
+                            Richmond, BC and surrounding areas
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form fade-in fade-in-delay-1">
+                    <form onsubmit="return false;">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="Your phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Needed</label>
+                            <input type="text" id="service" placeholder="e.g., Roofing, Plumbing">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Tell us about your project"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Request Free Quote</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>BuildingTec Solutions</h3>
+                <p>Transform your environment with our expert construction services. Quality craftsmanship and attention to detail for all your contractor needs.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#roofing">Roofing</a></li>
+                    <li><a href="#drywall">Drywall</a></li>
+                    <li><a href="#plumbing">Plumbing</a></li>
+                    <li><a href="#electrical">Electrical</a></li>
+                    <li><a href="#contracting">General Contracting</a></li>
+                    <li><a href="#flooring">Flooring</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonials">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li>Richmond, BC Canada</li>
+                    <li><a href="tel:+17788916773">(778) 891-6773</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div>&copy; <span id="currentYear"></span> BuildingTec Solutions. All rights reserved.</div>
+            <div class="footer-attribution">Made with love by <a href="https://design.withviso.com">Viso Solutions</a></div>
+        </div>
+    </footer>
+    
+    <script>
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Mobile nav toggle
+        function toggleMobileNav() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.toggle('active');
+        }
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 120;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+        
+        // Sticky header shadow on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
+            } else {
+                header.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+            }
+        });
+    </script>
+</body>
+</html>
