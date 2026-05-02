@@ -594,7 +594,7 @@
         /* Contact */
         .contact-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             grid-template-rows: auto;
             gap: 2rem;
             max-width: 1100px;
@@ -1030,9 +1030,7 @@
         const mobileNav = document.getElementById('mobileNav');
         const toggleIcon = document.getElementById('toggleIcon');
 
-        window.addEventListener('scroll', () => {
-            header.classList.toggle('scrolled', window.scrollY > 50);
-        });
+        /* Removed unnecessary scroll handler - no .scrolled CSS exists */
 
         navToggle.addEventListener('click', () => {
             mobileNav.classList.toggle('active');
