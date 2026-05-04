@@ -680,6 +680,17 @@
             border: none;
         }
 
+        /* Mobile adjustments for hours */
+        @media (max-width: 767px) {
+            .hours-grid {
+                grid-template-columns: 1fr auto;
+                gap: 0.75rem 1.5rem;
+            }
+            .hours-grid dd {
+                text-align: left;
+            }
+        }
+
         /* Footer */
         footer {
             background: var(--dark);
