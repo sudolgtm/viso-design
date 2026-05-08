@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>West Kelowna Electric Inc. | Trusted Electrician in West Kelowna, BC</title>
+  <meta name="description" content="West Kelowna Electric Inc. - Professional residential and commercial electrical services in West Kelowna, BC. Owner-operated, fair pricing, 5-star service.">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #1a56db;
+      --primary-dark: #1344b0;
+      --primary-light: #e8eefb;
+      --accent: #f59e0b;
+      --text: #1f2937;
+      --text-light: #6b7280;
+      --bg: #ffffff;
+      --bg-alt: #f9fafb;
+      --border: #e5e7eb;
+      --radius: 12px;
+      --shadow: 0 4px 24px rgba(0,0,0,0.08);
+      --shadow-lg: 0 8px 40px rgba(0,0,0,0.12);
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font);
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    section[id] {
+      scroll-margin-top: 110px;
+    }
+
+    .sticky-head {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .claim-banner {
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .claim-banner a {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+    }
+
+    .claim-banner u {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow 0.3s;
+      height: 64px;
+    }
+
+    .header.scrolled {
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .logo img {
+      height: 36px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-cta {
+      background: var(--primary);
+      color: #fff !important;
+      padding: 8px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .nav-cta:hover {
+      background: var(--primary-dark) !important;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .mobile-nav {
+      display: none;
+      position: absolute;
+      top: 64px;
+      left: 0;
+      right: 0;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      padding: 16px 24px;
+    }
+
+    .mobile-nav.open {
+      display: block;
+    }
+
+    .mobile-nav a {
+      display: block;
+      padding: 12px 0;
+      text-decoration: none;
+      color: var(--text);
+      font-size: 16px;
+      font-weight: 500;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .mobile-nav a:last-child {
+      border-bottom: none;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('https://images.pexels.com/photos/7640990/pexels-photo-7640990.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=1920') center center / cover no-repeat;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.45) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 0 24px;
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 6vw, 64px);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      font-size: clamp(16px, 2.5vw, 20px);
+      opacity: 0.9;
+      margin-bottom: 32px;
+      line-height: 1.5;
+    }
+
+    .hero .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      padding: 16px 36px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .hero .btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    section {
+      padding: 80px 24px;
+    }
+
+    .section-label {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .section-sub {
+      font-size: 16px;
+      color: var(--text-light);
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .text-center .section-sub {
+      margin: 0 auto 48px;
+    }
+
+    .bg-alt {
+      background: var(--bg-alt);
+    }
+
+    /* Service alternating layout */
+    .service-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      margin-bottom: 80px;
+    }
+
+    .service-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .service-block.reverse .service-image {
+      order: 2;
+    }
+
+    .service-block.reverse .service-content {
+      order: 1;
+    }
+
+    .service-image {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .service-image img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .service-content {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .service-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .service-header img {
+      width: 32px;
+      height: 32px;
+      color: var(--primary);
+    }
+
+    .service-header h3 {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .service-content p {
+      font-size: 15px;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    .service-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .service-bullets li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    .service-bullets li img {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* Testimonials */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .testimonial-card {
+      background: var(--bg);
+      border-radius: var(--radius);
+      padding: 32px 24px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .testimonial-stars {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 12px;
+    }
+
+    .testimonial-stars img {
+      width: 18px;
+      height: 18px;
+      filter: brightness(0) saturate(100%) invert(76%) sepia(68%) saturate(642%) hue-rotate(359deg) brightness(103%) contrast(106%);
+    }
+
+    .testimonial-card blockquote {
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.7;
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .contact-info h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .contact-item img {
+      width: 24px;
+      height: 24px;
+      opacity: 0.8;
+    }
+
+    .contact-item .label {
+      font-size: 12px;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .contact-item .value {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .contact-item a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    .hours-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px 24px;
+      font-size: 14px;
+    }
+
+    .hours-grid .day {
+      color: var(--text-light);
+    }
+
+    .hours-grid .time {
+      font-weight: 500;
+      text-align: right;
+    }
+
+    .map-container {
+      margin-top: 24px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .map-container iframe {
+      display: block;
+    }
+
+    .footer {
+      background: #111827;
+      color: #9ca3af;
+      padding: 48px 24px 32px;
+      text-align: center;
+    }
+
+    .footer-brand {
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .footer p {
+      font-size: 14px;
+    }
+
+    .footer-divider {
+      width: 60px;
+      height: 2px;
+      background: var(--primary);
+      margin: 24px auto;
+      border: none;
+    }
+
+    .footer-attribution {
+      font-size: 13px;
+      margin-top: 16px;
+      color: #6b7280;
+    }
+
+    .footer-attribution a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .footer-attribution a:hover {
+      text-decoration: underline;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .hours-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      section {
+        padding: 56px 20px;
+      }
+      .claim-banner {
+        font-size: 12px;
+        padding: 8px 16px;
+      }
+      .service-block {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-bottom: 56px;
+      }
+      .service-block.reverse .service-image {
+        order: 0;
+      }
+      .service-block.reverse .service-content {
+        order: 0;
+      }
+      .service-image img {
+        height: 240px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        min-height: 70vh;
+      }
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sticky-head">
+    <header class="header" id="header">
+      <div class="header-inner">
+        <a href="#" class="logo">
+          <img src="https://unpkg.com/lucide-static@latest/icons/zap.svg" alt="West Kelowna Electric Inc." style="height: 32px; width: 32px;">
+          <span>West Kelowna Electric</span>
+        </a>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+          </ul>
+          <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+            <img src="https://unpkg.com/lucide-static@latest/icons/menu.svg" width="24" height="24" alt="Menu">
+          </button>
+        </nav>
+      </div>
+      <div class="mobile-nav" id="mobileNav">
+        <a href="#services" class="mobile-link">Services</a>
+        <a href="#testimonials" class="mobile-link">Testimonials</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+        <a href="#contact" class="mobile-link">Get a Quote</a>
+      </div>
+    </header>
+    <div class="claim-banner">
+      <a href="https://design.withviso.com" target="_blank" rel="noopener">
+        Hi West Kelowna Electric! Do you like the website? <u>Contact us to make it yours</u>
+      </a>
+    </div>
+  </div>
+
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content fade-in">
+      <h1>Trusted Electrical Services in West Kelowna</h1>
+      <p>Owner-operated, reliable, and professional — we bring expert electrical work with fair pricing and a personal touch. Residential, commercial, and emergency services.</p>
+      <a href="#contact" class="btn">Get Your Free Quote</a>
+    </div>
+  </section>
+
+  <section id="services" class="bg-alt">
+    <div class="container text-center">
+      <div class="section-label">Our Services</div>
+      <h2 class="section-title">Full-Service Electrical Work</h2>
+      <p class="section-sub">From small repairs to full renovations, we handle all your electrical needs with care, precision, and professional craftsmanship.</p>
+    </div>
+    <div class="container" style="margin-top: 48px;">
+
+      <!-- Service 1: Residential Electrical -->
+      <div class="service-block fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/31737859/pexels-photo-31737859.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=1260" alt="Modern home exterior illuminated with outdoor lighting at night" loading="lazy">
+        </div>
+        <div class="service-content">
+          <div class="service-header">
+            <img src="https://unpkg.com/lucide-static@latest/icons/home.svg" alt="">
+            <h3>Residential Electrical</h3>
+          </div>
+          <p>Complete electrical services for your home — from new construction wiring to panel upgrades and renovations. We ensure every job is safe, code-compliant, and built to last.</p>
+          <ul class="service-bullets">
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> New construction wiring and rewiring</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Electrical panel upgrades and replacements</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Basement suite wiring for renovations</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Lighting installation and outlet repairs</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Service 2: Commercial Electrical -->
+      <div class="service-block reverse fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/27626696/pexels-photo-27626696.png?auto=compress&cs=tinysrgb&dpr=2&w=1260" alt="Modern cafe interior with finished electrical lighting" loading="lazy">
+        </div>
+        <div class="service-content">
+          <div class="service-header">
+            <img src="https://unpkg.com/lucide-static@latest/icons/building.svg" alt="">
+            <h3>Commercial Electrical</h3>
+          </div>
+          <p>Reliable electrical solutions for your business. We understand that downtime costs money — we work efficiently to get your commercial space powered and ready.</p>
+          <ul class="service-bullets">
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Cafe and restaurant electrical installations</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Salon and retail space wiring</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Commercial lighting and power solutions</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> New construction and renovation wiring</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Service 3: Electrical Inspections -->
+      <div class="service-block fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/8293680/pexels-photo-8293680.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=1260" alt="Home inspector holding a checklist on a clipboard" loading="lazy">
+        </div>
+        <div class="service-content">
+          <div class="service-header">
+            <img src="https://unpkg.com/lucide-static@latest/icons/clipboard-check.svg" alt="">
+            <h3>Electrical Inspections</h3>
+          </div>
+          <p>Thorough home electrical inspections for insurance companies, older home assessments, and safety code compliance. We provide clear, honest reports you can rely on.</p>
+          <ul class="service-bullets">
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Insurance-required home inspections</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Older home electrical safety assessments</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Code compliance and safety checks</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Detailed reports with recommendations</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Service 4: Emergency Service -->
+      <div class="service-block reverse fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/8488037/pexels-photo-8488037.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=1260" alt="Yellow hard hat and red gloves on a construction site" loading="lazy">
+        </div>
+        <div class="service-content">
+          <div class="service-header">
+            <img src="https://unpkg.com/lucide-static@latest/icons/alert-triangle.svg" alt="">
+            <h3>Emergency Service</h3>
+          </div>
+          <p>When electrical emergencies strike, we respond fast. Available 24/7 for urgent electrical issues — because some problems can't wait until morning.</p>
+          <ul class="service-bullets">
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Fast response for urgent electrical issues</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Power outage troubleshooting and repairs</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Exposed wiring and hazard resolution</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Available 24 hours, 7 days a week</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Service 5: Lighting Design & Installation -->
+      <div class="service-block fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/14186868/pexels-photo-14186868.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=1260" alt="Modern geometric ceiling lamps" loading="lazy">
+        </div>
+        <div class="service-content">
+          <div class="service-header">
+            <img src="https://unpkg.com/lucide-static@latest/icons/lightbulb.svg" alt="">
+            <h3>Lighting Design & Installation</h3>
+          </div>
+          <p>Transform your space with custom lighting solutions. From cozy indoor ambiance to bright outdoor security lighting, we help you design and install the perfect setup.</p>
+          <ul class="service-bullets">
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Indoor and outdoor lighting installation</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Bathroom light and fan combinations</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Energy-efficient LED upgrades</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Custom lighting design recommendations</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Service 6: Troubleshooting & Repairs -->
+      <div class="service-block reverse fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/10185562/pexels-photo-10185562.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=1260" alt="Digital multimeter for electrical troubleshooting" loading="lazy">
+        </div>
+        <div class="service-content">
+          <div class="service-header">
+            <img src="https://unpkg.com/lucide-static@latest/icons/wrench.svg" alt="">
+            <h3>Troubleshooting & Repairs</h3>
+          </div>
+          <p>Got an electrical problem? We diagnose the issue quickly and fix it right the first time. No guesswork, no unnecessary repairs — just honest, expert service.</p>
+          <ul class="service-bullets">
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Power outlet and switch repairs</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Circuit breaker diagnostics and fixes</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> General electrical troubleshooting</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Fixture replacement and maintenance</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <div class="container text-center">
+      <div class="section-label">Testimonials</div>
+      <h2 class="section-title">What Our Customers Say</h2>
+      <p class="section-sub">Don't just take our word for it — hear from the people we've helped.</p>
+    </div>
+    <div class="container testimonials-grid fade-in">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+          <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+          <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+          <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+          <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+        </div>
+        <blockquote>"I can't say enough good things about my experience with Stuart and West Kelowna Electric. He is knowledgable, has excellent communication, charges fair rates, and is extremely friendly. Stuart owns the business and is the one who does the work, so you just deal with one reliable person. West Kelowna Electric is the only electrician I'll be using moving forward."</blockquote>
+        <div class="testimonial-author">— Stirling</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+          <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+          <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+          <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+          <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+        </div>
+        <blockquote>"Stuart is bar none the most conscientious, talented and courteous young gentleman I've ever had the pleasure of working with. He is absolutely the only person I would call with any electrical needs. He covers every scenario, and does things safely, efficiently and top notch. 110% recommended!"</blockquote>
+        <div class="testimonial-author">— James</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+          <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+          <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+          <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+          <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+        </div>
+        <blockquote>"I'm so tired of electricians giving me insanely high quotes for the things I needed done on my rental properties. Not only that, they were never too friendly or personable. Stuart with West Kelowna Electric went above and beyond for my family. Incredibly fair rates and honestly one of the most friendliest humans you'll meet."</blockquote>
+        <div class="testimonial-author">— Chris</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="bg-alt">
+    <div class="container text-center">
+      <div class="section-label">Get in Touch</div>
+      <h2 class="section-title">Ready to Get Started?</h2>
+      <p class="section-sub">Call or text us today for a free quote. We serve West Kelowna and the surrounding Okanagan area.</p>
+    </div>
+    <div class="container contact-grid fade-in">
+      <div class="contact-info">
+        <h3>Information</h3>
+        <div class="contact-item">
+          <img src="https://unpkg.com/lucide-static@latest/icons/phone.svg" alt="">
+          <div>
+            <div class="label">Phone</div>
+            <div class="value"><a href="tel:2509380040">(250) 938-0040</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <img src="https://unpkg.com/lucide-static@latest/icons/map-pin.svg" alt="">
+          <div>
+            <div class="label">Service Area</div>
+            <div class="value">West Kelowna, BC & surrounding Okanagan Valley</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="">
+          <div>
+            <div class="label">Hours</div>
+            <div class="value">Open 24 hours, 7 days a week</div>
+          </div>
+        </div>
+      </div>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d82319.2379189427!2d-119.69923548593417!3d49.852299147644295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537df5458af714af%3A0x110cc167dd3028d4!2sWest%20Kelowna%2C%20BC!5e0!3m2!1sen!2sca!4v1778197847296!5m2!1sen!2sca" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-brand">West Kelowna Electric Inc.</div>
+      <p>Trusted electrical services for West Kelowna and the Okanagan Valley.</p>
+      <hr class="footer-divider">
+      <p>&copy; <span id="year"></span> West Kelowna Electric Inc. All rights reserved.</p>
+      <div class="footer-attribution">
+        Made with love by <a href="https://design.withviso.com" target="_blank" rel="noopener">Viso Solutions</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      const header = document.getElementById('header');
+      let ticking = false;
+      window.addEventListener('scroll', function() {
+        if (!ticking) {
+          requestAnimationFrame(function() {
+            header.classList.toggle('scrolled', window.scrollY > 20);
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+
+      const menuToggle = document.getElementById('menuToggle');
+      const mobileNav = document.getElementById('mobileNav');
+      menuToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        mobileNav.classList.toggle('open');
+        const isOpen = mobileNav.classList.contains('open');
+        menuToggle.innerHTML = isOpen
+          ? '<img src="https://unpkg.com/lucide-static@latest/icons/x.svg" width="24" height="24" alt="Close">'
+          : '<img src="https://unpkg.com/lucide-static@latest/icons/menu.svg" width="24" height="24" alt="Menu">';
+      });
+
+      document.querySelectorAll('.mobile-link').forEach(function(link) {
+        link.addEventListener('click', function() {
+          mobileNav.classList.remove('open');
+          menuToggle.innerHTML = '<img src="https://unpkg.com/lucide-static@latest/icons/menu.svg" width="24" height="24" alt="Menu">';
+        });
+      });
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      document.querySelectorAll('.fade-in').forEach(function(el) {
+        observer.observe(el);
+      });
+
+      window.addEventListener('resize', function() {
+        if (window.innerWidth > 768 && mobileNav.classList.contains('open')) {
+          mobileNav.classList.remove('open');
+          menuToggle.innerHTML = '<img src="https://unpkg.com/lucide-static@latest/icons/menu.svg" width="24" height="24" alt="Menu">';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

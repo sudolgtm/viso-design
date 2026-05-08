@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entec Electric Inc - Professional Electrical Services in Kelowna</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="logo.png" rel="icon">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #333; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+    /* Header */
+    header { position: fixed; top: 0; width: 100%; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 1000; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
+    .logo { display: flex; align-items: center; gap: 10px; font-size: 1.5rem; font-weight: 700; color: #1a365d; }
+    .logo img { height: 40px; }
+    .nav-links { display: flex; gap: 30px; list-style: none; }
+    .nav-links a { text-decoration: none; color: #333; font-weight: 500; transition: color 0.3s; }
+    .nav-links a:hover { color: #2563eb; }
+    .mobile-toggle { display: none; font-size: 24px; cursor: pointer; }
+
+    /* Claim Banner */
+    .claim-banner { background: #2563eb; color: white; text-align: center; padding: 10px; margin-top: 70px; position: sticky; top: 70px; z-index: 999; }
+    .claim-banner a { color: white; text-decoration: underline; }
+
+    /* Hero */
+    .hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; position: relative; }
+    .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://images.pexels.com/photos/6980702/pexels-photo-6980702.jpeg?auto=compress&cs=tinysrgb&w=1200') center/cover; }
+    .hero-content { position: relative; z-index: 2; color: white; max-width: 800px; padding: 20px; }
+    .hero h1 { font-size: 3rem; font-weight: 700; margin-bottom: 20px; }
+    .hero p { font-size: 1.25rem; margin-bottom: 30px; opacity: 0.9; }
+    .cta-button { display: inline-block; background: #2563eb; color: white; padding: 15px 40px; border-radius: 5px; text-decoration: none; font-weight: 600; transition: background 0.3s; }
+    .cta-button:hover { background: #1d4ed8; }
+
+    /* Sections */
+    section { padding: 80px 0; }
+    .section-title { text-align: center; font-size: 2.5rem; font-weight: 700; margin-bottom: 50px; color: #1a365d; }
+    .section-subtitle { text-align: center; font-size: 1.1rem; color: #666; margin-top: -30px; margin-bottom: 50px; }
+
+    /* Service Detail Blocks */
+    .service-block { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; padding: 50px 0; }
+    .service-block + .service-block { border-top: 1px solid #e5e7eb; }
+    .service-block.reverse .service-image { order: 1; }
+    .service-block.reverse .service-text { order: 2; }
+    .service-text .service-header { display: flex; align-items: center; gap: 12px; margin-bottom: 15px; }
+    .service-text .service-header img { width: 32px; height: 32px; }
+    .service-text .service-header h3 { font-size: 1.5rem; color: #1a365d; font-weight: 600; }
+    .service-text > p { color: #555; margin-bottom: 20px; font-size: 1rem; line-height: 1.7; }
+    .service-text ul { list-style: none; padding: 0; }
+    .service-text ul li { padding: 8px 0; display: flex; align-items: center; gap: 10px; color: #444; font-size: 0.95rem; }
+    .service-text ul li img { width: 20px; height: 20px; flex-shrink: 0; }
+    .service-image { width: 100%; height: 320px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
+    .service-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+
+    /* Testimonials */
+    .testimonials { position: relative; }
+    .testimonials-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(249,250,251,0.97), rgba(249,250,251,0.97)), url('https://images.pexels.com/photos/4496282/pexels-photo-4496282.jpeg?auto=compress&cs=tinysrgb&w=1200') center/cover fixed; }
+    .testimonials > .container { position: relative; z-index: 2; }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+    .testimonial-card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+    .stars { color: #fbbf24; font-size: 1.25rem; margin-bottom: 15px; }
+    .testimonial-card p { font-style: italic; margin-bottom: 15px; color: #555; }
+    .testimonial-card .name { font-weight: 600; color: #1a365d; }
+
+    /* Contact */
+    .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+    .contact-info h3 { margin-bottom: 20px; color: #1a365d; }
+    .contact-item { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
+    .contact-item img { width: 24px; height: 24px; flex-shrink: 0; }
+    .hours-box { background: #f9fafb; padding: 20px; border-radius: 8px; margin-top: 25px; }
+    .hours-box h3 { margin-bottom: 15px; }
+    .hours-row { display: flex; justify-content: space-between; padding: 5px 0; }
+    .hours-row .day { font-weight: 500; }
+    .hours-row .time { color: #666; }
+
+    /* Footer */
+    footer { background: #1a365d; color: white; padding: 40px 0; text-align: center; }
+    .footer-content { border-top: 1px solid rgba(255,255,255,0.2); padding-top: 20px; margin-top: 20px; font-size: 0.875rem; }
+    .footer-content a { color: white; }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .nav-links { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: white; flex-direction: column; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+      .nav-links.active { display: flex; }
+      .mobile-toggle { display: block; }
+      .hero h1 { font-size: 2rem; }
+      .section-title { font-size: 2rem; }
+      .service-block { grid-template-columns: 1fr; gap: 30px; padding: 30px 0; }
+      .service-block.reverse .service-image { order: 0; }
+      .service-block.reverse .service-text { order: 0; }
+      .service-image { height: 220px; }
+    }
+
+    /* Nav scroll offset */
+    section[id] { scroll-margin-top: 120px; }
+
+    /* Animations */
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <img src="logo.png" alt="Entec Electric">
+          Entec Electric Inc
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-toggle" onclick="toggleMenu()">☰</div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="claim-banner">
+    <a href="https://design.withviso.com" style="text-decoration: none; color: inherit;">Hi Entec Electric! Do you like the website? <u>Contact us to make it yours</u></a>
+  </div>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <h1>Professional Electrical Services in Kelowna</h1>
+      <p>Service above all else! With over 25 years of industry experience, our team provides affordable electrical services and products on time and within budget.</p>
+      <a href="#contact" class="cta-button">Get a Free Quote</a>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title fade-in">Our Services</h2>
+      <p class="section-subtitle fade-in">Comprehensive electrical solutions for residential and commercial clients across the Okanagan Valley</p>
+
+      <div class="service-block reverse fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/3615711/pexels-photo-3615711.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Residential electrical service" loading="lazy">
+        </div>
+        <div class="service-text">
+          <div class="service-header">
+            <img src="https://unpkg.com/lucide-static@latest/icons/home.svg" alt="">
+            <h3>Residential Services</h3>
+          </div>
+          <p>Complete electrical solutions for your home. From new wiring and panel upgrades to lighting installation and safety corrections, we ensure your home is powered safely and efficiently. Our team treats every home with respect, leaving it clean and tidy after every job.</p>
+          <ul>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> New home wiring and rough-ins</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Panel upgrades and replacements</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Smart home technology: Lutron, Google Nest, Sonos</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Home safety inspections and wiring corrections</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-block fade-in">
+        <div class="service-text">
+          <div class="service-header">
+            <img src="https://unpkg.com/lucide-static@latest/icons/building-2.svg" alt="">
+            <h3>Commercial Services</h3>
+          </div>
+          <p>Professional electrical contracting for businesses and commercial properties across the Okanagan. We specialize in electrical work for wineries, breweries, restaurants, and cafés — handling projects of any scale with minimal disruption, delivering code-compliant work on time and within budget.</p>
+          <ul>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Wineries, breweries, and restaurant electrical</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Commercial tenant improvements</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Office and retail wiring</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Marina and boat dock electrical</li>
+          </ul>
+        </div>
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/9679179/pexels-photo-9679179.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Commercial electrical service" loading="lazy">
+        </div>
+      </div>
+
+      <div class="service-block reverse fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/30144993/pexels-photo-30144993.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Electrical installations and repairs" loading="lazy">
+        </div>
+        <div class="service-text">
+          <div class="service-header">
+            <img src="https://unpkg.com/lucide-static@latest/icons/wrench.svg" alt="">
+            <h3>Installations & Repairs</h3>
+          </div>
+          <p>Expert installation and reliable repair services for all your electrical needs. Whether you need a new appliance wired in or a faulty circuit diagnosed, our experienced technicians respond quickly and get the job done right the first time.</p>
+          <ul>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Appliance and fixture installation</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Electrical troubleshooting and repair</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Breaker and fuse replacements</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Emergency electrical service</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-block fade-in">
+        <div class="service-text">
+          <div class="service-header">
+            <img src="https://unpkg.com/lucide-static@latest/icons/lightbulb.svg" alt="">
+            <h3>Lighting Fixtures</h3>
+          </div>
+          <p>Professional lighting installation, fixture upgrades, and custom lighting solutions to enhance the comfort and aesthetics of your space. We supply and install quality fixtures that match your style and budget — from indoor ambiance to outdoor landscape and pool lighting.</p>
+          <ul>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Indoor and outdoor lighting installation</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Pool, hot tub, and landscape lighting</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Fixture upgrades and replacements</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Recessed, track, and security lighting</li>
+          </ul>
+        </div>
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/7228846/pexels-photo-7228846.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Lighting fixture installation" loading="lazy">
+        </div>
+      </div>
+
+      <div class="service-block reverse fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/6412539/pexels-photo-6412539.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Renovation electrical wiring" loading="lazy">
+        </div>
+        <div class="service-text">
+          <div class="service-header">
+            <img src="https://unpkg.com/lucide-static@latest/icons/zap.svg" alt="">
+            <h3>Renovation Wiring</h3>
+          </div>
+          <p>Complete electrical wiring for home renovations and upgrades. We work alongside your renovation team to deliver seamless, code-compliant electrical work that integrates perfectly with your new space.</p>
+          <ul>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Kitchen and bathroom rewiring</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Basement and addition wiring</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> New circuit installations</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Renovation permit inspections</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-block fade-in">
+        <div class="service-text">
+          <div class="service-header">
+            <img src="https://unpkg.com/lucide-static@latest/icons/settings.svg" alt="">
+            <h3>Service Upgrades</h3>
+          </div>
+          <p>Electrical panel upgrades, service maintenance, and safety improvements. We bring older electrical systems up to modern standards, ensuring your home or business has the capacity to handle today's power demands.</p>
+          <ul>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> 100 to 200 amp panel upgrades</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Service entrance replacements</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Surge protection installation</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Electrical system maintenance</li>
+          </ul>
+        </div>
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Electrical panel upgrade" loading="lazy">
+        </div>
+      </div>
+
+      <div class="service-block reverse fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/8488029/pexels-photo-8488029.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Electrical tools and safety equipment" loading="lazy">
+        </div>
+        <div class="service-text">
+          <div class="service-header">
+            <img src="https://unpkg.com/lucide-static@latest/icons/shield.svg" alt="">
+            <h3>Wiring Corrections & Safety Improvements</h3>
+          </div>
+          <p>We specialize in identifying and correcting hazardous wiring issues. Our team thoroughly inspects your electrical system and makes all necessary corrections to ensure your property is safe, code-compliant, and built to last.</p>
+          <ul>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Faulty wiring identification and repair</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Code compliance upgrades</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Safety inspection and testing</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Older home rewiring services</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="testimonials">
+    <div class="testimonials-bg"></div>
+    <div class="container">
+      <h2 class="section-title fade-in">What Our Clients Say</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-in">
+          <div class="stars">★★★★★</div>
+          <p>"I was thoroughly impressed with this company. If I could, I would give them a 10-star rating. The communication was excellent, and the work was completed quickly and efficiently."</p>
+          <div class="name">- Sonja H.</div>
+        </div>
+        <div class="testimonial-card fade-in">
+          <div class="stars">★★★★★</div>
+          <p>"I'm in the construction industry and whenever I need to recommend an electrician to my clients I only give them Entec's number. Reliable, fair, and honest are 3 major qualities I look for in other trades; Anthony and his crews exemplify every one of them."</p>
+          <div class="name">- Logan H.</div>
+        </div>
+        <div class="testimonial-card fade-in">
+          <div class="stars">★★★★★</div>
+          <p>"AMAZING COMPANY!! Family owned, and very invested in their work, and quality! You will not be disappointed!"</p>
+          <div class="name">- Asia M.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title fade-in">Contact & Hours</h2>
+      <div class="contact-grid">
+        <div class="contact-info fade-in">
+          <h3>Get In Touch</h3>
+          <div class="contact-item">
+            <img src="https://unpkg.com/lucide-static@latest/icons/map-pin.svg" alt="Address">
+            <div>
+              <strong>Address:</strong><br>
+              1943 Abel St, West Kelowna, BC V1Z 3C6
+            </div>
+          </div>
+          <div class="contact-item">
+            <img src="https://unpkg.com/lucide-static@latest/icons/phone.svg" alt="Phone">
+            <div>
+              <strong>Phone:</strong><br>
+              (250) 300-5110
+            </div>
+          </div>
+
+          <div class="hours-box">
+            <h3>Business Hours</h3>
+            <div class="hours-row"><span class="day">Mon - Fri</span><span class="time">8:00 a.m. - 4:30 p.m.</span></div>
+            <div class="hours-row"><span class="day">Saturday</span><span class="time">Closed</span></div>
+            <div class="hours-row"><span class="day">Sunday</span><span class="time">Closed</span></div>
+          </div>
+        </div>
+        <div class="fade-in">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2570.9922348533714!2d-119.53054979999999!3d49.8801724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537df4c4303e4fc1%3A0x62d979518c9a9945!2s1943%20Abel%20St%2C%20Kelowna%2C%20BC%20V1Z%203C6!5e0!3m2!1sen!2sca!4v1778184405279!5m2!1sen!2sca"
+            width="100%"
+            height="300"
+            style="border:0; border-radius:10px;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div>&copy; <span id="currentYear"></span> Entec Electric Inc. All rights reserved.</div>
+      <div class="footer-content">
+        Made with love by <a href="https://design.withviso.com">Viso Solutions</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('active');
+    }
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('active');
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
