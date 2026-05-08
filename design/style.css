@@ -9,7 +9,7 @@
   --spacing-3xl: 3rem;
   --spacing-4xl: 4rem;
   --color-accent: #FF6B6B;
-  --color-border: #bfc6cc;
+  --color-border: #dde3e7;
   --font-size-lg: clamp(1.05rem, 1.6vw, 1.25rem);
   --font-size-sm: clamp(0.8rem, 1.1vw, 0.95rem);
   --font-size-xl: clamp(1.25rem, 2.2vw, 1.6rem);
@@ -19,7 +19,7 @@
   --color-overlay: color-mix(in oklab, #000000 40%, transparent);
   --color-primary: #5ebc67;
   --color-surface: #ffffff;
-  --divider-value: 2px solid var(--color-border);
+  --divider-value: 1px solid var(--color-border);
   --font-size-2xl: clamp(1.6rem, 3.2vw, 2rem);
   --font-size-3xl: clamp(2.2rem, 4.6vw, 2.8rem);
   --font-size-4xl: clamp(3rem, 6.5vw, 4.2rem);
@@ -1377,11 +1377,12 @@
  
 .step-number {
   display: block;
-  opacity: 0.1;
+  opacity: 0.2;
   font-size: var(--font-size-4xl);
   font-weight: 800;
   line-height: 1;
   margin-bottom: -1.5rem;
+  color: var(--color-primary);
 }
  
 

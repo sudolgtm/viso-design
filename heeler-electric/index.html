@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heeler Electric | Trusted Electrician in Kelowna</title>
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TBD8TFCF');</script>
+  <!-- End Google Tag Manager -->
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #1e293b;
+      line-height: 1.6;
+      background: #fff;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    section[id] {
+      scroll-margin-top: 100px;
+    }
+
+    /* --- Sticky Wrapper --- */
+    .sticky-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    /* --- Header --- */
+    header {
+      position: relative;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 14px;
+      padding-bottom: 14px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 22px;
+      font-weight: 800;
+      color: #1e293b;
+    }
+
+    .logo img {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    nav a {
+      font-size: 15px;
+      font-weight: 500;
+      color: #475569;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #ea580c;
+    }
+
+    .nav-cta {
+      background: #ea580c;
+      color: #fff !important;
+      padding: 10px 22px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: background 0.2s;
+    }
+
+    .nav-cta:hover {
+      background: #c2410c !important;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    /* --- Claim Banner --- */
+    .claim-banner {
+      background: #1e293b;
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+      padding: 12px 16px;
+      font-size: 14px;
+      font-weight: 500;
+      display: block;
+      transition: background 0.3s;
+    }
+
+    header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 14px;
+      padding-bottom: 14px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 22px;
+      font-weight: 800;
+      color: #1e293b;
+    }
+
+    .logo img {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    nav a {
+      font-size: 15px;
+      font-weight: 500;
+      color: #475569;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #ea580c;
+    }
+
+    .nav-cta {
+      background: #ea580c;
+      color: #fff !important;
+      padding: 10px 22px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: background 0.2s;
+    }
+
+    .nav-cta:hover {
+      background: #c2410c !important;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    /* --- Hero --- */
+    .hero {
+      position: relative;
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('https://images.pexels.com/photos/4981794/pexels-photo-4981794.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1080&w=1920') center center / cover no-repeat;
+      z-index: -1;
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 span {
+      color: #f97316;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.85);
+      max-width: 640px;
+      margin: 0 auto 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 32px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 16px;
+      transition: all 0.25s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: #f97316;
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #ea580c;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(249, 115, 22, 0.35);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #fff;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .btn-outline:hover {
+      border-color: #fff;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* --- Section common --- */
+    section {
+      padding: 100px 0;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #ea580c;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-size: 38px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 16px;
+    }
+
+    .section-desc {
+      font-size: 18px;
+      color: #64748b;
+      max-width: 640px;
+      margin-bottom: 48px;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .mx-auto {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* --- Services Alternating --- */
+    #services {
+      background: #f8fafc;
+    }
+
+    .service-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      margin-bottom: 80px;
+    }
+
+    .service-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .service-block.right .service-content {
+      order: -1;
+    }
+
+    .service-image {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-image img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .service-content .icon {
+      margin-bottom: 14px;
+    }
+
+    .service-content .icon img {
+      width: 32px;
+      height: 32px;
+      filter: brightness(0) saturate(100%) invert(31%) sepia(86%) saturate(2489%) hue-rotate(11deg) brightness(96%) contrast(101%);
+    }
+
+    .service-content h3 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #0f172a;
+    }
+
+    .service-content > p {
+      font-size: 16px;
+      color: #64748b;
+      margin-bottom: 16px;
+    }
+
+    .service-content ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .service-content ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 15px;
+      color: #334155;
+      margin-bottom: 8px;
+    }
+
+    .service-content ul li::before {
+      content: '';
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      margin-top: 3px;
+      background: url('https://unpkg.com/lucide-static@latest/icons/check-circle.svg') center center / contain no-repeat;
+    }
+
+    /* --- Testimonials --- */
+    #testimonials {
+      background: #fff;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 28px;
+    }
+
+    .testimonial-card {
+      background: #f8fafc;
+      padding: 32px;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .testimonial-card .stars {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 14px;
+    }
+
+    .testimonial-card .stars img {
+      width: 18px;
+      height: 18px;
+      filter: brightness(0) saturate(100%) invert(76%) sepia(68%) saturate(642%) hue-rotate(359deg) brightness(103%) contrast(106%);
+    }
+
+    .testimonial-card blockquote {
+      font-size: 16px;
+      color: #334155;
+      font-style: italic;
+      margin-bottom: 18px;
+      line-height: 1.7;
+    }
+
+    .testimonial-card .author {
+      font-weight: 700;
+      font-size: 15px;
+      color: #0f172a;
+    }
+
+    .testimonial-card .role {
+      font-size: 13px;
+      color: #94a3b8;
+    }
+
+    /* --- Contact --- */
+    #contact {
+      background: #1e293b;
+      color: #fff;
+    }
+
+    #contact .section-label {
+      color: #f97316;
+    }
+
+    #contact .section-title {
+      color: #fff;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .contact-info h3 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .contact-item img {
+      width: 22px;
+      height: 22px;
+      margin-top: 3px;
+      filter: brightness(0) invert(1);
+    }
+
+    .contact-item p {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .contact-item strong {
+      display: block;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 2px;
+    }
+
+    .hours-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 24px;
+      margin-top: 12px;
+    }
+
+    .hours-grid .day {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 15px;
+    }
+
+    .hours-grid .time {
+      color: #fff;
+      font-weight: 500;
+      font-size: 15px;
+      text-align: right;
+    }
+
+    .hours-grid .closed .time {
+      color: #fca5a5;
+    }
+
+    .map-container {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 340px;
+      border: 0;
+      display: block;
+    }
+
+    /* --- Footer --- */
+    footer {
+      background: #0f172a;
+      color: rgba(255, 255, 255, 0.7);
+      padding: 48px 0 32px;
+      text-align: center;
+    }
+
+    footer .footer-logo {
+      font-size: 20px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    footer p {
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    footer .copyright {
+      margin-top: 12px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    footer .attribution {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    footer .attribution a {
+      color: #f97316;
+      font-weight: 500;
+    }
+
+    footer .attribution a:hover {
+      text-decoration: underline;
+    }
+
+    /* --- Fade-in animation --- */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* --- Mobile --- */
+    @media (max-width: 900px) {
+      .service-block {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-bottom: 56px;
+      }
+
+      .service-block.right .service-content {
+        order: 0;
+      }
+
+      .service-block.right .service-image {
+        order: 0;
+      }
+
+      .service-image img {
+        height: 240px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .section-title {
+        font-size: 30px;
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        padding: 20px 24px;
+        border-bottom: 1px solid #e2e8f0;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        gap: 16px;
+      }
+
+      nav.open {
+        display: flex;
+      }
+
+      nav a {
+        font-size: 17px;
+      }
+
+      .nav-cta {
+        text-align: center;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hours-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 28px;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+
+      .service-image img {
+        height: 200px;
+      }
+
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .hours-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBD8TFCF"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div class="sticky-wrapper">
+    <header>
+      <div class="container">
+        <a href="#" class="logo">
+          <img src="/logo.png" alt="Heeler Electric" onerror="this.style.display='none'">
+          Heeler Electric
+        </a>
+        <button class="menu-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+          <img src="https://unpkg.com/lucide-static@latest/icons/menu.svg" width="28" height="28" alt="Menu">
+        </button>
+        <nav id="navbar">
+          <a href="#services" onclick="closeNav()">Services</a>
+          <a href="#testimonials" onclick="closeNav()">Testimonials</a>
+          <a href="#contact" onclick="closeNav()" class="nav-cta">Get a Quote</a>
+        </nav>
+      </div>
+    </header>
+
+    <a href="https://design.withviso.com" class="claim-banner" target="_blank">
+      Hi Heeler Electric! Do you like the website? <u>Contact us to make it yours</u>
+    </a>
+  </div>
+
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <h1>Quality <span>Electrical</span> Work You Can Trust</h1>
+      <p>Safe, code-compliant electrical work for your home or strata. Reliable service you can count on — every time.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary">
+          <img src="https://unpkg.com/lucide-static@latest/icons/phone.svg" width="20" height="20" alt="" style="filter: brightness(0) invert(1);">
+          Call (250) 861-6112
+        </a>
+        <a href="#services" class="btn btn-outline">Our Services</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">What We Do</span>
+        <h2 class="section-title">Electrical Services</h2>
+        <p class="section-desc mx-auto">From minor repairs to full electrical upgrades, we handle it all with safety and precision.</p>
+      </div>
+
+      <!-- Service 1 - Photo Left -->
+      <div class="service-block fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/28942196/pexels-photo-28942196.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Electrical panel upgrade" loading="lazy">
+        </div>
+        <div class="service-content">
+          <div class="icon"><img src="https://unpkg.com/lucide-static@latest/icons/zap.svg" alt=""></div>
+          <h3>Electrical Repairs &amp; Panel Upgrades</h3>
+          <p>Fast, reliable troubleshooting and repairs for all electrical issues. From flickering lights to full panel upgrades.</p>
+          <ul>
+            <li>Diagnose and repair faulty outlets, switches, and wiring</li>
+            <li>Electrical panel upgrades for increased capacity and safety</li>
+            <li>Service changes and breaker replacements</li>
+            <li>Emergency electrical troubleshooting</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Service 2 - Photo Right -->
+      <div class="service-block right fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/7031407/pexels-photo-7031407.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Lighting installation" loading="lazy">
+        </div>
+        <div class="service-content">
+          <div class="icon"><img src="https://unpkg.com/lucide-static@latest/icons/lightbulb.svg" alt=""></div>
+          <h3>Lighting &amp; Wiring</h3>
+          <p>Professional lighting and wiring solutions for interior and exterior spaces, new builds, and renovations.</p>
+          <ul>
+            <li>Interior and exterior lighting installation</li>
+            <li>Attic wiring and low-voltage systems</li>
+            <li>New circuit installation for renovations and additions</li>
+            <li>Landscape and accent lighting</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Service 3 - Photo Left -->
+      <div class="service-block fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/7937307/pexels-photo-7937307.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Electrical wiring renovation" loading="lazy">
+        </div>
+        <div class="service-content">
+          <div class="icon"><img src="https://unpkg.com/lucide-static@latest/icons/plug.svg" alt=""></div>
+          <h3>Outlet &amp; Switch Installation</h3>
+          <p>New installations, upgrades, and relocations to meet modern electrical needs throughout your home.</p>
+          <ul>
+            <li>New outlet and switch installation</li>
+            <li>GFCI and AFCI protected outlet upgrades</li>
+            <li>Outlet relocation for renovations and remodels</li>
+            <li>USB outlet and modern device integration</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Service 4 - Photo Right -->
+      <div class="service-block right fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/8488037/pexels-photo-8488037.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Electrical safety inspection" loading="lazy">
+        </div>
+        <div class="service-content">
+          <div class="icon"><img src="https://unpkg.com/lucide-static@latest/icons/shield-check.svg" alt=""></div>
+          <h3>Code Compliance &amp; Safety Inspections</h3>
+          <p>All work meets current BC electrical codes with proper permits and inspections for your peace of mind.</p>
+          <ul>
+            <li>Full electrical code compliance inspections</li>
+            <li>Permit handling and inspection coordination</li>
+            <li>Safety upgrades to meet current code requirements</li>
+            <li>Pre-purchase home electrical inspections</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Service 5 - Photo Left -->
+      <div class="service-block fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/3615721/pexels-photo-3615721.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Electrician tools" loading="lazy">
+        </div>
+        <div class="service-content">
+          <div class="icon"><img src="https://unpkg.com/lucide-static@latest/icons/wrench.svg" alt=""></div>
+          <h3>Kitchen &amp; Bathroom Electrical</h3>
+          <p>Specialized electrical work for kitchens and bathrooms, ensuring safety in wet areas.</p>
+          <ul>
+            <li>Kitchen appliance circuit installation</li>
+            <li>Bathroom exhaust fan and lighting wiring</li>
+            <li>Heated floor thermostat installation</li>
+            <li>Wet-area GFCI protection compliance</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Service 6 - Photo Right -->
+      <div class="service-block right fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/32812553/pexels-photo-32812553.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Electrical outlet installation" loading="lazy">
+        </div>
+        <div class="service-content">
+          <div class="icon"><img src="https://unpkg.com/lucide-static@latest/icons/building.svg" alt=""></div>
+          <h3>Strata &amp; Condo Electrical</h3>
+          <p>In-suite upgrades and large-scale strata electrical maintenance with minimal disruption to residents.</p>
+          <ul>
+            <li>In-suite electrical upgrades for condo owners</li>
+            <li>Common area lighting and power maintenance</li>
+            <li>Strata corporation electrical repairs</li>
+            <li>Energy-efficient lighting retrofits for common spaces</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Testimonials</span>
+        <h2 class="section-title">What Our Customers Say</h2>
+        <p class="section-desc mx-auto">Don't just take our word for it — here's what Kelowna has to say.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-in">
+          <div class="stars">
+            <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+            <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+            <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+            <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+            <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+          </div>
+          <blockquote>"Trustworthy, safe, great at communication, and delivers on service, warranty and beyond! This is why I booked them for all my electrical needs."</blockquote>
+          <div class="author">Squeaky Cheese</div>
+          <div class="role">Local Guide</div>
+        </div>
+        <div class="testimonial-card fade-in">
+          <div class="stars">
+            <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+            <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+            <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+            <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+            <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+          </div>
+          <blockquote>"I'm a renovation contractor and Brad has done almost all of my electrical work for the last 3 years. He is reliable, understands the code, and is great to work with."</blockquote>
+          <div class="author">Mike</div>
+          <div class="role">Renovation Contractor</div>
+        </div>
+        <div class="testimonial-card fade-in">
+          <div class="stars">
+            <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+            <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+            <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+            <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+            <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+          </div>
+          <blockquote>"Heeler Electric is a great company to deal with. Brad is very knowledgeable and helpful! Very professional as well."</blockquote>
+          <div class="author">Loren</div>
+          <div class="role">Homeowner</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Get In Touch</span>
+        <h2 class="section-title">Contact Heeler Electric</h2>
+        <p class="section-desc mx-auto" style="color: rgba(255,255,255,0.7);">Ready to get started? Give us a call or stop by.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Contact Details</h3>
+          <div class="contact-item">
+            <img src="https://unpkg.com/lucide-static@latest/icons/phone.svg" alt="">
+            <div>
+              <strong>Phone</strong>
+              <p><a href="tel:2508616112">(250) 861-6112</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <img src="https://unpkg.com/lucide-static@latest/icons/map-pin.svg" alt="">
+            <div>
+              <strong>Address</strong>
+              <p>2080 K. L. O. Rd<br>Kelowna, BC V1Y 8H6</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="">
+            <div style="flex:1;">
+              <strong>Business Hours</strong>
+              <div class="hours-grid">
+                <span class="day">Monday</span><span class="time">7 a.m. – 5 p.m.</span>
+                <span class="day">Tuesday</span><span class="time">7 a.m. – 5 p.m.</span>
+                <span class="day">Wednesday</span><span class="time">7 a.m. – 5 p.m.</span>
+                <span class="day">Thursday</span><span class="time">7 a.m. – 5 p.m.</span>
+                <span class="day">Friday</span><span class="time">7 a.m. – 5 p.m.</span>
+                <span class="day closed">Saturday</span><span class="time closed">Closed</span>
+                <span class="day closed">Sunday</span><span class="time closed">Closed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2581.2476389397883!2d-119.4516071!3d49.8902786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537e4d4b2e45c5b9%3A0x8b8f3e2e1a2b3c4d!2s2080%20K.%20L.%20O.%20Rd%2C%20Kelowna%2C%20BC%20V1Y%208H6!5e0!3m2!1sen!2sca!4v1"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Heeler Electric location on Google Maps">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-logo">Heeler Electric</div>
+      <p>Kelowna, BC</p>
+      <p><a href="tel:2508616112" style="color:#f97316;">(250) 861-6112</a></p>
+      <div class="copyright">&copy; <span id="year"></span> Heeler Electric. All rights reserved.</div>
+      <div class="attribution">
+        Made with love by <a href="https://design.withviso.com" target="_blank">Viso Solutions</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleNav() {
+      document.getElementById('navbar').classList.toggle('open');
+    }
+
+    function closeNav() {
+      document.getElementById('navbar').classList.remove('open');
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
