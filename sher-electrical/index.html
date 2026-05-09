@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sher Electrical Service Ltd | Kelowna Electrician</title>
+  <meta name="description" content="Sher Electrical Service Ltd provides residential electrical solutions in Kelowna, BC. Call (236) 869-9000.">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TBD8TFCF');</script>
+  <!-- End Google Tag Manager -->
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: #1a1a1a; line-height: 1.6; }
+
+    section[id] { scroll-margin-top: 110px; }
+
+    .claim-banner {
+      background: #f59e0b;
+      color: #fff;
+      text-align: center;
+      padding: 10px 16px;
+      font-size: 14px;
+      position: sticky;
+      top: 64px;
+      z-index: 1000;
+    }
+    .claim-banner a {
+      color: #fff;
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1001;
+      background: #fff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 0 24px;
+      height: 64px;
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .logo {
+      font-size: 20px;
+      font-weight: 700;
+      color: #0f172a;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .logo img { height: 36px; width: auto; }
+    .logo-icon { width: 28px; height: 28px; }
+    .nav { display: flex; gap: 32px; align-items: center; }
+    .nav a {
+      text-decoration: none;
+      color: #4b5563;
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav a:hover { color: #0f172a; }
+    .nav-cta {
+      background: #f59e0b;
+      color: #fff !important;
+      padding: 8px 20px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+    .nav-cta:hover { background: #d97706 !important; color: #fff !important; }
+    .mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+    .mobile-toggle img { width: 28px; height: 28px; }
+
+    .mobile-nav {
+      display: none;
+      background: #fff;
+      border-top: 1px solid #e5e7eb;
+      padding: 16px 24px;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a {
+      text-decoration: none;
+      color: #4b5563;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 8px 0;
+    }
+    .mobile-nav a:hover { color: #0f172a; }
+
+    .hero {
+      position: relative;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('https://images.pexels.com/photos/17072947/pexels-photo-17072947.jpeg') center/cover no-repeat;
+    }
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.65);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      padding: 0 24px;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: rgba(245,158,11,0.2);
+      color: #fcd34d;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .hero h1 span { color: #fcd34d; }
+    .hero p {
+      font-size: 18px;
+      color: #d1d5db;
+      margin-bottom: 32px;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #f59e0b;
+      color: #fff;
+      padding: 14px 32px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-primary:hover { background: #d97706; }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 2px solid #fff;
+      color: #fff;
+      padding: 12px 30px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.1); }
+
+    .section {
+      padding: 96px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .section-header h2 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 12px;
+    }
+    .section-header p {
+      font-size: 17px;
+      color: #6b7280;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .section-label {
+      display: inline-block;
+      background: #e2e8f0;
+      color: #0f172a;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .service-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      margin-bottom: 80px;
+    }
+    .service-row:last-child { margin-bottom: 0; }
+    .service-row.reverse .service-image { order: 2; }
+    .service-row.reverse .service-text { order: 1; }
+    .service-image {
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .service-image img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      display: block;
+      border-radius: 12px;
+    }
+    .service-text { display: flex; flex-direction: column; gap: 16px; }
+    .service-text .service-icon-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .service-text .service-icon-wrap img { width: 32px; height: 32px; }
+    .service-text .service-icon-wrap h3 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .service-text p {
+      font-size: 15px;
+      color: #6b7280;
+      line-height: 1.7;
+    }
+    .service-text ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .service-text li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: #4b5563;
+    }
+    .service-text li img { width: 18px; height: 18px; flex-shrink: 0; margin-top: 3px; }
+
+    .services-alt { background: #f8fafc; }
+    .services-alt .section { padding-top: 96px; padding-bottom: 96px; }
+
+    .testimonials {
+      background: #0f172a;
+      color: #fff;
+    }
+    .testimonials .section-header h2 { color: #fff; }
+    .testimonials .section-header p { color: #9ca3af; }
+    .testimonials .section-label { background: rgba(255,255,255,0.1); color: #fcd34d; }
+    .testimonials .section { padding-top: 96px; padding-bottom: 96px; }
+    .testimonials-bg {
+      position: relative;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      position: relative;
+      z-index: 1;
+    }
+    .testimonial-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 32px;
+      backdrop-filter: blur(4px);
+    }
+    .testimonial-stars {
+      display: flex;
+      gap: 2px;
+      margin-bottom: 12px;
+    }
+    .testimonial-stars img { width: 18px; height: 18px; filter: brightness(0) saturate(100%) invert(76%) sepia(68%) saturate(642%) hue-rotate(359deg) brightness(103%) contrast(106%); }
+    .testimonial-card blockquote {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #d1d5db;
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .testimonial-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #f59e0b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 16px;
+      color: #fff;
+    }
+    .testimonial-name { font-weight: 600; font-size: 15px; }
+    .testimonial-title { font-size: 13px; color: #9ca3af; }
+
+    .contact { background: #f8fafc; }
+    .contact .section { padding-top: 96px; padding-bottom: 96px; }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+    }
+    .contact-info { display: flex; flex-direction: column; gap: 24px; }
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .contact-item img {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .contact-item h4 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #0f172a;
+      margin-bottom: 2px;
+    }
+    .contact-item p, .contact-item a {
+      font-size: 15px;
+      color: #6b7280;
+      text-decoration: none;
+    }
+    .contact-item a:hover { color: #f59e0b; }
+    .hours-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px 24px;
+    }
+    .hours-grid .day { font-weight: 500; color: #4b5563; }
+    .hours-grid .time { color: #6b7280; text-align: right; }
+    .contact-map { border-radius: 12px; overflow: hidden; min-height: 360px; }
+    .contact-map iframe { width: 100%; height: 100%; min-height: 360px; border: 0; }
+
+    .footer {
+      background: #111827;
+      color: #9ca3af;
+      padding: 48px 24px 32px;
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+    .footer-logo {
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .footer-nav { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+    .footer-nav a {
+      color: #9ca3af;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+    .footer-nav a:hover { color: #fff; }
+    .footer-divider {
+      width: 100%;
+      max-width: 400px;
+      height: 1px;
+      background: #374151;
+    }
+    .footer-attribution {
+      font-size: 14px;
+      color: #9ca3af;
+    }
+    .footer-attribution a {
+      color: #fcd34d;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .footer-attribution a:hover { text-decoration: underline; }
+    .footer-copy { font-size: 13px; }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      .claim-banner { font-size: 12px; padding: 8px 12px; }
+      .nav { display: none; }
+      .mobile-toggle { display: block; }
+      .hero { min-height: 70vh; }
+      .hero h1 { font-size: 32px; }
+      .hero p { font-size: 16px; }
+      .section { padding: 64px 16px; }
+      .section-header h2 { font-size: 28px; }
+      .service-row {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        margin-bottom: 56px;
+      }
+      .service-row.reverse .service-image { order: 1; }
+      .service-row.reverse .service-text { order: 2; }
+      .service-image img { height: 240px; }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (min-width: 769px) and (max-width: 1023px) {
+      .hero h1 { font-size: 40px; }
+      .service-row { gap: 40px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBD8TFCF"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+<header class="header" id="header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <img src="https://unpkg.com/lucide-static@latest/icons/zap.svg" alt="" class="logo-icon">
+      Sher Electrical
+    </a>
+    <nav class="nav">
+      <a href="#services">Services</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="nav-cta">Get a Free Quote</a>
+    </nav>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+      <img src="https://unpkg.com/lucide-static@latest/icons/menu.svg" alt="Menu">
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#services" class="mobile-link">Services</a>
+    <a href="#testimonials" class="mobile-link">Testimonials</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+    <a href="#contact" class="mobile-link" style="color:#f59e0b;font-weight:600;">Get a Free Quote</a>
+  </div>
+</header>
+
+<div class="claim-banner">
+  <a href="https://design.withviso.com" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">
+    Hi Sher Electrical! Do you like the website? <u>Contact us to make it yours</u>
+  </a>
+</div>
+
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content fade-in">
+    <span class="hero-tag">Kelowna's Trusted Electrician</span>
+    <h1>Wired for <span>Safety</span>. Built for <span>Life</span>.</h1>
+    <p>Reliable residential electrical solutions in Kelowna and the Okanagan Valley for all your electrical needs.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">
+        Get a Free Quote
+        <img src="https://unpkg.com/lucide-static@latest/icons/arrow-right.svg" alt="" style="width:18px;height:18px;">
+      </a>
+      <a href="#services" class="btn-secondary">Our Services</a>
+    </div>
+  </div>
+</section>
+
+<section class="services-alt" id="services">
+  <div class="section">
+    <div class="section-header fade-in">
+      <span class="section-label">What We Do</span>
+      <h2>Our Electrical Services</h2>
+      <p>Professional electrical solutions for your home, from minor repairs to full installations.</p>
+    </div>
+
+    <div class="service-row fade-in">
+      <div class="service-image">
+        <img src="https://images.pexels.com/photos/33379360/pexels-photo-33379360.jpeg" alt="Electrician repairing wiring" loading="lazy">
+      </div>
+      <div class="service-text">
+        <div class="service-icon-wrap">
+          <img src="https://unpkg.com/lucide-static@latest/icons/zap.svg" alt="">
+          <h3>Electrical Repairs & Troubleshooting</h3>
+        </div>
+        <p>Fast, reliable diagnosis and repair for all types of electrical issues in your home. From flickering lights to faulty outlets, we get things working safely and efficiently.</p>
+        <ul>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Diagnose and repair faulty wiring and circuits</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Outlet, switch, and receptacle replacement</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Breaker and fuse troubleshooting</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Emergency service available</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service-row reverse fade-in">
+      <div class="service-image">
+        <img src="https://images.pexels.com/photos/1253128/pexels-photo-1253128.jpeg" alt="Modern lighting installation" loading="lazy">
+      </div>
+      <div class="service-text">
+        <div class="service-icon-wrap">
+          <img src="https://unpkg.com/lucide-static@latest/icons/lightbulb.svg" alt="">
+          <h3>Lighting Installation & Design</h3>
+        </div>
+        <p>Transform your home with professional lighting solutions. We handle everything from simple fixture swaps to complete custom lighting designs for any room.</p>
+        <ul>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Interior and exterior lighting installation</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> LED upgrade and retrofit solutions</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Pot lights, chandeliers, and ceiling fans</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Landscape and security lighting</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service-row fade-in">
+      <div class="service-image">
+        <img src="https://images.pexels.com/photos/36085816/pexels-photo-36085816.jpeg" alt="Electrical panel upgrade" loading="lazy">
+      </div>
+      <div class="service-text">
+        <div class="service-icon-wrap">
+          <img src="https://unpkg.com/lucide-static@latest/icons/plug.svg" alt="">
+          <h3>Electrical Panel Upgrades</h3>
+        </div>
+        <p>Upgrade your electrical panel to handle modern power demands safely. Essential for older homes, new appliances, or adding EV chargers and home additions.</p>
+        <ul>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> 100A, 200A, and 400A panel upgrades</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Breaker replacement and fuse-to-breaker conversions</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Subpanel installation for additions and suites</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Load calculations and code-compliant installation</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service-row reverse fade-in">
+      <div class="service-image">
+        <img src="https://images.pexels.com/photos/5391510/pexels-photo-5391510.jpeg" alt="EV charger installation" loading="lazy">
+      </div>
+      <div class="service-text">
+        <div class="service-icon-wrap">
+          <img src="https://unpkg.com/lucide-static@latest/icons/battery-charging.svg" alt="">
+          <h3>EV Charger Installation</h3>
+        </div>
+        <p>Go electric with confidence. We install Level 2 EV chargers for homes and businesses, ensuring safe, fast, and code-compliant charging every time.</p>
+        <ul>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Level 2 charger installation for all EV models</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Dedicated circuit setup and panel prep</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Indoor and outdoor charger mounting</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Permit handling and final inspection</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service-row fade-in">
+      <div class="service-image">
+        <img src="https://images.pexels.com/photos/3615735/pexels-photo-3615735.jpeg" alt="New construction wiring" loading="lazy">
+      </div>
+      <div class="service-text">
+        <div class="service-icon-wrap">
+          <img src="https://unpkg.com/lucide-static@latest/icons/home.svg" alt="">
+          <h3>New Construction & Renovation Wiring</h3>
+        </div>
+        <p>Complete wiring solutions for new builds, major renovations, and home additions. We work with builders and homeowners to deliver safe, code-compliant electrical systems.</p>
+        <ul>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Full rewiring for older homes and renovations</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> New build rough-in and trim-out</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Dedicated circuits for kitchen, spa, and workshop</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Smart home and network cabling</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service-row reverse fade-in">
+      <div class="service-image">
+        <img src="https://images.pexels.com/photos/772444/pexels-photo-772444.jpeg" alt="Electrical safety inspection" loading="lazy">
+      </div>
+      <div class="service-text">
+        <div class="service-icon-wrap">
+          <img src="https://unpkg.com/lucide-static@latest/icons/shield.svg" alt="">
+          <h3>Safety Inspections & Maintenance</h3>
+        </div>
+        <p>Keep your home and family safe with thorough electrical inspections and preventative maintenance. Identify potential hazards before they become serious problems.</p>
+        <ul>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Comprehensive electrical safety inspections</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Smoke and CO2 alarm installation and testing</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Surge protection for your entire home</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Preventive maintenance and code compliance checks</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="testimonials testimonials-bg" id="testimonials">
+  <div class="section fade-in">
+    <div class="section-header">
+      <span class="section-label">What Our Customers Say</span>
+      <h2>Trusted by Kelowna Homeowners</h2>
+      <p>We take pride in delivering quality electrical work that our customers can count on.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+          <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+          <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+          <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+          <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+        </div>
+        <blockquote>"Sher Electrical did an amazing job rewiring our older home. The team was professional, punctual, and left everything spotless. Highly recommend for any electrical work."</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">M</div>
+          <div>
+            <div class="testimonial-name">Mike</div>
+            <div class="testimonial-title">Kelowna, BC</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+          <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+          <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+          <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+          <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+        </div>
+        <blockquote>"Called for an emergency electrical issue late at night and they showed up quickly. Fixed the problem and gave great advice on upgrading our panel. True pros."</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">S</div>
+          <div>
+            <div class="testimonial-name">Sarah</div>
+            <div class="testimonial-title">West Kelowna, BC</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+          <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+          <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+          <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+          <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+        </div>
+        <blockquote>"They installed a new EV charger and upgraded our panel. The work was clean, fast, and all permits were handled. Exactly what we needed. Will use again."</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">J</div>
+          <div>
+            <div class="testimonial-name">James</div>
+            <div class="testimonial-title">Kelowna, BC</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="section fade-in">
+    <div class="section-header">
+      <span class="section-label">Get In Touch</span>
+      <h2>Contact Us</h2>
+      <p>For all your electrical needs, give us a call or stop by.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <img src="https://unpkg.com/lucide-static@latest/icons/phone.svg" alt="">
+          <div>
+            <h4>Phone</h4>
+            <a href="tel:2368699000">(236) 869-9000</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <img src="https://unpkg.com/lucide-static@latest/icons/map-pin.svg" alt="">
+          <div>
+            <h4>Address</h4>
+            <p>11 Caramillo Rd, Kelowna, BC V1V 1A9</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="">
+          <div>
+            <h4>Business Hours</h4>
+            <div class="hours-grid">
+              <span class="day">Monday</span><span class="time">Open 24 hours</span>
+              <span class="day">Tuesday</span><span class="time">Open 24 hours</span>
+              <span class="day">Wednesday</span><span class="time">Open 24 hours</span>
+              <span class="day">Thursday</span><span class="time">Open 24 hours</span>
+              <span class="day">Friday</span><span class="time">Open 24 hours</span>
+              <span class="day">Saturday</span><span class="time">Open 24 hours</span>
+              <span class="day">Sunday</span><span class="time">Open 24 hours</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2588.2903893431957!2d-119.43928478887374!3d49.89864737141324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537d954b7b3b0d47%3A0x9b0c7a4e2b0f7e3c!2s11%20Caramillo%20Rd%2C%20Kelowna%2C%20BC%20V1V%201A9%2C%20Canada!5e0!3m2!1sen!2sus!4v1" width="100%" height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <img src="https://unpkg.com/lucide-static@latest/icons/zap.svg" alt="" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;">
+      Sher Electrical Service Ltd
+    </div>
+    <div class="footer-nav">
+      <a href="#services">Services</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-attribution">
+      Made with love by <a href="https://design.withviso.com" target="_blank" rel="noopener">Viso Solutions</a>
+    </div>
+    <div class="footer-copy">
+      &copy; <span id="year"></span> Sher Electrical Service Ltd. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const mobileToggle = document.getElementById('mobileToggle');
+  const mobileNav = document.getElementById('mobileNav');
+
+  mobileToggle.addEventListener('click', function() {
+    mobileNav.classList.toggle('open');
+    const isOpen = mobileNav.classList.contains('open');
+    this.querySelector('img').src = isOpen
+      ? 'https://unpkg.com/lucide-static@latest/icons/x.svg'
+      : 'https://unpkg.com/lucide-static@latest/icons/menu.svg';
+  });
+
+  document.querySelectorAll('.mobile-link').forEach(function(link) {
+    link.addEventListener('click', function() {
+      mobileNav.classList.remove('open');
+      document.getElementById('mobileToggle').querySelector('img').src = 'https://unpkg.com/lucide-static@latest/icons/menu.svg';
+    });
+  });
+
+  const fadeEls = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  fadeEls.forEach(function(el) { observer.observe(el); });
+</script>
+
+</body>
+</html>
