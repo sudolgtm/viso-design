@@ -2041,6 +2041,9 @@
     gap: var(--spacing-3xl);
     flex-direction: column;
   }
+  .process-steps::before {
+    display: none;
+  }
   .guarantees-grid {
     grid-auto-rows: auto;
     grid-template-columns: 1fr;
