@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Nate's Plumbing and Gas | Kelowna's Trusted Plumber</title>
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TBD8TFCF');</script>
+    <style>
+        :root {
+            --primary: #051146;
+            --primary-light: #0a1f6e;
+            --secondary: #06c3f4;
+            --accent: #fdbf00;
+            --light-bg: #f8f9fa;
+            --dark-text: #1a1a2e;
+            --gray-text: #6c757d;
+            --white: #ffffff;
+            --section-padding: 100px 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        section[id] {
+            scroll-margin-top: 115px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--primary);
+            padding: 15px 0;
+            height: 75px;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 45px;
+            width: auto;
+        }
+
+        .logo-text {
+            color: var(--white);
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text span {
+            color: var(--accent);
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        nav a {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--secondary);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--accent);
+            color: var(--primary) !important;
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        .nav-cta::after {
+            display: none;
+        }
+
+        .nav-cta:hover {
+            background: #e5a800;
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        /* Claim Banner */
+        .claim-banner {
+            position: sticky;
+            top: 75px;
+            z-index: 999;
+            background: var(--secondary);
+            color: var(--primary);
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .claim-banner a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .claim-banner u {
+            font-weight: 700;
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--primary) 0%, #0a1f6e 50%, #0d2b8a 100%);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1920&h=1080&fit=crop') center/cover no-repeat;
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(5,17,70,0.85) 0%, rgba(5,17,70,0.6) 100%);
+            z-index: 1;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.8rem;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 20px;
+            letter-spacing: -1.5px;
+            line-height: 1.1;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.85);
+            max-width: 650px;
+            margin: 0 auto 35px;
+            line-height: 1.7;
+        }
+
+        .hero-badges {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .hero-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255,255,255,0.9);
+            font-size: 0.95rem;
+        }
+
+        .hero-badge img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(253,191,0,0.3);
+        }
+
+        .btn-outline {
+            display: inline-block;
+            background: transparent;
+            color: var(--white);
+            padding: 14px 36px;
+            border-radius: 50px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-decoration: none;
+            border: 2px solid rgba(255,255,255,0.3);
+            transition: all 0.3s ease;
+            margin-left: 15px;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--white);
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* Sections */
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.6rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+        }
+
+        .section-title p {
+            color: var(--gray-text);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section-title .accent-bar {
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+
+        /* What We Do */
+        .what-we-do {
+            padding: var(--section-padding);
+            background: var(--white);
+        }
+
+        .what-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .what-text h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .what-text p {
+            color: var(--gray-text);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .what-image {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(5,17,70,0.15);
+        }
+
+        .what-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: var(--section-padding);
+            background: var(--light-bg);
+        }
+
+        .service-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .service-block:last-child {
+            margin-bottom: 0;
+        }
+
+        .service-block.reverse .service-image {
+            order: 2;
+        }
+
+        .service-block.reverse .service-info {
+            order: 1;
+        }
+
+        .service-image {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(5,17,70,0.1);
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .service-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .service-info {
+            padding: 20px 0;
+        }
+
+        .service-info .service-icon {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .service-info .service-icon img {
+            width: 32px;
+            height: 32px;
+        }
+
+        .service-info h3 {
+            font-size: 1.6rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .service-info p {
+            color: var(--gray-text);
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .service-info ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-info ul li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            color: var(--dark-text);
+        }
+
+        .service-info ul li img {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* Why Choose Us */
+        .why-choose-us {
+            padding: var(--section-padding);
+            background: var(--white);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .why-card {
+            background: var(--light-bg);
+            padding: 40px 30px;
+            border-radius: 16px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .why-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(5,17,70,0.1);
+        }
+
+        .why-card img {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 20px;
+        }
+
+        .why-card h4 {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .why-card p {
+            color: var(--gray-text);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Reviews */
+        .reviews-section {
+            padding: var(--section-padding);
+            background: var(--primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .reviews-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1920&h=800&fit=crop') center/cover no-repeat;
+            opacity: 0.06;
+        }
+
+        .reviews-section .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .reviews-section .section-title h2 {
+            color: var(--white);
+        }
+
+        .reviews-section .section-title p {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .reviews-section .section-title .accent-bar {
+            background: var(--secondary);
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .review-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .review-card .stars {
+            display: flex;
+            gap: 3px;
+            margin-bottom: 15px;
+        }
+
+        .review-card .stars img {
+            width: 18px;
+            height: 18px;
+        }
+
+        .review-card p {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .review-card .reviewer {
+            color: var(--secondary);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Contact */
+        .contact-section {
+            padding: var(--section-padding);
+            background: var(--light-bg);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .contact-detail img {
+            width: 24px;
+            height: 24px;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+
+        .contact-detail div h5 {
+            font-size: 1rem;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .contact-detail div p {
+            color: var(--gray-text);
+            font-size: 0.95rem;
+        }
+
+        .hours-grid {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 6px 25px;
+            margin-top: 10px;
+        }
+
+        .hours-grid .day {
+            color: var(--dark-text);
+            font-weight: 500;
+        }
+
+        .hours-grid .time {
+            color: var(--gray-text);
+        }
+
+        .hours-grid .closed {
+            color: #dc3545;
+        }
+
+        .contact-map {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(5,17,70,0.1);
+        }
+
+        .contact-map iframe {
+            display: block;
+            width: 100%;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.8);
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        footer .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        footer .footer-links {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        footer .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        footer .footer-links a:hover {
+            color: var(--secondary);
+        }
+
+        footer .copyright {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
+        }
+
+        footer .attribution {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.4);
+            margin-top: 5px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            width: 100%;
+        }
+
+        footer .attribution a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        /* Mobile Navigation */
+        @media (max-width: 768px) {
+            section[id] {
+                scroll-margin-top: 115px;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 75px;
+                left: 0;
+                right: 0;
+                background: var(--primary);
+                flex-direction: column;
+                padding: 20px;
+                gap: 15px;
+                border-top: 1px solid rgba(255,255,255,0.1);
+            }
+
+            nav.open {
+                display: flex;
+            }
+
+            nav a {
+                padding: 10px 0;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1.05rem;
+            }
+
+            .hero-badges {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .btn-outline {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+
+            .what-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .what-image img {
+                height: 280px;
+            }
+
+            .service-block {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                margin-bottom: 50px;
+            }
+
+            .service-block.reverse .service-image {
+                order: 0;
+            }
+
+            .service-block.reverse .service-info {
+                order: 0;
+            }
+
+            .service-image img {
+                height: 280px;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 0 16px;
+            }
+
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+
+            .logo-text {
+                font-size: 1.1rem;
+            }
+
+            .claim-banner {
+                font-size: 0.8rem;
+                padding: 8px 12px;
+                top: 75px;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .reviews-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .service-block {
+                gap: 30px;
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBD8TFCF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="/logo.png" alt="Nate's Plumbing and Gas Logo">
+                <span class="logo-text">Nate's <span>Plumbing & Gas</span></span>
+            </a>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+            <nav id="mainNav">
+                <a href="#what-we-do">What We Do</a>
+                <a href="#services">Services</a>
+                <a href="#why-choose-us">Why Choose Us</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact">Contact</a>
+                <a href="#contact" class="nav-cta">Get a Quote</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Claim Banner -->
+    <div class="claim-banner">
+        <a href="https://design.withviso.com" target="_blank" rel="noopener">
+            Hi Nate's Plumbing and Gas! Do you like the website? <u>Contact us to make it yours</u>
+        </a>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-badges">
+                <span class="hero-badge">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="Star">
+                    5.0 Rating
+                </span>
+                <span class="hero-badge">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/map-pin.svg" alt="Location">
+                    Kelowna, BC
+                </span>
+                <span class="hero-badge">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/shield-check.svg" alt="Licensed">
+                    Licensed & Insured
+                </span>
+            </div>
+            <h1>Kelowna's Trusted <span>Plumbing & Gas</span> Experts</h1>
+            <p>From emergency repairs to complete renovations, Nate's Plumbing and Gas delivers reliable, professional service across the Central Okanagan.</p>
+            <div>
+                <a href="#contact" class="btn-primary">Get a Free Quote</a>
+                <a href="#services" class="btn-outline">Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do -->
+    <section class="what-we-do fade-in" id="what-we-do">
+        <div class="container">
+            <div class="section-title">
+                <h2>What We Do</h2>
+                <div class="accent-bar"></div>
+                <p>Expert plumbing and gas services for residential and commercial clients across the Central Okanagan</p>
+            </div>
+            <div class="what-content">
+                <div class="what-text">
+                    <h3>Your Complete Plumbing & Gas Solution</h3>
+                    <p>At Nate's Plumbing & Gas, we've got your back when it comes to plumbing maintenance, repairs, emergencies, and renovations. Our team serves across the Central Okanagan and is the choice among residential and commercial clients who value quality workmanship and honest service.</p>
+                    <p style="margin-top: 15px;">Planning a new build? We specialize in hydronic in-floor heating and superior mechanical rooms. It's not everyday that you come across people who take pride in their work — check out the difference for yourself!</p>
+                </div>
+                <div class="what-image">
+                    <img src="https://images.pexels.com/photos/28169591/pexels-photo-28169591.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Plumbing pipes and fittings" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services-section fade-in" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <div class="accent-bar"></div>
+                <p>Comprehensive plumbing and gas services tailored to your needs</p>
+            </div>
+
+            <!-- Service 1: Plumbing Repairs -->
+            <div class="service-block">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop" alt="Plumbing repair" loading="lazy">
+                </div>
+                <div class="service-info">
+                    <div class="service-icon">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/wrench.svg" alt="Wrench icon">
+                        <h3>Plumbing Repairs & Maintenance</h3>
+                    </div>
+                    <p>From leaky faucets to burst pipes, we provide fast, reliable plumbing repairs to protect your home or business. Our team uses the latest tools and techniques to diagnose and resolve issues efficiently.</p>
+                    <ul>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Plumbing leak detection and repair</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Faucet installation and repair</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Toilet repair and replacement</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Plumbing pipe repair and replacement</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 2: Water Heater -->
+            <div class="service-block reverse">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=800&h=600&fit=crop" alt="Water heater installation" loading="lazy">
+                </div>
+                <div class="service-info">
+                    <div class="service-icon">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/thermometer.svg" alt="Thermometer icon">
+                        <h3>Water Heater Services</h3>
+                    </div>
+                    <p>Keep your hot water flowing with our professional water heater installation, repair, and maintenance services. We work with all major brands and types of water heaters.</p>
+                    <ul>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Water heater installation and replacement</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Water heater repair and maintenance</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Hot water recirculation pump installation</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Hot water recirculation pump repair</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 3: Gas Fitting & Hydronic Heating -->
+            <div class="service-block">
+                <div class="service-image">
+                    <img src="https://images.pexels.com/photos/5847394/pexels-photo-5847394.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Gas pipe fitting" loading="lazy">
+                </div>
+                <div class="service-info">
+                    <div class="service-icon">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/flame.svg" alt="Flame icon">
+                        <h3>Gas Fitting & Hydronic Heating</h3>
+                    </div>
+                    <p>Specializing in hydronic in-floor heating and superior mechanical rooms for new builds and renovations. Our gas fitting services ensure safe, code-compliant installations.</p>
+                    <ul>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Hydronic in-floor heating systems</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Gas line installation and repair</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Mechanical room design and build</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Gas appliance hookups</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 4: Renovations & New Construction -->
+            <div class="service-block reverse">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&h=600&fit=crop" alt="Renovation construction" loading="lazy">
+                </div>
+                <div class="service-info">
+                    <div class="service-icon">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/building.svg" alt="Building icon">
+                        <h3>Renovations & New Construction</h3>
+                    </div>
+                    <p>Whether you're building your dream home or remodeling an existing space, our team provides complete plumbing solutions for renovations and new construction projects of any scale.</p>
+                    <ul>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> New construction plumbing rough-ins</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Bathroom and kitchen remodeling</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Shower and tub installation</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="Check"> Outdoor plumbing system repair</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us fade-in" id="why-choose-us">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Nate's Plumbing & Gas</h2>
+                <div class="accent-bar"></div>
+                <p>What sets us apart from the rest</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="Clock">
+                    <h4>Fast Response Times</h4>
+                    <p>We understand plumbing emergencies can't wait. Our team responds quickly to get your plumbing back in working order as fast as possible.</p>
+                </div>
+                <div class="why-card">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/award.svg" alt="Award">
+                    <h4>5-Star Service</h4>
+                    <p>With a perfect 5.0 rating and dozens of 5-star reviews, our commitment to quality and customer satisfaction speaks for itself.</p>
+                </div>
+                <div class="why-card">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/users.svg" alt="Users">
+                    <h4>Residential & Commercial</h4>
+                    <p>From single-family homes to large commercial projects, we have the expertise and equipment to handle jobs of any size.</p>
+                </div>
+                <div class="why-card">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/shield-check.svg" alt="Shield">
+                    <h4>Fully Licensed & Insured</h4>
+                    <p>Rest easy knowing your plumbing project is in the hands of licensed, insured professionals who take pride in their work.</p>
+                </div>
+                <div class="why-card">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/pen-tool.svg" alt="Pen tool">
+                    <h4>Superior Workmanship</h4>
+                    <p>We specialize in hydronic in-floor heating and superior mechanical rooms — it's not everyday you come across people who take pride in their work.</p>
+                </div>
+                <div class="why-card">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/map-pin.svg" alt="Map pin">
+                    <h4>Serving Central Okanagan</h4>
+                    <p>Proudly serving Kelowna and the surrounding Central Okanagan area with reliable, professional plumbing and gas services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews-section fade-in" id="reviews">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Customers Say</h2>
+                <div class="accent-bar"></div>
+                <p>With a perfect 5.0 rating, our customers love our work</p>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">
+                        <svg class="lucide lucide-star" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--accent)" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.358 18.13a.53.53 0 0 1-.77-.56l.88-5.14a2.122 2.122 0 0 0-.61-1.878L2.122 6.794a.53.53 0 0 1 .294-.904l5.166-.756a2.123 2.123 0 0 0 1.595-1.16l2.31-4.679Z"/></svg>
+                        <svg class="lucide lucide-star" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--accent)" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.358 18.13a.53.53 0 0 1-.77-.56l.88-5.14a2.122 2.122 0 0 0-.61-1.878L2.122 6.794a.53.53 0 0 1 .294-.904l5.166-.756a2.123 2.123 0 0 0 1.595-1.16l2.31-4.679Z"/></svg>
+                        <svg class="lucide lucide-star" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--accent)" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.358 18.13a.53.53 0 0 1-.77-.56l.88-5.14a2.122 2.122 0 0 0-.61-1.878L2.122 6.794a.53.53 0 0 1 .294-.904l5.166-.756a2.123 2.123 0 0 0 1.595-1.16l2.31-4.679Z"/></svg>
+                        <svg class="lucide lucide-star" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--accent)" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.358 18.13a.53.53 0 0 1-.77-.56l.88-5.14a2.122 2.122 0 0 0-.61-1.878L2.122 6.794a.53.53 0 0 1 .294-.904l5.166-.756a2.123 2.123 0 0 0 1.595-1.16l2.31-4.679Z"/></svg>
+                        <svg class="lucide lucide-star" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--accent)" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.358 18.13a.53.53 0 0 1-.77-.56l.88-5.14a2.122 2.122 0 0 0-.61-1.878L2.122 6.794a.53.53 0 0 1 .294-.904l5.166-.756a2.123 2.123 0 0 0 1.595-1.16l2.31-4.679Z"/></svg>
+                    </div>
+                    <p>"Nate's Plumbing and Gas are hands down the best plumbers in Kelowna! I recommend them to all of my clients. They are knowledgeable, efficient, honest, and dependable."</p>
+                    <span class="reviewer">— Alexandra A.</span>
+                </div>
+                <div class="review-card">
+                    <div class="stars">
+                        <svg class="lucide lucide-star" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--accent)" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.358 18.13a.53.53 0 0 1-.77-.56l.88-5.14a2.122 2.122 0 0 0-.61-1.878L2.122 6.794a.53.53 0 0 1 .294-.904l5.166-.756a2.123 2.123 0 0 0 1.595-1.16l2.31-4.679Z"/></svg>
+                        <svg class="lucide lucide-star" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--accent)" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.358 18.13a.53.53 0 0 1-.77-.56l.88-5.14a2.122 2.122 0 0 0-.61-1.878L2.122 6.794a.53.53 0 0 1 .294-.904l5.166-.756a2.123 2.123 0 0 0 1.595-1.16l2.31-4.679Z"/></svg>
+                        <svg class="lucide lucide-star" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--accent)" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.358 18.13a.53.53 0 0 1-.77-.56l.88-5.14a2.122 2.122 0 0 0-.61-1.878L2.122 6.794a.53.53 0 0 1 .294-.904l5.166-.756a2.123 2.123 0 0 0 1.595-1.16l2.31-4.679Z"/></svg>
+                        <svg class="lucide lucide-star" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--accent)" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.358 18.13a.53.53 0 0 1-.77-.56l.88-5.14a2.122 2.122 0 0 0-.61-1.878L2.122 6.794a.53.53 0 0 1 .294-.904l5.166-.756a2.123 2.123 0 0 0 1.595-1.16l2.31-4.679Z"/></svg>
+                        <svg class="lucide lucide-star" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--accent)" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.358 18.13a.53.53 0 0 1-.77-.56l.88-5.14a2.122 2.122 0 0 0-.61-1.878L2.122 6.794a.53.53 0 0 1 .294-.904l5.166-.756a2.123 2.123 0 0 0 1.595-1.16l2.31-4.679Z"/></svg>
+                    </div>
+                    <p>"Nate attended our home to repair a failed valve that had caused a significant leak and flood. He arrived so swiftly and remedied the issue very quickly. We are so grateful for his prompt and professional service."</p>
+                    <span class="reviewer">— Jessica M.</span>
+                </div>
+                <div class="review-card">
+                    <div class="stars">
+                        <svg class="lucide lucide-star" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--accent)" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.358 18.13a.53.53 0 0 1-.77-.56l.88-5.14a2.122 2.122 0 0 0-.61-1.878L2.122 6.794a.53.53 0 0 1 .294-.904l5.166-.756a2.123 2.123 0 0 0 1.595-1.16l2.31-4.679Z"/></svg>
+                        <svg class="lucide lucide-star" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--accent)" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.358 18.13a.53.53 0 0 1-.77-.56l.88-5.14a2.122 2.122 0 0 0-.61-1.878L2.122 6.794a.53.53 0 0 1 .294-.904l5.166-.756a2.123 2.123 0 0 0 1.595-1.16l2.31-4.679Z"/></svg>
+                        <svg class="lucide lucide-star" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--accent)" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.358 18.13a.53.53 0 0 1-.77-.56l.88-5.14a2.122 2.122 0 0 0-.61-1.878L2.122 6.794a.53.53 0 0 1 .294-.904l5.166-.756a2.123 2.123 0 0 0 1.595-1.16l2.31-4.679Z"/></svg>
+                        <svg class="lucide lucide-star" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--accent)" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.358 18.13a.53.53 0 0 1-.77-.56l.88-5.14a2.122 2.122 0 0 0-.61-1.878L2.122 6.794a.53.53 0 0 1 .294-.904l5.166-.756a2.123 2.123 0 0 0 1.595-1.16l2.31-4.679Z"/></svg>
+                        <svg class="lucide lucide-star" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--accent)" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.358 18.13a.53.53 0 0 1-.77-.56l.88-5.14a2.122 2.122 0 0 0-.61-1.878L2.122 6.794a.53.53 0 0 1 .294-.904l5.166-.756a2.123 2.123 0 0 0 1.595-1.16l2.31-4.679Z"/></svg>
+                    </div>
+                    <p>"So happy with the service! Very quick to respond and very helpful in getting our main water shut off as it was leaking. Very easy to deal with… will definitely call again when we are in need of a plumber!"</p>
+                    <span class="reviewer">— Robert H.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact-section fade-in" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <div class="accent-bar"></div>
+                <p>Ready to get started? Contact us for a free quote</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-detail">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/map-pin.svg" alt="Location">
+                        <div>
+                            <h5>Address</h5>
+                            <p>1570 Richmond St, Kelowna, BC V1Y 3T6</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/phone.svg" alt="Phone">
+                        <div>
+                            <h5>Phone</h5>
+                            <p><a href="tel:+12503175966" style="color: var(--primary); text-decoration: none;">(250) 317-5966</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/mail.svg" alt="Email">
+                        <div>
+                            <h5>Email</h5>
+                            <p><a href="mailto:natesplumbingandgas@gmail.com" style="color: var(--primary); text-decoration: none;">natesplumbingandgas@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="Hours">
+                        <div>
+                            <h5>Business Hours</h5>
+                            <div class="hours-grid">
+                                <span class="day">Monday</span><span class="time">9:00 AM – 4:30 PM</span>
+                                <span class="day">Tuesday</span><span class="time">9:00 AM – 4:30 PM</span>
+                                <span class="day">Wednesday</span><span class="time">8:00 AM – 4:30 PM</span>
+                                <span class="day">Thursday</span><span class="time">8:00 AM – 4:30 PM</span>
+                                <span class="day">Friday</span><span class="time">8:00 AM – 4:30 PM</span>
+                                <span class="day">Saturday</span><span class="time closed">Closed</span>
+                                <span class="day">Sunday</span><span class="time closed">Closed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps?q=1570+Richmond+St+Kelowna+BC+V1Y+3T6&output=embed" width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#what-we-do">What We Do</a>
+                <a href="#services">Services</a>
+                <a href="#why-choose-us">Why Choose Us</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <p class="copyright">&copy; 2026 Nate's Plumbing and Gas. All rights reserved.</p>
+            <div class="attribution">
+                Made with love by <a href="https://design.withviso.com" target="_blank" rel="noopener">Viso Solutions</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile navigation toggle
+        const toggle = document.getElementById('mobileToggle');
+        const nav = document.getElementById('mainNav');
+
+        toggle.addEventListener('click', function() {
+            nav.classList.toggle('open');
+        });
+
+        // Close mobile nav when link is clicked
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function() {
+                nav.classList.remove('open');
+            });
+        });
+
+        // Scroll-triggered fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Header scroll effect
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 50) {
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.2)';
+            } else {
+                header.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
