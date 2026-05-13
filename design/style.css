@@ -2082,9 +2082,12 @@
     flex-direction: column;
   }
   .guarantees-image {
-    min-height: 300px;
+    flex: none;
+    width: 100%;
+    aspect-ratio: 4 / 3;
   }
   .guarantees-grid {
+    flex: none;
     grid-auto-rows: auto;
     grid-template-columns: 1fr;
   }
