@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RBS Electrical Ltd | Kelowna Electrician</title>
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TBD8TFCF');</script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary:       #18A5A5;
+      --primary-dark:  #0A6E6E;
+      --primary-light: #E2F7F7;
+      --accent:        #F9C846;
+      --text:          #0D2626;
+      --text-light:    #6B8F8F;
+      --bg:            #FAFEFE;
+      --bg-alt:        #EEF9F9;
+      --border:        #C8ECEC;
+      --radius:        12px;
+      --shadow:        0 4px 24px rgba(10,110,110,0.08);
+      --shadow-lg:     0 8px 40px rgba(10,110,110,0.13);
+      --font:          'Plus Jakarta Sans', -apple-system, sans-serif;
+      --header-height: 70px;
+      --claim-height: 44px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    section[id] { scroll-margin-top: calc(var(--header-height) + var(--claim-height)); }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--primary-dark);
+      padding: 0 2rem;
+      height: var(--header-height);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.25rem;
+      text-decoration: none;
+    }
+    .logo img { width: 28px; height: 28px; filter: brightness(0) invert(1); }
+    nav { display: flex; align-items: center; gap: 2rem; }
+    nav a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: #fff; }
+    .nav-cta {
+      background: var(--accent);
+      color: #fff !important;
+      padding: 0.5rem 1.25rem;
+      border-radius: 8px;
+      font-weight: 700;
+    }
+    .nav-cta:hover { background: #E0B12E; }
+    .menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+    .menu-toggle img { width: 28px; height: 28px; filter: brightness(0) invert(1); }
+
+    /* Claim Banner */
+    .claim-banner {
+      position: sticky;
+      top: var(--header-height);
+      z-index: 999;
+      background: var(--accent);
+      text-align: center;
+      padding: 0.625rem 1rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #fff;
+      height: var(--claim-height);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .claim-banner u { text-decoration: underline; }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('https://images.pexels.com/photos/3615735/pexels-photo-3615735.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1') center/cover no-repeat;
+    }
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(10,110,110,0.88) 0%, rgba(24,165,165,0.72) 100%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 2rem;
+    }
+    .hero h1 {
+      font-size: 3.25rem;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 1rem 2.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: background 0.3s;
+    }
+    .hero .btn:hover { background: #E0B12E; }
+    .hero .rating-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(8px);
+      padding: 0.5rem 1.25rem;
+      border-radius: 50px;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+    .hero .rating-badge .stars {
+      display: flex;
+      gap: 2px;
+    }
+    .hero .rating-badge .stars svg { width: 16px; height: 16px; }
+
+    /* Sections */
+    section { padding: 5rem 2rem; }
+    .section-title {
+      text-align: center;
+      font-size: 2.25rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      color: var(--primary-dark);
+    }
+    .section-subtitle {
+      text-align: center;
+      color: var(--text-light);
+      font-size: 1.05rem;
+      max-width: 600px;
+      margin: 0 auto 3rem;
+    }
+    .container { max-width: 1200px; margin: 0 auto; }
+
+    /* Services Alternating */
+    .service-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      margin-bottom: 5rem;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .service-block.visible { opacity: 1; transform: translateY(0); }
+    .service-block:last-child { margin-bottom: 0; }
+    .service-block:nth-child(even) .service-image { order: 2; }
+    .service-block:nth-child(even) .service-text { order: 1; }
+    .service-image {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+    .service-image img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      display: block;
+    }
+    .service-text { padding: 1rem 0; }
+    .service-text .icon-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .service-text .icon-wrap img {
+      width: 32px;
+      height: 32px;
+      color: var(--primary);
+    }
+    .service-text .icon-wrap h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+    .service-text p {
+      color: var(--text-light);
+      margin-bottom: 1.25rem;
+      font-size: 0.95rem;
+    }
+    .service-text ul { list-style: none; }
+    .service-text ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+    .service-text ul li img {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    /* Reviews */
+    #reviews { background: var(--bg-alt); }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .review-card {
+      background: var(--bg-alt);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .review-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .review-card .stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 0.75rem;
+    }
+    .review-card .stars svg { width: 18px; height: 18px; }
+    .review-card blockquote {
+      font-style: italic;
+      color: var(--text);
+      font-size: 0.9rem;
+      line-height: 1.65;
+      margin-bottom: 1rem;
+    }
+    .review-card cite {
+      font-style: normal;
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.85rem;
+    }
+
+    /* Contact */
+    #contact { background: var(--primary-dark); color: #fff; }
+    #contact .section-title { color: #fff; }
+    #contact .section-subtitle { color: rgba(255,255,255,0.7); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .contact-info { display: flex; flex-direction: column; gap: 1.5rem; }
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .contact-item img {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .contact-item h4 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      opacity: 0.7;
+      margin-bottom: 0.15rem;
+    }
+    .contact-item p, .contact-item a {
+      font-size: 1rem;
+      color: #fff;
+      text-decoration: none;
+    }
+    .hours-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.25rem 1.5rem;
+    }
+    .hours-grid .day { opacity: 0.7; font-size: 0.85rem; }
+    .hours-grid .time { font-size: 0.85rem; font-weight: 600; }
+    .map-wrap {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+    .map-wrap iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      display: block;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--primary-dark);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      text-align: center;
+      padding: 2rem;
+      color: rgba(255,255,255,0.6);
+      font-size: 0.85rem;
+    }
+    footer .attribution {
+      margin-top: 0.75rem;
+      font-size: 0.8rem;
+    }
+    footer .attribution a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    footer .attribution a:hover { color: #fff; }
+
+    /* Animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      header { padding: 0 1rem; }
+      nav {
+        display: none;
+        position: absolute;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        background: var(--primary-dark);
+        flex-direction: column;
+        padding: 1rem;
+        gap: 0.75rem;
+        border-top: 1px solid rgba(255,255,255,0.1);
+      }
+      nav.open { display: flex; }
+      .menu-toggle { display: block; }
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
+      .service-block {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .service-block:nth-child(even) .service-image { order: 1; }
+      .service-block:nth-child(even) .service-text { order: 2; }
+      .service-image img { height: 240px; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .section-title { font-size: 1.75rem; }
+    }
+  </style>
+</head>
+<body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBD8TFCF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <header>
+    <a href="#" class="logo">
+      <img src="https://unpkg.com/lucide-static@latest/icons/zap.svg" alt="" />
+      RBS Electrical
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <img src="https://unpkg.com/lucide-static@latest/icons/menu.svg" alt="" />
+    </button>
+    <nav id="nav">
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="nav-cta">(604) 727-3839</a>
+    </nav>
+  </header>
+
+  <div class="claim-banner">
+    <a href="https://design.withviso.com" target="_blank" style="text-decoration: none; color: inherit;">
+      Hi RBS Electrical Ltd! Do you like the website? <u>Contact us to make it yours</u>
+    </a>
+  </div>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="rating-badge">
+        <span>4.9</span>
+        <span class="stars">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#f1c40f" stroke="#f1c40f" stroke-width="1"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a.53.53 0 0 0 .399.29l5.166.753a.53.53 0 0 1 .294.904l-3.736 3.638a.53.53 0 0 0-.152.47l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a.53.53 0 0 0-.494 0L6.157 18.73a.53.53 0 0 1-.771-.56l.882-5.14a.53.53 0 0 0-.152-.47L2.38 8.921a.53.53 0 0 1 .294-.904l5.166-.753a.53.53 0 0 0 .399-.29z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#f1c40f" stroke="#f1c40f" stroke-width="1"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a.53.53 0 0 0 .399.29l5.166.753a.53.53 0 0 1 .294.904l-3.736 3.638a.53.53 0 0 0-.152.47l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a.53.53 0 0 0-.494 0L6.157 18.73a.53.53 0 0 1-.771-.56l.882-5.14a.53.53 0 0 0-.152-.47L2.38 8.921a.53.53 0 0 1 .294-.904l5.166-.753a.53.53 0 0 0 .399-.29z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#f1c40f" stroke="#f1c40f" stroke-width="1"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a.53.53 0 0 0 .399.29l5.166.753a.53.53 0 0 1 .294.904l-3.736 3.638a.53.53 0 0 0-.152.47l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a.53.53 0 0 0-.494 0L6.157 18.73a.53.53 0 0 1-.771-.56l.882-5.14a.53.53 0 0 0-.152-.47L2.38 8.921a.53.53 0 0 1 .294-.904l5.166-.753a.53.53 0 0 0 .399-.29z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#f1c40f" stroke="#f1c40f" stroke-width="1"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a.53.53 0 0 0 .399.29l5.166.753a.53.53 0 0 1 .294.904l-3.736 3.638a.53.53 0 0 0-.152.47l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a.53.53 0 0 0-.494 0L6.157 18.73a.53.53 0 0 1-.771-.56l.882-5.14a.53.53 0 0 0-.152-.47L2.38 8.921a.53.53 0 0 1 .294-.904l5.166-.753a.53.53 0 0 0 .399-.29z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#f1c40f" stroke="#f1c40f" stroke-width="1"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a.53.53 0 0 0 .399.29l5.166.753a.53.53 0 0 1 .294.904l-3.736 3.638a.53.53 0 0 0-.152.47l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a.53.53 0 0 0-.494 0L6.157 18.73a.53.53 0 0 1-.771-.56l.882-5.14a.53.53 0 0 0-.152-.47L2.38 8.921a.53.53 0 0 1 .294-.904l5.166-.753a.53.53 0 0 0 .399-.29z"/></svg>
+        </span>
+        <span>(7 reviews)</span>
+      </div>
+      <h1>Trusted Electrical Services in Kelowna</h1>
+      <p>Reliable residential and commercial electrical solutions backed by years of experience. Available 24/7 for all your electrical needs.</p>
+      <a href="#contact" class="btn">Get a Free Quote</a>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-subtitle">From small repairs to full installations, we deliver professional electrical work you can count on.</p>
+
+      <div class="service-block">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/32497160/pexels-photo-32497160.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Residential electrical panel" loading="lazy" />
+        </div>
+        <div class="service-text">
+          <div class="icon-wrap">
+            <img src="https://unpkg.com/lucide-static@latest/icons/zap.svg" alt="" />
+            <h3>Residential Electrical</h3>
+          </div>
+          <p>Complete electrical solutions for your home. Whether you're upgrading an older system or building new, our licensed electricians ensure safe, code-compliant work.</p>
+          <ul>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" /> Electrical panel upgrades &amp; replacements</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" /> Wiring &amp; rewiring for renovations</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" /> Outlet, switch &amp; lighting installation</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" /> Bathroom exhaust fans &amp; appliance wiring</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-block">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/34519257/pexels-photo-34519257.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Commercial building at night" loading="lazy" />
+        </div>
+        <div class="service-text">
+          <div class="icon-wrap">
+            <img src="https://unpkg.com/lucide-static@latest/icons/building.svg" alt="" />
+            <h3>Commercial Electrical</h3>
+          </div>
+          <p>Professional electrical services for businesses, offices, retail spaces, and more. We minimize downtime and deliver quality workmanship on every project.</p>
+          <ul>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" /> Commercial wiring &amp; new construction</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" /> Lighting design &amp; LED retrofits</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" /> Panel upgrades &amp; load balancing</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" /> Data cabling &amp; low-voltage systems</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-block">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/18082922/pexels-photo-18082922.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Electrical cables on pole" loading="lazy" />
+        </div>
+        <div class="service-text">
+          <div class="icon-wrap">
+            <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="" />
+            <h3>24/7 Emergency Services</h3>
+          </div>
+          <p>Electrical emergencies don't wait. We're available around the clock to handle urgent repairs and restore safety to your home or business quickly.</p>
+          <ul>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" /> Emergency electrical troubleshooting</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" /> Power outage &amp; surge repairs</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" /> Faulty wiring &amp; breaker fixes</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" /> Same-day service available</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="container">
+      <h2 class="section-title">What Our Customers Say</h2>
+      <p class="section-subtitle">Our reputation speaks for itself. Here's what Kelowna homeowners and businesses have to say.</p>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="stars">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f1c40f" stroke="#f1c40f" stroke-width="1"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a.53.53 0 0 0 .399.29l5.166.753a.53.53 0 0 1 .294.904l-3.736 3.638a.53.53 0 0 0-.152.47l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a.53.53 0 0 0-.494 0L6.157 18.73a.53.53 0 0 1-.771-.56l.882-5.14a.53.53 0 0 0-.152-.47L2.38 8.921a.53.53 0 0 1 .294-.904l5.166-.753a.53.53 0 0 0 .399-.29z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f1c40f" stroke="#f1c40f" stroke-width="1"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a.53.53 0 0 0 .399.29l5.166.753a.53.53 0 0 1 .294.904l-3.736 3.638a.53.53 0 0 0-.152.47l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a.53.53 0 0 0-.494 0L6.157 18.73a.53.53 0 0 1-.771-.56l.882-5.14a.53.53 0 0 0-.152-.47L2.38 8.921a.53.53 0 0 1 .294-.904l5.166-.753a.53.53 0 0 0 .399-.29z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f1c40f" stroke="#f1c40f" stroke-width="1"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a.53.53 0 0 0 .399.29l5.166.753a.53.53 0 0 1 .294.904l-3.736 3.638a.53.53 0 0 0-.152.47l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a.53.53 0 0 0-.494 0L6.157 18.73a.53.53 0 0 1-.771-.56l.882-5.14a.53.53 0 0 0-.152-.47L2.38 8.921a.53.53 0 0 1 .294-.904l5.166-.753a.53.53 0 0 0 .399-.29z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f1c40f" stroke="#f1c40f" stroke-width="1"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a.53.53 0 0 0 .399.29l5.166.753a.53.53 0 0 1 .294.904l-3.736 3.638a.53.53 0 0 0-.152.47l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a.53.53 0 0 0-.494 0L6.157 18.73a.53.53 0 0 1-.771-.56l.882-5.14a.53.53 0 0 0-.152-.47L2.38 8.921a.53.53 0 0 1 .294-.904l5.166-.753a.53.53 0 0 0 .399-.29z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f1c40f" stroke="#f1c40f" stroke-width="1"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a.53.53 0 0 0 .399.29l5.166.753a.53.53 0 0 1 .294.904l-3.736 3.638a.53.53 0 0 0-.152.47l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a.53.53 0 0 0-.494 0L6.157 18.73a.53.53 0 0 1-.771-.56l.882-5.14a.53.53 0 0 0-.152-.47L2.38 8.921a.53.53 0 0 1 .294-.904l5.166-.753a.53.53 0 0 0 .399-.29z"/></svg>
+          </div>
+          <blockquote>"Ravi from RBS Electrical did an excellent job installing a bathroom exhaust fan in my condo. Fair quote, quick scheduling, on time, and very efficient. Professional work and easy to deal with. Highly recommended."</blockquote>
+          <cite>— Paul</cite>
+        </div>
+        <div class="review-card">
+          <div class="stars">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f1c40f" stroke="#f1c40f" stroke-width="1"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a.53.53 0 0 0 .399.29l5.166.753a.53.53 0 0 1 .294.904l-3.736 3.638a.53.53 0 0 0-.152.47l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a.53.53 0 0 0-.494 0L6.157 18.73a.53.53 0 0 1-.771-.56l.882-5.14a.53.53 0 0 0-.152-.47L2.38 8.921a.53.53 0 0 1 .294-.904l5.166-.753a.53.53 0 0 0 .399-.29z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f1c40f" stroke="#f1c40f" stroke-width="1"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a.53.53 0 0 0 .399.29l5.166.753a.53.53 0 0 1 .294.904l-3.736 3.638a.53.53 0 0 0-.152.47l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a.53.53 0 0 0-.494 0L6.157 18.73a.53.53 0 0 1-.771-.56l.882-5.14a.53.53 0 0 0-.152-.47L2.38 8.921a.53.53 0 0 1 .294-.904l5.166-.753a.53.53 0 0 0 .399-.29z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f1c40f" stroke="#f1c40f" stroke-width="1"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a.53.53 0 0 0 .399.29l5.166.753a.53.53 0 0 1 .294.904l-3.736 3.638a.53.53 0 0 0-.152.47l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a.53.53 0 0 0-.494 0L6.157 18.73a.53.53 0 0 1-.771-.56l.882-5.14a.53.53 0 0 0-.152-.47L2.38 8.921a.53.53 0 0 1 .294-.904l5.166-.753a.53.53 0 0 0 .399-.29z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f1c40f" stroke="#f1c40f" stroke-width="1"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a.53.53 0 0 0 .399.29l5.166.753a.53.53 0 0 1 .294.904l-3.736 3.638a.53.53 0 0 0-.152.47l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a.53.53 0 0 0-.494 0L6.157 18.73a.53.53 0 0 1-.771-.56l.882-5.14a.53.53 0 0 0-.152-.47L2.38 8.921a.53.53 0 0 1 .294-.904l5.166-.753a.53.53 0 0 0 .399-.29z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f1c40f" stroke="#f1c40f" stroke-width="1"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a.53.53 0 0 0 .399.29l5.166.753a.53.53 0 0 1 .294.904l-3.736 3.638a.53.53 0 0 0-.152.47l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a.53.53 0 0 0-.494 0L6.157 18.73a.53.53 0 0 1-.771-.56l.882-5.14a.53.53 0 0 0-.152-.47L2.38 8.921a.53.53 0 0 1 .294-.904l5.166-.753a.53.53 0 0 0 .399-.29z"/></svg>
+          </div>
+          <blockquote>"Ravinder was professional, friendly and worked very efficiently. I would highly recommend this company. I felt their prices were reasonable. Thanks."</blockquote>
+          <cite>— Gurminder</cite>
+        </div>
+        <div class="review-card">
+          <div class="stars">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f1c40f" stroke="#f1c40f" stroke-width="1"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a.53.53 0 0 0 .399.29l5.166.753a.53.53 0 0 1 .294.904l-3.736 3.638a.53.53 0 0 0-.152.47l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a.53.53 0 0 0-.494 0L6.157 18.73a.53.53 0 0 1-.771-.56l.882-5.14a.53.53 0 0 0-.152-.47L2.38 8.921a.53.53 0 0 1 .294-.904l5.166-.753a.53.53 0 0 0 .399-.29z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f1c40f" stroke="#f1c40f" stroke-width="1"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a.53.53 0 0 0 .399.29l5.166.753a.53.53 0 0 1 .294.904l-3.736 3.638a.53.53 0 0 0-.152.47l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a.53.53 0 0 0-.494 0L6.157 18.73a.53.53 0 0 1-.771-.56l.882-5.14a.53.53 0 0 0-.152-.47L2.38 8.921a.53.53 0 0 1 .294-.904l5.166-.753a.53.53 0 0 0 .399-.29z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f1c40f" stroke="#f1c40f" stroke-width="1"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a.53.53 0 0 0 .399.29l5.166.753a.53.53 0 0 1 .294.904l-3.736 3.638a.53.53 0 0 0-.152.47l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a.53.53 0 0 0-.494 0L6.157 18.73a.53.53 0 0 1-.771-.56l.882-5.14a.53.53 0 0 0-.152-.47L2.38 8.921a.53.53 0 0 1 .294-.904l5.166-.753a.53.53 0 0 0 .399-.29z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f1c40f" stroke="#f1c40f" stroke-width="1"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a.53.53 0 0 0 .399.29l5.166.753a.53.53 0 0 1 .294.904l-3.736 3.638a.53.53 0 0 0-.152.47l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a.53.53 0 0 0-.494 0L6.157 18.73a.53.53 0 0 1-.771-.56l.882-5.14a.53.53 0 0 0-.152-.47L2.38 8.921a.53.53 0 0 1 .294-.904l5.166-.753a.53.53 0 0 0 .399-.29z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f1c40f" stroke="#f1c40f" stroke-width="1"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a.53.53 0 0 0 .399.29l5.166.753a.53.53 0 0 1 .294.904l-3.736 3.638a.53.53 0 0 0-.152.47l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a.53.53 0 0 0-.494 0L6.157 18.73a.53.53 0 0 1-.771-.56l.882-5.14a.53.53 0 0 0-.152-.47L2.38 8.921a.53.53 0 0 1 .294-.904l5.166-.753a.53.53 0 0 0 .399-.29z"/></svg>
+          </div>
+          <blockquote>"Did an amazing job for us. Shows up on time and priced fairly."</blockquote>
+          <cite>— Bala</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <p class="section-subtitle">Reach out for a free estimate. We serve Kelowna and surrounding areas.</p>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <img src="https://unpkg.com/lucide-static@latest/icons/map-pin.svg" alt="" />
+            <div>
+              <h4>Address</h4>
+              <p>934 Graham Rd, Kelowna, BC V1X 1J4</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <img src="https://unpkg.com/lucide-static@latest/icons/phone.svg" alt="" />
+            <div>
+              <h4>Phone</h4>
+              <p><a href="tel:+16047273839">(604) 727-3839</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="" />
+            <div>
+              <h4>Hours</h4>
+              <p>Open 24 hours, 7 days a week</p>
+            </div>
+          </div>
+        </div>
+        <div class="map-wrap">
+          <iframe src="https://maps.google.com/maps?q=934+Graham+Rd%2C+Kelowna%2C+BC+V1X+1J4&output=embed" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 RBS Electrical Ltd. All rights reserved.</p>
+    <div class="attribution">
+      Made with love by <a href="https://design.withviso.com" target="_blank">Viso Solutions</a>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('nav');
+
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      const isOpen = nav.classList.contains('open');
+      menuToggle.innerHTML = isOpen
+        ? '<img src="https://unpkg.com/lucide-static@latest/icons/x.svg" alt="" />'
+        : '<img src="https://unpkg.com/lucide-static@latest/icons/menu.svg" alt="" />';
+    });
+
+    // Close mobile nav on link click
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        menuToggle.innerHTML = '<img src="https://unpkg.com/lucide-static@latest/icons/menu.svg" alt="" />';
+      });
+    });
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade-in, .service-block').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
