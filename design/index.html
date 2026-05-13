@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Primary SEO -->
-  <title>Viso Solutions &amp; Web Design | Improve Your Online Presence</title>
-  <meta name="description" content="Your website is often the first impression you make and a good design instantly builds trust. Grow your business with a website that builds trust, and sets you above the competition.">
+  <title>Viso Solutions &amp; Web Design | Build Your Online Presence</title>
+  <meta name="description" content="Your website is often the first impression you make. Grow your business with a website that builds trust, and sets you above the competition.">
   <link rel="canonical" href="https://design.withviso.com/">
 
   <!-- Open Graph (Facebook, LinkedIn, iMessage, Slack, Discord, etc.) -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Viso Solutions">
-  <meta property="og:title" content="Viso Solutions &amp; Web Design | Improve Your Online Presence">
-  <meta property="og:description" content="Your website is often the first impression you make and a good design instantly builds trust. Grow your business with a website that builds trust, and sets you above the competition.">
+  <meta property="og:title" content="Viso Solutions &amp; Web Design | Build Your Online Presence">
+  <meta property="og:description" content="Your website is often the first impression you make. Grow your business with a website that builds trust, and sets you above the competition.">
   <meta property="og:url" content="https://design.withviso.com/">
   <meta property="og:image" content="https://design.withviso.com/og-image.jpg">
   <meta property="og:image:width" content="1184">
@@ -22,8 +22,8 @@
 
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Viso Solutions &amp; Web Design | Improve Your Online Presence">
-  <meta name="twitter:description" content="Your website is often the first impression you make and a good design instantly builds trust. Grow your business with a website that builds trust, and sets you above the competition.">
+  <meta name="twitter:title" content="Viso Solutions &amp; Web Design | Build Your Online Presence">
+  <meta name="twitter:description" content="Your website is often the first impression you make. Grow your business with a website that builds trust, and sets you above the competition.">
   <meta name="twitter:image" content="https://design.withviso.com/og-image.jpg">
 
   <!-- Browser / PWA polish -->
@@ -867,9 +867,7 @@
                       if (entry.isIntersecting) {
                         entry.target.style.opacity = "1"
                         entry.target.style.transform = "translateY(0)"
-                      } else {
-                        entry.target.style.opacity = "0"
-                        entry.target.style.transform = "translateY(30px)"
+                        revealObserver.unobserve(entry.target)
                       }
                     })
                   }, observerOptions)
