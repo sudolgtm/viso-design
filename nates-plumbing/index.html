@@ -12,10 +12,10 @@
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TBD8TFCF');</script>
     <style>
         :root {
-            --primary: #051146;
-            --primary-light: #0a1f6e;
-            --secondary: #06c3f4;
-            --accent: #fdbf00;
+            --primary: #0f2b4a;
+            --primary-light: #1a3d63;
+            --secondary: #2b7ec4;
+            --accent: #c88532;
             --light-bg: #f8f9fa;
             --dark-text: #1a1a2e;
             --gray-text: #6c757d;
@@ -55,9 +55,10 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: var(--primary);
+            background: var(--white);
             padding: 15px 0;
             height: 75px;
+            border-bottom: 1px solid rgba(15,43,74,0.08);
         }
 
         header .container {
@@ -79,7 +80,7 @@
         }
 
         .logo-text {
-            color: var(--white);
+            color: var(--primary);
             font-size: 1.3rem;
             font-weight: 700;
             letter-spacing: -0.5px;
@@ -96,7 +97,7 @@
         }
 
         nav a {
-            color: rgba(255,255,255,0.85);
+            color: var(--dark-text);
             text-decoration: none;
             font-size: 0.9rem;
             font-weight: 500;
@@ -125,7 +126,7 @@
 
         .nav-cta {
             background: var(--accent);
-            color: var(--primary) !important;
+            color: var(--white) !important;
             padding: 10px 24px;
             border-radius: 8px;
             font-weight: 600;
@@ -136,14 +137,14 @@
         }
 
         .nav-cta:hover {
-            background: #e5a800;
+            background: #b0732a;
         }
 
         .mobile-toggle {
             display: none;
             background: none;
             border: none;
-            color: var(--white);
+            color: var(--primary);
             font-size: 1.5rem;
             cursor: pointer;
             padding: 5px;
@@ -155,7 +156,7 @@
             top: 75px;
             z-index: 999;
             background: var(--secondary);
-            color: var(--primary);
+            color: var(--white);
             text-align: center;
             padding: 10px 20px;
             font-size: 0.9rem;
@@ -177,7 +178,7 @@
             min-height: 85vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(135deg, var(--primary) 0%, #0a1f6e 50%, #0d2b8a 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 50%, #1f4f7a 100%);
             overflow: hidden;
         }
 
@@ -185,7 +186,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1920&h=1080&fit=crop') center/cover no-repeat;
+            background: url('https://images.pexels.com/photos/14953886/pexels-photo-14953886.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1') center/cover no-repeat;
             opacity: 0.15;
             z-index: 0;
         }
@@ -193,7 +194,7 @@
         .hero-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, rgba(5,17,70,0.85) 0%, rgba(5,17,70,0.6) 100%);
+            background: linear-gradient(135deg, rgba(15,43,74,0.85) 0%, rgba(15,43,74,0.6) 100%);
             z-index: 1;
         }
 
@@ -243,12 +244,13 @@
         .hero-badge img {
             width: 20px;
             height: 20px;
+            filter: brightness(0) invert(1);
         }
 
         .btn-primary {
             display: inline-block;
             background: var(--accent);
-            color: var(--primary);
+            color: var(--white);
             padding: 16px 40px;
             border-radius: 50px;
             font-size: 1.05rem;
@@ -261,7 +263,7 @@
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(253,191,0,0.3);
+            box-shadow: 0 10px 30px rgba(200,133,50,0.3);
         }
 
         .btn-outline {
@@ -340,7 +342,7 @@
         .what-image {
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 20px 60px rgba(5,17,70,0.15);
+            box-shadow: 0 20px 60px rgba(15,43,74,0.15);
         }
 
         .what-image img {
@@ -379,7 +381,7 @@
         .service-image {
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 15px 40px rgba(5,17,70,0.1);
+            box-shadow: 0 15px 40px rgba(15,43,74,0.1);
         }
 
         .service-image img {
@@ -466,7 +468,7 @@
 
         .why-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(5,17,70,0.1);
+            box-shadow: 0 15px 40px rgba(15,43,74,0.1);
         }
 
         .why-card img {
@@ -626,7 +628,7 @@
         .contact-map {
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 15px 40px rgba(5,17,70,0.1);
+            box-shadow: 0 15px 40px rgba(15,43,74,0.1);
         }
 
         .contact-map iframe {
@@ -702,11 +704,12 @@
                 top: 75px;
                 left: 0;
                 right: 0;
-                background: var(--primary);
+                background: var(--white);
                 flex-direction: column;
                 padding: 20px;
                 gap: 15px;
-                border-top: 1px solid rgba(255,255,255,0.1);
+                border-top: 1px solid rgba(15,43,74,0.08);
+                box-shadow: 0 10px 30px rgba(15,43,74,0.1);
             }
 
             nav.open {
@@ -898,7 +901,7 @@
                     <p style="margin-top: 15px;">Planning a new build? We specialize in hydronic in-floor heating and superior mechanical rooms. It's not everyday that you come across people who take pride in their work — check out the difference for yourself!</p>
                 </div>
                 <div class="what-image">
-                    <img src="https://images.pexels.com/photos/28169591/pexels-photo-28169591.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Plumbing pipes and fittings" loading="lazy">
+                    <img src="https://images.pexels.com/photos/12105083/pexels-photo-12105083.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Close-up of wrench and tools" loading="lazy">
                 </div>
             </div>
         </div>
@@ -916,7 +919,7 @@
             <!-- Service 1: Plumbing Repairs -->
             <div class="service-block">
                 <div class="service-image">
-                    <img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop" alt="Plumbing repair" loading="lazy">
+                    <img src="https://images.pexels.com/photos/29399427/pexels-photo-29399427.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Modern bathroom sink with faucet" loading="lazy">
                 </div>
                 <div class="service-info">
                     <div class="service-icon">
@@ -956,7 +959,7 @@
             <!-- Service 3: Gas Fitting & Hydronic Heating -->
             <div class="service-block">
                 <div class="service-image">
-                    <img src="https://images.pexels.com/photos/5847394/pexels-photo-5847394.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Gas pipe fitting" loading="lazy">
+                    <img src="https://images.pexels.com/photos/13422435/pexels-photo-13422435.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Gas stove close-up" loading="lazy">
                 </div>
                 <div class="service-info">
                     <div class="service-icon">
@@ -976,7 +979,7 @@
             <!-- Service 4: Renovations & New Construction -->
             <div class="service-block reverse">
                 <div class="service-image">
-                    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&h=600&fit=crop" alt="Renovation construction" loading="lazy">
+                    <img src="https://images.pexels.com/photos/36777589/pexels-photo-36777589.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Modern bathroom interior" loading="lazy">
                 </div>
                 <div class="service-info">
                     <div class="service-icon">
