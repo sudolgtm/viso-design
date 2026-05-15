@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TBD8TFCF');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Lauer Plumbing | Kelowna's Trusted Plumber</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: #1a1a2e; line-height: 1.6; overflow-x: hidden; }
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+/* Header */
+header { position: sticky; top: 0; z-index: 1000; background: #fff; box-shadow: 0 2px 15px rgba(0,0,0,0.08); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 12px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 10px; }
+.logo img { height: 42px; width: auto; }
+.logo-text { font-size: 1.25rem; font-weight: 700; color: #1a56db; letter-spacing: -0.02em; }
+.logo-acronym { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: #1a56db; color: #fff; font-weight: 800; font-size: 1.1rem; border-radius: 10px; flex-shrink: 0; }
+.nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+.nav-links a { font-size: 0.9rem; font-weight: 500; color: #374151; transition: color 0.3s; }
+.nav-links a:hover { color: #1a56db; }
+.nav-cta { background: #1a56db; color: #fff !important; padding: 8px 20px; border-radius: 8px; font-weight: 600 !important; font-size: 0.85rem !important; transition: background 0.3s; }
+.nav-cta:hover { background: #1648c0 !important; }
+.mobile-toggle { display: none; flex-direction: column; cursor: pointer; background: none; border: none; padding: 4px; }
+.mobile-toggle span { width: 26px; height: 3px; background: #1a2a4a; margin: 3px 0; border-radius: 2px; transition: 0.3s; }
+
+/* Claim Banner */
+.claim-banner { position: sticky; top: 64px; z-index: 999; background: #1a56db; color: #fff; text-align: center; padding: 10px 24px; font-size: 0.9rem; font-weight: 500; }
+.claim-banner a { text-decoration: none; color: inherit; display: block; }
+.claim-banner u { text-decoration: underline; text-underline-offset: 2px; }
+
+section[id] { scroll-margin-top: 105px; }
+
+/* Hero */
+.hero { position: relative; min-height: 85vh; display: flex; align-items: center; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; }
+.hero-bg img { width: 100%; height: 100%; object-fit: cover; }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 100%); }
+.hero-content { position: relative; z-index: 2; max-width: 720px; padding: 80px 24px; }
+.hero h1 { font-size: clamp(2.5rem, 6vw, 4.2rem); font-weight: 800; color: #fff; line-height: 1.08; margin-bottom: 16px; letter-spacing: -0.03em; }
+.hero p { font-size: clamp(1.05rem, 2vw, 1.25rem); color: rgba(255,255,255,0.9); margin-bottom: 32px; max-width: 560px; line-height: 1.7; }
+.hero .btn { display: inline-block; background: #1a56db; color: #fff; padding: 16px 36px; border-radius: 10px; font-weight: 600; font-size: 1rem; transition: all 0.3s; }
+.hero .btn:hover { background: #1648c0; transform: translateY(-2px); box-shadow: 0 10px 30px rgba(26,86,219,0.3); }
+
+/* Section Common */
+section { padding: 80px 0; }
+.section-title { text-align: center; margin-bottom: 56px; }
+.section-title h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px; }
+.section-title p { color: #6b7280; font-size: 1.05rem; max-width: 600px; margin: 0 auto; }
+
+/* What We Do */
+.what-we-do { background: #f9fafb; }
+.what-we-do-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.what-we-do-text h3 { font-size: 1.6rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.02em; }
+.what-we-do-text p { color: #4b5563; font-size: 1.05rem; line-height: 1.8; }
+.what-we-do-image { border-radius: 16px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
+.what-we-do-image img { width: 100%; height: 350px; object-fit: cover; }
+
+/* Services Alternating */
+.services-section { background: #fff; }
+.service-row { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-bottom: 80px; }
+.service-row:last-child { margin-bottom: 0; }
+.service-row.reverse .service-image { order: 2; }
+.service-row.reverse .service-info { order: 1; }
+.service-image { border-radius: 16px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
+.service-image img { width: 100%; height: 320px; object-fit: cover; transition: transform 0.5s; }
+.service-image:hover img { transform: scale(1.04); }
+.service-info h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+.service-info h3 img { width: 28px; height: 28px; }
+.service-info .service-desc { color: #4b5563; margin-bottom: 16px; line-height: 1.7; }
+.service-info ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.service-info ul li { display: flex; align-items: flex-start; gap: 10px; color: #374151; font-size: 0.95rem; }
+.service-info ul li img { width: 20px; height: 20px; flex-shrink: 0; margin-top: 2px; }
+
+/* Why Choose Us */
+.why-choose-us { background: #f9fafb; }
+.benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.benefit-card { background: #fff; padding: 36px 28px; border-radius: 16px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.05); transition: transform 0.3s; }
+.benefit-card:hover { transform: translateY(-6px); }
+.benefit-card img { width: 44px; height: 44px; margin: 0 auto 16px; }
+.benefit-card h4 { font-size: 1.15rem; font-weight: 600; margin-bottom: 8px; }
+.benefit-card p { color: #6b7280; font-size: 0.92rem; line-height: 1.6; }
+
+/* Reviews */
+.reviews-section { background: #fff; }
+.reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.review-card { background: #f9fafb; border-radius: 16px; padding: 32px 28px; box-shadow: 0 4px 15px rgba(0,0,0,0.04); }
+.review-card .stars { display: flex; gap: 2px; margin-bottom: 12px; }
+.review-card .stars svg { width: 18px; height: 18px; }
+.review-card blockquote { color: #374151; font-size: 0.95rem; line-height: 1.7; font-style: italic; margin-bottom: 20px; }
+.review-card .reviewer { font-weight: 600; font-size: 0.9rem; color: #1a2a4a; }
+
+/* Contact */
+.contact-section { background: #1a2a4a; color: #fff; }
+.contact-section .section-title h2 { color: #fff; }
+.contact-section .section-title p { color: rgba(255,255,255,0.7); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+.contact-info h3 { font-size: 1.3rem; font-weight: 600; margin-bottom: 24px; }
+.contact-detail { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 20px; }
+.contact-detail img { width: 22px; height: 22px; flex-shrink: 0; margin-top: 4px; filter: brightness(0) invert(1); }
+.contact-detail div { font-size: 0.95rem; line-height: 1.6; }
+.contact-detail div strong { display: block; font-weight: 600; margin-bottom: 2px; }
+.hours-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 20px; margin-top: 8px; }
+.hours-grid .day { font-weight: 500; }
+.hours-grid .time { text-align: right; color: rgba(255,255,255,0.8); }
+.contact-map { border-radius: 16px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.2); }
+.contact-map iframe { width: 100%; height: 380px; border: 0; display: block; }
+
+/* Footer */
+footer { background: #0f1a2e; color: rgba(255,255,255,0.7); padding: 32px 0; text-align: center; }
+footer .footer-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+footer .footer-logo { margin-bottom: 12px; }
+footer .footer-logo .logo-acronym { width: 44px; height: 44px; margin: 0 auto; font-size: 1.2rem; }
+footer .footer-divider { width: 60px; height: 2px; background: #1a56db; margin: 0 auto 16px; }
+footer p { font-size: 0.85rem; margin-bottom: 4px; }
+footer .attribution { font-size: 0.85rem; margin-top: 8px; }
+footer .attribution a { color: #60a5fa; font-weight: 500; }
+footer .attribution a:hover { text-decoration: underline; }
+
+/* Fade-in Animation */
+.fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* Mobile Nav */
+@media (max-width: 900px) {
+  .nav-links { display: none; position: absolute; top: 64px; left: 0; right: 0; background: #fff; flex-direction: column; padding: 16px 24px; gap: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+  .nav-links.open { display: flex; }
+  .mobile-toggle { display: flex; }
+  .what-we-do-grid { grid-template-columns: 1fr; }
+  .service-row { grid-template-columns: 1fr; }
+  .service-row.reverse .service-image { order: 0; }
+  .service-row.reverse .service-info { order: 0; }
+  .benefits-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .hero { min-height: 70vh; }
+  .hero-content { padding: 60px 24px; }
+}
+
+@media (max-width: 600px) {
+  section { padding: 56px 0; }
+  .service-image img { height: 240px; }
+  .hours-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBD8TFCF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <span class="logo-acronym">LP</span>
+      <span class="logo-text">Lauer Plumbing</span>
+    </a>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#what-we-do">What We Do</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why-choose-us">Why Us</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+    </ul>
+  </div>
+</header>
+
+<div class="claim-banner">
+  <a href="https://design.withviso.com" target="_blank" rel="noopener">
+    Hi Lauer Plumbing! Do you like the website? <u>Contact us to make it yours</u>
+  </a>
+</div>
+
+<!-- Hero -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <img src="https://images.pexels.com/photos/14953886/pexels-photo-14953886.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Plumber working" loading="lazy">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content container">
+    <h1>Reliable Plumbing You Can Trust</h1>
+    <p>With over 55 years of combined experience, Lauer Plumbing delivers prompt, courteous service for all your plumbing and drainage needs in Kelowna and surrounding areas.</p>
+    <a href="#contact" class="btn">Call (250) 870-6199</a>
+  </div>
+</section>
+
+<!-- What We Do -->
+<section class="what-we-do" id="what-we-do">
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>What We Do</h2>
+      <p>Kelowna's trusted plumbing experts — serving our community with integrity and craftsmanship.</p>
+    </div>
+    <div class="what-we-do-grid fade-in">
+      <div class="what-we-do-text">
+        <h3>Solving All Your Plumbing & Drainage Problems</h3>
+        <p>Lauer Plumbing will solve all your plumbing and drainage problems — from plugged drains to full plumbing renovations. You can rely on our combined 55 years of experience backed with integrity to get the job done right the first time. For prompt, courteous, reliable service with integrity, call Brian.</p>
+      </div>
+      <div class="what-we-do-image">
+        <img src="https://images.pexels.com/photos/6419128/pexels-photo-6419128.jpeg?auto=compress&cs=tinysrgb&w=940" alt="Plumber installing steel pipes" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="services-section" id="services">
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>Our Services</h2>
+      <p>Comprehensive plumbing solutions for your home or business — done right the first time.</p>
+    </div>
+
+    <!-- Service 1: Brand Name Fixtures -->
+    <div class="service-row fade-in">
+      <div class="service-image">
+        <img src="https://images.pexels.com/photos/18071800/pexels-photo-18071800.jpeg?auto=compress&cs=tinysrgb&w=940" alt="Brand name plumbing fixtures" loading="lazy">
+      </div>
+      <div class="service-info">
+        <h3><img src="https://unpkg.com/lucide-static@latest/icons/wrench.svg" alt="" aria-hidden="true"> Brand Name Fixtures</h3>
+        <p class="service-desc">We install and repair high-quality brand name fixtures that enhance the functionality and style of your home. From faucets to toilets, we work with top brands to ensure lasting performance.</p>
+        <ul>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Premium faucet and tap installations</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Toilet repair and replacement</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Shower and bathtub fixture upgrades</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Sink and basin installations</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Service 2: Drain Cleaning -->
+    <div class="service-row reverse fade-in">
+      <div class="service-image">
+        <img src="https://images.pexels.com/photos/87299/pexels-photo-87299.jpeg?auto=compress&cs=tinysrgb&w=940" alt="Drain cleaning" loading="lazy">
+      </div>
+      <div class="service-info">
+        <h3><img src="https://unpkg.com/lucide-static@latest/icons/droplets.svg" alt="" aria-hidden="true"> Drain Cleaning</h3>
+        <p class="service-desc">From slow bathroom sinks to basement floor drains backing up from roots in the sewer — we've seen it all. Our drain cleaning services restore flow and prevent future clogs.</p>
+        <ul>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Kitchen and bathroom drain clearing</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Sewer line cleaning and root removal</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Floor drain maintenance</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Emergency drain unblocking</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Service 3: Hot Water Tanks -->
+    <div class="service-row fade-in">
+      <div class="service-image">
+        <img src="https://images.pexels.com/photos/30560254/pexels-photo-30560254.jpeg?auto=compress&cs=tinysrgb&w=940" alt="Hot water tank installation" loading="lazy">
+      </div>
+      <div class="service-info">
+        <h3><img src="https://unpkg.com/lucide-static@latest/icons/thermometer.svg" alt="" aria-hidden="true"> Hot Water Tanks</h3>
+        <p class="service-desc">We install, repair, and replace hot water tanks to ensure you never run out of hot water. Whether you need a traditional tank or a modern tankless system, we've got you covered.</p>
+        <ul>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Water heater installation and replacement</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Tank and tankless system repairs</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Annual maintenance and flushing</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Emergency water heater service</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Service 4: Plumbing Renovations -->
+    <div class="service-row reverse fade-in">
+      <div class="service-image">
+        <img src="https://images.pexels.com/photos/4194862/pexels-photo-4194862.jpeg?auto=compress&cs=tinysrgb&w=940" alt="Plumbing renovation" loading="lazy">
+      </div>
+      <div class="service-info">
+        <h3><img src="https://unpkg.com/lucide-static@latest/icons/hammer.svg" alt="" aria-hidden="true"> Plumbing Renovations</h3>
+        <p class="service-desc">Planning a renovation? We handle all the plumbing — from kitchen remodels to bathroom transformations and basement developments. Quality workmanship that stands the test of time.</p>
+        <ul>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Bathroom and kitchen plumbing renovations</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Basement bathroom installation</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Upstairs laundry rough-ins</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Pipe re-routing and system upgrades</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Service 5: Service & Plumbing Repair -->
+    <div class="service-row fade-in">
+      <div class="service-image">
+        <img src="https://images.pexels.com/photos/12105083/pexels-photo-12105083.jpeg?auto=compress&cs=tinysrgb&w=940" alt="Plumbing tools on blueprint" loading="lazy">
+      </div>
+      <div class="service-info">
+        <h3><img src="https://unpkg.com/lucide-static@latest/icons/settings.svg" alt="" aria-hidden="true"> Service &amp; Plumbing Repair</h3>
+        <p class="service-desc">Sooner or later, some part of your plumbing system will fail. From a dripping fixture to a broken pipe — we can repair or replace it and get you up and running fast.</p>
+        <ul>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Leak detection and pipe repair</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Emergency plumbing service available</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Fixture and appliance hookups</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> General plumbing maintenance</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="why-choose-us" id="why-choose-us">
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>Why Choose Lauer Plumbing</h2>
+      <p>What sets us apart — experience, integrity, and a commitment to getting it right.</p>
+    </div>
+    <div class="benefits-grid fade-in">
+      <div class="benefit-card">
+        <img src="https://unpkg.com/lucide-static@latest/icons/shield-check.svg" alt="" aria-hidden="true">
+        <h4>55+ Years Combined Experience</h4>
+        <p>Decades of hands-on plumbing expertise you can count on for every job, big or small.</p>
+      </div>
+      <div class="benefit-card">
+        <img src="https://unpkg.com/lucide-static@latest/icons/thumbs-up.svg" alt="" aria-hidden="true">
+        <h4>Done Right the First Time</h4>
+        <p>We take pride in our workmanship — meticulous attention to detail with quality materials ensures lasting results.</p>
+      </div>
+      <div class="benefit-card">
+        <img src="https://unpkg.com/lucide-static@latest/icons/clock-9.svg" alt="" aria-hidden="true">
+        <h4>Available 24/7</h4>
+        <p>Plumbing emergencies don't wait. We're here around the clock with prompt, courteous service whenever you need us.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section class="reviews-section" id="reviews">
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>What Our Customers Say</h2>
+      <p>Rated 5.0 stars from 137 reviews on Google — our customers speak for us.</p>
+    </div>
+    <div class="reviews-grid fade-in">
+      <div class="review-card">
+        <div class="stars">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        </div>
+        <blockquote>"Brian was fantastic — showed up on time, diagnosed the problem quickly, and fixed our leaky pipe in no time. Fair pricing and great work. Highly recommend!"</blockquote>
+        <div class="reviewer">— Mike R.</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        </div>
+        <blockquote>"We had Lauer Plumbing install a new hot water tank for us. Professional from start to finish — clean work, fair price, and everything works perfectly. Thanks Brian!"</blockquote>
+        <div class="reviewer">— Sarah K.</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        </div>
+        <blockquote>"Called Brian for an emergency drain backup late on a Saturday. He came right away, cleared the blockage, and saved our basement from flooding. True lifesaver!"</blockquote>
+        <div class="reviewer">— Tom D.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>Contact Us</h2>
+      <p>Ready to get started? Give us a call or stop by — we're here to help.</p>
+    </div>
+    <div class="contact-grid fade-in">
+      <div class="contact-info">
+        <h3>Get In Touch</h3>
+        <div class="contact-detail">
+          <img src="https://unpkg.com/lucide-static@latest/icons/map-pin.svg" alt="" aria-hidden="true">
+          <div>
+            <strong>Address</strong>
+            1405 Elm St, Kelowna, BC V1Y 3W8
+          </div>
+        </div>
+        <div class="contact-detail">
+          <img src="https://unpkg.com/lucide-static@latest/icons/phone.svg" alt="" aria-hidden="true">
+          <div>
+            <strong>Phone</strong>
+            (250) 870-6199
+          </div>
+        </div>
+        <div class="contact-detail">
+          <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="" aria-hidden="true">
+          <div>
+            <strong>Business Hours</strong>
+            <div class="hours-grid">
+              <span class="day">Monday</span><span class="time">Open 24 hours</span>
+              <span class="day">Tuesday</span><span class="time">Open 24 hours</span>
+              <span class="day">Wednesday</span><span class="time">Open 24 hours</span>
+              <span class="day">Thursday</span><span class="time">Open 24 hours</span>
+              <span class="day">Friday</span><span class="time">Open 24 hours</span>
+              <span class="day">Saturday</span><span class="time">Open 24 hours</span>
+              <span class="day">Sunday</span><span class="time">Open 24 hours</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20564.46635854543!2d-119.48477536523438!3d49.888321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537df3f69f28bf59%3A0x9d7786fb06d44248!2sLauer%20Plumbing!5e0!3m2!1sen!2sca!4v1778795801868!5m2!1sen!2sca" width="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <span class="logo-acronym">LP</span>
+    </div>
+    <div class="footer-divider"></div>
+    <p>&copy; <span id="year"></span> Lauer Plumbing. All rights reserved.</p>
+    <div class="attribution">
+      <p>Made with love by <a href="https://design.withviso.com" target="_blank" rel="noopener">Viso Solutions</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Mobile nav toggle
+const toggle = document.getElementById('mobileToggle');
+const navLinks = document.getElementById('navLinks');
+
+toggle.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+});
+
+// Close nav on link click
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+  });
+});
+
+// Fade-in on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Current year
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
