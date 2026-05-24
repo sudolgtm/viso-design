@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>Dave's Plumbing | East Wenatchee, WA</title>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TBD8TFCF');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: #1a1a2e; line-height: 1.6; background: #fff; }
+    section[id] { scroll-margin-top: 100px; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+
+    header { position: sticky; top: 0; z-index: 1000; background: #1a365d; color: #fff; padding: 12px 0; }
+    header .container { display: flex; align-items: center; justify-content: space-between; }
+    .logo { display: flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 800; font-family: 'Georgia', serif; letter-spacing: 1px; }
+    .logo-acronym { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: #e8751a; color: #fff; border-radius: 6px; font-size: 16px; font-weight: 900; font-family: 'Playfair Display', serif; letter-spacing: 0.5px; }
+    .nav-links { display: flex; gap: 28px; list-style: none; font-weight: 600; font-size: 14px; }
+    .nav-links a { transition: opacity 0.2s; }
+    .nav-links a:hover { opacity: 0.8; }
+    .nav-toggle { display: none; background: none; border: none; cursor: pointer; }
+    .nav-toggle img { width: 28px; height: 28px; filter: brightness(0) invert(1); }
+
+    .claim-banner { position: sticky; top: 60px; z-index: 999; background: #e8751a; color: #fff; text-align: center; padding: 10px 20px; font-size: 14px; font-weight: 600; }
+    .claim-banner a { display: block; }
+    .claim-banner u { text-decoration: underline; }
+
+    .hero { position: relative; min-height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; overflow: hidden; }
+    .hero-bg { position: absolute; inset: 0; }
+    .hero-bg img { width: 100%; height: 100%; object-fit: cover; }
+    .hero-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.65); }
+    .hero-content { position: relative; z-index: 1; max-width: 800px; padding: 40px 20px; }
+    .hero-content h1 { font-size: 48px; font-weight: 800; margin-bottom: 16px; }
+    .hero-content p { font-size: 20px; margin-bottom: 32px; opacity: 0.9; }
+    .hero-content .cta { display: inline-block; background: #e8751a; color: #fff; padding: 14px 36px; border-radius: 6px; font-weight: 700; font-size: 16px; transition: background 0.3s; }
+    .hero-content .cta:hover { background: #d0650e; }
+
+    .section-title { text-align: center; font-size: 36px; font-weight: 700; margin-bottom: 16px; color: #1a365d; }
+    .section-subtitle { text-align: center; font-size: 16px; color: #666; margin-bottom: 48px; }
+
+    .wwd-section { padding: 80px 0; background: #fff; }
+    .wwd-content { display: flex; align-items: center; gap: 48px; }
+    .wwd-text { flex: 1; }
+    .wwd-text p { font-size: 17px; color: #555; line-height: 1.8; }
+    .wwd-image { flex: 1; border-radius: 12px; overflow: hidden; }
+    .wwd-image img { width: 100%; height: 320px; object-fit: cover; border-radius: 12px; }
+
+    .services-section { padding: 80px 0; background: #f8f9fa; }
+    .service-block { display: flex; align-items: center; gap: 48px; margin-bottom: 64px; }
+    .service-block.reverse { flex-direction: row-reverse; }
+    .service-img { flex: 1; border-radius: 12px; overflow: hidden; }
+    .service-img img { width: 100%; height: 320px; object-fit: cover; border-radius: 12px; }
+    .service-text { flex: 1; }
+    .service-text h3 { display: flex; align-items: center; gap: 10px; font-size: 24px; font-weight: 700; color: #1a365d; margin-bottom: 12px; }
+    .service-text h3 img { width: 28px; height: 28px; }
+    .service-text p { color: #555; margin-bottom: 16px; }
+    .service-text ul { list-style: none; padding: 0; }
+    .service-text ul li { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; font-size: 15px; color: #444; }
+    .service-text ul li img { width: 20px; height: 20px; flex-shrink: 0; margin-top: 3px; }
+
+    .why-section { padding: 80px 0; background: #fff; }
+    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+    .why-card { text-align: center; padding: 40px 24px; border-radius: 12px; background: #f8f9fa; transition: transform 0.3s; }
+    .why-card:hover { transform: translateY(-4px); }
+    .why-card img { width: 40px; height: 40px; margin: 0 auto 16px; }
+    .why-card h4 { font-size: 18px; font-weight: 700; color: #1a365d; margin-bottom: 8px; }
+    .why-card p { font-size: 15px; color: #555; line-height: 1.7; }
+
+    .reviews-section { padding: 80px 0; background: #f8f9fa; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+    .review-card { background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+    .review-card .stars { display: flex; gap: 2px; margin-bottom: 12px; }
+    .review-card .stars svg { width: 18px; height: 18px; }
+    .review-card .review-text { color: #555; margin-bottom: 16px; font-size: 15px; line-height: 1.7; }
+    .review-card .review-name { font-weight: 700; color: #1a365d; font-size: 14px; }
+
+    .contact-section { padding: 80px 0; background: #fff; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .contact-info h3 { font-size: 24px; font-weight: 700; color: #1a365d; margin-bottom: 24px; }
+    .contact-info .info-item { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; font-size: 15px; color: #444; }
+    .contact-info .info-item img { width: 22px; height: 22px; flex-shrink: 0; }
+    .contact-map { border-radius: 12px; overflow: hidden; }
+    .contact-map iframe { width: 100%; height: 300px; border: 0; display: block; }
+
+    .footer { background: #1a365d; color: #fff; padding: 32px 0; text-align: center; }
+    .footer p { font-size: 14px; margin-bottom: 4px; }
+    .footer .attribution { font-size: 13px; opacity: 0.8; margin-top: 8px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.15); }
+    .footer .attribution a { color: #fff; text-decoration: underline; }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #1a365d; flex-direction: column; padding: 20px; gap: 16px; }
+      .nav-links.open { display: flex; }
+      .nav-toggle { display: block; }
+      .hero-content h1 { font-size: 32px; }
+      .hero-content p { font-size: 16px; }
+      .service-block { flex-direction: column !important; gap: 24px; }
+      .service-img img { height: 240px; }
+      .wwd-content { flex-direction: column; gap: 24px; }
+      .wwd-image img { height: 240px; }
+      .why-grid { grid-template-columns: 1fr; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .section-title { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBD8TFCF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <header>
+    <div class="container">
+      <div class="logo">
+        <span class="logo-acronym">DP</span>
+        <span>Dave's Plumbing</span>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" onclick="toggleNav()">
+        <img src="https://unpkg.com/lucide-static@latest/icons/menu.svg" alt="" />
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#services" onclick="closeNav()">Services</a></li>
+        <li><a href="#reviews" onclick="closeNav()">Reviews</a></li>
+        <li><a href="#contact" onclick="closeNav()">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="claim-banner">
+    <a href="https://design.withviso.com" style="text-decoration:none;color:inherit;">
+      Hi Dave's Plumbing! Do you like the website? <u>Contact us to make it yours</u>
+    </a>
+  </div>
+
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://images.pexels.com/photos/34228/drip-drop-of-water-wave-wet.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Clear water droplet" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Trusted Plumbing Experts Serving East Wenatchee</h1>
+      <p>Decades of experience in rough-in construction, residential repairs, and commercial plumbing for the Wenatchee-Chelan area.</p>
+      <a href="tel:+15098841417" class="cta">Call (509) 884-1417</a>
+    </div>
+  </section>
+
+  <section id="about" class="wwd-section">
+    <div class="container">
+      <h2 class="section-title">What We Do</h2>
+      <div class="wwd-content">
+        <div class="wwd-text">
+          <p>Dave's Plumbing has been serving the East Wenatchee and Wenatchee-Chelan area with expert plumbing services for decades. From rough-in construction for new custom homes to commercial plumbing and residential repairs, our experienced team delivers quality workmanship on every project.</p>
+        </div>
+        <div class="wwd-image">
+          <img src="https://images.pexels.com/photos/3855223/pexels-photo-3855223.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Mechanic choosing tools in garage" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="services-section">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-subtitle">Professional plumbing for residential and commercial projects</p>
+
+      <div class="service-block">
+        <div class="service-img">
+          <img src="https://images.pexels.com/photos/14715827/pexels-photo-14715827.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Mirrors above white bathroom counter" loading="lazy" />
+        </div>
+        <div class="service-text">
+          <h3><img src="https://unpkg.com/lucide-static@latest/icons/hard-hat.svg" alt="" /> Rough-In &amp; New Construction</h3>
+          <p>From custom homes to multi-unit developments, we handle all rough-in plumbing for new construction projects with precision and reliability.</p>
+          <ul>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" /> Full rough-in plumbing for new builds</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" /> Custom fixture selection and supply</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" /> Well water and septic system connections</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" /> Complex rural and challenging site expertise</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-block reverse">
+        <div class="service-img">
+          <img src="https://images.pexels.com/photos/7005476/pexels-photo-7005476.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Modern bathroom" loading="lazy" />
+        </div>
+        <div class="service-text">
+          <h3><img src="https://unpkg.com/lucide-static@latest/icons/droplets.svg" alt="" /> Residential Plumbing &amp; Repairs</h3>
+          <p>Reliable repairs, upgrades, and installations for homes throughout the Wenatchee-Chelan area. We treat every home like our own.</p>
+          <ul>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" /> Leak detection and pipe repair</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" /> Bathroom and kitchen fixture installation</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" /> Water heater repair and replacement</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" /> Drain cleaning and clog removal</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-block">
+        <div class="service-img">
+          <img src="https://images.pexels.com/photos/8082195/pexels-photo-8082195.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Luxury bathroom" loading="lazy" />
+        </div>
+        <div class="service-text">
+          <h3><img src="https://unpkg.com/lucide-static@latest/icons/building.svg" alt="" /> Commercial &amp; Multi-Unit Plumbing</h3>
+          <p>Professional plumbing solutions for duplexes, apartment buildings, and commercial properties. Quality work that stands up to heavy use.</p>
+          <ul>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" /> New construction and trim for multi-unit</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" /> Commercial fixture installation</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" /> Backflow prevention and code compliance</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" /> Emergency repairs for commercial properties</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why-us" class="why-section">
+    <div class="container">
+      <h2 class="section-title">Why Choose Dave's Plumbing</h2>
+      <p class="section-subtitle">What sets us apart from the rest</p>
+      <div class="why-grid">
+        <div class="why-card">
+          <img src="https://unpkg.com/lucide-static@latest/icons/award.svg" alt="" />
+          <h4>Decades of Experience</h4>
+          <p>Dave has been in the plumbing industry for many years, bringing unmatched knowledge and skill to every job, big or small.</p>
+        </div>
+        <div class="why-card">
+          <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="" />
+          <h4>Responsive &amp; Reliable</h4>
+          <p>We respond quickly to urgent requests and work with you to schedule projects on your timeline. No long waits, just prompt service.</p>
+        </div>
+        <div class="why-card">
+          <img src="https://unpkg.com/lucide-static@latest/icons/shield-check.svg" alt="" />
+          <h4>Quality Workmanship</h4>
+          <p>We stand behind every job with professionalism and attention to detail. Our work is done right the first time, every time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" class="reviews-section">
+    <div class="container">
+      <h2 class="section-title">What Our Customers Say</h2>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          </div>
+          <p class="review-text">Dave has done plumbing for many years and knows his stuff. He did all the rough in for our future home which includes 3 1/2 baths. Dave and his team are knowledgable so you are in good hands.</p>
+          <p class="review-name">Lee H.</p>
+        </div>
+        <div class="review-card">
+          <div class="stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          </div>
+          <p class="review-text">Called Dave's plumbing for a last-minute project I needed done ASAP. They were very responsive. Got to me within just a couple of days and did a great job. Checked back to make sure everything was functioning properly.</p>
+          <p class="review-name">Jerald S.</p>
+        </div>
+        <div class="review-card">
+          <div class="stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          </div>
+          <p class="review-text">Dave's Plumbing did an excellent job with the rough in and trim for my new duplex construction. Jose was on top of it and handled all work with a great level of professionalism and skill.</p>
+          <p class="review-name">Fred A.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+          <div class="info-item">
+            <img src="https://unpkg.com/lucide-static@latest/icons/phone.svg" alt="" />
+            <a href="tel:+15098841417">(509) 884-1417</a>
+          </div>
+          <div class="info-item">
+            <img src="https://unpkg.com/lucide-static@latest/icons/map-pin.svg" alt="" />
+            <span>4944 Contractors Dr, East Wenatchee, WA 98802</span>
+          </div>
+          <div class="info-item">
+            <img src="https://unpkg.com/lucide-static@latest/icons/building.svg" alt="" />
+            <span>Serving East Wenatchee &amp; the Wenatchee-Chelan area</span>
+          </div>
+          <div class="info-item">
+            <img src="https://unpkg.com/lucide-static@latest/icons/calendar-clock.svg" alt="" />
+            <span>Mon&ndash;Fri 9:00 AM &ndash; 5:00 PM</span>
+          </div>
+        </div>
+        <div class="contact-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50000!2d-121.384594432705!3d47.5805901859863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549bca29ed76522f%3A0xe9b75e168f66fc4c!2sDave's%20Plumbing%2C%20Inc.!5e0!3m2!1sen!2sca!4v1779322037887!5m2!1sen!2sca" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Dave's Plumbing, Inc. All rights reserved.</p>
+      <div class="attribution">Made with love by <a href="https://design.withviso.com" target="_blank" rel="noopener">Viso Solutions</a></div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleNav() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+    function closeNav() {
+      document.getElementById('navLinks').classList.remove('open');
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.wwd-content, .service-block, .review-card, .why-card').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TBD8TFCF');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Eastern Washington Plumbing | Trusted Plumber in Grant County, WA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; color: #1a1a2e; line-height: 1.6; }
+        section[id] { scroll-margin-top: 104px; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* Header */
+        header {
+            position: sticky; top: 0; z-index: 1000;
+            background: #fff; box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+        }
+        .header-inner {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 12px 20px; max-width: 1200px; margin: 0 auto;
+        }
+        .logo {
+            font-size: 24px; font-weight: 800; color: #1a365d;
+            font-family: 'Inter', sans-serif; letter-spacing: 2px;
+            text-decoration: none; border: 2px solid #c97b3e;
+            padding: 6px 14px; border-radius: 4px; line-height: 1;
+        }
+        .logo span { color: #c97b3e; }
+        nav { display: flex; align-items: center; gap: 32px; }
+        nav a {
+            text-decoration: none; color: #1a365d; font-weight: 500; font-size: 15px;
+            transition: color 0.3s; position: relative;
+        }
+        nav a::after {
+            content: ''; position: absolute; bottom: -4px; left: 0; width: 0;
+            height: 2px; background: #c97b3e; transition: width 0.3s;
+        }
+        nav a:hover { color: #c97b3e; }
+        nav a:hover::after { width: 100%; }
+        .nav-cta {
+            background: #1a365d; color: #fff !important; padding: 10px 24px;
+            border-radius: 6px; font-weight: 600; transition: background 0.3s;
+        }
+        .nav-cta::after { display: none; }
+        .nav-cta:hover { background: #c97b3e; color: #fff !important; }
+        .mobile-toggle { display: none; flex-direction: column; cursor: pointer; gap: 5px; background: none; border: none; padding: 4px; }
+        .mobile-toggle span {
+            width: 26px; height: 3px; background: #1a365d; border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        /* Claim Banner */
+        .claim-banner {
+            position: sticky; top: 64px; z-index: 999;
+            background: #c97b3e; text-align: center;
+            padding: 10px 20px; font-size: 14px; font-weight: 500;
+        }
+        .claim-banner a { color: #fff; text-decoration: none; }
+        .claim-banner u { text-decoration: underline; text-underline-offset: 3px; }
+
+        /* Hero */
+        .hero {
+            position: relative; min-height: 85vh; display: flex; align-items: center;
+            background: url('https://images.pexels.com/photos/34228/drip-drop-of-water-wave-wet.jpg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop') center/cover no-repeat;
+        }
+        .hero::before {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(135deg, rgba(26,54,93,0.92) 0%, rgba(26,54,93,0.6) 100%);
+        }
+        .hero-content { position: relative; z-index: 1; max-width: 700px; }
+        .hero h1 {
+            font-size: 56px; font-weight: 800; color: #fff; line-height: 1.15;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 20px; color: rgba(255,255,255,0.9); margin-bottom: 36px;
+            max-width: 550px; line-height: 1.7;
+        }
+        .hero .btn {
+            display: inline-block; background: #c97b3e; color: #fff;
+            padding: 16px 40px; border-radius: 8px; font-size: 17px;
+            font-weight: 600; text-decoration: none; transition: all 0.3s;
+        }
+        .hero .btn:hover { background: #b06930; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(201,123,62,0.3); }
+
+        /* Section styles */
+        section { padding: 90px 0; }
+        .section-title {
+            font-size: 36px; font-weight: 700; color: #1a365d;
+            text-align: center; margin-bottom: 16px;
+        }
+        .section-subtitle {
+            text-align: center; color: #4a5568; font-size: 18px;
+            max-width: 600px; margin: 0 auto 60px; line-height: 1.7;
+        }
+
+        /* What We Do */
+        .what-we-do {
+            background: #f8fafc;
+        }
+        .wwd-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+            align-items: center;
+        }
+        .wwd-image {
+            border-radius: 12px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        .wwd-image img { width: 100%; height: 380px; object-fit: cover; display: block; }
+        .wwd-text h2 { font-size: 32px; color: #1a365d; margin-bottom: 20px; }
+        .wwd-text p { color: #4a5568; font-size: 17px; line-height: 1.8; margin-bottom: 20px; }
+        .wwd-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: #fff; border-left: 4px solid #c97b3e;
+            padding: 12px 20px; border-radius: 0 8px 8px 0; font-weight: 600; color: #1a365d; font-size: 15px;
+        }
+        .wwd-badge img { width: 20px; height: 20px; }
+
+        /* Services - Alternating layout */
+        .services-section { background: #fff; }
+        .service-block { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; margin-bottom: 80px; }
+        .service-block:last-child { margin-bottom: 0; }
+        .service-block.reverse .service-image { order: 2; }
+        .service-block.reverse .service-text { order: 1; }
+        .service-image { border-radius: 12px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+        .service-image img { width: 100%; height: 350px; object-fit: cover; display: block; }
+        .service-header { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+        .service-header img { width: 32px; height: 32px; }
+        .service-header h3 { font-size: 26px; font-weight: 700; color: #1a365d; }
+        .service-text p { color: #4a5568; font-size: 16px; line-height: 1.8; margin-bottom: 20px; }
+        .service-bullets { list-style: none; }
+        .service-bullets li {
+            display: flex; align-items: flex-start; gap: 10px;
+            margin-bottom: 10px; color: #2d3748; font-size: 15px;
+        }
+        .service-bullets li img { width: 20px; height: 20px; flex-shrink: 0; margin-top: 3px; }
+
+        /* Why Choose Us */
+        .why-choose-us { background: #f8fafc; }
+        .wcu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .wcu-card {
+            background: #fff; padding: 36px 28px; border-radius: 12px;
+            text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .wcu-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
+        .wcu-card img { width: 40px; height: 40px; margin-bottom: 16px; }
+        .wcu-card h4 { font-size: 20px; font-weight: 600; color: #1a365d; margin-bottom: 10px; }
+        .wcu-card p { color: #4a5568; font-size: 15px; line-height: 1.7; }
+
+        /* Reviews */
+        .reviews-section {
+            background: url('https://images.pexels.com/photos/9658236/pexels-photo-9658236.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop') center/cover no-repeat fixed;
+            position: relative;
+        }
+        .reviews-section::before {
+            content: ''; position: absolute; inset: 0;
+            background: rgba(26,54,93,0.88);
+        }
+        .reviews-section .container { position: relative; z-index: 1; }
+        .reviews-section .section-title { color: #fff; }
+        .reviews-section .section-subtitle { color: rgba(255,255,255,0.8); }
+        .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .review-card {
+            background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);
+            padding: 32px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.15);
+        }
+        .review-stars { display: flex; gap: 2px; margin-bottom: 16px; }
+        .review-stars svg { width: 20px; height: 20px; }
+        .review-card p { color: rgba(255,255,255,0.9); font-size: 15px; line-height: 1.8; margin-bottom: 16px; font-style: italic; }
+        .review-author { font-weight: 600; color: #fff; font-size: 15px; }
+        .review-title { color: rgba(255,255,255,0.6); font-size: 13px; }
+
+        /* Contact */
+        .contact-section { background: #fff; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 50px; align-items: start; }
+        .contact-info h3 { font-size: 24px; color: #1a365d; margin-bottom: 24px; }
+        .contact-item { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 20px; }
+        .contact-item img { width: 22px; height: 22px; margin-top: 2px; }
+        .contact-item div { }
+        .contact-item strong { display: block; font-size: 14px; color: #718096; margin-bottom: 2px; }
+        .contact-item span { font-size: 16px; color: #1a1a2e; }
+        .hours-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 20px; margin-top: 10px; }
+        .hours-grid .day { color: #4a5568; font-size: 15px; }
+        .hours-grid .time { color: #1a1a2e; font-weight: 500; font-size: 15px; text-align: right; }
+        .contact-map { border-radius: 12px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+        .contact-map iframe { width: 100%; height: 400px; display: block; }
+
+        /* Footer */
+        footer {
+            background: #1a365d; color: rgba(255,255,255,0.8); padding: 50px 0 30px;
+        }
+        .footer-inner {
+            display: flex; flex-direction: column; align-items: center; text-align: center;
+        }
+        .footer-logo {
+            font-size: 22px; font-weight: 800; color: #fff;
+            border: 2px solid #c97b3e; padding: 6px 14px; border-radius: 4px;
+            display: inline-block; margin-bottom: 20px; letter-spacing: 2px;
+        }
+        .footer-logo span { color: #c97b3e; }
+        .footer-divider { width: 60px; height: 2px; background: #c97b3e; margin: 0 auto 20px; }
+        .footer-inner p { font-size: 14px; margin-bottom: 6px; }
+        .attribution {
+            margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.15);
+            font-size: 13px; width: 100%; max-width: 400px;
+        }
+        .attribution a { color: #c97b3e; text-decoration: none; }
+
+        /* Animations */
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .wwd-grid { grid-template-columns: 1fr; gap: 30px; }
+            .wwd-image img { height: 280px; }
+            .service-block { grid-template-columns: 1fr; gap: 30px; }
+            .service-block.reverse .service-image { order: 1; }
+            .service-block.reverse .service-text { order: 2; }
+            .service-image img { height: 280px; }
+            .wcu-grid { grid-template-columns: 1fr 1fr; }
+            .reviews-grid { grid-template-columns: 1fr 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            section[id] { scroll-margin-top: 110px; }
+            header { position: sticky; }
+            .header-inner { padding: 10px 16px; }
+            .logo { font-size: 20px; padding: 5px 10px; }
+            nav { position: fixed; top: 52px; left: 0; width: 100%; background: #fff; flex-direction: column; padding: 20px; gap: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); display: none; }
+            nav.open { display: flex; }
+            .mobile-toggle { display: flex; }
+            .hero h1 { font-size: 36px; }
+            .hero p { font-size: 17px; }
+            .hero { min-height: 70vh; }
+            section { padding: 60px 0; }
+            .section-title { font-size: 28px; }
+            .section-subtitle { font-size: 16px; margin-bottom: 40px; }
+            .wcu-grid { grid-template-columns: 1fr; }
+            .reviews-grid { grid-template-columns: 1fr; }
+            .claim-banner { font-size: 13px; padding: 8px 16px; top: 54px; }
+            .hours-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 28px; }
+            .hero p { font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBD8TFCF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- Header -->
+    <header>
+        <div class="header-inner">
+            <a href="#" class="logo">E<span>W</span>P</a>
+            <button class="mobile-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav>
+                <a href="#what-we-do">What We Do</a>
+                <a href="#services">Services</a>
+                <a href="#why-choose-us">Why Choose Us</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact" class="nav-cta">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Claim Banner -->
+    <div class="claim-banner">
+        <a href="https://design.withviso.com" target="_blank" rel="noopener noreferrer">
+            Hi Eastern Washington Plumbing! Do you like the website? <u>Contact us to make it yours</u>
+        </a>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="container hero-content">
+            <p style="color:#c97b3e;font-weight:600;font-size:17px;margin-bottom:8px;letter-spacing:2px;text-transform:uppercase;">Eastern Washington Plumbing</p>
+            <h1>Trusted Plumbing Services in Grant County</h1>
+            <p>Reliable, licensed plumbing solutions for your home and business. Fair pricing, professional diagnostics, and quality work you can count on.</p>
+            <a href="#contact" class="btn">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- What We Do -->
+    <section class="what-we-do" id="what-we-do">
+        <div class="container">
+            <div class="wwd-grid fade-in">
+                <div class="wwd-image">
+                    <img src="https://images.pexels.com/photos/14953886/pexels-photo-14953886.jpeg?auto=compress&cs=tinysrgb&w=940&h=627&fit=crop" alt="Industrial plumbing pipes" loading="lazy">
+                </div>
+                <div class="wwd-text">
+                    <h2>Your Go-To Plumber in Quincy &amp; Grant County</h2>
+                    <p>Eastern Washington Plumbing is your trusted local plumbing expert serving Grant County and the Quincy community. Operated by Jason, a licensed plumber with years of hands-on experience, we specialize in everything from water heater repairs to general plumbing fixes.</p>
+                    <p>We believe in fair pricing, honest diagnostics, and getting the job done right the first time. When you call us, you get personalized service from a skilled tradesman who truly cares about the quality of his work.</p>
+                    <div class="wwd-badge">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/shield.svg" alt="">
+                        Licensed &amp; Insured Plumber
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <h2 class="section-title fade-in">Our Plumbing Services</h2>
+            <p class="section-subtitle fade-in">From emergency repairs to planned installations, we handle all your plumbing needs with skill and professionalism.</p>
+
+            <!-- Service 1: Water Heater -->
+            <div class="service-block fade-in">
+                <div class="service-image">
+                    <img src="https://images.pexels.com/photos/30560254/pexels-photo-30560254.jpeg?auto=compress&cs=tinysrgb&w=940&h=627&fit=crop" alt="Water heater pressure gauges" loading="lazy">
+                </div>
+                <div class="service-text">
+                    <div class="service-header">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/thermometer.svg" alt="">
+                        <h3>Water Heater Services</h3>
+                    </div>
+                    <p>Whether your water heater needs repair or replacement, we have the expertise to get your hot water flowing again. We work with all major brands and types of water heaters.</p>
+                    <ul class="service-bullets">
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Water heater repair and troubleshooting</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> New water heater installation</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Flush valve replacement and repair</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Same-day service available</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 2: General Plumbing -->
+            <div class="service-block reverse fade-in">
+                <div class="service-image">
+                    <img src="https://images.pexels.com/photos/4030052/pexels-photo-4030052.jpeg?auto=compress&cs=tinysrgb&w=940&h=627&fit=crop" alt="Faucet and plumbing fixture" loading="lazy">
+                </div>
+                <div class="service-text">
+                    <div class="service-header">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/droplets.svg" alt="">
+                        <h3>General Plumbing Repairs</h3>
+                    </div>
+                    <p>From leaky faucets to clogged drains and pipe repairs, we handle all types of general plumbing issues. No job is too small or too complex for our experienced team.</p>
+                    <ul class="service-bullets">
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Faucet repair and replacement</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Pipe repair and leak detection</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Drain cleaning and unclogging</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Fixture installation and repair</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 3: Diagnostics -->
+            <div class="service-block fade-in">
+                <div class="service-image">
+                    <img src="https://images.pexels.com/photos/8943269/pexels-photo-8943269.jpeg?auto=compress&cs=tinysrgb&w=940&h=627&fit=crop" alt="Plumbing toolkit with wrenches" loading="lazy">
+                </div>
+                <div class="service-text">
+                    <div class="service-header">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/search.svg" alt="">
+                        <h3>Plumbing Diagnostics</h3>
+                    </div>
+                    <p>Not sure what's wrong? Our thorough diagnostic approach identifies issues quickly and accurately, so you know exactly what needs to be done before any work begins.</p>
+                    <ul class="service-bullets">
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Comprehensive plumbing inspection</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Leak detection and assessment</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Water pressure testing</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Clear diagnostic reports with solutions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us" id="why-choose-us">
+        <div class="container">
+            <h2 class="section-title fade-in">Why Choose Eastern Washington Plumbing</h2>
+            <p class="section-subtitle fade-in">We're committed to providing exceptional service that keeps our customers coming back.</p>
+            <div class="wcu-grid">
+                <div class="wcu-card fade-in">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/award.svg" alt="">
+                    <h4>Licensed &amp; Experienced</h4>
+                    <p>Fully licensed plumber with years of experience serving Grant County. You can trust that your plumbing is in capable hands.</p>
+                </div>
+                <div class="wcu-card fade-in">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/thumbs-up.svg" alt="">
+                    <h4>Fair &amp; Transparent Pricing</h4>
+                    <p>We provide honest upfront pricing with no hidden fees. Our customers consistently praise our fair rates and great value.</p>
+                </div>
+                <div class="wcu-card fade-in">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="">
+                    <h4>Prompt &amp; Reliable Service</h4>
+                    <p>We respect your time and arrive when we say we will. Quick diagnostics and efficient repairs mean minimal disruption to your day.</p>
+                </div>
+                <div class="wcu-card fade-in">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/hard-hat.svg" alt="">
+                    <h4>Quality Workmanship</h4>
+                    <p>Every job is done right the first time with attention to detail. We take pride in our work and stand behind every repair.</p>
+                </div>
+                <div class="wcu-card fade-in">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/map-pin.svg" alt="">
+                    <h4>Locally Owned &amp; Operated</h4>
+                    <p>Proudly serving Quincy and all of Grant County. As a local business, we care deeply about our community and reputation.</p>
+                </div>
+                <div class="wcu-card fade-in">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/shield.svg" alt="">
+                    <h4>Satisfaction Guaranteed</h4>
+                    <p>Your satisfaction is our top priority. We go above and beyond to ensure every customer is happy with the work we do.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews-section" id="reviews">
+        <div class="container">
+            <h2 class="section-title fade-in">What Our Customers Say</h2>
+            <p class="section-subtitle fade-in">Don't just take our word for it — hear from our satisfied customers.</p>
+            <div class="reviews-grid">
+                <div class="review-card fade-in">
+                    <div class="review-stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f6ad55" stroke="#f6ad55" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f6ad55" stroke="#f6ad55" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f6ad55" stroke="#f6ad55" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f6ad55" stroke="#f6ad55" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f6ad55" stroke="#f6ad55" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                    </div>
+                    <p>"Jason was incredibly accommodating — he worked it in between other jobs and made it happen without delay. He did a great job. We're fortunate in Quincy to have skilled tradespeople like Jason who truly care about the work they do."</p>
+                    <div class="review-author">Jennifer</div>
+                    <div class="review-title">Real Estate Broker</div>
+                </div>
+                <div class="review-card fade-in">
+                    <div class="review-stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f6ad55" stroke="#f6ad55" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f6ad55" stroke="#f6ad55" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f6ad55" stroke="#f6ad55" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f6ad55" stroke="#f6ad55" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f6ad55" stroke="#f6ad55" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                    </div>
+                    <p>"Got to my problems quickly. Professional diagnostics, communicated solution and scheduled time for fixes. Easy to work with."</p>
+                    <div class="review-author">David</div>
+                    <div class="review-title">Local Guide</div>
+                </div>
+                <div class="review-card fade-in">
+                    <div class="review-stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f6ad55" stroke="#f6ad55" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f6ad55" stroke="#f6ad55" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f6ad55" stroke="#f6ad55" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f6ad55" stroke="#f6ad55" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f6ad55" stroke="#f6ad55" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                    </div>
+                    <p>"Jason was installing a water heater at our neighbor's house. We had called 4-5 other plumbers to cut a water line and not one ever called us back. Jason finished his job, ran to Quincy for a part, came back and did the job. Fast, efficient, and reasonable."</p>
+                    <div class="review-author">Chuck</div>
+                    <div class="review-title">Happy Customer</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Get in Touch</h2>
+            <p class="section-subtitle fade-in">Ready to get your plumbing sorted? Give us a call or stop by our service area.</p>
+            <div class="contact-grid">
+                <div class="contact-info fade-in">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/phone.svg" alt="">
+                        <div>
+                            <strong>Phone</strong>
+                            <span><a href="tel:+15093983200" style="color:inherit;text-decoration:none;">(509) 398-3200</a></span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/map-pin.svg" alt="">
+                        <div>
+                            <strong>Service Area</strong>
+                            <span>Grant County, WA<br>Quincy &amp; surrounding areas</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="">
+                        <div>
+                            <strong>Business Hours</strong>
+                            <div class="hours-grid">
+                                <span class="day">Mon – Fri</span>
+                                <span class="time">8:00 AM – 8:00 PM</span>
+                                <span class="day">Saturday</span>
+                                <span class="time">Closed</span>
+                                <span class="day">Sunday</span>
+                                <span class="time">Closed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map fade-in">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1390603.5157398207!2d-121.40850158825697!3d47.09862973691905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54997b365025922b%3A0x4e53b7cb82d13fbd!2sEastern%20Washington%20plumbing!5e0!3m2!1sen!2sca!4v1779322297799!5m2!1sen!2sca" width="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-inner">
+            <div class="footer-logo">E<span>W</span>P</div>
+            <div class="footer-divider"></div>
+            <p>&copy; <span id="year"></span> Eastern Washington Plumbing. All rights reserved.</p>
+            <div class="attribution">
+                Made with love by <a href="https://design.withviso.com" target="_blank" rel="noopener noreferrer">Viso Solutions</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const toggle = document.querySelector('.mobile-toggle');
+        const nav = document.querySelector('nav');
+        toggle.addEventListener('click', () => nav.classList.toggle('open'));
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => nav.classList.remove('open'));
+        });
+
+        // Current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

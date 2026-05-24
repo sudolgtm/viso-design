@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TBD8TFCF');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>De Man On Demand Plumbing | Kelowna's Trusted Plumbers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; color: #1a1a2e; line-height: 1.6; overflow-x: hidden; }
+
+section[id] { scroll-margin-top: 120px; }
+
+/* Header */
+header { position: sticky; top: 0; z-index: 1000; background: #0f172a; color: #fff; padding: 0 24px; height: 70px; display: flex; align-items: center; justify-content: space-between; }
+.logo { font-size: 24px; font-weight: 800; letter-spacing: 1px; color: #fff; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+.logo-acronym { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; background: #2563eb; border-radius: 8px; font-size: 18px; font-weight: 700; color: #fff; border: 2px solid #3b82f6; }
+.logo-text { font-size: 16px; font-weight: 600; }
+nav { display: flex; align-items: center; gap: 8px; }
+nav a { color: #cbd5e1; text-decoration: none; font-size: 14px; font-weight: 500; padding: 8px 14px; border-radius: 6px; transition: all 0.2s; }
+nav a:hover { color: #fff; background: rgba(255,255,255,0.08); }
+.mobile-toggle { display: none; background: none; border: none; color: #fff; font-size: 28px; cursor: pointer; padding: 4px; }
+
+/* Claim Banner */
+.claim-banner { position: sticky; top: 70px; z-index: 999; background: #2563eb; color: #fff; text-align: center; padding: 10px 20px; font-size: 14px; }
+.claim-banner a { color: #fff; text-decoration: none; }
+.claim-banner u { text-decoration: underline; }
+
+/* Hero */
+.hero { position: relative; min-height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(15,23,42,0.85) 0%, rgba(15,23,42,0.65) 50%, rgba(37,99,235,0.3) 100%); }
+.hero-content { position: relative; z-index: 2; max-width: 800px; padding: 0 24px; }
+.hero h1 { font-size: clamp(2.2rem, 6vw, 4rem); font-weight: 800; margin-bottom: 16px; line-height: 1.15; }
+.hero h1 span { color: #60a5fa; }
+.hero p { font-size: clamp(1rem, 2.5vw, 1.25rem); color: #cbd5e1; margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
+.cta-btn { display: inline-block; background: #2563eb; color: #fff; padding: 16px 40px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px; transition: all 0.3s; border: none; cursor: pointer; }
+.cta-btn:hover { background: #1d4ed8; transform: translateY(-2px); box-shadow: 0 10px 30px rgba(37,99,235,0.3); }
+
+/* Section common */
+.section { padding: 100px 24px; }
+.section-title { text-align: center; margin-bottom: 60px; }
+.section-title h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 700; color: #0f172a; }
+.section-title p { color: #64748b; font-size: 16px; max-width: 600px; margin: 12px auto 0; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+/* What We Do */
+.what-we-do { background: #f8fafc; }
+.what-we-do-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.what-we-do-text h2 { font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: 700; margin-bottom: 20px; color: #0f172a; }
+.what-we-do-text p { color: #475569; font-size: 16px; margin-bottom: 16px; }
+.what-we-do-image { border-radius: 16px; overflow: hidden; }
+.what-we-do-image img { width: 100%; height: 400px; object-fit: cover; display: block; border-radius: 16px; }
+
+/* Services alternating two-column */
+.services-section { background: #fff; }
+.service-row { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 100px; }
+.service-row:last-child { margin-bottom: 0; }
+.service-row.reverse .service-image { order: 2; }
+.service-row.reverse .service-content { order: 1; }
+.service-image { border-radius: 16px; overflow: hidden; }
+.service-image img { width: 100%; height: 400px; object-fit: cover; display: block; border-radius: 16px; }
+.service-content { }
+.service-content .service-icon { width: 48px; height: 48px; margin-bottom: 16px; }
+.service-content h3 { font-size: 24px; font-weight: 700; margin-bottom: 12px; color: #0f172a; }
+.service-content p { color: #475569; font-size: 15px; margin-bottom: 20px; line-height: 1.7; }
+.service-bullets { list-style: none; }
+.service-bullets li { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; color: #334155; font-size: 15px; }
+.service-bullets li svg { flex-shrink: 0; width: 20px; height: 20px; margin-top: 3px; }
+
+/* Why Choose Us */
+.why-choose-us { background: #0f172a; color: #fff; }
+.why-choose-us .section-title h2 { color: #fff; }
+.why-choose-us .section-title p { color: #94a3b8; }
+.why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px; }
+.why-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 36px 28px; text-align: center; transition: all 0.3s; }
+.why-card:hover { background: rgba(255,255,255,0.1); transform: translateY(-4px); }
+ .why-card img { width: 40px; height: 40px; margin-bottom: 16px; filter: brightness(0) invert(1); }
+.why-card h3 { font-size: 18px; font-weight: 600; margin-bottom: 10px; }
+.why-card p { color: #94a3b8; font-size: 14px; line-height: 1.7; }
+
+/* Reviews */
+.reviews-section { background: #f8fafc; }
+.reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; }
+.review-card { background: #fff; border-radius: 16px; padding: 32px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); border: 1px solid #e2e8f0; }
+.review-stars { display: flex; gap: 2px; margin-bottom: 14px; }
+.review-text { color: #475569; font-size: 15px; line-height: 1.7; margin-bottom: 20px; font-style: italic; }
+.review-author { font-weight: 600; color: #0f172a; font-size: 15px; }
+
+/* Contact */
+.contact-section { background: #fff; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+.contact-info h3 { font-size: 22px; font-weight: 700; margin-bottom: 24px; color: #0f172a; }
+.contact-item { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 20px; }
+.contact-item img { width: 22px; height: 22px; flex-shrink: 0; margin-top: 3px; }
+.contact-item div { }
+.contact-item .label { font-weight: 600; color: #0f172a; font-size: 14px; }
+.contact-item .value { color: #475569; font-size: 14px; }
+.hours-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; max-width: 300px; }
+.hours-grid .day { font-weight: 500; color: #334155; font-size: 14px; }
+.hours-grid .time { color: #475569; font-size: 14px; text-align: right; }
+.contact-map { border-radius: 16px; overflow: hidden; }
+.contact-map iframe { width: 100%; height: 400px; border: 0; display: block; }
+
+/* Footer */
+footer { background: #0f172a; color: #94a3b8; text-align: center; padding: 40px 24px; font-size: 14px; }
+footer .footer-logo { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+footer .footer-logo .logo-acronym { width: 36px; height: 36px; font-size: 15px; }
+footer .footer-logo .logo-text { color: #fff; font-size: 15px; }
+footer .divider { width: 60px; height: 1px; background: #334155; margin: 20px auto; }
+footer p { margin-bottom: 6px; }
+footer a { color: #60a5fa; text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+
+/* Animations */
+.fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* Mobile nav panel */
+.nav-panel { display: none; position: fixed; top: 70px; left: 0; right: 0; background: #0f172a; padding: 16px 24px; flex-direction: column; gap: 4px; z-index: 999; border-top: 1px solid rgba(255,255,255,0.08); }
+.nav-panel.open { display: flex; }
+.nav-panel a { color: #cbd5e1; text-decoration: none; font-size: 16px; font-weight: 500; padding: 12px 16px; border-radius: 8px; }
+.nav-panel a:hover { background: rgba(255,255,255,0.08); color: #fff; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .what-we-do-grid { grid-template-columns: 1fr; gap: 40px; }
+  .service-row { grid-template-columns: 1fr; gap: 30px; }
+  .service-row.reverse .service-image { order: 0; }
+  .service-row.reverse .service-content { order: 0; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .what-we-do-image img, .service-image img { height: 280px; }
+  section[id] { scroll-margin-top: 110px; }
+  .claim-banner { top: 70px; }
+}
+@media (max-width: 768px) {
+  nav.desktop-nav { display: none; }
+  .mobile-toggle { display: block; }
+  .hero { min-height: 70vh; }
+  .section { padding: 60px 20px; }
+  .section-title { margin-bottom: 40px; }
+  .why-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .service-row { margin-bottom: 60px; }
+}
+@media (min-width: 769px) {
+  .nav-panel { display: none !important; }
+}
+</style>
+</head>
+<body>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBD8TFCF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- Header -->
+<header>
+  <a href="#hero" class="logo">
+    <span class="logo-acronym">DM</span>
+    <span class="logo-text">De Man On Demand</span>
+  </a>
+  <nav class="desktop-nav">
+    <a href="#what-we-do">What We Do</a>
+    <a href="#services">Services</a>
+    <a href="#why-choose-us">Why Us</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">☰</button>
+</header>
+
+<!-- Claim Banner -->
+<div class="claim-banner">
+  <a href="https://design.withviso.com" style="text-decoration: none; color: inherit;">Hi De Man On Demand Plumbing! Do you like the website? <u>Contact us to make it yours</u></a>
+</div>
+
+<!-- Mobile Nav Panel -->
+<div class="nav-panel" id="navPanel">
+  <a href="#what-we-do">What We Do</a>
+  <a href="#services">Services</a>
+  <a href="#why-choose-us">Why Us</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- Hero -->
+<section class="hero" id="hero">
+  <img class="hero-bg" src="https://images.pexels.com/photos/12105083/pexels-photo-12105083.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" alt="Home construction interior" loading="eager">
+  <div class="hero-overlay"></div>
+  <div class="hero-content fade-in">
+    <h1>Reliable <span>Plumbing</span> You Can Count On</h1>
+    <p>Family-owned and operated with over 40 years of experience serving Kelowna, West Kelowna, and surrounding areas.</p>
+    <a href="tel:+12508084567" class="cta-btn">Call (250) 808-4567</a>
+  </div>
+</section>
+
+<!-- What We Do -->
+<section class="section what-we-do" id="what-we-do">
+  <div class="container what-we-do-grid fade-in">
+    <div class="what-we-do-text">
+      <h2>Your Trusted Plumbing Professionals</h2>
+      <p>At de Man On Demand Plumbing Ltd., we're your licensed plumbing professionals offering complete plumbing solutions for residential and light commercial clients across Kelowna and surrounding areas. From piping replacements to drain cleaning and hot water heating repairs, we provide comprehensive service with over four decades of hands-on experience.</p>
+      <p>Owner-operated by John De Man, our family-owned business is dedicated to delivering superior results with every job — big or small. We take the time to explain the work, so you always know exactly what's happening in your home.</p>
+    </div>
+    <div class="what-we-do-image">
+      <img src="https://images.pexels.com/photos/28169591/pexels-photo-28169591.jpeg?auto=compress&cs=tinysrgb&w=940&h=627&fit=crop" alt="Copper plumbing fittings" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="section services-section" id="services">
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>Our Plumbing Services</h2>
+      <p>From emergency repairs to full renovations, we handle all your plumbing needs with expertise and care.</p>
+    </div>
+
+    <!-- Service 1 -->
+    <div class="service-row fade-in">
+      <div class="service-image">
+        <img src="https://images.pexels.com/photos/87299/pexels-photo-87299.jpeg?auto=compress&cs=tinysrgb&w=940&h=627&fit=crop" alt="Kitchen sink with water" loading="lazy">
+      </div>
+      <div class="service-content">
+        <img class="service-icon" src="https://unpkg.com/lucide-static@latest/icons/wrench.svg" alt="" loading="lazy">
+        <h3>Plumbing Repairs &amp; Drain Cleaning</h3>
+        <p>From dripping faucets to clogged drains, our licensed plumbers quickly diagnose and resolve any plumbing issue. We use professional-grade tools and proven techniques to get your plumbing back in top shape.</p>
+        <ul class="service-bullets">
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" width="20" height="20" style="flex-shrink:0;margin-top:3px;">Fixtures and faucet replacement</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" width="20" height="20" style="flex-shrink:0;margin-top:3px;">Drain cleaning and video inspections</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" width="20" height="20" style="flex-shrink:0;margin-top:3px;">Pipe repair and re-piping services</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" width="20" height="20" style="flex-shrink:0;margin-top:3px;">Fixture and appliance installation</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Service 2 (reverse) -->
+    <div class="service-row reverse fade-in">
+      <div class="service-image">
+        <img src="https://images.pexels.com/photos/3722212/pexels-photo-3722212.jpeg?auto=compress&cs=tinysrgb&w=940&h=627&fit=crop" alt="Gas stove flame" loading="lazy">
+      </div>
+      <div class="service-content">
+        <img class="service-icon" src="https://unpkg.com/lucide-static@latest/icons/thermometer.svg" alt="" loading="lazy">
+        <h3>Hot Water Heating Services</h3>
+        <p>With specialized expertise in hot water systems, we install, repair, and maintain all types of water heating equipment. Whether you need a new tank or a high-efficiency boiler, we have the skills to get it done right.</p>
+        <ul class="service-bullets">
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" width="20" height="20" style="flex-shrink:0;margin-top:3px;">Hot water tank installation and repair</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" width="20" height="20" style="flex-shrink:0;margin-top:3px;">Boiler repair and maintenance</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" width="20" height="20" style="flex-shrink:0;margin-top:3px;">Tankless water heater installation</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" width="20" height="20" style="flex-shrink:0;margin-top:3px;">Heating system troubleshooting</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Service 3 -->
+    <div class="service-row fade-in">
+      <div class="service-image">
+        <img src="https://images.pexels.com/photos/14953886/pexels-photo-14953886.jpeg?auto=compress&cs=tinysrgb&w=940&h=627&fit=crop" alt="Plumbing tools on blueprint" loading="lazy">
+      </div>
+      <div class="service-content">
+        <img class="service-icon" src="https://unpkg.com/lucide-static@latest/icons/building-2.svg" alt="" loading="lazy">
+        <h3>Renovations &amp; Installations</h3>
+        <p>Planning a renovation? We work alongside you to handle all plumbing aspects of your project. From kitchen and bathroom remodels to new appliance hookups, our team ensures seamless integration with your existing systems.</p>
+        <ul class="service-bullets">
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" width="20" height="20" style="flex-shrink:0;margin-top:3px;">Kitchen and bathroom plumbing renovations</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" width="20" height="20" style="flex-shrink:0;margin-top:3px;">New construction plumbing</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" width="20" height="20" style="flex-shrink:0;margin-top:3px;">Appliance installation (washing machines, dishwashers)</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" width="20" height="20" style="flex-shrink:0;margin-top:3px;">Residential and light commercial projects</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Service 4 (reverse) -->
+    <div class="service-row reverse fade-in">
+      <div class="service-image">
+        <img src="https://images.pexels.com/photos/8943269/pexels-photo-8943269.jpeg?auto=compress&cs=tinysrgb&w=940&h=627&fit=crop" alt="Gas pressure regulators" loading="lazy">
+      </div>
+      <div class="service-content">
+        <img class="service-icon" src="https://unpkg.com/lucide-static@latest/icons/flame.svg" alt="" loading="lazy">
+        <h3>Gas Lines &amp; Emergency Services</h3>
+        <p>Our licensed professionals handle all gas line installations and repairs with the utmost attention to safety. From earthquake valves to gas appliance hookups, we ensure your gas systems are code-compliant and secure.</p>
+        <ul class="service-bullets">
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" width="20" height="20" style="flex-shrink:0;margin-top:3px;">Gas line installation and repair</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" width="20" height="20" style="flex-shrink:0;margin-top:3px;">Earthquake valve installation</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" width="20" height="20" style="flex-shrink:0;margin-top:3px;">Gas appliance hookups</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" width="20" height="20" style="flex-shrink:0;margin-top:3px;">Emergency plumbing services</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="section why-choose-us" id="why-choose-us">
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>Why Choose De Man On Demand Plumbing?</h2>
+      <p>What sets us apart is our commitment to quality, transparency, and customer satisfaction.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card fade-in">
+        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="" loading="lazy">
+        <h3>40+ Years Experience</h3>
+        <p>With over four decades in the plumbing industry, we bring unmatched expertise and troubleshooting skills to every job.</p>
+      </div>
+      <div class="why-card fade-in">
+        <img src="https://unpkg.com/lucide-static@latest/icons/shield.svg" alt="" loading="lazy">
+        <h3>Licensed &amp; Insured</h3>
+        <p>We are a fully licensed plumbing company with an A+ BBB rating, so you can trust that your home is in good hands.</p>
+      </div>
+      <div class="why-card fade-in">
+        <img src="https://unpkg.com/lucide-static@latest/icons/users.svg" alt="" loading="lazy">
+        <h3>Family-Owned &amp; Operated</h3>
+        <p>Owner-operated by John De Man, we treat every customer like family with honest advice and fair pricing.</p>
+      </div>
+      <div class="why-card fade-in">
+        <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="" loading="lazy">
+        <h3>Free Consultations</h3>
+        <p>Project consultations are complimentary. We'll assess your needs, explain your options, and provide a clear plan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section class="section reviews-section" id="reviews">
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>What Our Customers Say</h2>
+      <p>Don't just take our word for it — hear from the people we've helped.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card fade-in">
+        <div class="review-stars">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+        </div>
+        <p class="review-text">"John is incredibly knowledgeable. He spends the time to explain to you what is going on in real time. For the times we have needed his expertise, he has delivered nothing but the best. Top notch work, as always!"</p>
+        <p class="review-author">— Justin M.</p>
+      </div>
+      <div class="review-card fade-in">
+        <div class="review-stars">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+        </div>
+        <p class="review-text">"John is professional, detailed and straight up amazing service and advice. Makes me feel so great that I know that all his work is only what's best for me and my home. Thanks, John."</p>
+        <p class="review-author">— Jeff L.</p>
+      </div>
+      <div class="review-card fade-in">
+        <div class="review-stars">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+        </div>
+        <p class="review-text">"Each experience we have with John is positive. He continues to exceed our expectations and as a result has our full confidence, trust and respect! It's de Man On Demand for us!"</p>
+        <p class="review-author">— Doug &amp; Judy, West Kelowna</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="section contact-section" id="contact">
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>Get In Touch</h2>
+      <p>Ready to get started? Give us a call or stop by during business hours.</p>
+    </div>
+    <div class="contact-grid fade-in">
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+        <div class="contact-item">
+          <img src="https://unpkg.com/lucide-static@latest/icons/phone.svg" alt="" loading="lazy">
+          <div>
+            <div class="label">Phone</div>
+            <div class="value"><a href="tel:+12508084567" style="color:#2563eb;text-decoration:none;">(250) 808-4567</a></div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <img src="https://unpkg.com/lucide-static@latest/icons/map-pin.svg" alt="" loading="lazy">
+          <div>
+            <div class="label">Address</div>
+            <div class="value">2558 Saddleridge Dr, West Kelowna, BC V4T 2T5</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="" loading="lazy">
+          <div>
+            <div class="label">Business Hours</div>
+            <div class="hours-grid" style="margin-top:8px;">
+              <span class="day">Mon – Fri</span><span class="time">8:00 a.m. – 5:00 p.m.</span>
+              <span class="day">Saturday</span><span class="time">Closed</span>
+              <span class="day">Sunday</span><span class="time">Closed</span>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:24px;padding:16px 20px;background:#f8fafc;border-radius:12px;border:1px solid #e2e8f0;">
+          <p style="font-size:14px;color:#475569;"><strong style="color:#0f172a;">Free Consultations!</strong> Project consultations are complimentary. Call us to schedule an appointment.</p>
+        </div>
+      </div>
+      <div class="contact-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10280.31002283312!2d-119.4893908826172!3d49.897348199999996!2m3!1f2!0f2!0f3!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537df343659aaaab%3A0x93533e84b68ac078!2sDe%20Man%20On%20Demand%20Plumbing!5e0!3m2!1sen!2sca!4v1778795316362!5m2!1sen!2sca" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-logo">
+    <span class="logo-acronym">DM</span>
+    <span class="logo-text">De Man On Demand Plumbing</span>
+  </div>
+  <p>Serving Kelowna, West Kelowna, and surrounding areas.</p>
+  <p>© <span id="year"></span> De Man On Demand Plumbing Ltd. All rights reserved.</p>
+  <div class="divider"></div>
+  <p>Made with love by <a href="https://design.withviso.com">Viso Solutions</a></p>
+</footer>
+
+<script>
+// Mobile toggle
+document.getElementById('mobileToggle').addEventListener('click', function() {
+  document.getElementById('navPanel').classList.toggle('open');
+});
+
+// Close panel on link click
+document.querySelectorAll('.nav-panel a').forEach(function(a) {
+  a.addEventListener('click', function() {
+    document.getElementById('navPanel').classList.remove('open');
+  });
+});
+
+// Sticky header adjustment on mobile nav links
+document.querySelectorAll('nav a, .nav-panel a').forEach(function(link) {
+  link.addEventListener('click', function(e) {
+    var target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      var headerOffset = 120;
+      var elementPosition = target.getBoundingClientRect().top;
+      var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+    }
+  });
+});
+
+// Fade-in animations on scroll
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-in').forEach(function(el) {
+  observer.observe(el);
+});
+
+// Set current year
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

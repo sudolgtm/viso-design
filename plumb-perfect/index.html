@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TBD8TFCF');</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#3742ac">
+<meta name="description" content="Plumb Perfect - Professional plumbing services in Wenatchee, WA. Water heaters, drain cleaning, gas lines, remodeling, and more. 24/7 service. Call us today!">
+<title>Plumb Perfect | Professional Plumbing Services in Wenatchee, WA</title>
+<link rel="icon" href="/logo.svg" sizes="any" type="image/svg+xml">
+<link rel="shortcut icon" href="/logo.svg">
+<link rel="apple-touch-icon" href="/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --primary:#3742ac;
+  --primary-dark:#2a3080;
+  --primary-light:#5a66d4;
+  --bg-dark:#1a1a2e;
+  --bg-light:#f8f9fc;
+  --text-dark:#1e1e2e;
+  --text-light:#6b7280;
+  --white:#fff;
+  --shadow:0 4px 20px rgba(0,0,0,0.1);
+  --radius:12px;
+  --header-h:70px;
+  --banner-h:44px;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',-apple-system,sans-serif;
+  color:var(--text-dark);
+  line-height:1.6;
+  overflow-x:hidden;
+}
+section[id]{scroll-margin-top:calc(var(--header-h) + var(--banner-h))}
+
+/* Header */
+header{
+  position:sticky;top:0;z-index:1000;
+  background:var(--white);
+  box-shadow:0 2px 10px rgba(0,0,0,0.08);
+  height:var(--header-h);
+}
+.header-inner{
+  max-width:1200px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 24px;height:100%;
+}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-img{height:42px;width:auto}
+.logo-text{
+  font-size:1.25rem;font-weight:800;
+  color:var(--primary);letter-spacing:-0.5px;
+  line-height:1.2;
+}
+.logo-text span{color:var(--text-dark);font-weight:400}
+nav{display:flex;align-items:center;gap:8px}
+nav a{
+  text-decoration:none;color:var(--text-dark);
+  font-size:0.9rem;font-weight:500;
+  padding:8px 14px;border-radius:8px;
+  transition:all 0.2s;
+}
+nav a:hover{background:var(--bg-light);color:var(--primary)}
+.mobile-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
+
+/* Claim Banner */
+.claim-banner{
+  position:sticky;top:var(--header-h);z-index:999;
+  background:var(--primary);color:var(--white);
+  text-align:center;padding:10px 24px;
+  font-size:0.9rem;height:var(--banner-h);
+  display:flex;align-items:center;justify-content:center;
+}
+.claim-banner a{color:inherit}
+
+/* Hero */
+.hero{
+  position:relative;min-height:85vh;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:url('https://images.pexels.com/photos/10615852/pexels-photo-10615852.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover no-repeat;
+}
+.hero-bg::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(26,26,46,0.85) 0%,rgba(55,66,172,0.7) 100%);
+}
+.hero-content{
+  position:relative;z-index:1;
+  text-align:center;max-width:800px;padding:0 24px;
+}
+.hero h1{
+  font-size:3.5rem;font-weight:800;
+  color:var(--white);margin-bottom:16px;
+  line-height:1.15;letter-spacing:-1px;
+}
+.hero p{
+  font-size:1.2rem;color:rgba(255,255,255,0.9);
+  margin-bottom:32px;max-width:600px;margin-left:auto;margin-right:auto;
+}
+.btn{
+  display:inline-block;padding:16px 36px;
+  background:var(--primary);color:var(--white);
+  text-decoration:none;border-radius:50px;
+  font-weight:600;font-size:1.05rem;
+  transition:all 0.3s;border:none;cursor:pointer;
+}
+.btn:hover{background:var(--primary-light);transform:translateY(-2px);box-shadow:0 8px 25px rgba(55,66,172,0.4)}
+
+/* Sections */
+.section{padding:100px 24px}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-label{
+  display:inline-block;font-size:0.85rem;font-weight:600;
+  text-transform:uppercase;letter-spacing:2px;color:var(--primary);
+  margin-bottom:8px;
+}
+.section-title{
+  font-size:2.5rem;font-weight:800;margin-bottom:16px;
+  line-height:1.2;letter-spacing:-0.5px;
+}
+.section-sub{
+  font-size:1.1rem;color:var(--text-light);
+  max-width:640px;line-height:1.7;
+}
+.text-center{text-align:center}
+.text-center .section-sub{margin-left:auto;margin-right:auto}
+
+/* What We Do */
+.what-we-do{
+  background:var(--white);
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:60px;align-items:center;
+}
+.wwd-image{
+  border-radius:var(--radius);overflow:hidden;
+  box-shadow:var(--shadow);
+}
+.wwd-image img{width:100%;height:100%;object-fit:cover;display:block}
+.wwd-content .section-title{margin-top:8px}
+.wwd-content .section-sub{font-size:1rem;margin-bottom:20px}
+.wwd-stats{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:16px;margin-top:32px;
+}
+.stat{padding:16px;background:var(--bg-light);border-radius:10px}
+.stat-num{font-size:1.5rem;font-weight:800;color:var(--primary)}
+.stat-label{font-size:0.85rem;color:var(--text-light);margin-top:4px}
+
+/* Services - Alternating */
+.services-section{background:var(--bg-light)}
+.service-row{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:60px;align-items:center;
+  margin-bottom:80px;
+}
+.service-row:last-child{margin-bottom:0}
+.service-row.reverse .service-image{order:2}
+.service-row.reverse .service-text{order:1}
+.service-image{
+  border-radius:var(--radius);overflow:hidden;
+  box-shadow:var(--shadow);
+}
+.service-image img{width:100%;height:380px;object-fit:cover;display:block}
+.service-icon{width:48px;height:48px;margin-bottom:16px}
+.service-text h3{font-size:1.6rem;font-weight:700;margin-bottom:12px}
+.service-text p{color:var(--text-light);margin-bottom:20px;line-height:1.7}
+.service-features{list-style:none}
+.service-features li{
+  display:flex;align-items:flex-start;gap:10px;
+  margin-bottom:10px;font-size:0.95rem;
+}
+.service-features li svg{flex-shrink:0;margin-top:3px}
+
+/* Why Choose Us */
+.why-section{background:var(--white)}
+.why-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:30px;margin-top:48px;
+}
+.why-card{
+  padding:36px 28px;background:var(--bg-light);
+  border-radius:var(--radius);text-align:center;
+  transition:transform 0.3s;
+}
+.why-card:hover{transform:translateY(-4px)}
+.why-card .service-icon{display:block;margin:0 auto 16px}
+.why-card h3{font-size:1.2rem;font-weight:700;margin-bottom:10px}
+.why-card p{font-size:0.95rem;color:var(--text-light);line-height:1.6}
+
+/* Reviews */
+.reviews-section{
+  position:relative;
+  background:url('https://images.pexels.com/photos/8374311/pexels-photo-8374311.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover no-repeat fixed;
+}
+.reviews-section::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(26,26,46,0.92) 0%,rgba(55,66,172,0.85) 100%);
+}
+.reviews-section .section-inner{position:relative;z-index:1}
+.reviews-section .section-title{color:var(--white)}
+.reviews-section .section-sub{color:rgba(255,255,255,0.8)}
+.reviews-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:30px;margin-top:48px;
+}
+.review-card{
+  background:rgba(255,255,255,0.1);
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.15);
+  border-radius:var(--radius);padding:32px;
+}
+.review-stars{display:flex;gap:3px;margin-bottom:16px}
+.review-text{
+  color:rgba(255,255,255,0.9);
+  font-size:0.95rem;line-height:1.7;
+  margin-bottom:20px;font-style:italic;
+}
+.review-author{font-weight:600;color:var(--white)}
+
+/* Contact */
+.contact-section{background:var(--bg-light)}
+.contact-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:60px;margin-top:48px;
+}
+.contact-info h3{font-size:1.3rem;font-weight:700;margin-bottom:24px}
+.contact-item{
+  display:flex;align-items:flex-start;gap:14px;
+  margin-bottom:20px;
+}
+.contact-item svg{flex-shrink:0;margin-top:2px}
+.contact-item h4{font-size:0.85rem;font-weight:600;color:var(--primary);margin-bottom:2px}
+.contact-item p{font-size:0.95rem;color:var(--text-dark)}
+.hours-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px 20px;margin-top:4px}
+.hours-item{display:flex;justify-content:space-between;font-size:0.9rem}
+.hours-item .day{color:var(--text-light)}
+.hours-item .time{font-weight:500}
+.contact-map{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.contact-map iframe{width:100%;height:400px;display:block}
+
+/* Footer */
+footer{
+  background:var(--bg-dark);color:rgba(255,255,255,0.7);
+  padding:40px 24px 24px;
+}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-top{
+  display:flex;align-items:center;justify-content:space-between;
+  padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,0.1);
+  margin-bottom:24px;
+}
+.footer-logo{display:flex;align-items:center;gap:10px}
+.footer-logo .logo-img{height:36px}
+.footer-logo .logo-text{font-size:1.1rem;color:var(--white)}
+.footer-links{display:flex;gap:16px}
+.footer-links a{color:rgba(255,255,255,0.6);text-decoration:none;font-size:0.9rem;transition:color 0.2s}
+.footer-links a:hover{color:var(--white)}
+.footer-bottom{
+  text-align:center;font-size:0.85rem;
+  display:flex;flex-direction:column;gap:8px;
+}
+.footer-bottom .attribution{font-size:0.85rem;color:rgba(255,255,255,0.5);margin-top:4px}
+.footer-bottom .attribution a{color:rgba(255,255,255,0.7);text-decoration:none;transition:color 0.2s}
+.footer-bottom .attribution a:hover{color:var(--primary-light)}
+
+/* Animations */
+.fade-in{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+
+/* Mobile */
+@media(max-width:768px){
+  :root{--header-h:60px;--banner-h:50px}
+  .hero h1{font-size:2.2rem}
+  .hero{min-height:70vh}
+  .hero p{font-size:1rem}
+  .section{padding:60px 20px}
+  .section-title{font-size:1.8rem}
+  
+  /* Mobile nav */
+  nav{
+    position:fixed;top:var(--header-h);left:0;right:0;
+    background:var(--white);flex-direction:column;
+    padding:16px;box-shadow:0 4px 20px rgba(0,0,0,0.1);
+    display:none;z-index:999;
+  }
+  nav.open{display:flex}
+  nav a{width:100%;padding:12px 16px;font-size:1rem}
+  .mobile-toggle{display:flex;align-items:center;justify-content:center}
+
+  .what-we-do{grid-template-columns:1fr}
+  .wwd-image{order:-1}
+  .wwd-stats{grid-template-columns:1fr 1fr}
+
+  .service-row{grid-template-columns:1fr;gap:30px;margin-bottom:50px}
+  .service-row.reverse .service-image{order:1}
+  .service-row.reverse .service-text{order:2}
+  .service-image img{height:260px}
+  .service-text h3{font-size:1.3rem}
+
+  .why-grid{grid-template-columns:1fr;gap:16px}
+  .reviews-grid{grid-template-columns:1fr;gap:20px}
+  .contact-grid{grid-template-columns:1fr;gap:40px}
+  .hours-grid{grid-template-columns:1fr}
+  .footer-top{flex-direction:column;gap:16px;text-align:center}
+  .footer-links{flex-wrap:wrap;justify-content:center}
+}
+
+@media(min-width:769px) and (max-width:1024px){
+  .service-row{grid-template-columns:1fr 1fr;gap:30px}
+  .service-image img{height:300px}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBD8TFCF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <img class="logo-img" src="/logo.svg" alt="Plumb Perfect">
+      <span class="logo-text">Plumb <span>Perfect</span></span>
+    </a>
+    <nav id="nav">
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="claim-banner">
+  <a href="https://design.withviso.com" style="text-decoration:none;color:inherit">
+    Hi Plumb Perfect! Do you like the website? <u>Contact us to make it yours</u>
+  </a>
+</div>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <h1>It's Not Done Right, Until It's Done Plumb Perfect</h1>
+    <p>Your trusted Wenatchee plumber for water heaters, drain cleaning, gas lines, and full bathroom remodels. Available 24/7 for all your plumbing needs.</p>
+    <a href="tel:+15096633602" class="btn">Call (509) 663-3602</a>
+  </div>
+</section>
+
+<section class="section" id="what">
+  <div class="section-inner">
+    <div class="what-we-do fade-in">
+      <div class="wwd-image">
+        <img src="https://images.pexels.com/photos/4030052/pexels-photo-4030052.jpeg?auto=compress&cs=tinysrgb&w=940" alt="Professional plumbing services" loading="lazy">
+      </div>
+      <div class="wwd-content">
+        <span class="section-label">What We Do</span>
+        <h2 class="section-title">Full-Service Plumbing for North Central Washington</h2>
+        <p class="section-sub">From emergency repairs to complete bathroom remodels, Plumb Perfect delivers quality plumbing solutions for residential and commercial customers throughout Wenatchee and all of NCW. Every job is backed by licensed, bonded professionals who take pride in doing the job right the first time.</p>
+        <div class="wwd-stats">
+          <div class="stat">
+            <div class="stat-num">24/7</div>
+            <div class="stat-label">Emergency Service</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">A+</div>
+            <div class="stat-label">BBB Rating</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">100%</div>
+            <div class="stat-label">Licensed & Bonded</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">4.9</div>
+            <div class="stat-label">Google Rating</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section services-section" id="services">
+  <div class="section-inner">
+    <div class="text-center fade-in">
+      <span class="section-label">Our Services</span>
+      <h2 class="section-title">Expert Plumbing You Can Count On</h2>
+      <p class="section-sub">We handle everything from minor leaks to major installations with precision and care.</p>
+    </div>
+
+    <div style="margin-top:60px">
+      <!-- Service 1: Water Heater -->
+      <div class="service-row fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/30560254/pexels-photo-30560254.jpeg?auto=compress&cs=tinysrgb&w=940" alt="Water heater services" loading="lazy">
+        </div>
+        <div class="service-text">
+          <img class="service-icon" src="https://unpkg.com/lucide-static@latest/icons/droplet.svg" alt="">
+          <h3>Water Heater Services</h3>
+          <p>Whether your water heater is acting up or ready for an upgrade, we provide expert installation, repair, and maintenance for all types of water heaters.</p>
+          <ul class="service-features">
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#3742ac" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> New water heater installation</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#3742ac" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Emergency repair & troubleshooting</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#3742ac" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Hybrid & standard unit replacement</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#3742ac" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Routine maintenance & flushing</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Service 2: Drain & Sewer -->
+      <div class="service-row reverse fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/87299/pexels-photo-87299.jpeg?auto=compress&cs=tinysrgb&w=940" alt="Drain and sewer cleaning" loading="lazy">
+        </div>
+        <div class="service-text">
+          <img class="service-icon" src="https://unpkg.com/lucide-static@latest/icons/wrench.svg" alt="">
+          <h3>Drain & Sewer Cleaning</h3>
+          <p>Clogged drains and sewer lines can cause major headaches. Our advanced equipment clears blockages quickly and thoroughly, restoring proper flow.</p>
+          <ul class="service-features">
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#3742ac" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Hydro jetting for deep cleaning</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#3742ac" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Sewer line cleaning & repair</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#3742ac" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Rooter service for tough clogs</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#3742ac" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Emergency drain unblocking</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Service 3: Gas Line -->
+      <div class="service-row fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/13422435/pexels-photo-13422435.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200" alt="Gas stove close-up" loading="lazy">
+        </div>
+        <div class="service-text">
+          <img class="service-icon" src="https://unpkg.com/lucide-static@latest/icons/zap.svg" alt="">
+          <h3>Gas Line Services</h3>
+          <p>Safe and reliable gas line installation, repair, and inspection. We handle everything from cooktop hookups to full gas system modernization.</p>
+          <ul class="service-features">
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#3742ac" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Gas appliance installation (cooktops, heaters)</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#3742ac" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Gas line repair & leak detection</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#3742ac" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Gas system modernization & updates</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#3742ac" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Pressure testing & safety inspections</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Service 4: Remodeling -->
+      <div class="service-row reverse fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/8082195/pexels-photo-8082195.jpeg?auto=compress&cs=tinysrgb&w=940" alt="Kitchen and bathroom remodeling" loading="lazy">
+        </div>
+        <div class="service-text">
+          <img class="service-icon" src="https://unpkg.com/lucide-static@latest/icons/shower-head.svg" alt="">
+          <h3>Kitchen & Bathroom Remodeling</h3>
+          <p>Transform your space with complete kitchen and bathroom remodels. From fixture updates to full renovations, we bring your vision to life.</p>
+          <ul class="service-features">
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#3742ac" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Complete bathroom renovations</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#3742ac" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Kitchen plumbing & fixture installation</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#3742ac" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Sink, faucet & toilet replacement</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#3742ac" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Custom shower & tub installations</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Service 5: Camera Inspection -->
+      <div class="service-row fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/5768318/pexels-photo-5768318.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200" alt="Stainless steel drain cover in modern shower" loading="lazy">
+        </div>
+        <div class="service-text">
+          <img class="service-icon" src="https://unpkg.com/lucide-static@latest/icons/camera.svg" alt="">
+          <h3>Video Camera Inspection</h3>
+          <p>Our state-of-the-art sewer line video cameras allow us to pinpoint problems without invasive digging, saving you time and money.</p>
+          <ul class="service-features">
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#3742ac" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Sewer line video inspection</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#3742ac" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Pipe condition assessment</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#3742ac" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Electronic locating & mapping</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#3742ac" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Pre-purchase home inspection</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Service 6: Residential & Commercial -->
+      <div class="service-row reverse fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/4642438/pexels-photo-4642438.jpeg?auto=compress&cs=tinysrgb&w=940" alt="Residential and commercial plumbing" loading="lazy">
+        </div>
+        <div class="service-text">
+          <img class="service-icon" src="https://unpkg.com/lucide-static@latest/icons/building.svg" alt="">
+          <h3>Residential & Commercial Plumbing</h3>
+          <p>We serve both homeowners and businesses with comprehensive plumbing solutions, from minor repairs to large-scale commercial projects.</p>
+          <ul class="service-features">
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#3742ac" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Residential service & repair</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#3742ac" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Commercial plumbing & maintenance</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#3742ac" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> New construction plumbing</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#3742ac" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Backflow testing & prevention</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section why-section" id="why">
+  <div class="section-inner">
+    <div class="text-center fade-in">
+      <span class="section-label">Why Choose Us</span>
+      <h2 class="section-title">Plumbing Service You Can Trust</h2>
+      <p class="section-sub">We don't just fix pipes — we build lasting relationships with our customers through quality work and exceptional service.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card fade-in">
+        <img class="service-icon" src="https://unpkg.com/lucide-static@latest/icons/shield-check.svg" alt="">
+        <h3>Licensed & Insured</h3>
+        <p>Fully licensed, bonded, and insured for your peace of mind. Every technician is background-checked and professionally trained.</p>
+      </div>
+      <div class="why-card fade-in">
+        <img class="service-icon" src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="">
+        <h3>24/7 Emergency Service</h3>
+        <p>Plumbing emergencies don't wait for business hours. Neither do we. We're available around the clock, every day of the week.</p>
+      </div>
+      <div class="why-card fade-in">
+        <img class="service-icon" src="https://unpkg.com/lucide-static@latest/icons/award.svg" alt="">
+        <h3>A+ BBB Rating</h3>
+        <p>Our commitment to quality and customer satisfaction has earned us an A+ rating with the Better Business Bureau.</p>
+      </div>
+      <div class="why-card fade-in">
+        <img class="service-icon" src="https://unpkg.com/lucide-static@latest/icons/thumbs-up.svg" alt="">
+        <h3>Senior Discounts</h3>
+        <p>We believe in giving back to our community. Ask us about our senior discounts and special pricing for veterans.</p>
+      </div>
+      <div class="why-card fade-in">
+        <img class="service-icon" src="https://unpkg.com/lucide-static@latest/icons/home.svg" alt="">
+        <h3>Quality Workmanship</h3>
+        <p>Every job is done right the first time. We use premium materials and proven techniques to ensure lasting results.</p>
+      </div>
+      <div class="why-card fade-in">
+        <img class="service-icon" src="https://unpkg.com/lucide-static@latest/icons/message-square.svg" alt="">
+        <h3>Responsive Service</h3>
+        <p>From your first call to project completion, we communicate clearly and show up when promised. No runaround, no excuses.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section reviews-section" id="reviews">
+  <div class="section-inner">
+    <div class="text-center fade-in">
+      <span class="section-label" style="color:rgba(255,255,255,0.7)">Testimonials</span>
+      <h2 class="section-title">What Our Customers Say</h2>
+      <p class="section-sub">Don't take our word for it — hear from the people we've served.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card fade-in">
+        <div class="review-stars">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        </div>
+        <p class="review-text">"The install was professional and clean. The guys that came out were friendly, respectful of our home and clearly cared that we were happy with the end result. Highly recommended!"</p>
+        <p class="review-author">— Cherice</p>
+      </div>
+      <div class="review-card fade-in">
+        <div class="review-stars">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        </div>
+        <p class="review-text">"Plumb Perfect did an outstanding job of checking over our existing system, made some updates to modernize it, and installed the cooktop. Thank you Cameron and the wonderful staff!"</p>
+        <p class="review-author">— Paige</p>
+      </div>
+      <div class="review-card fade-in">
+        <div class="review-stars">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        </div>
+        <p class="review-text">"Plumb Perfect was hired for the rehab in all 3 units and did a great job. Cameron responds to me right away and shows up when he is scheduled. Quality work and great communication!"</p>
+        <p class="review-author">— PTR</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section contact-section" id="contact">
+  <div class="section-inner">
+    <div class="text-center fade-in">
+      <span class="section-label">Contact Us</span>
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="section-sub">Ready to get started? Give us a call or stop by. We're here 24/7 for all your plumbing needs.</p>
+    </div>
+    <div class="contact-grid fade-in">
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+        <div class="contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3742ac" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <div>
+            <h4>Phone</h4>
+            <p><a href="tel:+15096633602" style="color:inherit;text-decoration:none">(509) 663-3602</a></p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3742ac" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div>
+            <h4>Address</h4>
+            <p>1115A Walla Walla Ave Ste. 101<br>Wenatchee, WA 98801</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3742ac" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <div>
+            <h4>Business Hours</h4>
+            <div class="hours-grid">
+              <div class="hours-item"><span class="day">Mon - Sun</span><span class="time">Open 24 Hours</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10794.081114858041!2d-120.33431664458006!3d47.4407968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549bccbb5efb97ef%3A0x750af30e7f5d35ec!2sPlumb%20Perfect!5e0!3m2!1sen!2sca!4v1779410067013!5m2!1sen!2sca" width="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-logo">
+        <img class="logo-img" src="/logo.svg" alt="Plumb Perfect">
+        <span class="logo-text" style="color:var(--white);font-size:1.1rem">Plumb Perfect</span>
+      </div>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#why">Why Us</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Plumb Perfect. All rights reserved.</p>
+      <p class="attribution">Made with love by <a href="https://design.withviso.com">Viso Solutions</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Mobile nav toggle
+const toggle = document.getElementById('mobileToggle');
+const nav = document.getElementById('nav');
+toggle.addEventListener('click', () => nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+
+// Fade-in on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Current year
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
