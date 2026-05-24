@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>J & E Plumbing & Heating | Kelowna's Trusted Plumber</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TBD8TFCF');</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; color: #1a1a2e; line-height: 1.6; overflow-x: hidden; }
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* ===== HEADER ===== */
+        header {
+            position: sticky; top: 0; z-index: 1000;
+            background: #fff; color: #1a1a2e;
+            padding: 0 24px;
+            display: flex; align-items: center; justify-content: space-between;
+            height: 70px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .header-logo {
+            font-size: 24px; font-weight: 800; letter-spacing: 1px;
+            color: #f97316; display: flex; align-items: center; gap: 8px;
+        }
+        .header-logo .logo-icon {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 50px; height: 40px; border: 2px solid #f97316;
+            border-radius: 8px; font-size: 16px; font-weight: 700; color: #f97316;
+        }
+        nav { display: flex; align-items: center; gap: 32px; }
+        nav a {
+            font-size: 14px; font-weight: 500; color: #64748b;
+            transition: color 0.2s; position: relative;
+        }
+        nav a:hover { color: #f97316; }
+        nav a::after {
+            content: ''; position: absolute; bottom: -4px; left: 0;
+            width: 0; height: 2px; background: #f97316;
+            transition: width 0.2s;
+        }
+        nav a:hover::after { width: 100%; }
+        .nav-cta {
+            background: #f97316; color: #fff !important;
+            padding: 10px 20px; border-radius: 8px; font-weight: 600;
+        }
+        .nav-cta:hover { background: #ea580c; }
+        .nav-cta::after { display: none; }
+        .mobile-toggle { display: none; background: none; border: none; color: #1a1a2e; cursor: pointer; padding: 8px; }
+        .mobile-toggle img { filter: brightness(0) saturate(100%); }
+
+        /* ===== CLAIM BANNER ===== */
+        .claim-banner {
+            position: sticky; top: 70px; z-index: 999;
+            background: #f97316; color: #fff;
+            text-align: center; padding: 10px 24px;
+            font-size: 14px; font-weight: 500;
+        }
+        .claim-banner u { text-decoration: underline; text-underline-offset: 2px; }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 85vh; display: flex; align-items: center; justify-content: center;
+            position: relative; overflow: hidden;
+            background: #0f172a;
+        }
+        .hero-bg {
+            position: absolute; inset: 0;
+            background-size: cover; background-position: center;
+            opacity: 0.5;
+        }
+        .hero-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(135deg, rgba(15,23,42,0.7) 0%, rgba(15,23,42,0.4) 100%);
+        }
+        .hero-content {
+            position: relative; z-index: 2; text-align: center;
+            max-width: 800px; padding: 0 24px;
+        }
+        .hero-content h1 {
+            font-size: 56px; font-weight: 800; color: #fff;
+            line-height: 1.1; margin-bottom: 16px;
+        }
+        .hero-content h1 span { color: #f97316; }
+        .hero-content p {
+            font-size: 20px; color: #94a3b8;
+            margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto;
+        }
+        .hero-btn {
+            display: inline-block; background: #f97316; color: #fff;
+            padding: 16px 40px; border-radius: 12px; font-size: 18px; font-weight: 700;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .hero-btn:hover { background: #ea580c; transform: translateY(-2px); }
+        .hero-stats {
+            display: flex; justify-content: center; gap: 48px; margin-top: 48px;
+        }
+        .hero-stat { text-align: center; }
+        .hero-stat .num { font-size: 32px; font-weight: 800; color: #f97316; }
+        .hero-stat .label { font-size: 14px; color: #94a3b8; margin-top: 4px; }
+
+        /* ===== SECTION COMMON ===== */
+        section { padding: 100px 0; }
+        section[id] { scroll-margin-top: 130px; }
+        .section-title {
+            font-size: 36px; font-weight: 800; text-align: center;
+            margin-bottom: 12px; color: #0f172a;
+        }
+        .section-subtitle {
+            text-align: center; font-size: 18px; color: #64748b;
+            max-width: 600px; margin: 0 auto 56px;
+        }
+        .title-underline {
+            width: 60px; height: 4px; background: #f97316; border-radius: 2px;
+            margin: 0 auto 48px;
+        }
+
+        /* ===== WHAT WE DO ===== */
+        .what-we-do {
+            background: #f8fafc;
+            display: flex; align-items: center; gap: 64px;
+        }
+        .what-we-do .container { display: flex; align-items: center; gap: 64px; }
+        .wwd-content { flex: 1; }
+        .wwd-content h2 { font-size: 36px; font-weight: 800; margin-bottom: 16px; color: #0f172a; }
+        .wwd-content p { font-size: 18px; color: #475569; line-height: 1.8; }
+        .wwd-image { flex: 1; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .wwd-image img { width: 100%; height: 400px; object-fit: cover; }
+
+        /* ===== SERVICES (alternating 2-column) ===== */
+        .services-section { background: #fff; }
+        .service-item {
+            display: flex; align-items: center; gap: 64px;
+            padding: 80px 0; border-bottom: 1px solid #e2e8f0;
+        }
+        .service-item:last-child { border-bottom: none; }
+        .service-item.reverse { flex-direction: row-reverse; }
+        .service-image {
+            flex: 1; border-radius: 16px; overflow: hidden; box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+        }
+        .service-image img { width: 100%; height: 380px; object-fit: cover; transition: transform 0.4s; }
+        .service-image:hover img { transform: scale(1.05); }
+        .service-text { flex: 1; }
+        .service-text .service-icon {
+            display: inline-flex; align-items: center; gap: 8px;
+            margin-bottom: 12px;
+        }
+        .service-text .service-icon img { width: 32px; height: 32px; }
+        .service-text .service-icon h3 {
+            font-size: 24px; font-weight: 700; color: #0f172a;
+        }
+        .service-text p { font-size: 16px; color: #475569; margin-bottom: 16px; line-height: 1.7; }
+        .service-text ul li {
+            display: flex; align-items: flex-start; gap: 12px;
+            margin-bottom: 10px; font-size: 15px; color: #334155;
+        }
+        .service-text ul li img { width: 20px; height: 20px; flex-shrink: 0; margin-top: 3px; }
+
+        /* ===== WHY CHOOSE US ===== */
+        .why-choose-us {
+            background: #0f172a; color: #fff;
+            position: relative; overflow: hidden;
+        }
+        .why-choose-us .section-title { color: #fff; }
+        .choose-bg {
+            position: absolute; inset: 0; opacity: 0.08;
+            background-size: cover; background-position: center;
+        }
+        .choose-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+            position: relative; z-index: 1;
+        }
+        .choose-card {
+            background: rgba(255,255,255,0.06); backdrop-filter: blur(4px);
+            padding: 40px 32px; border-radius: 16px; text-align: center;
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .choose-card:hover { transform: translateY(-6px); border-color: #f97316; }
+        .choose-card img { width: 48px; height: 48px; margin: 0 auto 16px; filter: brightness(0) invert(1); }
+        .choose-card h4 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+        .choose-card p { font-size: 15px; color: #94a3b8; line-height: 1.7; }
+
+        /* ===== REVIEWS ===== */
+        .reviews-section {
+            background: #f8fafc;
+            position: relative; overflow: hidden;
+        }
+        .reviews-bg {
+            position: absolute; inset: 0; opacity: 0.04;
+            background-size: cover; background-position: center;
+        }
+        .reviews-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+            position: relative; z-index: 1;
+        }
+        .review-card {
+            background: #fff; padding: 32px; border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            transition: transform 0.3s;
+        }
+        .review-card:hover { transform: translateY(-4px); }
+        .review-stars { display: flex; gap: 2px; margin-bottom: 12px; }
+        .review-stars svg { width: 18px; height: 18px; }
+        .review-card blockquote {
+            font-size: 15px; color: #475569; line-height: 1.7;
+            margin-bottom: 16px; font-style: italic;
+        }
+        .review-card .reviewer {
+            font-weight: 700; color: #0f172a; font-size: 15px;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .review-card .reviewer .badge {
+            font-size: 12px; font-weight: 500; color: #f97316;
+        }
+
+        /* ===== CONTACT ===== */
+        .contact-section { background: #fff; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+        .contact-info h3 { font-size: 24px; font-weight: 700; margin-bottom: 24px; color: #0f172a; }
+        .contact-info .info-item {
+            display: flex; align-items: flex-start; gap: 12px;
+            margin-bottom: 20px;
+        }
+        .contact-info .info-item img { width: 22px; height: 22px; flex-shrink: 0; margin-top: 3px; }
+        .contact-info .info-item .label { font-size: 13px; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+        .contact-info .info-item .value { font-size: 16px; color: #1e293b; font-weight: 500; }
+        .hours-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 24px; margin-top: 8px; }
+        .hours-grid .day { font-size: 14px; color: #64748b; }
+        .hours-grid .time { font-size: 14px; color: #0f172a; font-weight: 500; text-align: right; }
+        .contact-map { border-radius: 16px; overflow: hidden; box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
+        .contact-map iframe { width: 100%; height: 400px; border: 0; display: block; }
+        .cta-phone {
+            display: inline-block; margin-top: 16px;
+            background: #f97316; color: #fff;
+            padding: 14px 32px; border-radius: 10px; font-weight: 700; font-size: 18px;
+            transition: background 0.2s;
+        }
+        .cta-phone:hover { background: #ea580c; }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #0f172a; color: #94a3b8;
+            padding: 48px 0 32px; text-align: center;
+        }
+        footer .footer-logo { font-size: 22px; font-weight: 800; color: #f97316; margin-bottom: 8px; }
+        footer .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+        footer .footer-links a { font-size: 14px; color: #64748b; transition: color 0.2s; }
+        footer .footer-links a:hover { color: #f97316; }
+        footer .header-logo {
+            display: inline-flex;
+            margin: 0 auto 16px; /* Center the logo and add some bottom margin */
+        }
+        footer hr { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 24px auto; max-width: 400px; }
+        footer .attribution { font-size: 13px; color: #475569; margin-top: 8px; }
+        footer .attribution a { color: #f97316; font-weight: 500; }
+        footer .attribution a:hover { text-decoration: underline; }
+        footer .copyright { font-size: 13px; color: #475569; margin-top: 8px; }
+
+        /* ===== ANIMATIONS ===== */
+        .fade-up { opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .what-we-do .container { flex-direction: column; gap: 32px; }
+            .wwd-image img { height: 300px; }
+            .service-item { flex-direction: column !important; gap: 32px; padding: 48px 0; }
+            .service-image img { height: 300px; }
+            .choose-grid { grid-template-columns: repeat(2, 1fr); }
+            .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            header { padding: 0 16px; }
+            nav { display: none; position: absolute; top: 70px; left: 0; right: 0;
+                   background: #fff; flex-direction: column; padding: 24px;
+                   gap: 20px; border-top: 1px solid rgba(0,0,0,0.08); }
+            nav.open { display: flex; }
+            .mobile-toggle { display: block; }
+            .hero-content h1 { font-size: 36px; }
+            .hero-content p { font-size: 16px; }
+            .hero-stats { gap: 24px; flex-wrap: wrap; }
+            .hero-stat .num { font-size: 28px; }
+            section { padding: 64px 0; }
+            .section-title { font-size: 28px; }
+            .choose-grid { grid-template-columns: 1fr; }
+            .reviews-grid { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+            .contact-map iframe { height: 300px; }
+            .hours-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 480px) {
+            .hero-content h1 { font-size: 28px; }
+            .hero-btn { padding: 14px 28px; font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBD8TFCF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <a href="#" class="header-logo">
+            <span class="logo-icon">J&E</span>
+            J &amp; E Plumbing
+        </a>
+        <nav id="mainNav">
+            <a href="#what-we-do">What We Do</a>
+            <a href="#services">Services</a>
+            <a href="#why-choose-us">Why Choose Us</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+            <a href="#contact" class="nav-cta">(250) 826-4175</a>
+        </nav>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+            <img src="https://unpkg.com/lucide-static@latest/icons/menu.svg" alt="Menu" width="28" height="28">
+        </button>
+    </header>
+
+    <!-- ===== CLAIM BANNER ===== -->
+    <div class="claim-banner">
+        <a href="https://design.withviso.com" target="_blank" style="text-decoration: none; color: inherit;">
+            Hi J &amp; E Plumbing and Heating! Do you like the website? <u>Contact us to make it yours</u>
+        </a>
+    </div>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+        <div class="hero-bg" style="background-image: url('https://images.pexels.com/photos/34295401/pexels-photo-34295401.jpeg?auto=compress&cs=tinysrgb&w=1920');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content fade-up">
+            <h1>Trusted <span>Plumbing &amp; Heating</span> in Kelowna</h1>
+            <p>Over 25 years of honest, reliable service. From emergency repairs to full installations — we keep your home comfortable year-round.</p>
+            <a href="#contact" class="hero-btn">Call Us: (250) 826-4175</a>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="num">25+</div>
+                    <div class="label">Years Serving Kelowna</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="num">24/7</div>
+                    <div class="label">Emergency Service</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHAT WE DO ===== -->
+    <section class="what-we-do" id="what-we-do">
+        <div class="container">
+            <div class="wwd-image fade-up">
+                <img src="https://images.pexels.com/photos/14953886/pexels-photo-14953886.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Plumbing tools and equipment" loading="lazy">
+            </div>
+            <div class="wwd-content fade-up">
+                <h2>What We Do</h2>
+                <p>J &amp; E Plumbing &amp; Heating has been serving Kelowna for more than 25 years with quality workmanship and reasonable rates. We are a family-owned plumbing and heating company dedicated to providing honest, professional service for residential and commercial properties. Whether it's a burst pipe emergency, a furnace installation, or a full renovation, our team delivers reliable solutions you can count on.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <h2 class="section-title fade-up">Our Services</h2>
+            <p class="section-subtitle fade-up">Comprehensive plumbing and heating solutions for Kelowna homes and businesses</p>
+            <div class="title-underline fade-up"></div>
+
+            <!-- Service 1: Plumbing Services -->
+            <div class="service-item fade-up">
+                <div class="service-image">
+                    <img src="https://images.pexels.com/photos/9551383/pexels-photo-9551383.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Plumbing pipe work" loading="lazy">
+                </div>
+                <div class="service-text">
+                    <div class="service-icon">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/wrench.svg" alt="">
+                        <h3>Plumbing Services</h3>
+                    </div>
+                    <p>From kitchen and bathroom renovations to new construction and commercial projects, our skilled plumbers handle every job with precision and care using top-quality materials.</p>
+                    <ul>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Residential &amp; commercial plumbing</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Renovations and new builds</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Gas installation and fixture upgrades</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Bathroom sink and toilet repair</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 2: Heating & Furnace (reverse) -->
+            <div class="service-item reverse fade-up">
+                <div class="service-image">
+                    <img src="https://images.pexels.com/photos/195029/pexels-photo-195029.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Water heater and heating system" loading="lazy">
+                </div>
+                <div class="service-text">
+                    <div class="service-icon">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/flame.svg" alt="">
+                        <h3>Heating &amp; Furnace</h3>
+                    </div>
+                    <p>Stay warm through Kelowna's cold winters with expert furnace service, boiler systems, and home heating installations. We work with all major brands and ensure your system runs efficiently.</p>
+                    <ul>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Furnace service, repair &amp; installation</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Boiler system design and service</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Home heating system installation including ductwork</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Thermostat upgrades &amp; system maintenance</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 3: Drain & Pipe Solutions -->
+            <div class="service-item fade-up">
+                <div class="service-image">
+                    <img src="https://images.pexels.com/photos/28169591/pexels-photo-28169591.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Copper plumbing fitting" loading="lazy">
+                </div>
+                <div class="service-text">
+                    <div class="service-icon">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/droplets.svg" alt="">
+                        <h3>Drain &amp; Pipe Solutions</h3>
+                    </div>
+                    <p>Quick response to clogged drains, burst pipes, and pipe cleaning needs. Our team uses professional techniques to diagnose and resolve issues fast, minimizing damage to your property.</p>
+                    <ul>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Drain cleaning and clogged drain repair</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Burst pipe repair and pipe cleaning</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Drain pipe repair and maintenance</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> 24/7 emergency service available</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 4: Water Systems (reverse) -->
+            <div class="service-item reverse fade-up">
+                <div class="service-image">
+                    <img src="https://images.pexels.com/photos/10615852/pexels-photo-10615852.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Plumbing service work" loading="lazy">
+                </div>
+                <div class="service-text">
+                    <div class="service-icon">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/droplet.svg" alt="">
+                        <h3>Water Systems</h3>
+                    </div>
+                    <p>Expert water heater installation and repair, water softener services, and water filtration systems. We help you get clean, reliable water throughout your home with certified backflow prevention.</p>
+                    <ul>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Water heater repair &amp; installation</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Water softener installation &amp; service</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Water filtration systems</li>
+                        <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Backflow prevention certified</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHY CHOOSE US ===== -->
+    <section class="why-choose-us" id="why-choose-us">
+        <div class="choose-bg" style="background-image: url('https://images.pexels.com/photos/3722212/pexels-photo-3722212.jpeg?auto=compress&cs=tinysrgb&w=1920');"></div>
+        <div class="container">
+            <h2 class="section-title fade-up">Why Choose J &amp; E Plumbing?</h2>
+            <p class="section-subtitle fade-up" style="color: #94a3b8;">What sets us apart — honest, skilled, and local</p>
+            <div class="title-underline fade-up"></div>
+            <div class="choose-grid">
+                <div class="choose-card fade-up">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/award.svg" alt="">
+                    <h4>25+ Years of Experience</h4>
+                    <p>Decades of hands-on experience serving Kelowna homes and businesses with quality workmanship and reliable service.</p>
+                </div>
+                <div class="choose-card fade-up">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/shield-check.svg" alt="">
+                    <h4>Licensed &amp; Certified</h4>
+                    <p>Fully licensed plumbing contractors with backflow prevention certification. Your safety and satisfaction are our priority.</p>
+                </div>
+                <div class="choose-card fade-up">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="">
+                    <h4>24/7 Emergency Service</h4>
+                    <p>Plumbing emergencies don't wait — neither do we. Call our 24-hour emergency service any time, day or night.</p>
+                </div>
+                <div class="choose-card fade-up">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/thumbs-up.svg" alt="">
+                    <h4>Honest &amp; Transparent</h4>
+                    <p>We give honest recommendations — not upsells. Our customers appreciate that we tell you what you truly need.</p>
+                </div>
+                <div class="choose-card fade-up">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/users.svg" alt="">
+                    <h4>Family-Owned &amp; Local</h4>
+                    <p>A Kelowna family-owned business that treats every customer like family. Friendly, respectful, and community-focused.</p>
+                </div>
+                <div class="choose-card fade-up">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/zap.svg" alt="">
+                    <h4>Fast &amp; Efficient</h4>
+                    <p>Quick response times and efficient service. We arrive on time, solve the problem, and respect your home and property.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== REVIEWS ===== -->
+    <section class="reviews-section" id="reviews">
+        <div class="reviews-bg" style="background-image: url('https://images.pexels.com/photos/33832423/pexels-photo-33832423.jpeg?auto=compress&cs=tinysrgb&w=1920');"></div>
+        <div class="container">
+            <h2 class="section-title fade-up">What Our Customers Say</h2>
+            <p class="section-subtitle fade-up">Real reviews from real customers in Kelowna</p>
+            <div class="title-underline fade-up"></div>
+            <div class="reviews-grid">
+                <div class="review-card fade-up">
+                    <div class="review-stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f97316" stroke="#f97316" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f97316" stroke="#f97316" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f97316" stroke="#f97316" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f97316" stroke="#f97316" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f97316" stroke="#f97316" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                    </div>
+                    <blockquote>"Great experience. Other companies may have pushed an expensive softener on me, but they did not. The honesty was amazing. Very much appreciated and respected."</blockquote>
+                    <div class="reviewer">— Ivan <span class="badge">★★★★★</span></div>
+                </div>
+                <div class="review-card fade-up">
+                    <div class="review-stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f97316" stroke="#f97316" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f97316" stroke="#f97316" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f97316" stroke="#f97316" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f97316" stroke="#f97316" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f97316" stroke="#f97316" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                    </div>
+                    <blockquote>"Jack and his son Chris went above and beyond what we expected for our hot water tank. They truly made our holiday season a lot better. I recommend them to anyone looking for a plumber."</blockquote>
+                    <div class="reviewer">— Amanda <span class="badge">★★★★★</span></div>
+                </div>
+                <div class="review-card fade-up">
+                    <div class="review-stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f97316" stroke="#f97316" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f97316" stroke="#f97316" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f97316" stroke="#f97316" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f97316" stroke="#f97316" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f97316" stroke="#f97316" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                    </div>
+                    <blockquote>"Great experience with J &amp; E! Easily beat the competition with their pricing and fast service. Got about 4 quotes done and they were by far the best priced and quickest install date."</blockquote>
+                    <div class="reviewer">— Sander <span class="badge">★★★★★</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title fade-up">Get In Touch</h2>
+            <p class="section-subtitle fade-up">Call us for a free estimate or emergency service</p>
+            <div class="title-underline fade-up"></div>
+            <div class="contact-grid">
+                <div class="contact-info fade-up">
+                    <h3>Contact Information</h3>
+                    <div class="info-item">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/map-pin.svg" alt="">
+                        <div>
+                            <div class="label">Address</div>
+                            <div class="value">9460 Jim Bailey Rd<br>Kelowna, BC V4V 1S5</div>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/phone.svg" alt="">
+                        <div>
+                            <div class="label">Phone</div>
+                            <div class="value">(250) 826-4175</div>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="">
+                        <div>
+                            <div class="label">Business Hours</div>
+                            <div class="hours-grid">
+                                <span class="day">Mon - Fri</span>
+                                <span class="time">6:30 AM – 6:00 PM</span>
+                                <span class="day">Saturday</span>
+                                <span class="time">Closed</span>
+                                <span class="day">Sunday</span>
+                                <span class="time">Closed</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/zap.svg" alt="">
+                        <div>
+                            <div class="label">Emergency Service</div>
+                            <div class="value">24/7 emergency service available — call anytime</div>
+                        </div>
+                    </div>
+                    <a href="tel:2508264175" class="cta-phone">Call (250) 826-4175</a>
+                </div>
+                <div class="contact-map fade-up">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20509.02810646534!2d-119.41182816523435!3d50.0183177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537deeed61fb076f%3A0x60da4da54a5868d2!2sJ%20%26%20E%20Plumbing%20and%20Heating!5e0!3m2!1sen!2sca!4v1778795631981!5m2!1sen!2sca" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <a href="#hero" class="header-logo">
+                <span class="logo-icon">J&E</span>
+                J &amp; E Plumbing
+            </a>
+            <div class="footer-links">
+                <a href="#hero">Home</a>
+                <a href="#what-we-do">What We Do</a>
+                <a href="#services">Services</a>
+                <a href="#why-choose-us">Why Choose Us</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <hr>
+            <div class="attribution">Made with love by <a href="https://design.withviso.com" target="_blank">Viso Solutions</a></div>
+            <div class="copyright">&copy; <span id="year"></span> J &amp; E Plumbing and Heating. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        // Mobile nav toggle
+        document.getElementById('mobileToggle').addEventListener('click', function() {
+            document.getElementById('mainNav').classList.toggle('open');
+        });
+        // Close nav on link click
+        document.querySelectorAll('#mainNav a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                document.getElementById('mainNav').classList.remove('open');
+            });
+        });
+
+        // Dynamic copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Scroll-triggered fade-in animations
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.fade-up').forEach(function(el) {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Leask & Company | Plumbing & HVAC Services, West Kelowna</title>
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TBD8TFCF');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --primary: #1a4b8c;
+      --primary-dark: #0f3563;
+      --primary-light: #2a6bc4;
+      --accent: #e8b84b;
+      --accent-dark: #d4a435;
+      --bg-light: #f8f9fa;
+      --bg-dark: #1a1a2e;
+      --text-dark: #2d3436;
+      --text-light: #636e72;
+      --text-white: #ffffff;
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.12);
+      --radius: 12px;
+      --header-h: 70px;
+      --banner-h: 44px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text-dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    section[id] {
+      scroll-margin-top: calc(var(--header-h) + var(--banner-h));
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--text-white);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+      height: var(--header-h);
+      display: flex;
+      align-items: center;
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Playfair Display', serif;
+      letter-spacing: -0.3px;
+    }
+
+    .logo-mark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: var(--primary);
+      color: var(--text-white);
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .logo-text {
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      font-style: italic;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-size: 14px;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: all 0.2s;
+    }
+
+    nav a:hover {
+      background: var(--bg-light);
+      color: var(--primary);
+    }
+
+    .nav-cta {
+      background: var(--primary);
+      color: var(--text-white) !important;
+      padding: 10px 20px !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--primary-dark) !important;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text-dark);
+      margin: 5px 0;
+      transition: 0.3s;
+      border-radius: 2px;
+    }
+
+    /* Mobile Nav */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: calc(var(--header-h) + var(--banner-h));
+      left: 0;
+      right: 0;
+      background: var(--text-white);
+      box-shadow: var(--shadow-lg);
+      padding: 16px 24px;
+      z-index: 999;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .mobile-nav.open {
+      display: flex;
+    }
+
+    .mobile-nav a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-size: 16px;
+      font-weight: 500;
+      padding: 12px 16px;
+      border-radius: 8px;
+      transition: all 0.2s;
+    }
+
+    .mobile-nav a:hover {
+      background: var(--bg-light);
+      color: var(--primary);
+    }
+
+    .mobile-nav .nav-cta {
+      text-align: center;
+      margin-top: 8px;
+    }
+
+    /* Claim Banner */
+    .claim-banner {
+      position: sticky;
+      top: var(--header-h);
+      z-index: 999;
+      background: var(--primary);
+      color: var(--text-white);
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 400;
+      height: var(--banner-h);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .claim-banner a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .claim-banner u {
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('https://images.pexels.com/photos/3721272/pexels-photo-3721272.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=2000') center center / cover no-repeat;
+      filter: brightness(0.35);
+      transform: scale(1.05);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 40px 24px;
+      max-width: 800px;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 800;
+      color: var(--text-white);
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .hero-content h1 span {
+      color: var(--accent);
+    }
+
+    .hero-content p {
+      font-size: clamp(1.05rem, 2vw, 1.3rem);
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 32px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-btn {
+      display: inline-block;
+      padding: 16px 40px;
+      background: var(--accent);
+      color: var(--text-white);
+      font-weight: 700;
+      font-size: 16px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .hero-btn:hover {
+      background: var(--accent-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(232, 184, 75, 0.35);
+    }
+
+    /* Sections Common */
+    section {
+      padding: 90px 24px;
+    }
+
+    .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 16px;
+    }
+
+    .section-sub {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      max-width: 640px;
+      margin-bottom: 48px;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .text-center .section-sub {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* What We Do */
+    #what-we-do {
+      background: var(--bg-light);
+    }
+
+    .what-we-do-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .what-we-do-image {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .what-we-do-image img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .what-we-do-text p {
+      font-size: 1.05rem;
+      color: var(--text-light);
+      margin-bottom: 24px;
+    }
+
+    .what-we-do-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 32px;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 20px 12px;
+      background: var(--text-white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .stat-item .num {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .stat-item .label {
+      font-size: 13px;
+      color: var(--text-light);
+      margin-top: 4px;
+    }
+
+    /* Services - Alternating */
+    #services {
+      background: var(--text-white);
+    }
+
+    .service-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      margin-bottom: 80px;
+    }
+
+    .service-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .service-row.reverse .service-image {
+      order: 2;
+    }
+
+    .service-row.reverse .service-info {
+      order: 1;
+    }
+
+    .service-image {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .service-image img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s;
+    }
+
+    .service-image:hover img {
+      transform: scale(1.05);
+    }
+
+    .service-info .service-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      background: var(--primary);
+      border-radius: 14px;
+      margin-bottom: 16px;
+    }
+
+    .service-info .service-icon img {
+      width: 28px;
+      height: 28px;
+      filter: brightness(0) invert(1);
+    }
+
+    .service-info h3 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+    }
+
+    .service-info p {
+      font-size: 0.98rem;
+      color: var(--text-light);
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+
+    .service-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .service-bullets li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.95rem;
+      color: var(--text-dark);
+    }
+
+    .service-bullets li img {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .service-bullets li span {
+      flex: 1;
+    }
+
+    /* Why Choose Us */
+    #why-choose-us {
+      background: var(--bg-dark);
+      color: var(--text-white);
+      position: relative;
+    }
+
+    #why-choose-us .section-title {
+      color: var(--text-white);
+    }
+
+    #why-choose-us .section-sub {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 16px;
+    }
+
+    .benefit-card {
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(10px);
+      padding: 36px 28px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.3s;
+    }
+
+    .benefit-card:hover {
+      background: rgba(255, 255, 255, 0.10);
+      transform: translateY(-4px);
+    }
+
+    .benefit-card .ben-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      background: var(--accent);
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .benefit-card .ben-icon img {
+      width: 26px;
+      height: 26px;
+      filter: brightness(0) invert(1);
+    }
+
+    .benefit-card h4 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .benefit-card p {
+      font-size: 0.92rem;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.6;
+    }
+
+    /* Reviews */
+    #reviews {
+      background: var(--bg-light);
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .review-card {
+      background: var(--text-white);
+      padding: 36px 32px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: all 0.3s;
+    }
+
+    .review-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .review-stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 16px;
+    }
+
+    .review-stars svg polygon {
+      fill: #f1c40f;
+      stroke: #f1c40f;
+    }
+
+    .review-card blockquote {
+      font-size: 0.98rem;
+      color: var(--text-light);
+      line-height: 1.7;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .review-author .avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: var(--text-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .review-author .name {
+      font-weight: 600;
+      font-size: 15px;
+      color: var(--text-dark);
+    }
+
+    .review-author .title {
+      font-size: 13px;
+      color: var(--text-light);
+    }
+
+    /* Contact */
+    #contact {
+      background: var(--text-white);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .contact-info h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+      color: var(--text-dark);
+    }
+
+    .contact-detail {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+      align-items: flex-start;
+    }
+
+    .contact-detail .cd-icon {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      background: var(--bg-light);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-detail .cd-icon img {
+      width: 22px;
+      height: 22px;
+    }
+
+    .contact-detail .cd-label {
+      font-size: 13px;
+      color: var(--text-light);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .contact-detail .cd-value {
+      font-size: 16px;
+      color: var(--text-dark);
+      font-weight: 500;
+    }
+
+    .hours-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 24px;
+      margin-top: 8px;
+    }
+
+    .hours-grid .day {
+      font-size: 14px;
+      color: var(--text-light);
+    }
+
+    .hours-grid .time {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-dark);
+      text-align: right;
+    }
+
+    .contact-map {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .contact-map iframe {
+      width: 100%;
+      height: 420px;
+      border: 0;
+      display: block;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--bg-dark);
+      color: rgba(255, 255, 255, 0.7);
+      padding: 40px 24px 32px;
+      text-align: center;
+    }
+
+    footer .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    footer .footer-logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-white);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: 'Playfair Display', serif;
+      letter-spacing: -0.3px;
+    }
+
+    footer .footer-divider {
+      width: 60px;
+      height: 2px;
+      background: var(--primary);
+      margin: 16px auto;
+      border: none;
+    }
+
+    footer p {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    footer .attribution {
+      margin-top: 12px;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    footer .attribution a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer .attribution a:hover {
+      text-decoration: underline;
+    }
+
+    /* Scroll Animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .what-we-do-grid,
+      .service-row,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .service-row.reverse .service-image {
+        order: 1;
+      }
+
+      .service-row.reverse .service-info {
+        order: 2;
+      }
+
+      .what-we-do-stats {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .what-we-do-image img {
+        height: 280px;
+      }
+
+      .service-image img {
+        height: 280px;
+      }
+
+      .contact-map iframe {
+        height: 320px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .claim-banner {
+        padding: 10px 20px;
+        height: auto;
+        min-height: var(--banner-h);
+      }
+
+      .hero {
+        min-height: 70vh;
+      }
+
+      section {
+        padding: 60px 20px;
+      }
+
+      .benefits-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .what-we-do-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+
+      .stat-item {
+        padding: 16px 8px;
+      }
+
+      .stat-item .num {
+        font-size: 22px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .what-we-do-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .hours-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .logo-text {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBD8TFCF" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <span class="logo-mark">LC</span>
+        <span class="logo-text">Leask &amp; Company</span>
+      </a>
+      <nav>
+        <a href="#what-we-do">What We Do</a>
+        <a href="#services">Services</a>
+        <a href="#why-choose-us">Why Us</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#what-we-do" class="mobile-link">What We Do</a>
+    <a href="#services" class="mobile-link">Services</a>
+    <a href="#why-choose-us" class="mobile-link">Why Us</a>
+    <a href="#reviews" class="mobile-link">Reviews</a>
+    <a href="#contact" class="nav-cta">Contact</a>
+  </div>
+
+  <!-- Claim Banner -->
+  <div class="claim-banner">
+    <a href="https://design.withviso.com" target="_blank" rel="noopener">
+      Hi Leask &amp; Company! Do you like the website? <u>Contact us to make it yours</u>
+    </a>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content fade-in">
+      <h1>Trusted <span>Plumbing &amp; HVAC</span> Experts for West Kelowna</h1>
+      <p>Family-owned and serving the Okanagan with reliable plumbing, heating, and air conditioning services for residential, commercial, and industrial projects.</p>
+      <a href="#contact" class="hero-btn">Get a Quote</a>
+    </div>
+  </section>
+
+  <!-- What We Do -->
+  <section id="what-we-do">
+    <div class="section-inner">
+      <div class="text-center">
+        <span class="section-tag">About Us</span>
+        <h2 class="section-title">What We Do</h2>
+        <p class="section-sub">We are a trusted West Kelowna plumbing and HVAC company specializing in new construction for commercial, industrial, and residential projects across the Okanagan.</p>
+      </div>
+      <div class="what-we-do-grid fade-in">
+        <div class="what-we-do-image">
+          <img src="https://images.pexels.com/photos/12105083/pexels-photo-12105083.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200" alt="Close-up of wrench and tools" loading="lazy">
+        </div>
+        <div class="what-we-do-text">
+          <p>Leask &amp; Company has been serving Kelowna and the surrounding areas for years, delivering expert plumbing, heating, and air conditioning solutions. As a locally owned and family-run business, we take pride in our workmanship and commitment to customer satisfaction.</p>
+          <p>Our skilled technicians are equipped with the latest tools and knowledge to handle projects of any scale &mdash; from residential repairs to large commercial and industrial installations.</p>
+          <div class="what-we-do-stats">
+            <div class="stat-item">
+              <div class="num">10+</div>
+              <div class="label">Years Experience</div>
+            </div>
+            <div class="stat-item">
+              <div class="num">500+</div>
+              <div class="label">Projects Completed</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="section-inner">
+      <div class="text-center">
+        <span class="section-tag">Our Services</span>
+        <h2 class="section-title">Expert Plumbing, Heating &amp; AC</h2>
+        <p class="section-sub">From emergency repairs to full-system installations, we handle all your mechanical needs with professionalism and care.</p>
+      </div>
+
+      <!-- Service 1: Plumbing -->
+      <div class="service-row fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/15062117/pexels-photo-15062117.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200" alt="Plumbing tools" loading="lazy">
+        </div>
+        <div class="service-info">
+          <div class="service-icon">
+            <img src="https://unpkg.com/lucide-static@latest/icons/wrench.svg" alt="Wrench icon">
+          </div>
+          <h3>Plumbing Services</h3>
+          <p>Complete plumbing solutions for residential, commercial, and industrial properties. Our journeyman plumbers deliver quality workmanship on every project.</p>
+          <ul class="service-bullets">
+            <li>
+              <img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="">
+              <span>New construction plumbing installation</span>
+            </li>
+            <li>
+              <img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="">
+              <span>Fixture replacement &amp; repair (sinks, toilets, faucets)</span>
+            </li>
+            <li>
+              <img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="">
+              <span>Poly-B pipe replacement &amp; re-piping</span>
+            </li>
+            <li>
+              <img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="">
+              <span>Water heater installation &amp; maintenance</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Service 2: Heating -->
+      <div class="service-row reverse fade-in">
+        <div class="service-info">
+          <div class="service-icon">
+            <img src="https://unpkg.com/lucide-static@latest/icons/flame.svg" alt="Flame icon">
+          </div>
+          <h3>Heating Services</h3>
+          <p>Keep your home or business warm and comfortable year-round with our professional heating services, from furnace repairs to full system installations.</p>
+          <ul class="service-bullets">
+            <li>
+              <img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="">
+              <span>Furnace repair, maintenance &amp; installation</span>
+            </li>
+            <li>
+              <img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="">
+              <span>Heat pump installation &amp; servicing</span>
+            </li>
+            <li>
+              <img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="">
+              <span>Gas fitting &amp; gas line installation</span>
+            </li>
+            <li>
+              <img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="">
+              <span>Radiant &amp; hydronic heating systems</span>
+            </li>
+          </ul>
+        </div>
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/3722212/pexels-photo-3722212.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200" alt="Gas stove blue flame" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Service 3: Air Conditioning -->
+      <div class="service-row fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/434259/pexels-photo-434259.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200" alt="Ice cubes" loading="lazy">
+        </div>
+        <div class="service-info">
+          <div class="service-icon">
+            <img src="https://unpkg.com/lucide-static@latest/icons/snowflake.svg" alt="Snowflake icon">
+          </div>
+          <h3>Air Conditioning</h3>
+          <p>Stay cool during Okanagan summers with our expert AC services. We install, maintain, and repair a wide range of air conditioning systems for any property.</p>
+          <ul class="service-bullets">
+            <li>
+              <img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="">
+              <span>AC installation for residential &amp; commercial</span>
+            </li>
+            <li>
+              <img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="">
+              <span>Ductless mini-split systems</span>
+            </li>
+            <li>
+              <img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="">
+              <span>Air conditioning repair &amp; maintenance</span>
+            </li>
+            <li>
+              <img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="">
+              <span>Air exchanger &amp; ventilation systems</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section id="why-choose-us">
+    <div class="section-inner">
+      <div class="text-center">
+        <span class="section-tag" style="color: var(--accent);">Why Choose Us</span>
+        <h2 class="section-title">Built on Trust &amp; Quality</h2>
+        <p class="section-sub">Here is why homeowners and businesses across the Okanagan choose Leask &amp; Company for their plumbing and HVAC needs.</p>
+      </div>
+      <div class="benefits-grid fade-in">
+        <div class="benefit-card">
+          <div class="ben-icon">
+            <img src="https://unpkg.com/lucide-static@latest/icons/shield.svg" alt="Shield">
+          </div>
+          <h4>Licensed &amp; Insured</h4>
+          <p>Fully licensed and insured journeyman plumbers and gas fitters you can trust with your property.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="ben-icon">
+            <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="Clock">
+          </div>
+          <h4>Reliable &amp; Punctual</h4>
+          <p>We value your time. Our team arrives on schedule and gets the job done efficiently.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="ben-icon">
+            <img src="https://unpkg.com/lucide-static@latest/icons/building-2.svg" alt="Building">
+          </div>
+          <h4>Commercial &amp; Residential</h4>
+          <p>From single-family homes to large commercial and industrial projects &mdash; we do it all.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="ben-icon">
+            <img src="https://unpkg.com/lucide-static@latest/icons/users.svg" alt="Users">
+          </div>
+          <h4>Family-Owned &amp; Local</h4>
+          <p>Proudly serving the West Kelowna community as a locally owned, family-run business.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="ben-icon">
+            <img src="https://unpkg.com/lucide-static@latest/icons/award.svg" alt="Award">
+          </div>
+          <h4>Quality Workmanship</h4>
+          <p>Attention to detail and a commitment to excellence on every job, big or small.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="ben-icon">
+            <img src="https://unpkg.com/lucide-static@latest/icons/zap.svg" alt="Zap">
+          </div>
+          <h4>Fast Response</h4>
+          <p>Same-day service available for urgent plumbing and HVAC issues.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews">
+    <div class="section-inner">
+      <div class="text-center">
+        <span class="section-tag">Testimonials</span>
+        <h2 class="section-title">What Our Customers Say</h2>
+        <p class="section-sub">Real reviews from real customers who have experienced the Leask &amp; Company difference.</p>
+      </div>
+      <div class="reviews-grid fade-in">
+        <div class="review-card">
+          <div class="review-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          </div>
+          <blockquote>"Very impressed! We had them install an AC unit in our upper bedroom and they were on time, even a little early which was amazing, very professional, cleaned up after themselves and the job looked great. So happy with the work they did."</blockquote>
+          <div class="review-author">
+            <div class="avatar">C</div>
+            <div>
+              <div class="name">Chantelle</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          </div>
+          <blockquote>"As always, another fantastic experience with the team at Leask and Co! Fred came out to give our whole system a check up. The capacitor on our AC was on the verge. Thanks again to everyone for always taking care of our whole system!"</blockquote>
+          <div class="review-author">
+            <div class="avatar">C</div>
+            <div>
+              <div class="name">Coleman</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          </div>
+          <blockquote>"I have been dealing with Leask &amp; Co. for residential and commercial projects for years and I cannot say enough good things about them! They are locally owned and family run, and they have exceptional customer service."</blockquote>
+          <div class="review-author">
+            <div class="avatar">M</div>
+            <div>
+              <div class="name">Meighan</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="section-inner">
+      <div class="text-center">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Contact Us</h2>
+        <p class="section-sub">Ready to start your project? Give us a call or stop by our shop.</p>
+      </div>
+      <div class="contact-grid fade-in">
+        <div class="contact-info">
+          <h3>Our Contact Details</h3>
+          <div class="contact-detail">
+            <div class="cd-icon">
+              <img src="https://unpkg.com/lucide-static@latest/icons/map-pin.svg" alt="Map pin">
+            </div>
+            <div>
+              <div class="cd-label">Address</div>
+              <div class="cd-value">8-1385 Stevens Road<br>West Kelowna, BC V1Z 2S9</div>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="cd-icon">
+              <img src="https://unpkg.com/lucide-static@latest/icons/phone.svg" alt="Phone">
+            </div>
+            <div>
+              <div class="cd-label">Phone</div>
+              <div class="cd-value">(250) 769-8010</div>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="cd-icon">
+              <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="Clock">
+            </div>
+            <div>
+              <div class="cd-label">Business Hours</div>
+              <div class="hours-grid">
+                <span class="day">Monday – Friday</span>
+                <span class="time">2:00 PM – 6:00 PM</span>
+                <span class="day">Saturday</span>
+                <span class="time">Closed</span>
+                <span class="day">Sunday</span>
+                <span class="time">Closed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-map">
+          <iframe src="https://www.google.com/maps?q=8-1385+Stevens+Road+West+Kelowna+BC+V1Z+2S9&output=embed" width="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-mark">LC</span>
+        <span>Leask &amp; Company</span>
+      </div>
+      <hr class="footer-divider">
+      <p>Serving West Kelowna &amp; the Okanagan for all your plumbing and HVAC needs.</p>
+      <p>&copy; <span id="year"></span> Leask &amp; Company. All rights reserved.</p>
+      <div class="attribution">Made with love by <a href="https://design.withviso.com" target="_blank" rel="noopener">Viso Solutions</a></div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const toggle = document.getElementById('menuToggle');
+    const mobileNav = document.getElementById('mobileNav');
+
+    toggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('open');
+    });
+
+    // Close mobile nav on link click
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+      });
+    });
+
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    document.querySelectorAll('.fade-in').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Smooth scroll offset for mobile
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

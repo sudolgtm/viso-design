@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TBD8TFCF');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Philip Franke Plumbing | Kelowna's Trusted Plumber Since 1985</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; color: #1a1a2e; line-height: 1.7; overflow-x: hidden; }
+        
+        section[id] { scroll-margin-top: 140px; }
+
+        /* Header */
+        header { position: sticky; top: 0; z-index: 1000; background: #0b2a4a; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 70px; box-shadow: 0 2px 20px rgba(0,0,0,0.15); }
+        .logo { font-size: 1.2rem; font-weight: 800; color: #fff; letter-spacing: 0.5px; border: 2px solid #f0b429; padding: 0.4rem 0.8rem; border-radius: 6px; font-family: 'Inter', sans-serif; text-transform: uppercase; }
+        .logo span { color: #f0b429; }
+        nav { display: flex; gap: 1.8rem; align-items: center; }
+        nav a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.3s; }
+        nav a:hover { color: #f0b429; }
+        .cta-nav { background: #f0b429; color: #0b2a4a !important; padding: 0.5rem 1.2rem; border-radius: 6px; font-weight: 600; transition: background 0.3s; }
+        .cta-nav:hover { background: #d49b1a; }
+        .menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 5px; }
+        .menu-toggle span { width: 26px; height: 3px; background: #fff; border-radius: 2px; transition: 0.3s; }
+
+        /* Claim Banner */
+        .claim-banner { position: sticky; top: 70px; z-index: 999; background: #f0b429; text-align: center; padding: 0.7rem 1.5rem; font-size: 0.9rem; font-weight: 500; color: #0b2a4a; }
+        .claim-banner a { text-decoration: none; color: inherit; }
+        .claim-banner u { text-decoration: underline; font-weight: 600; }
+
+        /* Hero */
+        .hero { position: relative; min-height: 85vh; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; overflow: hidden; }
+        .hero-bg { position: absolute; inset: 0; background: url('https://images.pexels.com/photos/28169591/pexels-photo-28169591.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1') center/cover no-repeat; }
+        .hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(11,42,74,0.9) 0%, rgba(11,42,74,0.6) 100%); }
+        .hero-content { position: relative; z-index: 1; max-width: 800px; padding: 2rem; }
+        .hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 1rem; line-height: 1.15; }
+        .hero h1 span { color: #f0b429; }
+        .hero p { font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9; }
+        .hero-btn { display: inline-block; background: #f0b429; color: #0b2a4a; text-decoration: none; padding: 1rem 2.5rem; border-radius: 8px; font-weight: 700; font-size: 1.05rem; transition: transform 0.3s, box-shadow 0.3s; }
+        .hero-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(240,180,41,0.3); }
+        .hero-stats { display: flex; gap: 3rem; justify-content: center; margin-top: 3rem; flex-wrap: wrap; }
+        .hero-stat { text-align: center; }
+        .hero-stat .num { font-size: 2.2rem; font-weight: 800; color: #f0b429; }
+        .hero-stat .label { font-size: 0.85rem; opacity: 0.8; }
+
+        /* Section styling */
+        .section { padding: 5rem 2rem; }
+        .section-title { text-align: center; margin-bottom: 3rem; }
+        .section-title h2 { font-size: 2.2rem; font-weight: 700; color: #0b2a4a; margin-bottom: 0.5rem; }
+        .section-title p { color: #666; max-width: 600px; margin: 0 auto; font-size: 1.05rem; }
+        .container { max-width: 1200px; margin: 0 auto; }
+
+        /* What We Do */
+        .what-we-do { background: #f8f9fa; }
+        .wwd-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .wwd-content h2 { font-size: 2.2rem; font-weight: 700; color: #0b2a4a; margin-bottom: 1.2rem; }
+        .wwd-content p { color: #555; font-size: 1.05rem; margin-bottom: 1.5rem; }
+        .wwd-content .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .wwd-stat { background: #fff; padding: 1.2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); text-align: center; }
+        .wwd-stat .val { font-size: 1.8rem; font-weight: 800; color: #f0b429; }
+        .wwd-stat .lbl { font-size: 0.85rem; color: #666; }
+        .wwd-image { border-radius: 16px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .wwd-image img { width: 100%; height: 400px; object-fit: cover; display: block; }
+
+        /* Services - Alternating Two Column */
+        .services-section { background: #fff; }
+        .service-item { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 5rem; }
+        .service-item:last-child { margin-bottom: 0; }
+        .service-item.reverse .service-image { order: 2; }
+        .service-item.reverse .service-text { order: 1; }
+        .service-image { border-radius: 14px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
+        .service-image img { width: 100%; height: 350px; object-fit: cover; display: block; transition: transform 0.5s; }
+        .service-image:hover img { transform: scale(1.05); }
+        .service-text .icon-wrap { width: 50px; height: 50px; background: rgba(240,180,41,0.12); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+        .service-text .icon-wrap img { width: 28px; height: 28px; }
+        .service-text h3 { font-size: 1.6rem; font-weight: 700; color: #0b2a4a; margin-bottom: 0.8rem; }
+        .service-text p { color: #555; margin-bottom: 1rem; font-size: 0.95rem; }
+        .service-text ul { list-style: none; }
+        .service-text ul li { display: flex; align-items: flex-start; gap: 0.7rem; margin-bottom: 0.6rem; color: #444; font-size: 0.9rem; }
+        .service-text ul li svg { flex-shrink: 0; margin-top: 2px; }
+        .service-tag { display: inline-block; background: #e8f0f8; color: #0b2a4a; font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.7rem; border-radius: 20px; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; }
+
+        /* Why Choose Us */
+        .why-choose-us { background: #0b2a4a; color: #fff; }
+        .why-choose-us .section-title h2 { color: #fff; }
+        .why-choose-us .section-title p { color: rgba(255,255,255,0.7); }
+        .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+        .why-card { background: rgba(255,255,255,0.08); border-radius: 14px; padding: 2rem 1.5rem; text-align: center; transition: transform 0.3s, background 0.3s; }
+        .why-card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.12); }
+        .why-card .icon-wrap { width: 60px; height: 60px; background: rgba(240,180,41,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.2rem; }
+        .why-card .icon-wrap img { width: 30px; height: 30px; }
+        .why-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.6rem; color: #f0b429; }
+        .why-card p { font-size: 0.9rem; color: rgba(255,255,255,0.75); }
+
+        /* Reviews */
+        .reviews-section { background: #f8f9fa; }
+        .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .review-card { background: #fff; border-radius: 14px; padding: 2rem; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
+        .review-card .stars { display: flex; gap: 2px; margin-bottom: 1rem; }
+        .review-card .stars svg { display: block; }
+        .review-card .text { color: #444; font-size: 0.95rem; line-height: 1.7; font-style: italic; margin-bottom: 1.2rem; }
+        .review-card .name { font-weight: 700; color: #0b2a4a; font-size: 0.95rem; }
+        .review-card .source { font-size: 0.8rem; color: #999; }
+
+        /* Contact */
+        .contact-section { background: #fff; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+        .contact-info h3 { font-size: 1.5rem; font-weight: 700; color: #0b2a4a; margin-bottom: 1.5rem; }
+        .contact-detail { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.2rem; }
+        .contact-detail .icon { width: 44px; height: 44px; background: rgba(240,180,41,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .contact-detail .icon img { width: 22px; height: 22px; }
+        .contact-detail .detail-label { font-size: 0.8rem; color: #999; }
+        .contact-detail .detail-value { font-weight: 600; color: #0b2a4a; }
+        .hours-grid { display: grid; grid-template-columns: auto 1fr; gap: 0.3rem 1rem; margin-top: 1rem; }
+        .hours-grid .day { font-weight: 500; color: #444; }
+        .hours-grid .time { color: #666; }
+        .contact-map { border-radius: 14px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+        .contact-map iframe { width: 100%; height: 400px; border: 0; display: block; }
+
+        /* Footer */
+        footer { background: #0b2a4a; color: rgba(255,255,255,0.7); padding: 2.5rem 2rem; text-align: center; }
+        footer .footer-logo { font-size: 1rem; font-weight: 800; color: #fff; margin-bottom: 0.5rem; letter-spacing: 0.5px; }
+        footer .footer-logo span { color: #f0b429; }
+        footer .attribution { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.85rem; }
+        footer .attribution a { color: #f0b429; text-decoration: none; font-weight: 500; }
+
+        /* Fade-in Animation */
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .service-item { gap: 2rem; }
+            .why-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            header { padding: 0 1rem; }
+            .menu-toggle { display: flex; }
+            nav { display: none; position: absolute; top: 70px; left: 0; right: 0; background: #0b2a4a; flex-direction: column; padding: 1.5rem; gap: 1.2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+            nav.active { display: flex; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1rem; }
+            .hero-stats { gap: 1.5rem; }
+            .section { padding: 3rem 1rem; }
+            .wwd-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .wwd-image img { height: 250px; }
+            .service-item { grid-template-columns: 1fr; gap: 1.5rem; }
+            .service-item.reverse .service-image { order: 1; }
+            .service-item.reverse .service-text { order: 2; }
+            .service-image img { height: 250px; }
+            .why-grid { grid-template-columns: 1fr; }
+            .reviews-grid { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
+            section[id] { scroll-margin-top: 130px; }
+        }
+    </style>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBD8TFCF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">PFP</div>
+        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="mainNav">
+            <a href="#what-we-do">What We Do</a>
+            <a href="#services">Services</a>
+            <a href="#why-choose-us">Why Us</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+            <a href="#contact" class="cta-nav">Call Now</a>
+        </nav>
+    </header>
+
+    <!-- Claim Banner -->
+    <div class="claim-banner">
+        <a href="https://design.withviso.com" target="_blank">
+            Hi Philip Franke Plumbing! Do you like the website? <u>Contact us to make it yours</u>
+        </a>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content fade-in">
+            <h1>Kelowna's Trusted <span>Plumbing</span> Experts Since 1985</h1>
+            <p>Family-owned and operated — providing honest, reliable plumbing services with 24/7 emergency response. From leak detection to full renovations, we handle it all.</p>
+            <a href="#contact" class="hero-btn">Get a Free Estimate</a>
+            <div class="hero-stats">
+                <div class="hero-stat"><div class="num">40+</div><div class="label">Years Serving Kelowna</div></div>
+                <div class="hero-stat"><div class="num">4.9</div><div class="label">Star Rating</div></div>
+                <div class="hero-stat"><div class="num">24/7</div><div class="label">Emergency Service</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do -->
+    <section class="section what-we-do" id="what-we-do">
+        <div class="container">
+            <div class="wwd-grid">
+                <div class="wwd-content fade-in">
+                    <h2>What We Do</h2>
+                    <p>Philip Franke Plumbing has been Kelowna's go-to plumbing company for over four decades. Founded by Philip Franke in 1985 and now proudly run by his son Todd, we specialize in everything from minor faucet repairs to full-scale plumbing renovations and 24-hour emergency services.</p>
+                    <p>We're known for honest pricing, fast response times, and work that's done right the first time. Whether it's a burst pipe at 2 AM or a complete bathroom remodel, our family treats your home like our own.</p>
+                    <div class="stats">
+                        <div class="wwd-stat"><div class="val">1985</div><div class="lbl">Year Established</div></div>
+                        <div class="wwd-stat"><div class="val">24/7</div><div class="lbl">Emergency Service</div></div>
+                        <div class="wwd-stat"><div class="val">4.9★</div><div class="lbl">Customer Rating</div></div>
+                        <div class="wwd-stat"><div class="val">100%</div><div class="lbl">Family-Owned</div></div>
+                    </div>
+                </div>
+                <div class="wwd-image fade-in">
+                    <img src="https://images.pexels.com/photos/6419128/pexels-photo-6419128.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Plumber installing pipe fittings" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section services-section" id="services">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Our Plumbing Services</h2>
+                <p>Comprehensive plumbing solutions for Kelowna homes and businesses — available 24/7</p>
+            </div>
+
+            <!-- Service 1: Leak Detection & Repair -->
+            <div class="service-item fade-in">
+                <div class="service-image">
+                    <img src="https://images.pexels.com/photos/15206136/pexels-photo-15206136.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Leaking pipe repair" loading="lazy">
+                </div>
+                <div class="service-text">
+                    <span class="service-tag">Service 01</span>
+                    <div class="icon-wrap">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/droplet.svg" alt="Droplet icon" loading="lazy">
+                    </div>
+                    <h3>Leak Detection & Repair</h3>
+                    <p>Hidden leaks can cause serious damage to your property. We use advanced techniques to quickly locate and repair leaks of all types — from dripping faucets to hidden slab leaks.</p>
+                    <ul>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="#fff" fill="none"/></svg> Accurate leak detection technology</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="#fff" fill="none"/></svg> Pipe repair and replacement</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="#fff" fill="none"/></svg> Emergency leak response</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="#fff" fill="none"/></svg> Water damage prevention</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 2: Hot Water Tanks -->
+            <div class="service-item reverse fade-in">
+                <div class="service-image">
+                    <img src="https://images.pexels.com/photos/9551366/pexels-photo-9551366.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Water heater installation" loading="lazy">
+                </div>
+                <div class="service-text">
+                    <span class="service-tag">Service 02</span>
+                    <div class="icon-wrap">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/thermometer.svg" alt="Thermometer icon" loading="lazy">
+                    </div>
+                    <h3>Hot Water Tank Installation & Repair</h3>
+                    <p>From emergency replacements to routine maintenance, we handle all makes and models of hot water tanks. We'll help you choose the right size and energy-efficient option for your home.</p>
+                    <ul>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="#fff" fill="none"/></svg> New tank installation</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="#fff" fill="none"/></svg> Emergency tank replacement</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="#fff" fill="none"/></svg> Routine maintenance & flushing</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="#fff" fill="none"/></svg> Energy-efficient upgrades</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 3: Drain Cleaning -->
+            <div class="service-item fade-in">
+                <div class="service-image">
+                    <img src="https://images.pexels.com/photos/12671714/pexels-photo-12671714.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Drain cleaning" loading="lazy">
+                </div>
+                <div class="service-text">
+                    <span class="service-tag">Service 03</span>
+                    <div class="icon-wrap">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/refresh-cw.svg" alt="Drain icon" loading="lazy">
+                    </div>
+                    <h3>Drain Cleaning & Repair</h3>
+                    <p>Slow drains and stubborn clogs are more than an inconvenience — they can lead to bigger plumbing issues. Our professional drain cleaning restores flow and prevents future problems.</p>
+                    <ul>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="#fff" fill="none"/></svg> Kitchen & bathroom drain clearing</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="#fff" fill="none"/></svg> Sewer line cleaning & inspection</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="#fff" fill="none"/></svg> Clogged drain repair</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="#fff" fill="none"/></svg> Preventive maintenance</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 4: Faucet & Pipe Repair -->
+            <div class="service-item reverse fade-in">
+                <div class="service-image">
+                    <img src="https://images.pexels.com/photos/10246156/pexels-photo-10246156.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Faucet and pipe repair" loading="lazy">
+                </div>
+                <div class="service-text">
+                    <span class="service-tag">Service 04</span>
+                    <div class="icon-wrap">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/wrench.svg" alt="Wrench icon" loading="lazy">
+                    </div>
+                    <h3>Faucet & Pipe Repair</h3>
+                    <p>Dripping faucets, low water pressure, and noisy pipes are signs it's time for professional attention. We repair and replace faucets, pipes, and fixtures throughout your home.</p>
+                    <ul>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="#fff" fill="none"/></svg> Faucet repair & replacement</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="#fff" fill="none"/></svg> Pipe repair & repiping</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="#fff" fill="none"/></svg> Fixture installation</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="#fff" fill="none"/></svg> Water pressure solutions</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 5: Backflow Prevention -->
+            <div class="service-item fade-in">
+                <div class="service-image">
+                    <img src="https://images.pexels.com/photos/35016079/pexels-photo-35016079.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Backflow prevention" loading="lazy">
+                </div>
+                <div class="service-text">
+                    <span class="service-tag">Service 05</span>
+                    <div class="icon-wrap">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/shield.svg" alt="Shield icon" loading="lazy">
+                    </div>
+                    <h3>Backflow Prevention & Testing</h3>
+                    <p>Protect your drinking water with professional backflow prevention services. We install, test, and maintain backflow devices to ensure your water supply stays clean and safe.</p>
+                    <ul>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="#fff" fill="none"/></svg> Backflow device installation</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="#fff" fill="none"/></svg> Annual testing & certification</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="#fff" fill="none"/></svg> Commercial backflow solutions</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="#fff" fill="none"/></svg> Code compliance & repairs</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 6: Emergency Plumbing -->
+            <div class="service-item reverse fade-in">
+                <div class="service-image">
+                    <img src="https://images.pexels.com/photos/32588548/pexels-photo-32588548.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Emergency plumbing" loading="lazy">
+                </div>
+                <div class="service-text">
+                    <span class="service-tag">Service 06</span>
+                    <div class="icon-wrap">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="Clock icon" loading="lazy">
+                    </div>
+                    <h3>24/7 Emergency Plumbing</h3>
+                    <p>Plumbing emergencies don't wait for business hours — and neither do we. Whether it's a burst pipe in the middle of the night or a weekend water heater failure, we're here when you need us most.</p>
+                    <ul>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="#fff" fill="none"/></svg> 24-hour emergency response</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="#fff" fill="none"/></svg> Burst pipe repair</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="#fff" fill="none"/></svg> Sewage backup cleanup</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="#fff" fill="none"/></svg> Same-day service guaranteed</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section why-choose-us" id="why-choose-us">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Why Choose Philip Franke Plumbing?</h2>
+                <p>Four decades of honest, reliable service that Kelowna homeowners have trusted since 1985</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card fade-in">
+                    <div class="icon-wrap">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/heart.svg" alt="Heart icon" loading="lazy">
+                    </div>
+                    <h3>Family-Owned & Operated</h3>
+                    <p>Founded by Philip Franke in 1985 and now run by his son Todd — we treat every customer like family with honest, personal service.</p>
+                </div>
+                <div class="why-card fade-in">
+                    <div class="icon-wrap">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="Star icon" loading="lazy">
+                    </div>
+                    <h3>4.9 Star Rating</h3>
+                    <p>Our customers consistently rate us among Kelowna's best. We don't rest until the job is done right and you're completely satisfied.</p>
+                </div>
+                <div class="why-card fade-in">
+                    <div class="icon-wrap">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="Clock icon" loading="lazy">
+                    </div>
+                    <h3>24/7 Emergency Service</h3>
+                    <p>Plumbing emergencies don't wait — and neither do we. Day or night, weekends and holidays, we're just a phone call away.</p>
+                </div>
+                <div class="why-card fade-in">
+                    <div class="icon-wrap">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/thumbs-up.svg" alt="Thumbs up icon" loading="lazy">
+                    </div>
+                    <h3>Fair & Transparent Pricing</h3>
+                    <p>No surprises, no hidden fees. We provide clear upfront estimates and honest advice — the way plumbing should be.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="section reviews-section" id="reviews">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>What Our Customers Say</h2>
+                <p>Rated 4.9 stars from real Kelowna customers — here's what they have to say</p>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card fade-in">
+                    <div class="stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                    </div>
+                    <p class="text">"Tod is a great plumber. He did an amazing job replacing all the pipes in my home. I have used this company for 24 years and highly recommend — honest, reliable and very kind!"</p>
+                    <div class="name">Colleen W.</div>
+                    <div class="source">Google Review</div>
+                </div>
+                <div class="review-card fade-in">
+                    <div class="stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                    </div>
+                    <p class="text">"Just honest, fair-dealing people, both the father and the son. I manage property and have been using them here and there for years. Always my first call, always timely, friendly, and affordable."</p>
+                    <div class="name">Andrew P.</div>
+                    <div class="source">Google Review</div>
+                </div>
+                <div class="review-card fade-in">
+                    <div class="stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f0b429" stroke="#f0b429" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                    </div>
+                    <p class="text">"Very professional, know what he's doing and reasonable. Would recommend him without question. Most honest peeps in town! Phil and Todd provide the best service and charge decent rates."</p>
+                    <div class="name">Tammy F.</div>
+                    <div class="source">Google Review</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Get In Touch</h2>
+                <p>Call us anytime — we're available 24 hours a day, 7 days a week for all your plumbing needs</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info fade-in">
+                    <h3>Contact Information</h3>
+                    <div class="contact-detail">
+                        <div class="icon">
+                            <img src="https://unpkg.com/lucide-static@latest/icons/map-pin.svg" alt="Location icon" loading="lazy">
+                        </div>
+                        <div>
+                            <div class="detail-label">Address</div>
+                            <div class="detail-value">1282 Findlay Rd, Kelowna, BC V1X 5B2</div>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="icon">
+                            <img src="https://unpkg.com/lucide-static@latest/icons/phone.svg" alt="Phone icon" loading="lazy">
+                        </div>
+                        <div>
+                            <div class="detail-label">Phone</div>
+                            <div class="detail-value"><a href="tel:2507651288" style="color: #0b2a4a; text-decoration: none;">(250) 765-1288</a></div>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="icon">
+                            <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="Hours icon" loading="lazy">
+                        </div>
+                        <div>
+                            <div class="detail-label">Hours</div>
+                            <div class="detail-value">Open 24 Hours — Every Day</div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 2rem; padding: 1.2rem; background: #f8f9fa; border-radius: 10px; border-left: 4px solid #f0b429;">
+                        <strong style="color: #0b2a4a;">Emergency Service?</strong>
+                        <p style="color: #555; font-size: 0.9rem; margin-top: 0.3rem;">We respond to plumbing emergencies 24/7. Call us anytime — day or night.</p>
+                    </div>
+                </div>
+                <div class="contact-map fade-in">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20540.43882866941!2d-119.56467036523435!3d49.9446934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537df2ca71ad33b9%3A0xa1d61cd886e555b7!2sPhilip%20Franke%20Plumbing!5e0!3m2!1sen!2sca!4v1778795398852!5m2!1sen!2sca" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">PFP</div>
+            <p style="font-size: 0.85rem; margin-bottom: 0.3rem;">1282 Findlay Rd, Kelowna, BC | (250) 765-1288</p>
+            <p style="font-size: 0.8rem;">Serving Kelowna & the Central Okanagan since 1985</p>
+            <div class="attribution">
+                &copy; <span id="year"></span> Philip Franke Plumbing. All rights reserved.
+                <br>
+                <span>Made with love by <a href="https://design.withviso.com" target="_blank">Viso Solutions</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            document.getElementById('mainNav').classList.toggle('active');
+        }
+        // Close menu when clicking a link
+        document.querySelectorAll('#mainNav a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mainNav').classList.remove('active');
+            });
+        });
+
+        // Fade-in on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
