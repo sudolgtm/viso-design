@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wayne Electric Solutions | Trusted Electrician in Wenatchee</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TBD8TFCF');</script>
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;color:#1e293b;line-height:1.6;background:#fff}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .container{max-width:1200px;margin:0 auto;padding:0 24px}
+    section[id]{scroll-margin-top:100px}
+    .sticky-wrapper{position:sticky;top:0;z-index:1000}
+    header{position:relative;background:rgba(255,255,255,0.97);backdrop-filter:blur(8px);border-bottom:1px solid #e2e8f0}
+    header .container{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
+    .logo{display:flex;align-items:center;gap:10px;font-size:22px;font-weight:800;color:#1e293b}
+    .logo span{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;background:#fff;color:#1e3a5f;border:2px solid #1e3a5f;border-radius:0;font-size:22px;font-weight:700;font-family:'Georgia',serif}
+    nav{display:flex;align-items:center;gap:28px}
+    nav a{font-size:15px;font-weight:500;color:#475569;transition:color 0.2s}
+    nav a:hover{color:#3461a0}
+    .nav-cta{background:#3461a0;color:#fff!important;padding:10px 22px;border-radius:8px;font-weight:600;font-size:14px;transition:background 0.2s}
+    .nav-cta:hover{background:#2a4f82!important}
+    .menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:4px}
+    .claim-banner{background:#1e3a5f;color:#fff;text-decoration:none;text-align:center;padding:12px 16px;font-size:14px;font-weight:500;display:block;transition:background 0.3s}
+    .hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden}
+    .hero-bg{position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('https://images.pexels.com/photos/4800175/pexels-photo-4800175.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1080&w=1920') center center/cover no-repeat;z-index:-1}
+    .hero .container{position:relative;z-index:1;text-align:center;padding-top:40px;padding-bottom:40px}
+    .hero h1{font-size:52px;font-weight:800;color:#fff;line-height:1.15;margin-bottom:16px}
+    .hero h1 span{color:#93c5fd}
+    .hero p{font-size:20px;color:rgba(255,255,255,0.85);max-width:640px;margin:0 auto 32px}
+    .hero-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:16px 32px;border-radius:10px;font-weight:600;font-size:16px;transition:all 0.25s;border:none;cursor:pointer}
+    .btn-primary{background:#3461a0;color:#fff}
+    .btn-primary:hover{background:#2a4f82;transform:translateY(-2px);box-shadow:0 8px 24px rgba(52,97,160,0.35)}
+    .btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.5)}
+    .btn-outline:hover{border-color:#fff;background:rgba(255,255,255,0.1)}
+    section{padding:100px 0}
+    .section-label{display:inline-block;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:#3461a0;margin-bottom:8px}
+    .section-title{font-size:38px;font-weight:800;color:#0f172a;margin-bottom:16px}
+    .section-desc{font-size:18px;color:#64748b;max-width:640px;margin-bottom:48px}
+    .text-center{text-align:center}
+    .mx-auto{margin-left:auto;margin-right:auto}
+    #services{background:#f8fafc}
+    .service-block{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:80px}
+    .service-block:last-child{margin-bottom:0}
+    .service-block.right .service-content{order:-1}
+    .service-image{border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.1)}
+    .service-image img{width:100%;height:320px;object-fit:cover;display:block}
+    .service-content .icon{margin-bottom:14px}
+    .service-content .icon img{width:32px;height:32px;filter:brightness(0)saturate(100%)invert(28%)sepia(51%)saturate(580%)hue-rotate(191deg)brightness(93%)contrast(88%)}
+    .service-content h3{font-size:24px;font-weight:700;margin-bottom:10px;color:#0f172a}
+    .service-content>p{font-size:16px;color:#64748b;margin-bottom:16px}
+    .service-content ul{list-style:none;padding:0}
+    .service-content ul li{display:flex;align-items:flex-start;gap:10px;font-size:15px;color:#334155;margin-bottom:8px}
+    .service-content ul li::before{content:'';display:inline-block;width:18px;height:18px;flex-shrink:0;margin-top:3px;background:url('https://unpkg.com/lucide-static@latest/icons/check-circle.svg') center center/contain no-repeat}
+    #why-choose-us{background:#fff}
+    .benefits-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:28px}
+    .benefit-card{background:#f8fafc;padding:32px;border-radius:16px;border:1px solid #e2e8f0;text-align:center}
+    .benefit-card .icon img{width:36px;height:36px;margin:0 auto 16px;filter:brightness(0)saturate(100%)invert(28%)sepia(51%)saturate(580%)hue-rotate(191deg)brightness(93%)contrast(88%)}
+    .benefit-card h3{font-size:18px;font-weight:700;margin-bottom:8px;color:#0f172a}
+    .benefit-card p{font-size:15px;color:#64748b}
+    #testimonials{background:#f8fafc}
+    .testimonials-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:28px}
+    .testimonial-card{background:#fff;padding:32px;border-radius:16px;border:1px solid #e2e8f0}
+    .testimonial-card .stars{display:flex;gap:4px;margin-bottom:14px}
+    .testimonial-card blockquote{font-size:16px;color:#334155;font-style:italic;margin-bottom:18px;line-height:1.7}
+    .testimonial-card .author{font-weight:700;font-size:15px;color:#0f172a}
+    .testimonial-card .role{font-size:13px;color:#94a3b8}
+    #contact{background:#1e3a5f;color:#fff}
+    #contact .section-label{color:#93c5fd}
+    #contact .section-title{color:#fff}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+    .contact-info h3{font-size:22px;font-weight:700;margin-bottom:20px}
+    .contact-item{display:flex;align-items:flex-start;gap:14px;margin-bottom:18px}
+    .contact-item img{width:22px;height:22px;margin-top:3px;filter:brightness(0)invert(1)}
+    .contact-item p{font-size:16px;color:rgba(255,255,255,0.85)}
+    .contact-item strong{display:block;font-weight:600;color:#fff;margin-bottom:2px}
+    .hours-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px 24px;margin-top:12px}
+    .hours-grid .day{color:rgba(255,255,255,0.7);font-size:15px}
+    .hours-grid .time{color:#fff;font-weight:500;font-size:15px;text-align:right}
+    .hours-grid .closed .time{color:#fca5a5}
+    .map-container{border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.2)}
+    .map-container iframe{width:100%;height:340px;border:0;display:block}
+    footer{background:#0f172a;color:rgba(255,255,255,0.7);padding:48px 0 32px;text-align:center}
+    footer .footer-logo{display:flex;align-items:center;justify-content:center;gap:10px;font-size:20px;font-weight:800;color:#fff;margin-bottom:8px}
+    footer .footer-logo span{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;background:#fff;color:#1e3a5f;border:2px solid #fff;border-radius:0;font-size:18px;font-weight:700;font-family:'Georgia',serif}
+    footer p{font-size:14px;margin-bottom:4px}
+    footer .copyright{margin-top:12px;font-size:14px;color:rgba(255,255,255,0.5)}
+    footer .attribution{margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.1);font-size:13px;color:rgba(255,255,255,0.5)}
+    footer .attribution a{color:#93c5fd;font-weight:500}
+    footer .attribution a:hover{text-decoration:underline}
+    .fade-in{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease}
+    .fade-in.visible{opacity:1;transform:translateY(0)}
+    @media(max-width:900px){
+      .service-block{grid-template-columns:1fr;gap:24px;margin-bottom:56px}
+      .service-block.right .service-content{order:0}
+      .service-block.right .service-image{order:0}
+      .service-image img{height:240px}
+      .contact-grid{grid-template-columns:1fr}
+      .hero h1{font-size:36px}
+      .hero p{font-size:17px}
+      .section-title{font-size:30px}
+      nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;padding:20px 24px;border-bottom:1px solid #e2e8f0;box-shadow:0 8px 24px rgba(0,0,0,0.08);gap:16px}
+      nav.open{display:flex}
+      nav a{font-size:17px}
+      .nav-cta{text-align:center}
+      .menu-toggle{display:block}
+      .testimonials-grid{grid-template-columns:1fr}
+      .hours-grid{grid-template-columns:1fr 1fr}
+      .benefits-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:480px){
+      .hero h1{font-size:28px}
+      section{padding:60px 0}
+      .service-image img{height:200px}
+      .btn{width:100%;justify-content:center}
+      .hours-grid{grid-template-columns:1fr 1fr}
+      .benefits-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBD8TFCF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <div class="sticky-wrapper">
+    <header>
+      <div class="container">
+        <a href="#" class="logo"><span>WE</span>Wayne Electric</a>
+        <button class="menu-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+          <img src="https://unpkg.com/lucide-static@latest/icons/menu.svg" width="28" height="28" alt="Menu">
+        </button>
+        <nav id="navbar">
+          <a href="#services" onclick="closeNav()">Services</a>
+          <a href="#why-choose-us" onclick="closeNav()">Why Us</a>
+          <a href="#testimonials" onclick="closeNav()">Reviews</a>
+          <a href="#contact" onclick="closeNav()" class="nav-cta">Get a Quote</a>
+        </nav>
+      </div>
+    </header>
+    <a href="https://design.withviso.com" class="claim-banner" target="_blank">
+      Hi Wayne Electric Solutions! Do you like the website? <u>Contact us to make it yours</u>
+    </a>
+  </div>
+
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <h1>Your Trusted <span>Wenatchee</span> Electricians</h1>
+      <p>Residential and commercial electrical services with years of experience, safety, and quality in every project.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary">
+          <img src="https://unpkg.com/lucide-static@latest/icons/phone.svg" width="20" height="20" alt="" style="filter:brightness(0)invert(1);">
+          Call (509) 215-1393
+        </a>
+        <a href="#services" class="btn btn-outline">Our Services</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">What We Do</span>
+        <h2 class="section-title">Complete Electrical Solutions</h2>
+        <p class="section-desc mx-auto">From small repairs to major installations, our skilled team delivers safe, efficient, and quality electrical work.</p>
+      </div>
+
+      <div class="service-block fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/7512040/pexels-photo-7512040.jpeg?auto=compress&cs=tinysrgb&w=940" alt="Modern kitchen with electrical installations" loading="lazy">
+        </div>
+        <div class="service-content">
+          <div class="icon"><img src="https://unpkg.com/lucide-static@latest/icons/zap.svg" alt=""></div>
+          <h3>Electrical Installations</h3>
+          <p>Professional installation of electrical systems, fixtures, and equipment for residential and commercial properties.</p>
+          <ul>
+            <li>Light fixture and ceiling fan installation</li>
+            <li>Appliance wiring and hookups</li>
+            <li>Electrical panel and sub-panel installation</li>
+            <li>Whole-home surge protection systems</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-block right fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/6412539/pexels-photo-6412539.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Electrical repairs" loading="lazy">
+        </div>
+        <div class="service-content">
+          <div class="icon"><img src="https://unpkg.com/lucide-static@latest/icons/wrench.svg" alt=""></div>
+          <h3>Electrical Repairs</h3>
+          <p>Fast, reliable diagnosis and repair of electrical problems to keep your home or business running safely.</p>
+          <ul>
+            <li>Faulty wiring diagnosis and repair</li>
+            <li>Circuit breaker and fuse replacement</li>
+            <li>Outlet and switch troubleshooting</li>
+            <li>Electrical system maintenance and safety checks</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-block fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/5391509/pexels-photo-5391509.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="EV car charger installation" loading="lazy">
+        </div>
+        <div class="service-content">
+          <div class="icon"><img src="https://unpkg.com/lucide-static@latest/icons/settings.svg" alt=""></div>
+          <h3>Electrical Upgrades</h3>
+          <p>Modernize your electrical system with panel upgrades, energy-efficient solutions, and smart home technology.</p>
+          <ul>
+            <li>Electrical panel upgrades and replacements</li>
+            <li>Energy-efficient LED retrofits</li>
+            <li>Smart thermostat and home automation wiring</li>
+            <li>EV charger installation</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-block right fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/5691633/pexels-photo-5691633.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="New home rough-in wiring" loading="lazy">
+        </div>
+        <div class="service-content">
+          <div class="icon"><img src="https://unpkg.com/lucide-static@latest/icons/hard-hat.svg" alt=""></div>
+          <h3>New Construction &amp; Rough-In</h3>
+          <p>Complete wiring for new homes, additions, and commercial builds — done right the first time, every time.</p>
+          <ul>
+            <li>New home rough-in electrical wiring</li>
+            <li>Commercial construction electrical systems</li>
+            <li>Heated driveway installation</li>
+            <li>Code-compliant wiring with full inspection</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-block fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/14319099/pexels-photo-14319099.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Electrical tools" loading="lazy">
+        </div>
+        <div class="service-content">
+          <div class="icon"><img src="https://unpkg.com/lucide-static@latest/icons/search.svg" alt=""></div>
+          <h3>Wiring Diagnosis &amp; Repair</h3>
+          <p>Thorough diagnosis and repair of complex wiring issues to ensure your electrical system is safe and reliable.</p>
+          <ul>
+            <li>Complex wiring system diagnosis</li>
+            <li>Knob-and-tube wiring replacement</li>
+            <li>Aluminum wiring remediation</li>
+            <li>Electrical code compliance upgrades</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why-choose-us">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Why Choose Us</span>
+        <h2 class="section-title">Why Wenatchee Chooses Wayne Electric</h2>
+        <p class="section-desc mx-auto">Skilled, experienced, and committed to customer satisfaction on every project.</p>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card fade-in">
+          <div class="icon"><img src="https://unpkg.com/lucide-static@latest/icons/users.svg" alt=""></div>
+          <h3>Experienced Team</h3>
+          <p>Years of hands-on electrical experience serving residential and commercial customers in Wenatchee.</p>
+        </div>
+        <div class="benefit-card fade-in">
+          <div class="icon"><img src="https://unpkg.com/lucide-static@latest/icons/shield-check.svg" alt=""></div>
+          <h3>Safety First</h3>
+          <p>Every project follows strict safety protocols and current electrical codes for your peace of mind.</p>
+        </div>
+        <div class="benefit-card fade-in">
+          <div class="icon"><img src="https://unpkg.com/lucide-static@latest/icons/message-circle.svg" alt=""></div>
+          <h3>Clear Communication</h3>
+          <p>We prioritize clear communication and timely service so you're never left in the dark.</p>
+        </div>
+        <div class="benefit-card fade-in">
+          <div class="icon"><img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt=""></div>
+          <h3>Quality Guarantee</h3>
+          <p>We stand behind our work with a commitment to quality, using the latest technology and best practices.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Testimonials</span>
+        <h2 class="section-title">What Our Customers Say</h2>
+        <p class="section-desc mx-auto">Rated 4.7 stars on Google — here's what Wenatchee has to say about Wayne Electric.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-in">
+          <div class="stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          </div>
+          <blockquote>"Gary did an amazing job installing a heated driveway system for us. The work was clean, professional, and exactly on time. Highly recommend!"</blockquote>
+          <div class="author">Mark</div>
+          <div class="role">Homeowner</div>
+        </div>
+        <div class="testimonial-card fade-in">
+          <div class="stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          </div>
+          <blockquote>"Excellent communication and quality work on our new home rough-in. Wayne Electric made the whole process smooth and stress-free."</blockquote>
+          <div class="author">Sarah</div>
+          <div class="role">Homeowner</div>
+        </div>
+        <div class="testimonial-card fade-in">
+          <div class="stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          </div>
+          <blockquote>"Wayne Electric helped us with a complex wiring issue in our commercial building. They diagnosed the problem quickly and had it fixed the same day."</blockquote>
+          <div class="author">Tom</div>
+          <div class="role">Business Owner</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Get In Touch</span>
+        <h2 class="section-title">Contact Wayne Electric</h2>
+        <p class="section-desc mx-auto" style="color:rgba(255,255,255,0.7);">Ready to get started? Give us a call or stop by.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Contact Details</h3>
+          <div class="contact-item">
+            <img src="https://unpkg.com/lucide-static@latest/icons/phone.svg" alt="">
+            <div>
+              <strong>Phone</strong>
+              <p><a href="tel:15092151393">(509) 215-1393</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <img src="https://unpkg.com/lucide-static@latest/icons/map-pin.svg" alt="">
+            <div>
+              <strong>Address</strong>
+              <p>808 Lambert St<br>Wenatchee, WA 98801</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="">
+            <div style="flex:1;">
+              <strong>Business Hours</strong>
+              <div class="hours-grid">
+                <span class="day">Monday</span><span class="time">8 a.m. – 8 p.m.</span>
+                <span class="day">Tuesday</span><span class="time">8 a.m. – 8 p.m.</span>
+                <span class="day">Wednesday</span><span class="time">8 a.m. – 8 p.m.</span>
+                <span class="day">Thursday</span><span class="time">8 a.m. – 8 p.m.</span>
+                <span class="day">Friday</span><span class="time">8 a.m. – 8 p.m.</span>
+                <span class="day closed">Saturday</span><span class="time closed">Closed</span>
+                <span class="day closed">Sunday</span><span class="time closed">Closed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2699.904218854026!2d-120.33985062382719!3d47.41380937117285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549bccca97a3d4d7%3A0x7bba76a4f3ff6a30!2sWayne%20Electric%20Wenatchee!5e0!3m2!1sen!2sca!4v1779740081171!5m2!1sen!2sca" width="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-logo"><span>WE</span>Wayne Electric</div>
+      <p>Wenatchee, WA</p>
+      <p><a href="tel:15092151393" style="color:#93c5fd;">(509) 215-1393</a></p>
+      <div class="copyright">&copy; <span id="year"></span> Wayne Electric Solutions. All rights reserved.</div>
+      <div class="attribution">
+        Made with love by <a href="https://design.withviso.com" target="_blank">Viso Solutions</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleNav(){document.getElementById('navbar').classList.toggle('open')}
+    function closeNav(){document.getElementById('navbar').classList.remove('open')}
+    const observer=new IntersectionObserver(e=>{e.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible')}})},{threshold:0.15});
+    document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
+    document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>

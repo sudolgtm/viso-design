@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TBD8TFCF');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Choice Electric Heating & Cooling | Wenatchee HVAC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --primary: #1a56db; --primary-dark: #1341b0; --primary-light: #e8effd; --accent: #f59e0b; --text: #1f2937; --text-light: #6b7280; --bg: #ffffff; --bg-alt: #f9fafb; --border: #e5e7eb; --radius: 12px; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', -apple-system, sans-serif; color: var(--text); line-height: 1.6; }
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+section[id] { scroll-margin-top: 120px; }
+
+header { position: sticky; top: 0; z-index: 1000; background: var(--bg); border-bottom: 1px solid var(--border); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+.logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); font-family: 'Georgia', serif; letter-spacing: 1px; border: 2px solid var(--primary); padding: 6px 14px; border-radius: 0; white-space: nowrap; }
+.logo .amp { color: var(--accent); font-style: normal; font-weight: 400; }
+nav a { margin-left: 32px; font-size: 0.9rem; font-weight: 500; color: var(--text); transition: color 0.2s; }
+nav a:hover { color: var(--primary); }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.nav-toggle img { width: 28px; height: 28px; }
+
+.claim-banner { position: sticky; top: 72px; z-index: 999; background: var(--primary); color: #fff; text-align: center; padding: 10px 24px; font-size: 0.9rem; display: flex; align-items: center; justify-content: center; gap: 4px; flex-wrap: wrap; }
+.claim-banner u { text-decoration: underline; }
+
+.hero { position: relative; min-height: 85vh; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.5) 100%); }
+.hero-content { position: relative; z-index: 1; max-width: 800px; padding: 0 24px; }
+.hero h1 { font-size: 3.2rem; font-weight: 800; line-height: 1.15; margin-bottom: 16px; }
+.hero p { font-size: 1.2rem; opacity: 0.9; margin-bottom: 32px; }
+.btn { display: inline-block; padding: 14px 36px; border-radius: 8px; font-weight: 600; font-size: 1rem; transition: all 0.2s; cursor: pointer; border: none; }
+.btn-primary { background: var(--primary); color: #fff; }
+.btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26,86,219,0.3); }
+.btn-accent { background: var(--accent); color: #fff; }
+.btn-accent:hover { background: #d97706; transform: translateY(-2px); }
+
+section { padding: 96px 0; }
+.section-label { display: inline-block; font-size: 0.85rem; font-weight: 600; color: var(--primary); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 8px; }
+.section-title { font-size: 2.4rem; font-weight: 700; margin-bottom: 16px; line-height: 1.2; }
+.section-subtitle { font-size: 1.1rem; color: var(--text-light); max-width: 640px; margin-bottom: 48px; }
+.text-center { text-align: center; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+.what-we-do { background: var(--bg-alt); }
+.what-we-do-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.what-we-do-image { border-radius: var(--radius); overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+.what-we-do-image img { width: 100%; height: 400px; object-fit: cover; }
+.what-we-do-text p { font-size: 1.1rem; color: var(--text-light); margin-bottom: 24px; line-height: 1.8; }
+.badge-list { display: flex; flex-wrap: wrap; gap: 12px; }
+.badge { display: inline-flex; align-items: center; gap: 8px; background: var(--primary-light); color: var(--primary); padding: 10px 20px; border-radius: 50px; font-weight: 500; font-size: 0.9rem; }
+.badge img { width: 18px; height: 18px; }
+
+.service-block { padding: 96px 0; }
+.service-block:nth-child(even) { background: var(--bg-alt); }
+.service-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.service-block:nth-child(even) .service-inner { direction: rtl; }
+.service-block:nth-child(even) .service-inner > * { direction: ltr; }
+.service-image { border-radius: var(--radius); overflow: hidden; box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
+.service-image img { width: 100%; height: 380px; object-fit: cover; transition: transform 0.4s; }
+.service-image:hover img { transform: scale(1.03); }
+.service-icon { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+.service-icon img { width: 36px; height: 36px; color: var(--primary); }
+.service-icon h3 { font-size: 1.6rem; font-weight: 700; }
+.service-content p { color: var(--text-light); margin-bottom: 20px; line-height: 1.7; }
+.service-bullets { list-style: none; }
+.service-bullets li { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; font-size: 0.95rem; }
+.service-bullets li img { width: 20px; height: 20px; flex-shrink: 0; margin-top: 3px; }
+
+.why-choose { background: var(--bg); }
+.why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px; margin-top: 16px; }
+.why-card { background: var(--bg-alt); border-radius: var(--radius); padding: 36px 28px; text-align: center; border: 1px solid var(--border); transition: all 0.3s; }
+.why-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.06); }
+.why-card img { width: 44px; height: 44px; margin: 0 auto 16px; }
+.why-card h4 { font-size: 1.15rem; font-weight: 600; margin-bottom: 8px; }
+.why-card p { font-size: 0.9rem; color: var(--text-light); line-height: 1.6; }
+
+.reviews { position: relative; color: #fff; overflow: hidden; }
+.reviews-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.reviews-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.65) 100%); }
+.reviews .container { position: relative; z-index: 1; }
+.reviews .section-title, .reviews .section-subtitle { color: #fff; }
+.reviews .section-subtitle { opacity: 0.8; }
+.reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.review-card { background: rgba(255,255,255,0.1); backdrop-filter: blur(8px); border-radius: var(--radius); padding: 32px; border: 1px solid rgba(255,255,255,0.15); }
+.stars { display: flex; gap: 3px; margin-bottom: 14px; }
+.stars svg { width: 18px; height: 18px; }
+.review-card blockquote { font-size: 0.95rem; line-height: 1.7; opacity: 0.92; margin-bottom: 16px; }
+.review-author { font-weight: 600; font-size: 0.9rem; }
+
+.contact { background: var(--bg-alt); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+.contact-info { display: flex; flex-direction: column; gap: 28px; }
+.contact-item { display: flex; align-items: flex-start; gap: 14px; }
+.contact-item img { width: 24px; height: 24px; flex-shrink: 0; margin-top: 2px; }
+.contact-item h4 { font-weight: 600; margin-bottom: 2px; }
+.contact-item p { color: var(--text-light); }
+.contact-item a { color: var(--primary); }
+.contact-item a:hover { text-decoration: underline; }
+.contact-map { border-radius: var(--radius); overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+.contact-map iframe { width: 100%; height: 100%; min-height: 380px; border: 0; }
+
+footer { background: #111827; color: #9ca3af; padding: 40px 0; text-align: center; }
+.footer-inner { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.footer-logo { font-size: 1.3rem; font-weight: 800; color: #fff; font-family: 'Georgia', serif; letter-spacing: 1px; border: 2px solid #374151; padding: 4px 12px; border-radius: 0; }
+.footer-divider { width: 80px; height: 1px; background: #374151; }
+.footer-attribution { font-size: 0.85rem; }
+.footer-attribution a { color: #60a5fa; }
+.footer-attribution a:hover { text-decoration: underline; }
+
+.fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 768px) {
+  .header-inner { height: 64px; }
+  .claim-banner { top: 64px; font-size: 0.8rem; padding: 8px 16px; }
+  section[id] { scroll-margin-top: 124px; }
+  nav { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 16px 24px; flex-direction: column; box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+  nav.open { display: flex; }
+  nav a { margin: 0; padding: 12px 0; border-bottom: 1px solid var(--border); }
+  nav a:last-child { border-bottom: none; }
+  .logo { font-size: 0.95rem; padding: 4px 10px; }
+  .nav-toggle { display: block; }
+  .hero { min-height: 70vh; }
+  .hero h1 { font-size: 2rem; }
+  .hero p { font-size: 1rem; }
+  section { padding: 64px 0; }
+  .section-title { font-size: 1.8rem; }
+  .what-we-do-grid { grid-template-columns: 1fr; gap: 32px; }
+  .service-inner { grid-template-columns: 1fr; gap: 32px; }
+  .service-block:nth-child(even) .service-inner { direction: ltr; }
+  .service-block:nth-child(even) .service-inner > * { direction: ltr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; }
+  .service-image img { height: 260px; }
+  .what-we-do-image img { height: 260px; }
+}
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBD8TFCF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<header>
+  <div class="container header-inner">
+    <a href="#hero" class="logo">CEH<span class="amp">&amp;</span>C</a>
+    <button class="nav-toggle" onclick="toggleNav()" aria-label="Toggle navigation">
+      <img src="https://unpkg.com/lucide-static@latest/icons/menu.svg" alt="Menu">
+    </button>
+    <nav id="main-nav">
+      <a href="#what-we-do" onclick="closeNav()">What We Do</a>
+      <a href="#services" onclick="closeNav()">Services</a>
+      <a href="#why-choose" onclick="closeNav()">Why Choose Us</a>
+      <a href="#reviews" onclick="closeNav()">Reviews</a>
+      <a href="#contact" onclick="closeNav()">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="claim-banner">
+  <a href="https://design.withviso.com" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">
+    Hi Choice Electric Heating & Cooling! Do you like the website? <u>Contact us to make it yours</u>
+  </a>
+</div>
+
+<section class="hero" id="hero">
+  <img class="hero-bg" src="https://images.pexels.com/photos/5414384/pexels-photo-5414384.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Different wrenches on a brown surface" loading="eager">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p style="font-size: 1rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; opacity: 0.8;">Choice Electric Heating &amp; Cooling</p>
+    <h1>Your Comfort Is Our Priority</h1>
+    <p>Expert heating and cooling services for Wenatchee and Chelan County. Trusted, reliable, and always professional.</p>
+    <a href="#contact" class="btn btn-primary">Get in Touch</a>
+  </div>
+</section>
+
+<section class="what-we-do" id="what-we-do">
+  <div class="container">
+    <div class="what-we-do-grid">
+      <div class="what-we-do-image fade-in">
+        <img src="https://images.pexels.com/photos/20046694/pexels-photo-20046694.jpeg?auto=compress&cs=tinysrgb&w=940" alt="Air conditioner by building wall" loading="lazy">
+      </div>
+      <div class="what-we-do-text fade-in">
+        <span class="section-label">About Us</span>
+        <h2 class="section-title">Keeping Wenatchee Comfortable All Year</h2>
+        <p>Don't wait until the sun starts blazing or the weather drops to freezing to call for HVAC assistance. Let Choice Electric Heating & Cooling keep your home or business at the temperatures you find most comfortable. We are the experts that reduce the risk of future costs and help you avoid breakdowns when you need your AC or heater most. We guarantee quality service in a timely fashion.</p>
+        <div class="badge-list">
+          <span class="badge"><img src="https://unpkg.com/lucide-static@latest/icons/shield-check.svg" alt="">BBB A+ Accredited</span>
+          <span class="badge"><img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">5.0 Rating</span>
+          <span class="badge"><img src="https://unpkg.com/lucide-static@latest/icons/hard-hat.svg" alt="">Licensed & Bonded</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container text-center">
+    <span class="section-label">Our Services</span>
+    <h2 class="section-title">Complete HVAC Solutions</h2>
+    <p class="section-subtitle mx-auto">From emergency repairs to full system installations, we handle all your heating and cooling needs.</p>
+  </div>
+
+  <div class="service-block">
+    <div class="container">
+      <div class="service-inner">
+        <div class="service-image fade-in">
+          <img src="https://images.pexels.com/photos/434259/pexels-photo-434259.jpeg?auto=compress&cs=tinysrgb&w=940" alt="Ice cubes cooling" loading="lazy">
+        </div>
+        <div class="service-content fade-in">
+          <div class="service-icon">
+            <img src="https://unpkg.com/lucide-static@latest/icons/snowflake.svg" alt="">
+            <h3>AC Cooling Services</h3>
+          </div>
+          <p>Keep your home cool and comfortable with our comprehensive air conditioning services. We diagnose, repair, and maintain all makes and models to ensure peak performance when you need it most.</p>
+          <ul class="service-bullets">
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> A/C system repair and diagnostics</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> A/C system maintenance and tune-ups</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Central Air installation</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Ductless AC Units</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="service-block">
+    <div class="container">
+      <div class="service-inner">
+        <div class="service-image fade-in">
+          <img src="https://images.pexels.com/photos/195029/pexels-photo-195029.jpeg?auto=compress&cs=tinysrgb&w=940" alt="Stove fire heating" loading="lazy">
+        </div>
+        <div class="service-content fade-in">
+          <div class="service-icon">
+            <img src="https://unpkg.com/lucide-static@latest/icons/flame.svg" alt="">
+            <h3>Heating & Furnace Services</h3>
+          </div>
+          <p>Stay warm through the cold Wenatchee winters with our expert heating services. Whether you need a quick repair or a complete furnace replacement, we deliver reliable solutions.</p>
+          <ul class="service-bullets">
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Heating system repair and maintenance</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Heating system installation</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Furnace replacement</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Furnace repair</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="service-block">
+    <div class="container">
+      <div class="service-inner">
+        <div class="service-image fade-in">
+          <img src="https://images.pexels.com/photos/20046693/pexels-photo-20046693.jpeg?auto=compress&cs=tinysrgb&w=940" alt="Air conditioner unit" loading="lazy">
+        </div>
+        <div class="service-content fade-in">
+          <div class="service-icon">
+            <img src="https://unpkg.com/lucide-static@latest/icons/thermometer.svg" alt="">
+            <h3>Heat Pumps & HVAC Systems</h3>
+          </div>
+          <p>Maximize your home's energy efficiency with our heat pump and complete HVAC system services. We help you choose the right solution for year-round comfort.</p>
+          <ul class="service-bullets">
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Heat pump replacement and installation</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> HVAC repair and maintenance</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Thermostat installation</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Ductless AC system setup</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="why-choose" id="why-choose">
+  <div class="container text-center">
+    <span class="section-label">Why Choose Us</span>
+    <h2 class="section-title">Trusted by Wenatchee Homeowners</h2>
+    <p class="section-subtitle mx-auto">We take pride in delivering exceptional HVAC service with honesty and professionalism.</p>
+    <div class="why-grid">
+      <div class="why-card fade-in">
+        <img src="https://unpkg.com/lucide-static@latest/icons/shield-check.svg" alt="">
+        <h4>BBB A+ Accredited</h4>
+        <p>We are fully accredited by the Better Business Bureau with an A+ rating, so you can trust that your comfort is in good hands.</p>
+      </div>
+      <div class="why-card fade-in">
+        <img src="https://unpkg.com/lucide-static@latest/icons/user-check.svg" alt="">
+        <h4>Owner-Operated Service</h4>
+        <p>Owner Shane Larsen personally handles every job with expert knowledge and a commitment to quality that larger companies can't match.</p>
+      </div>
+      <div class="why-card fade-in">
+        <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="">
+        <h4>Fast Response Times</h4>
+        <p>When your heating or AC breaks down, we respond quickly — often arriving within the hour. We've even answered calls on Christmas Eve.</p>
+      </div>
+      <div class="why-card fade-in">
+        <img src="https://unpkg.com/lucide-static@latest/icons/award.svg" alt="">
+        <h4>Licensed & Bonded</h4>
+        <p>Fully licensed HVAC contractor with a BuildZoom score in the top 24% of Washington contractors. Quality and professionalism guaranteed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <img class="reviews-bg" src="https://images.pexels.com/photos/4030052/pexels-photo-4030052.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="" loading="lazy">
+  <div class="reviews-overlay"></div>
+  <div class="container text-center">
+    <span class="section-label" style="color: #fbbf24;">Testimonials</span>
+    <h2 class="section-title">What Our Customers Say</h2>
+    <p class="section-subtitle mx-auto">Don't take our word for it — hear from your neighbors in Wenatchee.</p>
+    <div class="reviews-grid">
+      <div class="review-card fade-in">
+        <div class="stars">
+          <svg viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        </div>
+        <blockquote>"He arrived super quickly, within less than an hour, and fixed the problem the very same day. Beyond the professionalism, he was friendly, patient, and provided great service."</blockquote>
+        <div class="review-author">— Iftach</div>
+      </div>
+      <div class="review-card fade-in">
+        <div class="stars">
+          <svg viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        </div>
+        <blockquote>"Shane was very prompt in calling me to set up an appointment. He was able to fix my A/C problem quickly. I'm a happy fan of Choice Electric."</blockquote>
+        <div class="review-author">— Carol</div>
+      </div>
+      <div class="review-card fade-in">
+        <div class="stars">
+          <svg viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        </div>
+        <blockquote>"Choice heating was very professional, did quality work and were very honest about the billing. I highly recommend this company."</blockquote>
+        <div class="review-author">— Ralph & Liz</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Contact Us</span>
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="section-subtitle mx-auto">Ready to get comfortable? Call or visit us — we're here to help.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info fade-in">
+        <div class="contact-item">
+          <img src="https://unpkg.com/lucide-static@latest/icons/map-pin.svg" alt="">
+          <div>
+            <h4>Address</h4>
+            <p>1301 Fuller St, Wenatchee, WA 98801</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <img src="https://unpkg.com/lucide-static@latest/icons/phone.svg" alt="">
+          <div>
+            <h4>Phone</h4>
+            <p><a href="tel:+15096693330">(509) 669-3330</a></p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="">
+          <div>
+            <h4>Business Hours</h4>
+            <p>Monday – Friday: 8:00 AM – 6:00 PM<br>Saturday – Sunday: Closed</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <img src="https://unpkg.com/lucide-static@latest/icons/award.svg" alt="">
+          <div>
+            <h4>BBB Accredited</h4>
+            <p>A+ Rated · Licensed & Bonded</p>
+          </div>
+        </div>
+      </div>
+      <div class="contact-map fade-in">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1390997.2514642982!2d-121.4085272678373!3d47.08355207249637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549bcd542d0d21fd%3A0x7c61b55a3db66268!2sChoice%20Electric%20Heating%20%26%20Cooling!5e0!3m2!1sen!2sca!4v1779322777284!5m2!1sen!2sca" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">CEH&amp;C</div>
+      <div class="footer-divider"></div>
+      <p>&copy; <span id="year"></span> Choice Electric Heating & Cooling. All rights reserved.</p>
+      <div class="footer-divider"></div>
+      <p class="footer-attribution">Made with love by <a href="https://design.withviso.com" target="_blank" rel="noopener">Viso Solutions</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleNav() {
+  document.getElementById('main-nav').classList.toggle('open');
+}
+function closeNav() {
+  document.getElementById('main-nav').classList.remove('open');
+}
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
