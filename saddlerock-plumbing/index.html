@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TBD8TFCF');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Saddlerock Plumbing | Wenatchee's 24/7 Plumber</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Sora', -apple-system, BlinkMacSystemFont, sans-serif; color: #1a1a2e; line-height: 1.6; overflow-x: hidden; }
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+header { position: sticky; top: 0; z-index: 1000; background: #fff; box-shadow: 0 2px 15px rgba(0,0,0,0.08); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 12px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 10px; }
+.logo-acronym { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: #fff; color: #B8860B; font-weight: 800; font-size: 1.1rem; border: 2px solid #B8860B; flex-shrink: 0; font-family: 'Playfair Display', serif; }
+.logo-text { font-size: 1.25rem; font-weight: 700; color: #B8860B; letter-spacing: -0.02em; font-family: 'Playfair Display', serif; }
+.nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+.nav-links a { font-size: 0.9rem; font-weight: 500; color: #374151; transition: color 0.3s; }
+.nav-links a:hover { color: #B8860B; }
+.nav-cta { background: #B8860B; color: #fff !important; padding: 8px 20px; border-radius: 8px; font-weight: 600 !important; font-size: 0.85rem !important; transition: background 0.3s; }
+.nav-cta:hover { background: #9a7209 !important; }
+.mobile-toggle { display: none; flex-direction: column; cursor: pointer; background: none; border: none; padding: 4px; }
+.mobile-toggle span { width: 26px; height: 3px; background: #1a2a4a; margin: 3px 0; border-radius: 2px; transition: 0.3s; }
+
+.claim-banner { position: sticky; top: 64px; z-index: 999; background: #B8860B; color: #fff; text-align: center; padding: 10px 24px; font-size: 0.9rem; font-weight: 500; }
+.claim-banner a { text-decoration: none; color: inherit; display: block; }
+.claim-banner u { text-decoration: underline; text-underline-offset: 2px; }
+
+section[id] { scroll-margin-top: 105px; }
+
+.hero { position: relative; min-height: 85vh; display: flex; align-items: center; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; }
+.hero-bg img { width: 100%; height: 100%; object-fit: cover; }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 100%); }
+.hero-content { position: relative; z-index: 2; max-width: 720px; padding: 80px 24px; }
+.hero h1 { font-size: clamp(2.5rem, 6vw, 4.2rem); font-weight: 800; color: #fff; line-height: 1.08; margin-bottom: 16px; letter-spacing: -0.03em; }
+.hero p { font-size: clamp(1.05rem, 2vw, 1.25rem); color: rgba(255,255,255,0.9); margin-bottom: 32px; max-width: 560px; line-height: 1.7; }
+.hero .btn { display: inline-block; background: #B8860B; color: #fff; padding: 16px 36px; border-radius: 10px; font-weight: 600; font-size: 1rem; transition: all 0.3s; }
+.hero .btn:hover { background: #9a7209; transform: translateY(-2px); box-shadow: 0 10px 30px rgba(184,134,11,0.3); }
+
+section { padding: 80px 0; }
+.section-title { text-align: center; margin-bottom: 56px; }
+.section-title h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px; }
+.section-title p { color: #6b7280; font-size: 1.05rem; max-width: 600px; margin: 0 auto; }
+
+.what-we-do { background: #f9fafb; }
+.what-we-do-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.what-we-do-text h3 { font-size: 1.6rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.02em; }
+.what-we-do-text p { color: #4b5563; font-size: 1.05rem; line-height: 1.8; }
+.what-we-do-image { border-radius: 16px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
+.what-we-do-image img { width: 100%; height: 350px; object-fit: cover; }
+
+.services-section { background: #fff; }
+.service-row { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-bottom: 80px; }
+.service-row:last-child { margin-bottom: 0; }
+.service-row.reverse .service-image { order: 2; }
+.service-row.reverse .service-info { order: 1; }
+.service-image { border-radius: 16px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
+.service-image img { width: 100%; height: 320px; object-fit: cover; transition: transform 0.5s; }
+.service-image:hover img { transform: scale(1.04); }
+.service-info h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+.service-info h3 img { width: 28px; height: 28px; }
+.service-info .service-desc { color: #4b5563; margin-bottom: 16px; line-height: 1.7; }
+.service-info ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.service-info ul li { display: flex; align-items: flex-start; gap: 10px; color: #374151; font-size: 0.95rem; }
+.service-info ul li img { width: 20px; height: 20px; flex-shrink: 0; margin-top: 2px; }
+
+.why-choose-us { background: #f9fafb; }
+.benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.benefit-card { background: #fff; padding: 36px 28px; border-radius: 16px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.05); transition: transform 0.3s; }
+.benefit-card:hover { transform: translateY(-6px); }
+.benefit-card img { width: 44px; height: 44px; margin: 0 auto 16px; }
+.benefit-card h4 { font-size: 1.15rem; font-weight: 600; margin-bottom: 8px; }
+.benefit-card p { color: #6b7280; font-size: 0.92rem; line-height: 1.6; }
+
+.reviews-section { background: #fff; }
+.reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.review-card { background: #f9fafb; border-radius: 16px; padding: 32px 28px; box-shadow: 0 4px 15px rgba(0,0,0,0.04); }
+.review-card .stars { display: flex; gap: 2px; margin-bottom: 12px; }
+.review-card .stars svg { width: 18px; height: 18px; }
+.review-card blockquote { color: #374151; font-size: 0.95rem; line-height: 1.7; font-style: italic; margin-bottom: 20px; }
+.review-card .reviewer { font-weight: 600; font-size: 0.9rem; color: #1a2a4a; }
+
+.contact-section { background: #1a2a4a; color: #fff; }
+.contact-section .section-title h2 { color: #fff; }
+.contact-section .section-title p { color: rgba(255,255,255,0.7); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+.contact-info h3 { font-size: 1.3rem; font-weight: 600; margin-bottom: 24px; }
+.contact-detail { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 20px; }
+.contact-detail img { width: 22px; height: 22px; flex-shrink: 0; margin-top: 4px; filter: brightness(0) invert(1); }
+.contact-detail div { font-size: 0.95rem; line-height: 1.6; }
+.contact-detail div strong { display: block; font-weight: 600; margin-bottom: 2px; }
+.hours-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 20px; margin-top: 8px; }
+.hours-grid .day { font-weight: 500; }
+.hours-grid .time { text-align: right; color: rgba(255,255,255,0.8); }
+.contact-map { border-radius: 16px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.2); }
+.contact-map iframe { width: 100%; height: 380px; border: 0; display: block; }
+
+footer { background: #0f1a2e; color: rgba(255,255,255,0.7); padding: 32px 0; text-align: center; }
+footer .footer-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+footer .footer-logo { margin-bottom: 12px; }
+footer .footer-logo .logo-acronym { width: 44px; height: 44px; margin: 0 auto; font-size: 1.2rem; }
+footer .footer-divider { width: 60px; height: 2px; background: #B8860B; margin: 0 auto 16px; }
+footer p { font-size: 0.85rem; margin-bottom: 4px; }
+footer .attribution { font-size: 0.85rem; margin-top: 8px; }
+footer .attribution a { color: #F0C040; font-weight: 500; }
+footer .attribution a:hover { text-decoration: underline; }
+
+.fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 900px) {
+  .nav-links { display: none; position: absolute; top: 64px; left: 0; right: 0; background: #fff; flex-direction: column; padding: 16px 24px; gap: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+  .nav-links.open { display: flex; }
+  .mobile-toggle { display: flex; }
+  .what-we-do-grid { grid-template-columns: 1fr; }
+  .service-row { grid-template-columns: 1fr; }
+  .service-row.reverse .service-image { order: 0; }
+  .service-row.reverse .service-info { order: 0; }
+  .benefits-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .hero { min-height: 70vh; }
+  .hero-content { padding: 60px 24px; }
+}
+
+@media (max-width: 600px) {
+  section { padding: 56px 0; }
+  .service-image img { height: 240px; }
+  .hours-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBD8TFCF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <span class="logo-acronym">SP</span>
+      <span class="logo-text">Saddlerock Plumbing</span>
+    </a>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#what-we-do">What We Do</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why-choose-us">Why Us</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="nav-cta">Call Now</a></li>
+    </ul>
+  </div>
+</header>
+
+<div class="claim-banner">
+  <a href="https://design.withviso.com" target="_blank" rel="noopener">
+    Hi Saddlerock Plumbing! Do you like the website? <u>Contact us to make it yours</u>
+  </a>
+</div>
+
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <img src="https://images.pexels.com/photos/7005476/pexels-photo-7005476.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Plumber working on pipes" loading="lazy">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content container">
+    <h1>24/7 Emergency Plumbing in Wenatchee</h1>
+    <p>Your go-to plumbing company for emergencies, repairs, and installations — available around the clock with prompt, professional service you can count on.</p>
+    <a href="#contact" class="btn">Call (509) 423-4779</a>
+  </div>
+</section>
+
+<section class="what-we-do" id="what-we-do">
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>What We Do</h2>
+      <p>Wenatchee's trusted plumbing and mechanical company — serving our community 24/7.</p>
+    </div>
+    <div class="what-we-do-grid fade-in">
+      <div class="what-we-do-text">
+        <h3>Full-Service Plumbing & Mechanical Solutions</h3>
+        <p>Saddlerock Plumbing and Mechanical LLC is a full-service plumbing and mechanical company serving Wenatchee and surrounding areas. We specialize in emergency plumbing, water heaters, pumps, and comprehensive solutions for both residential and commercial properties. Known for our prompt service and professional team, we're available 24/7 for urgent plumbing needs — because plumbing emergencies don't wait.</p>
+      </div>
+      <div class="what-we-do-image">
+        <img src="https://images.pexels.com/photos/14953886/pexels-photo-14953886.jpeg?auto=compress&cs=tinysrgb&w=940" alt="Plumbing tools on workbench" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services-section" id="services">
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>Our Services</h2>
+      <p>Comprehensive plumbing solutions for your home or business — available any time, day or night.</p>
+    </div>
+
+    <div class="service-row fade-in">
+      <div class="service-image">
+        <img src="https://images.pexels.com/photos/3855223/pexels-photo-3855223.jpeg?auto=compress&cs=tinysrgb&w=940" alt="Emergency plumbing service" loading="lazy">
+      </div>
+      <div class="service-info">
+        <h3><img src="https://unpkg.com/lucide-static@latest/icons/zap.svg" alt="" aria-hidden="true"> Emergency Plumbing & Leak Detection</h3>
+        <p class="service-desc">When a plumbing emergency strikes, we're here — day or night. Our team responds quickly to diagnose and fix urgent issues before they become disasters.</p>
+        <ul>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> 24/7 emergency plumbing service</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Plumbing leak detection and repair</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Pipe repair and replacement</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Burst pipe emergency response</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service-row reverse fade-in">
+      <div class="service-image">
+        <img src="https://images.pexels.com/photos/3722212/pexels-photo-3722212.jpeg?auto=compress&cs=tinysrgb&w=940" alt="Water heater installation" loading="lazy">
+      </div>
+      <div class="service-info">
+        <h3><img src="https://unpkg.com/lucide-static@latest/icons/thermometer.svg" alt="" aria-hidden="true"> Water Heaters & Pumps</h3>
+        <p class="service-desc">From water heater installations to pump repairs, we keep your home's essential systems running smoothly and efficiently year-round.</p>
+        <ul>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Water heater installation and repair</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Pump installation and maintenance</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Tank and tankless system service</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Emergency water heater repair</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service-row fade-in">
+      <div class="service-image">
+        <img src="https://images.pexels.com/photos/9562388/pexels-photo-9562388.jpeg?auto=compress&cs=tinysrgb&w=940" alt="Drain and sewer service" loading="lazy">
+      </div>
+      <div class="service-info">
+        <h3><img src="https://unpkg.com/lucide-static@latest/icons/droplets.svg" alt="" aria-hidden="true"> Drains, Sewer & Water Lines</h3>
+        <p class="service-desc">We handle everything from clogged drains to full sewer line repairs. Our team has the equipment and expertise to solve even the toughest drainage problems.</p>
+        <ul>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Drain cleaning and sewer line service</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Water line installation and repair</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Sewer line inspections and diagnostics</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Frost free hose bib installation</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service-row reverse fade-in">
+      <div class="service-image">
+        <img src="https://images.pexels.com/photos/7031840/pexels-photo-7031840.jpeg?auto=compress&cs=tinysrgb&w=940" alt="Specialty plumbing services" loading="lazy">
+      </div>
+      <div class="service-info">
+        <h3><img src="https://unpkg.com/lucide-static@latest/icons/settings.svg" alt="" aria-hidden="true"> Specialty Services</h3>
+        <p class="service-desc">Beyond everyday plumbing, we offer specialized services including fiber optic inspections and whole-house rough-ins for new construction and renovations.</p>
+        <ul>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Fiber optic inspection services</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Whole house rough-in plumbing</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Commercial plumbing solutions</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Residential property plumbing</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-choose-us" id="why-choose-us">
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>Why Choose Saddlerock Plumbing</h2>
+      <p>What sets us apart — honesty, availability, and a team that truly cares.</p>
+    </div>
+    <div class="benefits-grid fade-in">
+      <div class="benefit-card">
+        <img src="https://unpkg.com/lucide-static@latest/icons/clock-9.svg" alt="" aria-hidden="true">
+        <h4>24/7 Availability</h4>
+        <p>Plumbing emergencies don't follow business hours. We're open 24 hours a day, 7 days a week — ready to respond whenever you need us.</p>
+      </div>
+      <div class="benefit-card">
+        <img src="https://unpkg.com/lucide-static@latest/icons/shield-check.svg" alt="" aria-hidden="true">
+        <h4>Honest & Resourceful</h4>
+        <p>We always look for ways to save you money without cutting corners. Our team genuinely cares about your safety, comfort, and satisfaction.</p>
+      </div>
+      <div class="benefit-card">
+        <img src="https://unpkg.com/lucide-static@latest/icons/users.svg" alt="" aria-hidden="true">
+        <h4>Professional & Reliable Team</h4>
+        <p>From Mary in the office to Luis, Tanner, and Logan in the field — every member of our team is prompt, professional, and dedicated to doing the job right.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews-section" id="reviews">
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>What Our Customers Say</h2>
+      <p>Rated 4.4 stars on Google — our customers speak for themselves.</p>
+    </div>
+    <div class="reviews-grid fade-in">
+      <div class="review-card">
+        <div class="stars">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        </div>
+        <blockquote>"What really sets Saddlerock apart is their honesty and resourcefulness. They're always looking for ways to help us save money, without cutting corners. The entire team is a pleasure to work with — prompt, professional, and genuinely nice people, every single time."</blockquote>
+        <div class="reviewer">— Shawna</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        </div>
+        <blockquote>"I got a letter from the city saying my water usage was 3x the normal amount. Thanks to Saddlerock Plumbing for jumping on this issue so quickly and fixing it so I'm all good again!"</blockquote>
+        <div class="reviewer">— Yvette</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        </div>
+        <blockquote>"Mary was great on the phone and dispatched Luis to come to my rescue. Both were friendly, efficient and fast! Thank you so much!"</blockquote>
+        <div class="reviewer">— Karen</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>Contact Us</h2>
+      <p>Ready to get started? Give us a call — we're available 24/7.</p>
+    </div>
+    <div class="contact-grid fade-in">
+      <div class="contact-info">
+        <h3>Get In Touch</h3>
+        <div class="contact-detail">
+          <img src="https://unpkg.com/lucide-static@latest/icons/map-pin.svg" alt="" aria-hidden="true">
+          <div>
+            <strong>Address</strong>
+            126 N Chelan Ave, Wenatchee, WA 98801
+          </div>
+        </div>
+        <div class="contact-detail">
+          <img src="https://unpkg.com/lucide-static@latest/icons/phone.svg" alt="" aria-hidden="true">
+          <div>
+            <strong>Phone</strong>
+            (509) 423-4779
+          </div>
+        </div>
+        <div class="contact-detail">
+          <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="" aria-hidden="true">
+          <div>
+            <strong>Business Hours</strong>
+            <div class="hours-grid">
+              <span class="day">Every Day</span><span class="time">Open 24 hours</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86451.81958012955!2d-120.3893017870954!3d47.38034712217297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549bcd9ffce9bd93%3A0x3100ea71e2da8bf8!2sSaddlerock%20Plumbing%20and%20Mechanical%20LLC!5e0!3m2!1sen!2sca!4v1779321849621!5m2!1sen!2sca" width="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <span class="logo-acronym">SP</span>
+    </div>
+    <div class="footer-divider"></div>
+    <p>&copy; <span id="year"></span> Saddlerock Plumbing and Mechanical LLC. All rights reserved.</p>
+    <div class="attribution">
+      <p>Made with love by <a href="https://design.withviso.com" target="_blank" rel="noopener">Viso Solutions</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const toggle = document.getElementById('mobileToggle');
+const navLinks = document.getElementById('navLinks');
+
+toggle.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+});
+
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+  });
+});
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
