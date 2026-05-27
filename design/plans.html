@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plans & Pricing | Viso Solutions</title>
+  <meta name="description" content="Simple, transparent pricing for your website. Choose the plan that fits your business.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 1rem; scroll-behavior: smooth; }
+    body {
+      font-family: "Inter", system-ui, -apple-system, sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      color: #0b0b0b;
+      background: #f8f9fa;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    :root {
+      --primary: #5ebc67;
+      --primary-dark: #4da855;
+      --accent: #FF6B6B;
+      --surface: #ffffff;
+      --surface-section: #f8f9fa;
+      --on-surface: #0b0b0b;
+      --on-surface-secondary: #4a4a4a;
+      --border: #e0e4e8;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-md: 0 8px 24px rgba(0,0,0,0.1);
+      --radius: 18px;
+      --radius-sm: 12px;
+    }
+
+    .container {
+      max-width: 84rem;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+      flex: 1;
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .page-header h1 {
+      font-family: "Poppins", system-ui, sans-serif;
+      font-size: clamp(2.2rem, 4.6vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.18;
+      letter-spacing: -0.02em;
+      color: var(--on-surface);
+      margin-bottom: 0.75rem;
+    }
+
+    .page-header h1 span {
+      color: var(--primary);
+    }
+
+    .page-header p {
+      font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+      color: var(--on-surface-secondary);
+      max-width: 36rem;
+      margin: 0 auto 1.5rem;
+    }
+
+    .billing-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      background: var(--surface);
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+    }
+
+    .billing-toggle label {
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      color: var(--on-surface-secondary);
+      user-select: none;
+      transition: color 0.2s;
+    }
+
+    .billing-toggle label.active {
+      color: var(--on-surface);
+    }
+
+    .toggle-switch {
+      width: 44px;
+      height: 24px;
+      background: var(--primary);
+      border-radius: 12px;
+      position: relative;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background 0.2s;
+    }
+
+    .toggle-switch::after {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 18px;
+      height: 18px;
+      background: #fff;
+      border-radius: 50%;
+      transition: transform 0.2s;
+    }
+
+    .toggle-switch.monthly::after {
+      transform: translateX(20px);
+    }
+
+    .badge {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--primary);
+      background: color-mix(in oklab, var(--primary) 12%, transparent);
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      white-space: nowrap;
+    }
+
+    .plans-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    .plan-card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 2.5rem 2rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .plan-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .plan-card.featured {
+      border-color: var(--primary);
+      border-width: 2px;
+      position: relative;
+    }
+
+    .plan-card.featured::before {
+      content: 'Most Popular';
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--primary);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.25rem 1rem;
+      border-radius: 9999px;
+      white-space: nowrap;
+    }
+
+    .plan-name {
+      font-family: "Poppins", system-ui, sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--on-surface);
+      margin-bottom: 0.5rem;
+    }
+
+    .plan-price {
+      display: flex;
+      align-items: baseline;
+      gap: 0.25rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .plan-price .amount {
+      font-family: "Poppins", system-ui, sans-serif;
+      font-size: clamp(2.2rem, 4vw, 3rem);
+      font-weight: 800;
+      color: var(--on-surface);
+      line-height: 1;
+    }
+
+    .plan-price .amount .cents {
+      font-size: 0.4em;
+      vertical-align: super;
+    }
+
+    .plan-price .period {
+      font-size: 1rem;
+      color: var(--on-surface-secondary);
+    }
+
+    .plan-price-annual {
+      font-size: 0.85rem;
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .plan-price-annual .strike {
+      text-decoration: line-through;
+      color: var(--on-surface-secondary);
+      font-weight: 400;
+      margin-right: 0.25rem;
+    }
+
+    .plan-divider {
+      height: 1px;
+      background: var(--border);
+      margin: 1.25rem 0;
+    }
+
+    .plan-features {
+      list-style: none;
+      flex: 1;
+    }
+
+    .plan-features li {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      padding: 0.5rem 0;
+      font-size: 0.95rem;
+      color: var(--on-surface-secondary);
+      line-height: 1.5;
+    }
+
+    .plan-features li .check {
+      color: var(--primary);
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .plan-features li .cross {
+      color: var(--accent);
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .plan-features li .info {
+      flex: 1;
+    }
+
+    .plan-cta {
+      display: block;
+      width: 100%;
+      padding: 0.85rem;
+      text-align: center;
+      font-family: "Inter", system-ui, sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      background: var(--primary);
+      border: none;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: background 0.2s;
+      text-decoration: none;
+      margin-top: 1.5rem;
+    }
+
+    .plan-cta:hover {
+      background: var(--primary-dark);
+    }
+
+    .plan-cta.outline {
+      color: var(--primary);
+      background: transparent;
+      border: 2px solid var(--primary);
+    }
+
+    .plan-cta.outline:hover {
+      color: #fff;
+      background: var(--primary);
+    }
+
+    .plan-footnote {
+      font-size: 0.8rem;
+      color: var(--on-surface-secondary);
+      text-align: center;
+      margin-top: 0.75rem;
+      line-height: 1.4;
+    }
+
+    .plan-fee-badge {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--on-surface-secondary);
+      margin-bottom: 0.25rem;
+    }
+
+    .footer-note {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: var(--on-surface-secondary);
+    }
+
+    .annual-only {
+      display: none;
+    }
+    .annual-only.visible {
+      display: block;
+    }
+
+    @media(max-width: 1200px) {
+      .plans-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media(max-width: 767px) {
+      .container { padding: 2.5rem 1rem; }
+      .plans-grid { grid-template-columns: 1fr; }
+      .plan-card { padding: 2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="page-header">
+      <h1>Simple <span>Pricing</span></h1>
+      <p>Choose the plan that fits your business. All plans include hosting, maintenance, and our satisfaction guarantee.</p>
+      <div class="billing-toggle">
+        <label class="active" id="label-annual">Annual <span class="badge">Save 20%</span></label>
+        <div class="toggle-switch" id="billing-toggle" role="button" tabindex="0" aria-label="Toggle billing period"></div>
+        <label id="label-monthly">Monthly</label>
+      </div>
+    </div>
+
+    <div class="plans-grid">
+      <div class="plan-card">
+        <div class="plan-name">Starter</div>
+        <div class="plan-price">
+          <span class="amount" style="font-size: clamp(1.8rem, 3.5vw, 2.5rem);">Free</span>
+        </div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li>
+            <span class="check">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span class="info">Basic starter website</span>
+          </li>
+          <li>
+            <span class="cross">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </span>
+            <span class="info">Customize website design</span>
+          </li>
+          <li>
+            <span class="cross">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </span>
+            <span class="info">Remove ad/banner</span>
+          </li>
+        </ul>
+        <a href="mailto:hello@withviso.com?subject=Starter%20Plan%20Inquiry" class="plan-cta outline">Get Started</a>
+      </div>
+
+      <div class="plan-card">
+        <div class="plan-name">Lite</div>
+        <div class="plan-price">
+          <span class="amount" id="price-lite">19</span>
+          <span class="period">/mo</span>
+        </div>
+        <div class="plan-price-annual annual-only" id="annual-lite">$239.88/yr</div>
+        <div class="plan-fee-badge">+ $199 one time design &amp; setup fee</div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li>
+            <span class="check">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span class="info">Customize website design</span>
+          </li>
+          <li>
+            <span class="check">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span class="info">Remove ad/banner</span>
+          </li>
+          <li>
+            <span class="check">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span class="info">Custom logo</span>
+          </li>
+        </ul>
+        <a href="mailto:hello@withviso.com?subject=Lite%20Plan%20Inquiry" class="plan-cta outline">Get Started</a>
+        <p class="plan-footnote">Free design changes up to 1 week after launch to guarantee satisfaction</p>
+      </div>
+
+      <div class="plan-card featured">
+        <div class="plan-name">Basic</div>
+        <div class="plan-price">
+          <span class="amount" id="price-basic">29</span>
+          <span class="period">/mo</span>
+        </div>
+        <div class="plan-price-annual annual-only" id="annual-basic">$359.88/yr</div>
+        <div class="plan-fee-badge">+ $199 one time design &amp; setup fee</div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li>
+            <span class="check">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span class="info">Everything in Lite</span>
+          </li>
+          <li>
+            <span class="check">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span class="info">Professional website domain (e.g. yourbusiness.com)</span>
+          </li>
+          <li>
+            <span class="check">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span class="info">Embedded Contact/Sign Up form</span>
+          </li>
+        </ul>
+        <a href="mailto:hello@withviso.com?subject=Basic%20Plan%20Inquiry" class="plan-cta">Get Started</a>
+        <p class="plan-footnote">Free design changes up to 1 week after launch to guarantee satisfaction</p>
+      </div>
+
+      <div class="plan-card">
+        <div class="plan-name">Professional</div>
+        <div class="plan-price">
+          <span class="amount" id="price-pro">39</span>
+          <span class="period">/mo</span>
+        </div>
+        <div class="plan-price-annual annual-only" id="annual-pro">$479.88/yr</div>
+        <div class="plan-fee-badge">+ $199 one time design &amp; setup fee</div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li>
+            <span class="check">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span class="info">Everything in Basic</span>
+          </li>
+          <li>
+            <span class="check">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span class="info">Ongoing website design changes - your site stays up to date as your business changes</span>
+          </li>
+        </ul>
+        <a href="mailto:hello@withviso.com?subject=Professional%20Plan%20Inquiry" class="plan-cta outline">Get Started</a>
+      </div>
+    </div>
+
+    <p class="footer-note">All plans include hosting, SSL, security monitoring, and regular backups. Satisfaction guaranteed — Cancel anytime. Payments are non-refundable.</p>
+
+  </div>
+
+  <script>
+    (function() {
+      const toggle = document.getElementById('billing-toggle');
+      const labelMonthly = document.getElementById('label-monthly');
+      const labelAnnual = document.getElementById('label-annual');
+      const annualPrices = document.querySelectorAll('.annual-only');
+      const priceLite = document.getElementById('price-lite');
+      const priceBasic = document.getElementById('price-basic');
+      const pricePro = document.getElementById('price-pro');
+      let isAnnual = true;
+
+      function updatePricing() {
+        if (isAnnual) {
+          toggle.classList.remove('monthly');
+          labelAnnual.classList.add('active');
+          labelMonthly.classList.remove('active');
+          priceLite.innerHTML = '19<span class="cents">.99</span>';
+          priceBasic.innerHTML = '29<span class="cents">.99</span>';
+          pricePro.innerHTML = '39<span class="cents">.99</span>';
+          annualPrices.forEach(el => el.classList.add('visible'));
+        } else {
+          toggle.classList.add('monthly');
+          labelMonthly.classList.add('active');
+          labelAnnual.classList.remove('active');
+          priceLite.innerHTML = '24<span class="cents">.99</span>';
+          priceBasic.innerHTML = '36<span class="cents">.99</span>';
+          pricePro.innerHTML = '49<span class="cents">.99</span>';
+          annualPrices.forEach(el => el.classList.remove('visible'));
+        }
+      }
+
+      toggle.addEventListener('click', function() {
+        isAnnual = !isAnnual;
+        updatePricing();
+      });
+
+      labelMonthly.addEventListener('click', function() {
+        if (isAnnual) { isAnnual = false; updatePricing(); }
+      });
+
+      labelAnnual.addEventListener('click', function() {
+        if (!isAnnual) { isAnnual = true; updatePricing(); }
+      });
+
+      updatePricing();
+    })();
+  </script>
+</body>
+</html>
