@@ -21,15 +21,15 @@
     img { max-width: 100%; display: block; }
     .container { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
 
-    header { position: sticky; top: 0; z-index: 1000; background: #0f3b5e; color: #fff; padding: 12px 0; }
+    header { position: sticky; top: 0; z-index: 1000; background: #fff; color: #1a1a2e; padding: 12px 0; border-bottom: 1px solid #e5e7eb; }
     header .container { display: flex; align-items: center; justify-content: space-between; }
-    .logo { display: flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 700; }
-    .logo img { width: 32px; height: 32px; filter: brightness(0) invert(1); }
+    .logo { display: flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 700; color: #0f3b5e; }
+    .logo img { width: 32px; height: 32px; }
     .nav-links { display: flex; gap: 28px; list-style: none; font-weight: 600; font-size: 14px; }
-    .nav-links a { transition: opacity 0.2s; }
-    .nav-links a:hover { opacity: 0.8; }
+    .nav-links a { color: #4b5563; transition: color 0.2s; }
+    .nav-links a:hover { color: #0f3b5e; }
     .nav-toggle { display: none; background: none; border: none; cursor: pointer; }
-    .nav-toggle img { width: 28px; height: 28px; filter: brightness(0) invert(1); }
+    .nav-toggle img { width: 28px; height: 28px; }
 
     .claim-banner { position: sticky; top: 56px; z-index: 999; background: #e8751a; color: #fff; text-align: center; padding: 10px 20px; font-size: 14px; font-weight: 600; }
     .claim-banner a { display: block; }
@@ -65,7 +65,7 @@
     .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
     .review-card { background: #f8f9fa; padding: 30px; border-radius: 12px; }
     .review-card .stars { display: flex; gap: 2px; margin-bottom: 12px; }
-    .review-card .stars img { width: 18px; height: 18px; }
+    .review-card .stars svg { width: 18px; height: 18px; fill: #e8751a; }
     .review-card .review-text { color: #555; margin-bottom: 16px; font-size: 15px; line-height: 1.7; }
     .review-card .review-name { font-weight: 700; color: #0f3b5e; font-size: 14px; }
 
@@ -85,7 +85,7 @@
     .footer .attribution { font-size: 13px; opacity: 0.8; margin-top: 8px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.15); }
 
     @media (max-width: 768px) {
-      .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #0f3b5e; flex-direction: column; padding: 20px; gap: 16px; }
+      .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff; flex-direction: column; padding: 20px; gap: 16px; border-bottom: 1px solid #e5e7eb; }
       .nav-links.open { display: flex; }
       .nav-toggle { display: block; }
       .hero-content h1 { font-size: 32px; }
@@ -120,13 +120,13 @@
 
   <div class="claim-banner">
     <a href="https://design.withviso.com" style="text-decoration:none;color:inherit;">
-      Hi Anderson Plumbing and Gas Fitting! Do you like the website? <u>Contact us to make it yours today</u>
+      Hi Anderson Plumbing! Do you like the website? <u>Contact us to make it yours today</u>
     </a>
   </div>
 
   <section class="hero">
     <div class="hero-bg">
-      <img src="https://images.pexels.com/photos/6419128/pexels-photo-6419128.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Plumber working on pipes" />
+      <img src="https://images.pexels.com/photos/12105083/pexels-photo-12105083.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Close up of wrench and tools" />
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -143,7 +143,7 @@
 
       <div class="service-block">
         <div class="service-img">
-          <img src="https://images.pexels.com/photos/11658940/pexels-photo-11658940.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Plumbing repair" loading="lazy" />
+          <img src="https://images.pexels.com/photos/36777589/pexels-photo-36777589.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Elegant modern bathroom interior with shower" loading="lazy" />
         </div>
         <div class="service-text">
           <h3><img src="https://unpkg.com/lucide-static@latest/icons/droplets.svg" alt="" /> Plumbing Services</h3>
@@ -175,7 +175,7 @@
 
       <div class="service-block">
         <div class="service-img">
-          <img src="https://images.pexels.com/photos/9551366/pexels-photo-9551366.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Water heater" loading="lazy" />
+          <img src="https://images.pexels.com/photos/30560254/pexels-photo-30560254.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Vintage chrome hot water faucet close up" loading="lazy" />
         </div>
         <div class="service-text">
           <h3><img src="https://unpkg.com/lucide-static@latest/icons/thermometer.svg" alt="" /> Water Heater Services</h3>
@@ -213,33 +213,33 @@
       <div class="reviews-grid">
         <div class="review-card">
           <div class="stars">
-            <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="" />
-            <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="" />
-            <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="" />
-            <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="" />
-            <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="" />
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
           <p class="review-text">Big thank you to Dylan! He was punctual, responsive and very friendly. He came prepared and on time, completing a new sink and reverse osmosis set up for us. His rates are fantastic and he is very good at what he does.</p>
           <p class="review-name">Anastasia T.</p>
         </div>
         <div class="review-card">
           <div class="stars">
-            <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="" />
-            <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="" />
-            <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="" />
-            <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="" />
-            <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="" />
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
           <p class="review-text">I hired Dylan to do a bathroom renovation. He was very easy to work with, straight up with pricing, and did an excellent job. I will definitely be calling him again for future projects.</p>
           <p class="review-name">Ryan J.</p>
         </div>
         <div class="review-card">
           <div class="stars">
-            <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="" />
-            <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="" />
-            <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="" />
-            <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="" />
-            <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="" />
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
           <p class="review-text">Punctual, tidy, extremely knowledgeable and skilled at his craft. Always ensuring the job is done to the highest standard. Highly recommend Dylan for all plumbing and gas fitting needs.</p>
           <p class="review-name">Kristopher O.</p>
