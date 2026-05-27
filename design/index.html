@@ -352,7 +352,7 @@
               <h2 class="section-title">How Customers <span class="home-thq-text-primary-elm1">Choose</span></h2>
             </div>
             <div class="how-text">
-              <p class="section-content">Think about the last time you searched for a local business. You probably looked at two things: their <span class="home-thq-text-primary-elm1" style="font-weight: 700;">website</span> and their <span class="home-thq-text-primary-elm1" style="font-weight: 700;">reviews</span>. Your customers do the exact same thing. And we make sure you win at both.</p>
+              <p class="section-content">Think about the last time you searched for a local business. You probably looked at two things: their <span class="home-thq-text-primary-elm1" style="font-weight: 700;">website</span> and <span class="home-thq-text-primary-elm1" style="font-weight: 700;">reviews</span>. Your customers do the exact same thing. And we make sure you win at both.</p>
             </div>
             <div class="how-stats-grid">
               <div class="stat-card">
@@ -406,8 +406,6 @@
                 <span>Elevate Your</span>
                 <span class="home-thq-text-primary-elm1">Online Presence</span>
               </h2>
-              <p class="section-content">
-                Simple solutions that make it easy for customers to find and connect with you.              </p>
             </div>
             <div class="service-subsections">
               <div class="service-subsection">
@@ -551,7 +549,7 @@
               </h2>
               <div class="section-content">
                 <p>
-              Hey I'm Jesse, I started Viso because I saw many small businesses struggle to find the time or resources to build their online presence to meet todays customers. <strong style="font-size: 1.1rem; color: var(--color-on-surface); opacity: 0.9;">My goal is simple: keep business owners focused on their business.</strong> Do-it-yourself website builders, like Squarespace or Wix, can be a headache and never quite deliver professional results. On the other hand design agencies aren't priced reasonably for many smaller businesses. That's where we come in, delivering results that fit your budget.
+              Hey I'm Jesse, I started Viso because I saw many small businesses struggle to find the time or resources to build their online presence to meet todays customers. <strong style="font-size: 1.1rem; color: var(--color-on-surface); opacity: 0.9;">My goal is simple: keep business owners focused on their business.</strong> Do-it-yourself website builders, like Squarespace or Wix, can be a headache and never quite deliver professional results. On the other hand, design agencies aren't priced reasonably for many smaller businesses. That's where we come in, delivering results that fit your budget. Because your business deserves an online presence you can be proud of.
               </p>
               </div>
               <div class="philosophy-tags">
@@ -884,7 +882,7 @@
               document.addEventListener('DOMContentLoaded', function() {
                 (function(){
                   const observerOptions = {
-                    threshold: 0.1,
+                    threshold: 0.2,
                   }
 
                   const revealObserver = new IntersectionObserver((entries) => {
@@ -897,21 +895,33 @@
                     })
                   }, observerOptions)
 
-                  const animatedElements = document.querySelectorAll(".service-graphic, .service-card, .guarantee-card")
+                  const serviceElements = document.querySelectorAll(".service-graphic, .service-card")
+                  const guaranteeElements = document.querySelectorAll(".guarantee-card")
                   const processSteps = document.querySelectorAll(".process-step")
 
                   if (window.innerWidth > 767) {
-                    animatedElements.forEach((el, i) => {
+                    serviceElements.forEach((el, i) => {
                       el.style.opacity = "0"
                       el.style.transform = "translateY(30px)"
+                      el.style.willChange = "transform, opacity"
                       el.style.transition = "all 0.6s cubic-bezier(0.22, 1, 0.36, 1)"
                       el.style.transitionDelay = `${i * 0.1}s`
+                      revealObserver.observe(el)
+                    })
+
+                    guaranteeElements.forEach((el, i) => {
+                      el.style.opacity = "0"
+                      el.style.transform = "translateY(30px)"
+                      el.style.willChange = "transform, opacity"
+                      el.style.transition = "all 0.4s cubic-bezier(0.22, 1, 0.36, 1)"
+                      el.style.transitionDelay = `${i * 0.05}s`
                       revealObserver.observe(el)
                     })
 
                     processSteps.forEach((el, i) => {
                       el.style.opacity = "0"
                       el.style.transform = "translateY(30px)"
+                      el.style.willChange = "transform, opacity"
                       el.style.transition = "all 0.8s cubic-bezier(0.22, 1, 0.36, 1)"
                       el.style.transitionDelay = `${i * 0.25}s`
                       revealObserver.observe(el)
