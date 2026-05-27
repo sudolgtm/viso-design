@@ -623,7 +623,6 @@
         <div class="form-group">
           <label for="plans-name">Name</label>
           <input type="hidden" name="access_key" value="cff6a427-520a-4a81-8a41-98e9b3ee704d">
-          <input type="hidden" name="redirect" value="https://design.withviso.com/plans?contact-submitted=true">
           <input type="text" id="plans-name" name="name" required placeholder="Your full name" class="form-input" />
         </div>
         <div class="form-group">
@@ -657,6 +656,7 @@
       const params = new URLSearchParams(window.location.search);
       if (params.get('contact-submitted') === 'true') {
         document.getElementById('plans-contact-success').style.display = 'block';
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
         if (window.history.replaceState) {
           window.history.replaceState({}, document.title, window.location.pathname);
         }
