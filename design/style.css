@@ -1391,6 +1391,10 @@
   background: var(--color-surface-section);
 }
 
+.process-section .section-title {
+  margin-bottom: var(--spacing-3xl);
+}
+
 .text-center {
   text-align: center;
 }
