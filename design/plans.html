@@ -622,7 +622,8 @@
       >
         <div class="form-group">
           <label for="plans-name">Name</label>
-          <input type="hidden" name="access_key" value="bb0f22e1-bfb1-47c3-bf34-2d08f2a2d1d1">
+          <input type="hidden" name="access_key" value="cff6a427-520a-4a81-8a41-98e9b3ee704d">
+          <input type="hidden" name="redirect" value="https://design.withviso.com/plans?contact-submitted=true">
           <input type="text" id="plans-name" name="name" required placeholder="Your full name" class="form-input" />
         </div>
         <div class="form-group">
@@ -645,14 +646,22 @@
           <textarea id="plans-message" name="message" rows="4" placeholder="Tell us about your business..." class="form-input"></textarea>
         </div>
         <button type="submit" class="plan-cta">Send Message</button>
-        <p id="plans-contact-success" style="display:none; color:var(--primary); text-align:center; margin-top:0.75rem; font-weight:600;">Thank you for reaching out! We'll be in touch soon.</p>
       </form>
+      <p id="plans-contact-success" style="display:none; color:var(--primary); text-align:center; margin-top:2rem; font-weight:600; font-size:1.1rem;">Thank you for reaching out! We'll be in touch soon.</p>
     </div>
 
   </div>
 
   <script>
     (function() {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('contact-submitted') === 'true') {
+        document.getElementById('plans-contact-success').style.display = 'block';
+        if (window.history.replaceState) {
+          window.history.replaceState({}, document.title, window.location.pathname);
+        }
+      }
+
       const toggle = document.getElementById('billing-toggle');
       const labelMonthly = document.getElementById('label-monthly');
       const labelAnnual = document.getElementById('label-annual');
