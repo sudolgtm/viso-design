@@ -1,0 +1,58 @@
+{
+  "hero": {
+    "url": "https://images.pexels.com/photos/37144291/pexels-photo-37144291.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "alt": "Wide view of a plant nursery with diverse greenery in pots under cloudy sky.",
+    "photographer": "Jan Wright",
+    "width": 6960,
+    "height": 4640
+  },
+  "service1": {
+    "url": "https://images.pexels.com/photos/12763046/pexels-photo-12763046.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "alt": "Rustic stone retaining wall by a pond, accented with adjacent green hedge.",
+    "photographer": "Muhammed Zahid Bulut",
+    "width": 4905,
+    "height": 3270
+  },
+  "service2": {
+    "url": "https://images.pexels.com/photos/10530994/pexels-photo-10530994.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "alt": "A tranquil pond filled with lily pads and a gentle water fountain, ideal for relaxation scenes.",
+    "photographer": "Alexey Demidov",
+    "width": 4032,
+    "height": 2688
+  },
+  "service3": {
+    "url": "https://images.pexels.com/photos/11866592/pexels-photo-11866592.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "alt": "A cozy stone garden patio with ivy-covered walls, stone benches, and rustic decor perfect for relaxation.",
+    "photographer": "Lucas Pezeta",
+    "width": 4986,
+    "height": 3324
+  },
+  "service4": {
+    "url": "https://images.pexels.com/photos/8960427/pexels-photo-8960427.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "alt": "A close-up view of a campfire, showcasing vibrant flames against a dark night backdrop.",
+    "photographer": "Mara Diezinger",
+    "width": 6240,
+    "height": 4160
+  },
+  "service5": {
+    "url": "https://images.pexels.com/photos/10606633/pexels-photo-10606633.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "alt": "Young vegetable plants growing with drip irrigation system in a fertile field.",
+    "photographer": "Anil  Sharma",
+    "width": 6720,
+    "height": 4480
+  },
+  "reviews": {
+    "url": "https://images.pexels.com/photos/4944058/pexels-photo-4944058.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "alt": "Pink flowers blooming in a clay pot outdoors, surrounded by greenery and sunlight.",
+    "photographer": "Jill Wellington",
+    "width": 5760,
+    "height": 3840
+  },
+  "what_we_do": {
+    "url": "https://images.pexels.com/photos/23070382/pexels-photo-23070382.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "alt": "Explore the elegance of a wooden staircase surrounded by lush greenery in an outdoor garden.",
+    "photographer": "Emre  Simsek",
+    "width": 6000,
+    "height": 4000
+  }
+}

@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TBD8TFCF');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Rockstar Landscaping | Kelowna's Premier Landscaping Services</title>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #3a7d44;
+  --primary-dark: #2d5a27;
+  --primary-light: #4a9d56;
+  --secondary: #8B5E3C;
+  --accent: #50586b;
+  --text-dark: #1a1a2e;
+  --text-light: #4a4a5a;
+  --bg-light: #f8f9fa;
+  --white: #ffffff;
+  --shadow: 0 4px 20px rgba(0,0,0,0.08);
+  --radius: 12px;
+  --header-height: 70px;
+  --banner-height: 44px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+section[id] { scroll-margin-top: calc(var(--header-height) + var(--banner-height)); }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--white);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  height: var(--header-height);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 44px;
+  width: 44px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.logo-text {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  line-height: 1.2;
+}
+
+.logo-text span {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 400;
+  color: var(--text-light);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.3s;
+  white-space: nowrap;
+}
+
+.nav-links a:hover { color: var(--primary); }
+
+.nav-cta {
+  background: var(--primary) !important;
+  color: var(--white) !important;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600 !important;
+  transition: background 0.3s !important;
+}
+
+.nav-cta:hover { background: var(--primary-dark) !important; }
+
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.mobile-toggle img { width: 28px; height: 28px; }
+
+/* Claim Banner */
+.claim-banner {
+  position: sticky;
+  top: var(--header-height);
+  z-index: 999;
+  background: var(--primary);
+  color: var(--white);
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 0.85rem;
+  height: var(--banner-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.claim-banner a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.claim-banner u { text-decoration: underline; }
+
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('hero.jpg') center/cover no-repeat;
+  filter: brightness(0.35);
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(42,78,42,0.4) 0%, rgba(0,0,0,0.6) 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: var(--white);
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 36px;
+  line-height: 1.7;
+}
+
+.hero-cta {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--white);
+  padding: 16px 40px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.hero-cta:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* Section Styling */
+section { padding: 90px 0; }
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.section-title p {
+  font-size: 1.05rem;
+  color: var(--text-light);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.bg-alt { background: var(--bg-light); }
+
+/* What We Do */
+.what-we-do {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.what-we-do-image {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.what-we-do-image img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
+.what-we-do-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 18px;
+  color: var(--text-dark);
+}
+
+.what-we-do-text p {
+  color: var(--text-light);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.what-we-do-text .stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item .number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.stat-item .label {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+/* Services - Alternating Two-Column Layout */
+.service-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  padding: 60px 0;
+}
+
+.service-item:not(:last-child) {
+  border-bottom: 1px solid #eaeaea;
+}
+
+.service-item.reverse .service-image { order: 2; }
+.service-item.reverse .service-info { order: 1; }
+
+.service-image {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.service-image img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+}
+
+.service-info .service-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.service-info .service-header img {
+  width: 36px;
+  height: 36px;
+  color: var(--primary);
+}
+
+.service-info .service-header h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.service-info > p {
+  color: var(--text-light);
+  font-size: 0.98rem;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.service-info ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.service-info ul li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.92rem;
+  color: var(--text-dark);
+}
+
+.service-info ul li img {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* Why Choose Us */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.why-card {
+  background: var(--white);
+  padding: 36px 28px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.why-card:hover { transform: translateY(-5px); }
+
+.why-card img {
+  width: 48px;
+  height: 48px;
+  color: var(--primary);
+  margin-bottom: 18px;
+}
+
+.why-card h4 {
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+
+.why-card p {
+  font-size: 0.92rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* Reviews */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.review-card {
+  background: var(--white);
+  padding: 32px 28px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid #f0f0f0;
+}
+
+.review-stars {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 14px;
+}
+
+.review-stars svg polygon {
+  fill: #f5b342;
+}
+
+.review-card blockquote {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+.review-card .reviewer {
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--text-dark);
+}
+
+/* Contact */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.contact-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.contact-detail {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 18px;
+  align-items: flex-start;
+}
+
+.contact-detail img {
+  width: 22px;
+  height: 22px;
+  color: var(--primary);
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.contact-detail div h4 {
+  font-size: 0.92rem;
+  margin-bottom: 2px;
+  color: var(--text-dark);
+}
+
+.contact-detail div p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.hours-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 16px;
+  font-size: 0.9rem;
+}
+
+.hours-grid .day { color: var(--text-dark); font-weight: 500; }
+.hours-grid .time { color: var(--text-light); }
+
+.contact-map {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  height: 100%;
+  min-height: 350px;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+  border: 0;
+}
+
+/* Footer */
+footer {
+  background: var(--text-dark);
+  color: rgba(255,255,255,0.85);
+  padding: 48px 0 32px;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.footer-logo img {
+  height: 40px;
+  width: 40px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.footer-logo span {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+footer p {
+  font-size: 0.88rem;
+  opacity: 0.7;
+}
+
+.footer-divider {
+  width: 60px;
+  height: 2px;
+  background: var(--primary);
+  margin: 8px 0;
+}
+
+.footer-attribution {
+  font-size: 0.82rem;
+  opacity: 0.6;
+  margin-top: 4px;
+}
+
+.footer-attribution a {
+  color: var(--primary-light);
+  text-decoration: none;
+}
+
+.footer-attribution a:hover { text-decoration: underline; }
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background: var(--white);
+    flex-direction: column;
+    padding: 20px;
+    gap: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.open { display: flex; }
+
+  .mobile-toggle { display: block; }
+
+  .hero-content h1 { font-size: 2.2rem; }
+
+  .hero-content p { font-size: 1rem; }
+
+  .what-we-do { grid-template-columns: 1fr; }
+  .what-we-do-image img { height: 250px; }
+  .what-we-do-text .stats { grid-template-columns: repeat(3, 1fr); }
+
+  .service-item { grid-template-columns: 1fr; gap: 30px; padding: 40px 0; }
+  .service-item.reverse .service-image { order: 0; }
+  .service-item.reverse .service-info { order: 0; }
+  .service-image img { height: 250px; }
+  .service-info ul { grid-template-columns: 1fr; }
+
+  .why-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+
+  .contact-grid { grid-template-columns: 1fr; }
+
+  .section-title h2 { font-size: 1.8rem; }
+  section { padding: 60px 0; }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 { font-size: 1.8rem; }
+  .logo-text { font-size: 1rem; }
+  .logo-text span { font-size: 0.55rem; }
+  .logo img { height: 36px; width: 36px; }
+}
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBD8TFCF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- Header -->
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <img src="logo.png" alt="Rockstar Landscaping logo">
+      <div class="logo-text">
+        Rockstar Landscaping
+        <span>Kelowna's Trusted Landscapers</span>
+      </div>
+    </a>
+    <nav>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+        <img src="https://unpkg.com/lucide-static@latest/icons/menu.svg" alt="Menu">
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Claim Banner -->
+<div class="claim-banner">
+  <a href="https://design.withviso.com?utm_source=rockstar-landscaping.withviso.com&utm_medium=referral&utm_campaign=banner-link&utm_content=client-banner" target="_blank" rel="noopener">
+    Do you like the website? <u>Contact Viso</u> for your new website today
+  </a>
+</div>
+
+<!-- Hero -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content fade-in">
+    <h1>Transform Your Outdoor Space with Kelowna's Landscaping Experts</h1>
+    <p>From custom retaining walls and stunning patios to complete landscape design — Rockstar Landscaping brings your vision to life with quality craftsmanship you can trust.</p>
+    <a href="#contact" class="hero-cta">Get Your Free Estimate</a>
+  </div>
+</section>
+
+<!-- What We Do -->
+<section id="what-we-do">
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>What We Do</h2>
+      <p>We're a Kelowna-based landscaping company dedicated to transforming outdoor spaces with professional craftsmanship and personalized service.</p>
+    </div>
+    <div class="what-we-do fade-in">
+      <div class="what-we-do-image">
+        <img src="hero.jpg" alt="Rockstar Landscaping project" loading="lazy">
+      </div>
+      <div class="what-we-do-text">
+        <h3>Your Vision, Our Expertise</h3>
+        <p>Led by Storm, our team brings years of hands-on experience to every project. We believe in doing the job right the first time — on time and on budget. Whether you need a simple garden refresh or a complete outdoor overhaul, we treat every property like it's our own.</p>
+        <p>We take pride in our 4.8-star rating and the trust our clients place in us. Every project begins with a conversation, a written estimate, and a commitment to excellence.</p>
+        <div class="stats">
+          <div class="stat-item">
+            <div class="number">4.8</div>
+            <div class="label">Star Rating</div>
+          </div>
+          <div class="stat-item">
+            <div class="number">13+</div>
+            <div class="label">Happy Clients</div>
+          </div>
+          <div class="stat-item">
+            <div class="number">24/7</div>
+            <div class="label">Availability</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="bg-alt">
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>Our Services</h2>
+      <p>Comprehensive landscaping services tailored to your needs — from the ground up.</p>
+    </div>
+
+    <!-- Service 1: Retaining Walls -->
+    <div class="service-item fade-in">
+      <div class="service-image">
+        <img src="retaining-walls.jpg" alt="Retaining wall installation" loading="lazy">
+      </div>
+      <div class="service-info">
+        <div class="service-header">
+          <img src="https://unpkg.com/lucide-static@latest/icons/layers.svg" alt="">
+          <h3>Retaining Walls</h3>
+        </div>
+        <p>Structural and decorative retaining walls that prevent erosion, create level spaces, and add stunning visual dimension to your property. We use quality materials and proven techniques for lasting results.</p>
+        <ul>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Custom wall design & engineering</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Natural stone & interlocking blocks</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Drainage & soil management</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Residential & commercial projects</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Service 2: Patios & Walkways -->
+    <div class="service-item reverse fade-in">
+      <div class="service-image">
+        <img src="patios-walkways.jpg" alt="Patio and walkway installation" loading="lazy">
+      </div>
+      <div class="service-info">
+        <div class="service-header">
+          <img src="https://unpkg.com/lucide-static@latest/icons/land-plot.svg" alt="">
+          <h3>Patios & Walkways</h3>
+        </div>
+        <p>Beautiful, functional patios and walkways that extend your living space outdoors. From intimate garden paths to entertainer-sized patios, we create surfaces that are both durable and visually appealing.</p>
+        <ul>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Paver stone patios & walkways</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Concrete masonry & stamping</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Custom patterns & color blends</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Slip-resistant & weather-proof</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Service 3: Driveways & Paving -->
+    <div class="service-item fade-in">
+      <div class="service-image">
+        <img src="driveways.jpg" alt="Driveway paving" loading="lazy">
+      </div>
+      <div class="service-info">
+        <div class="service-header">
+          <img src="https://unpkg.com/lucide-static@latest/icons/car.svg" alt="">
+          <h3>Driveways & Paving</h3>
+        </div>
+        <p>Upgrade your driveway with premium paving solutions that enhance curb appeal and increase property value. We handle everything from new installations to resurfacing and repairs.</p>
+        <ul>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Interlocking paver driveways</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Asphalt & concrete options</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Grading & resloping services</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Driveway landscaping & borders</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Service 4: Landscape Design -->
+    <div class="service-item reverse fade-in">
+      <div class="service-image">
+        <img src="landscape-design.jpg" alt="Landscape design" loading="lazy">
+      </div>
+      <div class="service-info">
+        <div class="service-header">
+          <img src="https://unpkg.com/lucide-static@latest/icons/palette.svg" alt="">
+          <h3>Landscape Design</h3>
+        </div>
+        <p>Complete landscape design services that blend aesthetics with functionality. We create outdoor environments that complement your home and lifestyle, using thoughtful plant selection and smart layout planning.</p>
+        <ul>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Custom garden & yard design</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Rock & stone landscaping</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Low-maintenance & drought-tolerant</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Seasonal planting & garden care</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Service 5: Hardscaping & Stonework -->
+    <div class="service-item fade-in">
+      <div class="service-image">
+        <img src="hardscaping.jpg" alt="Hardscaping and stonework" loading="lazy">
+      </div>
+      <div class="service-info">
+        <div class="service-header">
+          <img src="https://unpkg.com/lucide-static@latest/icons/hammer.svg" alt="">
+          <h3>Hardscaping & Stonework</h3>
+        </div>
+        <p>Expert stone masonry and hardscaping services that add permanent structure and beauty to your outdoor spaces. From garden walls to stone pathways, we craft features that stand the test of time.</p>
+        <ul>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Natural stone masonry</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Garden walls & borders</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Outdoor kitchen & fire pit bases</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Stone steps & terraces</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section id="why-us">
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>Why Choose Rockstar Landscaping</h2>
+      <p>We don't just build landscapes — we build relationships. Here's what sets us apart.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card fade-in">
+        <img src="https://unpkg.com/lucide-static@latest/icons/shield-check.svg" alt="">
+        <h4>Quality Guaranteed</h4>
+        <p>Every project is completed with meticulous attention to detail. We stand behind our work and your satisfaction is our top priority.</p>
+      </div>
+      <div class="why-card fade-in">
+        <img src="https://unpkg.com/lucide-static@latest/icons/trees.svg" alt="">
+        <h4>Local Expertise</h4>
+        <p>Proudly serving Kelowna and the Okanagan. We understand the local climate, soil conditions, and what works best for our region.</p>
+      </div>
+      <div class="why-card fade-in">
+        <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="">
+        <h4>On Time, On Budget</h4>
+        <p>We value your time and money. Projects are completed within the agreed timeline and budget — no surprises, just results.</p>
+      </div>
+      <div class="why-card fade-in">
+        <img src="https://unpkg.com/lucide-static@latest/icons/phone-call.svg" alt="">
+        <h4>Clear Communication</h4>
+        <p>From the first estimate to project completion, you'll always know what's happening. We keep you updated every step of the way.</p>
+      </div>
+      <div class="why-card fade-in">
+        <img src="https://unpkg.com/lucide-static@latest/icons/wrench.svg" alt="">
+        <h4>Full-Service Capability</h4>
+        <p>From design to execution, we handle every aspect of your landscaping project. One team, one vision, seamless results.</p>
+      </div>
+      <div class="why-card fade-in">
+        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+        <h4>4.8-Star Reputation</h4>
+        <p>Our clients consistently rate us among the best. Our 4.8-star average reflects our commitment to excellence and customer care.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section id="reviews" class="bg-alt">
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>What Our Clients Say</h2>
+      <p>Don't just take our word for it — hear from our happy customers.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card fade-in">
+        <div class="review-stars">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f5b342" stroke="#f5b342" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f5b342" stroke="#f5b342" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f5b342" stroke="#f5b342" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f5b342" stroke="#f5b342" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f5b342" stroke="#f5b342" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        </div>
+        <blockquote>"We are extremely impressed with the quality and timeliness of his work. Storm was a pleasure to work with and we would highly recommend Storm and his services."</blockquote>
+        <div class="reviewer">— Michelle</div>
+      </div>
+      <div class="review-card fade-in">
+        <div class="review-stars">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f5b342" stroke="#f5b342" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f5b342" stroke="#f5b342" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f5b342" stroke="#f5b342" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f5b342" stroke="#f5b342" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f5b342" stroke="#f5b342" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        </div>
+        <blockquote>"Storm and Rockstar replaced some old landscaping with easy maintenance rock material. Looks great and done in a timely fashion!"</blockquote>
+        <div class="reviewer">— Chris</div>
+      </div>
+      <div class="review-card fade-in">
+        <div class="review-stars">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f5b342" stroke="#f5b342" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f5b342" stroke="#f5b342" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f5b342" stroke="#f5b342" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f5b342" stroke="#f5b342" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f5b342" stroke="#f5b342" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        </div>
+        <blockquote>"Super professional, during the estimate meeting, eager young man that will get the job done efficiently. Also has this super cool mini excavator! Highly recommend for all lawn and wall needs!"</blockquote>
+        <div class="reviewer">— Makayla</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>Get In Touch</h2>
+      <p>Ready to transform your outdoor space? Reach out to us today for a free estimate.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info fade-in">
+        <h3>Contact Information</h3>
+
+        <div class="contact-detail">
+          <img src="https://unpkg.com/lucide-static@latest/icons/map-pin.svg" alt="">
+          <div>
+            <h4>Address</h4>
+            <p>Feedham Ave, Kelowna, BC V1P 1P4</p>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <img src="https://unpkg.com/lucide-static@latest/icons/phone.svg" alt="">
+          <div>
+            <h4>Phone</h4>
+            <p><a href="tel:+12503178848" style="color: var(--text-light); text-decoration: none;">(250) 317-8848</a></p>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="">
+          <div>
+            <h4>Business Hours</h4>
+            <div class="hours-grid">
+              <span class="day">Mon - Sun</span>
+              <span class="time">Open 24 hours</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-map fade-in">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41144.61152869675!2d-119.39775743046873!3d49.869918399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537d8db45a8f2631%3A0x89f4b1fbdb840c04!2sRockstar%20Landscaping!5e0!3m2!1sen!2sca!4v1779852948787!5m2!1sen!2sca" width="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="logo.png" alt="Rockstar Landscaping logo">
+        <span>Rockstar Landscaping</span>
+      </div>
+      <div class="footer-divider"></div>
+      <p>Kelowna, BC | (250) 317-8848</p>
+      <div class="footer-attribution">
+        Made with love by <a href="https://design.withviso.com?utm_source=rockstar-landscaping.withviso.com&utm_medium=referral&utm_campaign=footer-link&utm_content=client-footer" target="_blank" rel="noopener">Viso Solutions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Mobile menu toggle
+const toggle = document.getElementById('mobileToggle');
+const navLinks = document.getElementById('navLinks');
+
+toggle.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+});
+
+// Close mobile menu on link click
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+  });
+});
+
+// Scroll-triggered fade-in animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.fade-in').forEach(el => {
+  observer.observe(el);
+});
+
+// Set current year in copyright
+document.querySelector('footer p').textContent = `\u00a9 ${new Date().getFullYear()} Rockstar Landscaping. Kelowna, BC | (250) 317-8848`;
+</script>
+
+</body>
+</html>

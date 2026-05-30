@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>STAR-BRITE Pressure Washing | Kelowna's Premier Pressure Washing</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TBD8TFCF');</script>
+    <!-- End Google Tag Manager -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        :root {
+            --primary: #1a56db;
+            --primary-dark: #1243af;
+            --primary-light: #e8f0fe;
+            --accent: #f59e0b;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #ffffff;
+            --bg-alt: #f9fafb;
+            --bg-dark: #111827;
+            --border: #e5e7eb;
+            --header-height: 70px;
+            --banner-height: 44px;
+            --scroll-offset: calc(var(--header-height) + var(--banner-height));
+        }
+
+        html { scroll-behavior: smooth; }
+        
+        section[id] { scroll-margin-top: var(--scroll-offset); }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--bg);
+            border-bottom: 1px solid var(--border);
+            height: var(--header-height);
+            display: flex;
+            align-items: center;
+        }
+
+        header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-square {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border: 2px solid var(--primary);
+            border-radius: 10px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 800;
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+        .logo-text .sub {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.6rem;
+            font-weight: 500;
+            color: var(--text-light);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        nav { display: flex; align-items: center; gap: 32px; }
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        nav a:hover { color: var(--primary); }
+
+        .nav-cta {
+            background: var(--primary);
+            color: #fff !important;
+            padding: 10px 22px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .nav-cta:hover { background: var(--primary-dark) !important; }
+
+        .mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+
+        /* Claim Banner */
+        .claim-banner {
+            position: sticky;
+            top: var(--header-height);
+            z-index: 999;
+            background: var(--primary);
+            color: #fff;
+            text-align: center;
+            padding: 10px 24px;
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+        .claim-banner a { color: inherit; text-decoration: none; }
+        .claim-banner u { text-decoration: underline; }
+
+        /* Mobile nav */
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: var(--header-height);
+            left: 0;
+            right: 0;
+            background: var(--bg);
+            border-bottom: 2px solid var(--border);
+            padding: 16px 24px;
+            flex-direction: column;
+            gap: 16px;
+            z-index: 999;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+        .mobile-nav.open { display: flex; }
+        .mobile-nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 8px 0;
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url('https://images.pexels.com/photos/4876648/pexels-photo-4876648.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') center center / cover no-repeat;
+        }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.45) 100%);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 720px;
+        }
+        .hero h1 {
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+        .hero h1 span { color: var(--accent); }
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 32px;
+            max-width: 560px;
+            line-height: 1.7;
+        }
+        .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 32px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+        }
+        .btn-primary {
+            background: var(--primary);
+            color: #fff;
+        }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26,86,219,0.35); }
+        .btn-outline-light {
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255,255,255,0.5);
+        }
+        .btn-outline-light:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+
+        /* Section styling */
+        section { padding: 90px 0; }
+        .section-title {
+            font-size: clamp(1.6rem, 3vw, 2.4rem);
+            font-weight: 700;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 1.05rem;
+            max-width: 640px;
+            margin: 0 auto 56px;
+            line-height: 1.7;
+        }
+
+        .bg-alt { background: var(--bg-alt); }
+
+        /* What We Do */
+        .what-we-do-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .wwd-image {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+        }
+        .wwd-image img { width: 100%; height: 380px; object-fit: cover; display: block; }
+        .wwd-content h3 { font-size: 1.6rem; font-weight: 700; margin-bottom: 16px; }
+        .wwd-content p { color: var(--text-light); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px; }
+        .wwd-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px; }
+        .wwd-stat { text-align: center; padding: 20px; background: var(--primary-light); border-radius: 12px; }
+        .wwd-stat .num { font-size: 1.8rem; font-weight: 800; color: var(--primary); }
+        .wwd-stat .label { font-size: 0.85rem; color: var(--text-light); margin-top: 4px; }
+
+        /* Services Alternating Layout */
+        .service-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+        .service-block:last-child { margin-bottom: 0; }
+        .service-block.reverse .service-image { order: 2; }
+        .service-block.reverse .service-info { order: 1; }
+        .service-image {
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+        }
+        .service-image img { width: 100%; height: 340px; object-fit: cover; display: block; }
+        .service-info .service-icon { margin-bottom: 12px; }
+        .service-info .service-icon img { width: 36px; height: 36px; }
+        .service-info h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 12px; }
+        .service-info p { color: var(--text-light); font-size: 0.95rem; line-height: 1.7; margin-bottom: 16px; }
+        .service-info ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .service-info ul li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.93rem;
+        }
+        .service-info ul li img {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* Why Choose Us */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .why-card {
+            text-align: center;
+            padding: 36px 24px;
+            background: var(--bg);
+            border-radius: 14px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .why-card:hover { transform: translateY(-5px); box-shadow: 0 12px 36px rgba(0,0,0,0.1); }
+        .why-card img { width: 44px; height: 44px; margin-bottom: 16px; }
+        .why-card h4 { font-size: 1.1rem; font-weight: 600; margin-bottom: 8px; }
+        .why-card p { color: var(--text-light); font-size: 0.9rem; line-height: 1.6; }
+
+        /* Reviews */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .review-card {
+            background: var(--bg);
+            border-radius: 14px;
+            padding: 32px 28px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            position: relative;
+        }
+        .review-card::before {
+            content: '"';
+            position: absolute;
+            top: 12px;
+            left: 20px;
+            font-size: 4rem;
+            color: var(--primary);
+            opacity: 0.12;
+            font-family: 'Playfair Display', serif;
+            line-height: 1;
+        }
+        .review-stars { display: flex; gap: 3px; margin-bottom: 14px; }
+        .review-stars svg { display: block; }
+        .review-text { font-size: 0.93rem; color: var(--text-light); line-height: 1.7; margin-bottom: 18px; font-style: italic; }
+        .review-author { font-weight: 600; font-size: 0.95rem; }
+
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        .contact-info h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 24px; }
+        .contact-detail { display: flex; gap: 14px; margin-bottom: 20px; align-items: flex-start; }
+        .contact-detail img { width: 22px; height: 22px; flex-shrink: 0; margin-top: 3px; }
+        .contact-detail .label { font-size: 0.8rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
+        .contact-detail .value { font-size: 1rem; }
+        .contact-detail .value a { color: var(--primary); text-decoration: none; }
+        .contact-detail .value a:hover { text-decoration: underline; }
+
+        .hours-grid {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 8px 16px;
+            margin-top: 12px;
+            font-size: 0.95rem;
+        }
+        .hours-grid .day { font-weight: 500; }
+        .hours-grid .time { color: var(--text-light); }
+        .hours-grid .closed { color: #ef4444; font-weight: 500; }
+
+        .contact-map {
+            border-radius: 14px;
+            overflow: hidden;
+            min-height: 400px;
+        }
+        .contact-map iframe { width: 100%; height: 100%; min-height: 400px; border: 0; display: block; }
+
+        /* Footer */
+        footer {
+            background: var(--bg-dark);
+            color: rgba(255,255,255,0.7);
+            padding: 48px 0 32px;
+        }
+        footer .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 16px;
+        }
+        footer .logo { color: #fff; }
+        footer .logo-square { border-color: rgba(255,255,255,0.5); color: #fff; }
+        footer p { font-size: 0.88rem; }
+        .footer-divider { width: 80px; height: 2px; background: var(--primary); border-radius: 2px; margin: 8px 0; }
+        .footer-attribution { font-size: 0.82rem; color: rgba(255,255,255,0.45); }
+        .footer-attribution a { color: var(--accent); text-decoration: none; }
+        .footer-attribution a:hover { text-decoration: underline; }
+
+        /* Animations */
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .what-we-do-grid { grid-template-columns: 1fr; gap: 40px; }
+            .service-block { grid-template-columns: 1fr; gap: 30px; }
+            .service-block.reverse .service-image { order: 1; }
+            .service-block.reverse .service-info { order: 2; }
+            .why-grid { grid-template-columns: 1fr 1fr; }
+            .reviews-grid { grid-template-columns: 1fr 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            nav { display: none; }
+            .mobile-toggle { display: flex; }
+            .hero { min-height: 70vh; }
+            .hero-content { text-align: center; }
+            .hero p { margin-left: auto; margin-right: auto; }
+            .hero-buttons { justify-content: center; }
+            .why-grid { grid-template-columns: 1fr; }
+            .reviews-grid { grid-template-columns: 1fr; }
+            .wwd-stats { grid-template-columns: 1fr 1fr; }
+            .service-image img { height: 260px; }
+            .wwd-image img { height: 280px; }
+            section { padding: 60px 0; }
+        }
+
+        @media (max-width: 480px) {
+            .logo-text .full { font-size: 0.95rem; }
+            .logo-square { width: 36px; height: 36px; font-size: 0.7rem; }
+            .wwd-stats { grid-template-columns: 1fr; }
+            .hero { min-height: 65vh; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBD8TFCF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="#" class="logo">
+                <span class="logo-square">SB</span>
+                <span class="logo-text">
+                    <span class="full">STAR-BRITE</span>
+                    <span class="sub">Pressure Washing</span>
+                </span>
+            </a>
+            <nav>
+                <a href="#what-we-do">What We Do</a>
+                <a href="#services">Services</a>
+                <a href="#why-choose-us">Why Us</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact" class="nav-cta">Get a Quote</a>
+            </nav>
+            <button class="mobile-toggle" onclick="toggleMobile()" aria-label="Toggle menu">
+                <img src="https://unpkg.com/lucide-static@latest/icons/menu.svg" alt="Menu" width="26" height="26">
+            </button>
+        </div>
+    </header>
+
+    <!-- Claim Banner -->
+    <div class="claim-banner">
+        <a href="https://design.withviso.com?utm_source=star-brite-pressure-washing.withviso.com&utm_medium=referral&utm_campaign=banner-link&utm_content=client-banner" target="_blank" rel="noopener">
+            Do you like the website? <u>Contact Viso</u> for your new website today
+        </a>
+    </div>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#what-we-do" onclick="toggleMobile()">What We Do</a>
+        <a href="#services" onclick="toggleMobile()">Services</a>
+        <a href="#why-choose-us" onclick="toggleMobile()">Why Us</a>
+        <a href="#reviews" onclick="toggleMobile()">Reviews</a>
+        <a href="#contact" onclick="toggleMobile()">Get a Quote</a>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content fade-in">
+            <h1>Kelowna's Trusted <span>Pressure Washing</span> Professionals</h1>
+            <p>We bring new life to your driveways, homes, and commercial properties with expert pressure washing services. Professional, reliable, and results you'll love.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/phone.svg" alt="" width="18" height="18" style="filter: brightness(0) invert(1);">
+                    Call (250) 300-6295
+                </a>
+                <a href="#services" class="btn btn-outline-light">Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do -->
+    <section id="what-we-do" class="bg-alt">
+        <div class="container">
+            <h2 class="section-title">What We Do</h2>
+            <p class="section-subtitle">STAR-BRITE Pressure Washing is Kelowna's premier pressure washing company, delivering professional exterior cleaning services for residential and commercial properties across the Okanagan Valley.</p>
+            <div class="what-we-do-grid">
+                <div class="wwd-image fade-in">
+                    <img src="https://images.pexels.com/photos/8811394/pexels-photo-8811394.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Professional pressure washing service">
+                </div>
+                <div class="wwd-content fade-in">
+                    <h3>Expert Care for Your Property</h3>
+                    <p>Owned and operated by Steven, our team brings years of experience and a dedication to quality that sets us apart. We treat every property like our own, using professional-grade equipment to deliver stunning results every time.</p>
+                    <p>From long driveways to full home exteriors, no job is too big or small. We take pride in our responsiveness, professionalism, and the lasting relationships we build with our clients.</p>
+                    <div class="wwd-stats">
+                        <div class="wwd-stat">
+                            <div class="num">5.0</div>
+                            <div class="label">Star Rating</div>
+                        </div>
+                        <div class="wwd-stat">
+                            <div class="num">31+</div>
+                            <div class="label">Happy Clients</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Comprehensive pressure washing solutions tailored to your property's needs. We use professional equipment and eco-friendly techniques for outstanding results.</p>
+
+            <!-- Service 1: Driveway & Concrete -->
+            <div class="service-block fade-in">
+                <div class="service-image">
+                    <img src="https://images.pexels.com/photos/14965464/pexels-photo-14965464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Driveway pressure washing">
+                </div>
+                <div class="service-info">
+                    <div class="service-icon">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/spray-can.svg" alt="" width="36" height="36">
+                    </div>
+                    <h3>Driveway & Concrete Cleaning</h3>
+                    <p>Restore your driveway, walkways, and concrete surfaces to like-new condition. Our high-pressure system removes years of dirt, oil stains, moss, and grime in one visit.</p>
+                    <ul>
+                        <li>
+                            <img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="">
+                            <span>Driveway and parking area cleaning</span>
+                        </li>
+                        <li>
+                            <img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="">
+                            <span>Walkway and sidewalk restoration</span>
+                        </li>
+                        <li>
+                            <img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="">
+                            <span>Oil stain and grime removal</span>
+                        </li>
+                        <li>
+                            <img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="">
+                            <span>Moss, algae, and mildew treatment</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 2: Residential (reverse) -->
+            <div class="service-block reverse fade-in">
+                <div class="service-image">
+                    <img src="https://images.pexels.com/photos/29114658/pexels-photo-29114658.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Residential pressure washing">
+                </div>
+                <div class="service-info">
+                    <div class="service-icon">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/home.svg" alt="" width="36" height="36">
+                    </div>
+                    <h3>Residential Pressure Washing</h3>
+                    <p>Enhance your home's curb appeal with a thorough exterior clean. We gently yet effectively clean siding, decks, fences, patios, and more — making your home look freshly maintained.</p>
+                    <ul>
+                        <li>
+                            <img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="">
+                            <span>House siding and exterior washing</span>
+                        </li>
+                        <li>
+                            <img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="">
+                            <span>Deck, patio, and fence cleaning</span>
+                        </li>
+                        <li>
+                            <img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="">
+                            <span>Roof and gutter cleaning</span>
+                        </li>
+                        <li>
+                            <img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="">
+                            <span>Driveway and garage floor cleaning</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 3: Commercial -->
+            <div class="service-block fade-in">
+                <div class="service-image">
+                    <img src="https://images.pexels.com/photos/34517611/pexels-photo-34517611.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Commercial pressure washing">
+                </div>
+                <div class="service-info">
+                    <div class="service-icon">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/building.svg" alt="" width="36" height="36">
+                    </div>
+                    <h3>Commercial Pressure Washing</h3>
+                    <p>Make a great first impression with a clean commercial property. We serve businesses throughout Kelowna, keeping storefronts, parking lots, and building exteriors spotless.</p>
+                    <ul>
+                        <li>
+                            <img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="">
+                            <span>Storefront and building exterior cleaning</span>
+                        </li>
+                        <li>
+                            <img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="">
+                            <span>Parking lot and sidewalk washing</span>
+                        </li>
+                        <li>
+                            <img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="">
+                            <span>Dumpster pad and loading bay cleaning</span>
+                        </li>
+                        <li>
+                            <img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="">
+                            <span>Regular maintenance programs</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-choose-us" class="bg-alt">
+        <div class="container">
+            <h2 class="section-title">Why Choose STAR-BRITE</h2>
+            <p class="section-subtitle">We're not just pressure washers — we're your neighbours. Here's why Kelowna trusts us with their properties.</p>
+            <div class="why-grid">
+                <div class="why-card fade-in">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/award.svg" alt="" width="44" height="44">
+                    <h4>5-Star Quality</h4>
+                    <p>Rated 5.0 stars by our customers. We don't cut corners — every job gets our full attention and highest standard of workmanship.</p>
+                </div>
+                <div class="why-card fade-in">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="" width="44" height="44">
+                    <h4>Reliable & On Time</h4>
+                    <p>We show up when we say we will and get the job done efficiently. Your time matters, and we respect it completely.</p>
+                </div>
+                <div class="why-card fade-in">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/shield.svg" alt="" width="44" height="44">
+                    <h4>Professional Service</h4>
+                    <p>From your first call to the final walk-through, expect clear communication, respectful staff, and a hassle-free experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <p class="section-subtitle">Don't take our word for it — hear from your neighbours in Kelowna.</p>
+            <div class="reviews-grid">
+                <div class="review-card fade-in">
+                    <div class="review-stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                    </div>
+                    <p class="review-text">I have a 70 metre long driveway that needed a scrub. He responded very professionally and I was very happy with the job. The owner Steven is a great guy — would recommend to anyone.</p>
+                    <div class="review-author">Jovan B.</div>
+                </div>
+                <div class="review-card fade-in">
+                    <div class="review-stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                    </div>
+                    <p class="review-text">Showed up on time, was very professional and personable. I am extremely happy with the results for a great price. Steven and his team did a great job — looking forward to hiring them again!</p>
+                    <div class="review-author">Ryan M.</div>
+                </div>
+                <div class="review-card fade-in">
+                    <div class="review-stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                    </div>
+                    <p class="review-text">Steven came and was very professional. Did an excellent job cleaning my driveway and for a great price! Exceptional customer service and amazing quality work.</p>
+                    <div class="review-author">Sam G.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="bg-alt">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-subtitle">Ready for a cleaner property? Give us a call or stop by — we'd love to hear from you.</p>
+            <div class="contact-grid">
+                <div class="contact-info fade-in">
+                    <h3>Contact Information</h3>
+                    <div class="contact-detail">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/phone.svg" alt="Phone">
+                        <div>
+                            <div class="label">Phone</div>
+                            <div class="value"><a href="tel:2503006295">(250) 300-6295</a></div>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/map-pin.svg" alt="Location">
+                        <div>
+                            <div class="label">Service Area</div>
+                            <div class="value">Kelowna &amp; Okanagan Valley, BC</div>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="Hours">
+                        <div>
+                            <div class="label">Business Hours</div>
+                            <div class="hours-grid">
+                                <span class="day">Mon - Fri</span>
+                                <span class="time">7:00 a.m. – 5:00 p.m.</span>
+                                <span class="day">Saturday</span>
+                                <span class="time">9:00 a.m. – 5:00 p.m.</span>
+                                <span class="day">Sunday</span>
+                                <span class="time closed">Closed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map fade-in">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1316534.5634797523!2d-119.54660211541426!3d49.873330111453086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60b383b392552295%3A0x5191922ded9dba8a!2sSTAR-BRITE%20Pressure%20Washing!5e0!3m2!1sen!2sca!4v1779854593980!5m2!1sen!2sca" width="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="STAR-BRITE Pressure Washing location"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <a href="#" class="logo">
+                <span class="logo-square">SB</span>
+                <span class="logo-text">
+                    <span style="color:#fff;font-family:'Playfair Display',serif;font-weight:700;">STAR-BRITE</span>
+                    <span style="color:rgba(255,255,255,0.5);font-size:0.6rem;font-weight:500;letter-spacing:0.5px;text-transform:uppercase;">Pressure Washing</span>
+                </span>
+            </a>
+            <p>Kelowna's trusted pressure washing professionals.</p>
+            <div class="footer-divider"></div>
+            <p>&copy; <span id="year"></span> STAR-BRITE Pressure Washing. All rights reserved.</p>
+            <div class="footer-attribution">
+                Made with love by <a href="https://design.withviso.com?utm_source=star-brite-pressure-washing.withviso.com&utm_medium=referral&utm_campaign=footer-link&utm_content=client-footer" target="_blank" rel="noopener">Viso Solutions</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile nav toggle
+        function toggleMobile() {
+            const nav = document.getElementById('mobileNav');
+            nav.classList.toggle('open');
+        }
+
+        // Close mobile nav on link click
+        document.querySelectorAll('.mobile-nav a').forEach(a => {
+            a.addEventListener('click', () => {
+                document.getElementById('mobileNav').classList.remove('open');
+            });
+        });
+
+        // Scroll animations (Intersection Observer)
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

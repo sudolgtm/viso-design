@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TBD8TFCF');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Planting Dreams Landscaping | Masonry & Property Maintenance | Chilliwack, BC</title>
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #1a1a2e;
+            background: #ffffff;
+            line-height: 1.6;
+        }
+        section[id] { scroll-margin-top: 112px; }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #ffffff;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            padding: 0 5%;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        .logo img { height: 42px; width: auto; }
+        .logo-text {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #2d5a27;
+            line-height: 1.2;
+        }
+        .logo-text span { display: block; font-size: 0.7rem; font-weight: 400; color: #6b7b6a; letter-spacing: 1px; text-transform: uppercase; }
+
+        nav { display: flex; align-items: center; gap: 8px; }
+        nav a {
+            text-decoration: none;
+            color: #3d4f3c;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+        nav a:hover { background: #eff6ed; color: #2d5a27; }
+        .nav-cta {
+            background: #2d5a27;
+            color: #fff !important;
+            padding: 8px 20px;
+            border-radius: 8px;
+        }
+        .nav-cta:hover { background: #1f3f1a !important; }
+
+        .mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+        .mobile-toggle img { width: 24px; height: 24px; }
+
+        /* Claim Banner */
+        .claim-banner {
+            position: sticky;
+            top: 70px;
+            z-index: 999;
+            background: #2d5a27;
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 0.85rem;
+        }
+        .claim-banner a { color: inherit; text-decoration: none; display: block; }
+        .claim-banner u { text-decoration: underline; }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url('https://images.pexels.com/photos/32759035/pexels-photo-32759035.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover no-repeat;
+        }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(26,26,46,0.85) 0%, rgba(45,90,39,0.7) 100%);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 40px 20px;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 16px;
+            line-height: 1.15;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero-cta {
+            display: inline-block;
+            background: #5b8c51;
+            color: #fff;
+            text-decoration: none;
+            padding: 16px 40px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .hero-cta:hover { background: #4a7a40; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(45,90,39,0.3); }
+
+        /* Section Common */
+        section { padding: 90px 5%; }
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 12px;
+        }
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.05rem;
+            color: #6b7b6a;
+            max-width: 600px;
+            margin: 0 auto 60px;
+        }
+
+        /* What We Do */
+        .what-we-do {
+            background: #f8fbf7;
+        }
+        .wwd-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .wwd-text { flex: 1; }
+        .wwd-text p { font-size: 1.1rem; color: #3d4f3c; margin-bottom: 20px; }
+        .wwd-image { flex: 1; }
+        .wwd-image img { width: 100%; border-radius: 16px; box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
+        @media (max-width: 768px) {
+            .wwd-content { flex-direction: column; }
+        }
+
+        /* Services - Alternating Two-Column */
+        .services { background: #ffffff; }
+        .service-item {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            max-width: 1100px;
+            margin: 0 auto 80px;
+        }
+        .service-item:last-child { margin-bottom: 0; }
+        .service-item.reverse { flex-direction: row-reverse; }
+        .service-image { flex: 1; }
+        .service-image img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            aspect-ratio: 3/2;
+            object-fit: cover;
+        }
+        .service-info { flex: 1; }
+        .service-info h3 {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2d5a27;
+            margin-bottom: 12px;
+        }
+        .service-info h3 img { width: 28px; height: 28px; }
+        .service-info p { color: #3d4f3c; margin-bottom: 16px; font-size: 0.95rem; }
+        .service-bullets { list-style: none; padding: 0; }
+        .service-bullets li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: #3d4f3c;
+        }
+        .service-bullets li img { width: 18px; height: 18px; flex-shrink: 0; margin-top: 3px; filter: invert(35%) sepia(15%) saturate(741%) hue-rotate(62deg) brightness(95%) contrast(89%); }
+        @media (max-width: 768px) {
+            .service-item, .service-item.reverse { flex-direction: column; gap: 30px; }
+        }
+
+        /* Why Choose Us */
+        .why-choose-us { background: #f8fbf7; }
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .why-card {
+            background: #fff;
+            padding: 35px 25px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+        }
+        .why-card:hover { transform: translateY(-5px); box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
+        .why-card img { width: 40px; height: 40px; margin-bottom: 16px; }
+        .why-card h4 { font-size: 1.1rem; font-weight: 600; color: #2d5a27; margin-bottom: 8px; }
+        .why-card p { font-size: 0.9rem; color: #6b7b6a; }
+
+        /* Reviews */
+        .reviews { background: #ffffff; }
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .review-card {
+            background: #f8fbf7;
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid #e8f0e5;
+        }
+        .review-stars {
+            display: flex;
+            gap: 2px;
+            margin-bottom: 12px;
+        }
+        .review-stars svg { width: 18px; height: 18px; }
+        .review-text { font-size: 0.95rem; color: #3d4f3c; font-style: italic; margin-bottom: 16px; line-height: 1.7; }
+        .review-author { font-weight: 600; color: #2d5a27; font-size: 0.9rem; }
+
+        /* Contact */
+        .contact { background: #f8fbf7; }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .contact-info h3 { font-size: 1.3rem; font-weight: 600; margin-bottom: 24px; color: #2d5a27; }
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+        .contact-item img { width: 22px; height: 22px; margin-top: 3px; flex-shrink: 0; }
+        .contact-item strong { display: block; font-size: 0.85rem; color: #6b7b6a; }
+        .contact-item span { font-size: 0.95rem; color: #1a1a2e; }
+        .contact-map iframe { width: 100%; height: 350px; border-radius: 16px; }
+        .hours-list { list-style: none; }
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+            border-bottom: 1px solid #e8f0e5;
+            font-size: 0.9rem;
+        }
+        .hours-list li:last-child { border-bottom: none; }
+        .hours-list .day { color: #3d4f3c; font-weight: 500; }
+        .hours-list .time { color: #2d5a27; }
+        .hours-list .closed { color: #c0392b; }
+        @media (max-width: 768px) {
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a2e;
+            color: rgba(255,255,255,0.8);
+            padding: 40px 5% 30px;
+            text-align: center;
+        }
+        footer .footer-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        footer .footer-logo img { height: 36px; width: auto; opacity: 0.9; }
+        footer p { font-size: 0.85rem; margin-bottom: 8px; }
+        footer .attribution {
+            margin-top: 20px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            font-size: 0.8rem;
+        }
+        footer .attribution a { color: #8ab87e; text-decoration: none; }
+        footer .attribution a:hover { text-decoration: underline; }
+        footer .copyright { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        /* Mobile Nav */
+        @media (max-width: 768px) {
+            header { padding: 0 4%; }
+            nav { display: none; }
+            nav.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: #fff;
+                padding: 20px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                gap: 4px;
+            }
+            nav.open a { width: 100%; text-align: center; padding: 12px; }
+            .mobile-toggle { display: block; }
+            .hero h1 { font-size: 2.2rem; }
+            .section-title { font-size: 1.8rem; }
+        }
+        @media (min-width: 769px) {
+            .mobile-toggle { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBD8TFCF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo">
+            <img src="/logo.png" alt="Planting Dreams Landscaping Logo">
+            <div class="logo-text">
+                Planting Dreams
+                <span>Landscaping</span>
+            </div>
+        </a>
+        <nav id="main-nav">
+            <a href="#what-we-do">What We Do</a>
+            <a href="#services">Services</a>
+            <a href="#why-choose-us">Why Us</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact" class="nav-cta">Contact Us</a>
+        </nav>
+        <button class="mobile-toggle" onclick="toggleNav()" aria-label="Toggle navigation menu">
+            <img src="https://unpkg.com/lucide-static@latest/icons/menu.svg" alt="Menu">
+        </button>
+    </header>
+
+    <!-- Claim Banner -->
+    <div class="claim-banner">
+        <a href="https://design.withviso.com?utm_source=planting-dreams-landscaping.withviso.com&amp;utm_medium=referral&amp;utm_campaign=banner-link&amp;utm_content=client-banner">
+            Do you like the website? <u>Contact Viso</u> for your new website today
+        </a>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content fade-in">
+            <h1>Expert Masonry &amp; Property Care</h1>
+            <p>Chilliwack's trusted team for quality masonry, bricklaying, stonework, and property maintenance. Bringing your outdoor visions to life.</p>
+            <a href="#contact" class="hero-cta">Get a Free Quote</a>
+        </div>
+    </section>
+
+    <!-- What We Do -->
+    <section class="what-we-do" id="what-we-do">
+        <h2 class="section-title fade-in">What We Do</h2>
+        <p class="section-subtitle fade-in">We transform outdoor spaces with expert craftsmanship and reliable service.</p>
+        <div class="wwd-content fade-in">
+            <div class="wwd-text">
+                <p>Planting Dreams Landscaping is a Chilliwack-based masonry and property maintenance company dedicated to quality workmanship and exceptional customer service. Whether you need a stunning brick facade, a durable retaining wall, a beautiful patio, or regular property upkeep, our experienced team delivers results that stand the test of time.</p>
+                <p>We bring over a decade of combined experience in the construction and landscaping industry, serving residential and commercial clients throughout Chilliwack and the Fraser Valley.</p>
+            </div>
+            <div class="wwd-image">
+                <img src="https://images.pexels.com/photos/7394220/pexels-photo-7394220.jpeg?auto=compress&cs=tinysrgb&w=940" alt="Masonry work" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <h2 class="section-title fade-in">Our Services</h2>
+        <p class="section-subtitle fade-in">Comprehensive masonry and property maintenance solutions for your home or business.</p>
+
+        <!-- Service 1: Masonry & Bricklaying - photo left -->
+        <div class="service-item fade-in">
+            <div class="service-image">
+                <img src="https://images.pexels.com/photos/7394220/pexels-photo-7394220.jpeg?auto=compress&cs=tinysrgb&w=940" alt="Masonry and bricklaying" loading="lazy">
+            </div>
+            <div class="service-info">
+                <h3>
+                    <img src="https://unpkg.com/lucide-static@latest/icons/building.svg" alt="">
+                    Masonry &amp; Bricklaying
+                </h3>
+                <p>Expert masonry and bricklaying services for residential and commercial properties. We create durable, beautiful structures using premium materials and time-tested techniques.</p>
+                <ul class="service-bullets">
+                    <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Brick veneer and full brick construction</li>
+                    <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Stone facade and accent walls</li>
+                    <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Chimney repair and rebuild</li>
+                    <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Mortar repointing and restoration</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Service 2: Property Maintenance - photo right -->
+        <div class="service-item reverse fade-in">
+            <div class="service-image">
+                <img src="https://images.pexels.com/photos/30290374/pexels-photo-30290374.jpeg?auto=compress&cs=tinysrgb&w=940" alt="Property maintenance" loading="lazy">
+            </div>
+            <div class="service-info">
+                <h3>
+                    <img src="https://unpkg.com/lucide-static@latest/icons/hammer.svg" alt="">
+                    Property Maintenance
+                </h3>
+                <p>Keep your property in top condition with our comprehensive maintenance services. We handle everything from seasonal cleanups to ongoing property care.</p>
+                <ul class="service-bullets">
+                    <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Seasonal yard cleanup and debris removal</li>
+                    <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Lawn care, hedge trimming, and pruning</li>
+                    <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Driveway and walkway sweeping</li>
+                    <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Gutter cleaning and downspout maintenance</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Service 3: Patio & Stonework - photo left -->
+        <div class="service-item fade-in">
+            <div class="service-image">
+                <img src="https://images.pexels.com/photos/32759035/pexels-photo-32759035.jpeg?auto=compress&cs=tinysrgb&w=940" alt="Patio and stonework" loading="lazy">
+            </div>
+            <div class="service-info">
+                <h3>
+                    <img src="https://unpkg.com/lucide-static@latest/icons/landmark.svg" alt="">
+                    Patio &amp; Stonework
+                </h3>
+                <p>Transform your outdoor living space with custom patios and stonework. From natural stone pathways to elegant entertaining areas, we bring your vision to life.</p>
+                <ul class="service-bullets">
+                    <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Interlocking paver patios and walkways</li>
+                    <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Natural stone and flagstone installations</li>
+                    <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Outdoor kitchen and fire pit bases</li>
+                    <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Stepping stone paths and garden borders</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Service 4: Retaining Walls - photo right -->
+        <div class="service-item reverse fade-in">
+            <div class="service-image">
+                <img src="https://images.pexels.com/photos/35961120/pexels-photo-35961120.jpeg?auto=compress&cs=tinysrgb&w=940" alt="Retaining wall" loading="lazy">
+            </div>
+            <div class="service-info">
+                <h3>
+                    <img src="https://unpkg.com/lucide-static@latest/icons/shield-check.svg" alt="">
+                    Retaining Walls
+                </h3>
+                <p>Professional retaining wall construction for erosion control, landscaping, and structural support. We build walls that are both functional and aesthetically pleasing.</p>
+                <ul class="service-bullets">
+                    <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Segmental retaining wall systems</li>
+                    <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Natural stone and boulder walls</li>
+                    <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Timber and railroad tie retaining walls</li>
+                    <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Drainage solutions and erosion control</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us" id="why-choose-us">
+        <h2 class="section-title fade-in">Why Choose Us</h2>
+        <p class="section-subtitle fade-in">What sets Planting Dreams Landscaping apart from the rest.</p>
+        <div class="why-grid">
+            <div class="why-card fade-in">
+                <img src="https://unpkg.com/lucide-static@latest/icons/award.svg" alt="">
+                <h4>Quality Craftsmanship</h4>
+                <p>Every project is built with attention to detail and a commitment to lasting quality. We take pride in our work and it shows.</p>
+            </div>
+            <div class="why-card fade-in">
+                <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="">
+                <h4>Reliable &amp; On Time</h4>
+                <p>We respect your schedule and deliver projects on time, every time. Clear communication from start to finish.</p>
+            </div>
+            <div class="why-card fade-in">
+                <img src="https://unpkg.com/lucide-static@latest/icons/leaf.svg" alt="">
+                <h4>Local Expertise</h4>
+                <p>Based in Chilliwack, we understand the local climate and soil conditions. We recommend solutions that work for the Fraser Valley.</p>
+            </div>
+            <div class="why-card fade-in">
+                <img src="https://unpkg.com/lucide-static@latest/icons/shield-check.svg" alt="">
+                <h4>Fully Insured</h4>
+                <p>Work with peace of mind. We carry full liability insurance and prioritize safety on every job site.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews" id="reviews">
+        <h2 class="section-title fade-in">What Our Clients Say</h2>
+        <p class="section-subtitle fade-in">Rated 5.0 stars on Google — here's what people are saying.</p>
+        <div class="reviews-grid">
+            <div class="review-card fade-in">
+                <div class="review-stars">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f4b400" stroke="#f4b400" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f4b400" stroke="#f4b400" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f4b400" stroke="#f4b400" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f4b400" stroke="#f4b400" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f4b400" stroke="#f4b400" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                </div>
+                <p class="review-text">"Worked there and was a great group of guys and work that they did."</p>
+                <p class="review-author">— Richard</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <h2 class="section-title fade-in">Contact Us</h2>
+        <p class="section-subtitle fade-in">Get in touch for a free quote or consultation.</p>
+        <div class="contact-grid">
+            <div class="contact-info fade-in">
+                <h3>Get In Touch</h3>
+                <div class="contact-item">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/map-pin.svg" alt="">
+                    <div>
+                        <strong>Address</strong>
+                        <span>5837 Sappers Way<br>Chilliwack, BC V2R 0G4</span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/phone.svg" alt="">
+                    <div>
+                        <strong>Phone</strong>
+                        <span><a href="tel:+16047991550" style="color:inherit;text-decoration:none;">(604) 799-1550</a></span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="">
+                    <div>
+                        <strong>Business Hours</strong>
+                        <ul class="hours-list">
+                            <li><span class="day">Monday</span><span class="time">7 a.m. – 5 p.m.</span></li>
+                            <li><span class="day">Tuesday</span><span class="time">7 a.m. – 5 p.m.</span></li>
+                            <li><span class="day">Wednesday</span><span class="time">7 a.m. – 5 p.m.</span></li>
+                            <li><span class="day">Thursday</span><span class="time">7 a.m. – 5 p.m.</span></li>
+                            <li><span class="day">Friday</span><span class="time">7 a.m. – 5 p.m.</span></li>
+                            <li><span class="day">Saturday</span><span class="time closed">Closed</span></li>
+                            <li><span class="day">Sunday</span><span class="time closed">Closed</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-map fade-in">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1337228.1757954475!2d-123.259169375!3d49.10993790000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54844129f3c4f787%3A0xbd28639f738e687e!2sPlanting%20Dreams%20Landscaping!5e0!3m2!1sen!2sca!4v1779854483579!5m2!1sen!2sca" width="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">
+            <img src="/logo.png" alt="Planting Dreams Landscaping">
+            <div style="text-align:left;">
+                <div style="font-family:'Georgia','Times New Roman',serif;font-size:1.1rem;font-weight:700;color:#fff;">Planting Dreams</div>
+                <div style="font-size:0.7rem;color:rgba(255,255,255,0.5);letter-spacing:1px;text-transform:uppercase;">Landscaping</div>
+            </div>
+        </div>
+        <p>5837 Sappers Way, Chilliwack, BC V2R 0G4</p>
+        <p>(604) 799-1550</p>
+        <div class="attribution">
+            Made with love by <a href="https://design.withviso.com?utm_source=planting-dreams-landscaping.withviso.com&amp;utm_medium=referral&amp;utm_campaign=footer-link&amp;utm_content=client-footer" target="_blank" rel="noopener">Viso Solutions</a>
+        </div>
+        <p class="copyright">&copy; <span id="year"></span> Planting Dreams Landscaping. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Mobile navigation toggle
+        function toggleNav() {
+            document.getElementById('main-nav').classList.toggle('open');
+        }
+        document.querySelectorAll('#main-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('main-nav').classList.remove('open');
+            });
+        });
+
+        // Fade-in animations on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Dynamic copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

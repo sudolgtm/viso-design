@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TBD8TFCF');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Bare Hardscapes and Design LTD. | Landscaping & Hardscaping | Chilliwack, BC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #4A7C59;
+  --primary-dark: #3A6347;
+  --primary-light: #6B9E7A;
+  --accent: #D4A373;
+  --bg-light: #F9F9F6;
+  --bg-dark: #2D3A2F;
+  --text: #1E1E1E;
+  --text-light: #6B7280;
+  --white: #FFFFFF;
+  --shadow: 0 4px 20px rgba(0,0,0,0.08);
+  --radius: 12px;
+  --header-height: 72px;
+  --banner-height: 44px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  background: var(--bg-light);
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--white);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.logo-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  border: 2px solid var(--primary);
+  padding: 6px 14px;
+  border-radius: 6px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.logo-text span { color: var(--accent); }
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.3s;
+}
+
+.nav-links a:hover { color: var(--primary); }
+.nav-links a:hover::after { width: 100%; }
+
+.nav-cta {
+  background: var(--primary);
+  color: var(--white) !important;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.nav-cta::after { display: none !important; }
+.nav-cta:hover { background: var(--primary-dark) !important; }
+
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.mobile-toggle img { width: 28px; height: 28px; }
+
+/* Claim Banner */
+.claim-banner {
+  position: sticky;
+  top: var(--header-height);
+  z-index: 999;
+  background: var(--primary-dark);
+  color: var(--white);
+  text-align: center;
+  padding: 10px 16px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.claim-banner a { color: var(--white); }
+
+.claim-banner u { text-decoration: underline; }
+
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('https://images.pexels.com/photos/13091885/pexels-photo-13091885.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(30,30,30,0.75) 0%, rgba(45,58,47,0.6) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 24px;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(212, 163, 115, 0.2);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 6px 18px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 24px;
+  letter-spacing: 0.5px;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4.2rem);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero h1 span { color: var(--accent); }
+
+.hero p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 36px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--accent);
+  color: var(--text);
+  padding: 16px 36px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.hero-cta:hover { background: #C49363; transform: translateY(-2px); }
+
+.hero-cta img { width: 20px; height: 20px; filter: brightness(0); }
+
+.hero-stats {
+  display: flex;
+  gap: 48px;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.hero-stat { text-align: center; }
+
+.hero-stat-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.hero-stat-label {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.7);
+  margin-top: 4px;
+}
+
+/* Section base */
+section {
+  padding: 96px 0;
+}
+
+section:nth-child(even) { background: var(--white); }
+
+.section-label {
+  display: inline-block;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-light);
+  max-width: 640px;
+  margin-bottom: 48px;
+}
+
+/* What We Do */
+.what-we-do-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.what-we-do-image {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.what-we-do-image img { width: 100%; height: 400px; object-fit: cover; }
+
+.what-we-do-content p {
+  color: var(--text-light);
+  font-size: 1.05rem;
+  margin-bottom: 24px;
+  line-height: 1.7;
+}
+
+.what-we-do-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.wwd-feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.wwd-feature img { width: 20px; height: 20px; flex-shrink: 0; }
+
+/* Services Alternating Layout */
+.service-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  padding: 80px 0;
+}
+
+.service-item:last-child { padding-bottom: 0; }
+
+.service-item.reverse .service-image { order: 2; }
+.service-item.reverse .service-info { order: 1; }
+
+.service-image {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.service-image img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  transition: transform 0.6s;
+}
+
+.service-item:hover .service-image img { transform: scale(1.03); }
+
+.service-icon {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.service-icon img { width: 34px; height: 34px; }
+
+.service-icon h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+.service-info p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.service-bullets {
+  list-style: none;
+}
+
+.service-bullets li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.service-bullets li img {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Why Choose Us */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+.why-card {
+  background: var(--bg-light);
+  border-radius: var(--radius);
+  padding: 36px 28px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.why-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.why-card img {
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 18px;
+}
+
+.why-card h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.why-card p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Reviews */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+.review-card {
+  background: var(--bg-light);
+  border-radius: var(--radius);
+  padding: 32px;
+  position: relative;
+}
+
+.review-card::before {
+  content: '\201C';
+  font-size: 4rem;
+  color: var(--primary);
+  opacity: 0.15;
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  font-family: serif;
+  line-height: 1;
+}
+
+.review-stars {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 16px;
+}
+
+.review-stars svg { fill: #F59E0B; stroke: #F59E0B; }
+
+.review-text {
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.7;
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+.review-author {
+  font-weight: 600;
+  color: var(--primary-dark);
+  font-size: 0.9rem;
+}
+
+/* Contact */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.contact-info h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: var(--primary-dark);
+}
+
+.contact-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.contact-detail img {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contact-detail-label {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.contact-detail-value {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.hours-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 24px;
+  max-width: 280px;
+}
+
+.hours-day { font-weight: 500; font-size: 0.9rem; }
+.hours-time { color: var(--text-light); font-size: 0.9rem; }
+.hours-closed { color: #EF4444; font-weight: 500; }
+
+.contact-map {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.contact-map iframe { width: 100%; height: 400px; display: block; }
+
+/* Footer */
+footer {
+  background: var(--bg-dark);
+  color: rgba(255,255,255,0.8);
+  padding: 48px 0 32px;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--white);
+  border: 2px solid var(--primary-light);
+  padding: 6px 14px;
+  border-radius: 6px;
+}
+
+.footer-logo span { color: var(--accent); }
+
+.footer-links {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-links a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover { color: var(--white); }
+
+.footer-divider {
+  width: 80px;
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+  margin: 8px 0;
+}
+
+.footer-attribution {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+}
+
+.footer-attribution a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.footer-attribution a:hover { text-decoration: underline; }
+
+.footer-copyright {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.4);
+}
+
+/* Mobile Nav */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  background: var(--white);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  z-index: 999;
+  padding: 16px 24px;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.mobile-nav.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobile-nav a {
+  display: block;
+  padding: 12px 0;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile-nav a:last-child { border-bottom: none; }
+.mobile-nav .nav-cta { text-align: center; margin-top: 8px; }
+
+/* Scroll animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .what-we-do-grid,
+  .service-item {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .service-item.reverse .service-image { order: 1; }
+  .service-item.reverse .service-info { order: 2; }
+
+  .contact-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .mobile-toggle { display: block; }
+  section { padding: 64px 0; }
+
+  .hero-stats { flex-direction: column; gap: 24px; }
+  .what-we-do-features { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .hero { min-height: 70vh; }
+
+  .service-image img { height: 260px; }
+}
+
+@media (min-width: 769px) {
+  .mobile-nav { display: none !important; }
+}
+
+section[id] { scroll-margin-top: calc(var(--header-height) + var(--banner-height)); }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBD8TFCF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- Header -->
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo-text">BH<span>&</span>D</a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#what-we-do">What We Do</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why-choose-us">Why Us</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+      </ul>
+    </nav>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+      <img src="https://unpkg.com/lucide-static@latest/icons/menu.svg" alt="Menu">
+    </button>
+  </div>
+</header>
+
+<!-- Claim Banner -->
+<div class="claim-banner">
+  <a href="https://design.withviso.com?utm_source=bare-hardscapes.withviso.com&utm_medium=referral&utm_campaign=banner-link&utm_content=client-banner" style="text-decoration: none; color: inherit;">
+    Do you like the website? <u>Contact Viso</u> for your new website today
+  </a>
+</div>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#what-we-do" class="mobile-nav-link">What We Do</a>
+  <a href="#services" class="mobile-nav-link">Services</a>
+  <a href="#why-choose-us" class="mobile-nav-link">Why Us</a>
+  <a href="#reviews" class="mobile-nav-link">Reviews</a>
+  <a href="#contact" class="nav-cta" style="color: var(--white); border: none;">Get a Quote</a>
+</div>
+
+<!-- Hero -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content fade-in">
+    <div class="hero-badge">Chilliwack's Trusted Landscaping Experts</div>
+    <h1>Transforming Outdoor Spaces Into <span>Works of Art</span></h1>
+    <p>From custom cedar fencing to stunning paver patios and retaining walls — Bare Hardscapes and Design LTD. brings premium craftsmanship to every project in the Fraser Valley.</p>
+    <a href="#contact" class="hero-cta">
+      Get Your Free Quote
+      <img src="https://unpkg.com/lucide-static@latest/icons/arrow-down.svg" alt="">
+    </a>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-number">14+</div>
+        <div class="hero-stat-label">5-Star Reviews</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-number">5.0</div>
+        <div class="hero-stat-label">Star Rating</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-number">10+</div>
+        <div class="hero-stat-label">Years Experience</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What We Do -->
+<section id="what-we-do">
+  <div class="container">
+    <div class="what-we-do-grid fade-in">
+      <div class="what-we-do-image">
+        <img src="https://images.pexels.com/photos/37144291/pexels-photo-37144291.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Landscaping project" loading="lazy">
+      </div>
+      <div class="what-we-do-content">
+        <span class="section-label">What We Do</span>
+        <h2 class="section-title">Full-Service Landscaping &amp; Hardscaping</h2>
+        <p>Bare Hardscapes and Design LTD. is a leader in full landscaping, custom cedar fencing, paving stones, and retaining walls. We take care of it all — from design to completion — serving the Fraser Valley and Greater Vancouver areas.</p>
+        <p>Owned and operated by Brian, our team brings over a decade of hands-on experience, delivering quality craftsmanship, professionalism, and exceptional customer service on every project.</p>
+        <div class="what-we-do-features">
+          <div class="wwd-feature"><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Custom Designs</div>
+          <div class="wwd-feature"><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Premium Materials</div>
+          <div class="wwd-feature"><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> On-Time Delivery</div>
+          <div class="wwd-feature"><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Competitive Quotes</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" style="background: var(--white);">
+  <div class="container">
+    <div style="text-align: center;" class="fade-in">
+      <span class="section-label">Our Services</span>
+      <h2 class="section-title">What We Build For You</h2>
+      <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">Every project is crafted with precision, using premium materials and time-tested techniques to ensure lasting beauty and durability.</p>
+    </div>
+
+    <!-- Service 1: Landscaping -->
+    <div class="service-item fade-in">
+      <div class="service-image">
+        <img src="https://images.pexels.com/photos/37144291/pexels-photo-37144291.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Full Landscaping" loading="lazy">
+      </div>
+      <div class="service-info">
+        <div class="service-icon">
+          <img src="https://unpkg.com/lucide-static@latest/icons/leaf.svg" alt="">
+          <h3>Full Landscaping &amp; Design</h3>
+        </div>
+        <p>Complete landscape design and installation services tailored to your property. We transform outdoor spaces into beautiful, functional environments you'll love.</p>
+        <ul class="service-bullets">
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Custom landscape design &amp; planning</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Plant &amp; garden installation</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Sodding &amp; seeding</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Drainage &amp; irrigation solutions</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Service 2: Fencing -->
+    <div class="service-item reverse fade-in">
+      <div class="service-image">
+        <img src="https://images.pexels.com/photos/6494984/pexels-photo-6494984.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Custom Cedar Fencing" loading="lazy">
+      </div>
+      <div class="service-info">
+        <div class="service-icon">
+          <img src="https://unpkg.com/lucide-static@latest/icons/fence.svg" alt="">
+          <h3>Custom Cedar Fencing</h3>
+        </div>
+        <p>Beautiful, durable custom cedar fencing built to the highest standards. From privacy fences to decorative gates, we create fencing that enhances your property.</p>
+        <ul class="service-bullets">
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Custom cedar fence construction</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Gates &amp; entryways</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> 90ft+ fence installation</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Privacy &amp; decorative styles</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Service 3: Patios -->
+    <div class="service-item fade-in">
+      <div class="service-image">
+        <img src="https://images.pexels.com/photos/7746913/pexels-photo-7746913.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Paving Stone Patios" loading="lazy">
+      </div>
+      <div class="service-info">
+        <div class="service-icon">
+          <img src="https://unpkg.com/lucide-static@latest/icons/compass.svg" alt="">
+          <h3>Paving Stone Patios &amp; Walkways</h3>
+        </div>
+        <p>Create stunning outdoor living spaces with expertly installed paving stone patios and walkways. We design patterns and layouts that complement your home.</p>
+        <ul class="service-bullets">
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Interlocking paver patios</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Walkways &amp; garden paths</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Custom patterns &amp; designs</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Driveway paving</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Service 4: Retaining Walls -->
+    <div class="service-item reverse fade-in">
+      <div class="service-image">
+        <img src="https://images.pexels.com/photos/35961120/pexels-photo-35961120.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Retaining Walls" loading="lazy">
+      </div>
+      <div class="service-info">
+        <div class="service-icon">
+          <img src="https://unpkg.com/lucide-static@latest/icons/shield-check.svg" alt="">
+          <h3>Retaining Wall Construction</h3>
+        </div>
+        <p>Professional retaining wall construction and rebuilds engineered for stability and longevity. We use quality materials to create walls that are both functional and attractive.</p>
+        <ul class="service-bullets">
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Retaining wall design &amp; build</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Retaining wall rebuilds</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Natural stone &amp; block options</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Drainage &amp; erosion control</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Service 5: Decks -->
+    <div class="service-item fade-in">
+      <div class="service-image">
+        <img src="https://images.pexels.com/photos/36220309/pexels-photo-36220309.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Deck Building" loading="lazy">
+      </div>
+      <div class="service-info">
+        <div class="service-icon">
+          <img src="https://unpkg.com/lucide-static@latest/icons/home.svg" alt="">
+          <h3>Deck Building &amp; Design</h3>
+        </div>
+        <p>Custom deck building that extends your living space outdoors. We design and construct decks that are beautiful, durable, and built to last through every season.</p>
+        <ul class="service-bullets">
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Custom deck design &amp; construction</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Multi-level decks</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Deck additions &amp; wraps</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Built-in seating &amp; features</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Service 6: Pergolas -->
+    <div class="service-item reverse fade-in">
+      <div class="service-image">
+        <img src="https://images.pexels.com/photos/18861439/pexels-photo-18861439.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Pergola Construction" loading="lazy">
+      </div>
+      <div class="service-info">
+        <div class="service-icon">
+          <img src="https://unpkg.com/lucide-static@latest/icons/trees.svg" alt="">
+          <h3>Pergola Construction</h3>
+        </div>
+        <p>Add shade, style, and structure to your outdoor space with a custom-built pergola. We create beautiful pergolas that define your outdoor living areas.</p>
+        <ul class="service-bullets">
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Custom pergola design &amp; build</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Freestanding &amp; attached styles</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Cedar &amp; wood construction</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Custom sizing &amp; finishes</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Service 7: Hardscaping -->
+    <div class="service-item fade-in">
+      <div class="service-image">
+        <img src="https://images.pexels.com/photos/9891098/pexels-photo-9891098.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Hardscaping" loading="lazy">
+      </div>
+      <div class="service-info">
+        <div class="service-icon">
+          <img src="https://unpkg.com/lucide-static@latest/icons/pickaxe.svg" alt="">
+          <h3>Hardscaping</h3>
+        </div>
+        <p>Expert hardscaping services that add lasting structure and beauty to your property. From stone features to pathways, we build hardscapes that stand the test of time.</p>
+        <ul class="service-bullets">
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Stone pathways &amp; steps</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Outdoor kitchen &amp; fire pit areas</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Rock &amp; boulder features</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Property drainage solutions</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section id="why-choose-us">
+  <div class="container">
+    <div style="text-align: center;" class="fade-in">
+      <span class="section-label">Why Choose Us</span>
+      <h2 class="section-title">Built on Quality &amp; Trust</h2>
+      <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">Our customers consistently praise our work ethic, craftsmanship, and attention to detail. Here's why they choose Bare Hardscapes.</p>
+    </div>
+    <div class="why-grid fade-in">
+      <div class="why-card">
+        <img src="https://unpkg.com/lucide-static@latest/icons/award.svg" alt="">
+        <h4>Quality Craftsmanship</h4>
+        <p>Every project is built with precision using premium materials. Our work is described as "beautiful craftsmanship" by customers who appreciate true quality.</p>
+      </div>
+      <div class="why-card">
+        <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="">
+        <h4>On Time &amp; On Budget</h4>
+        <p>We respect your time and your budget. Customers consistently note that we complete projects on schedule without going over the original estimate.</p>
+      </div>
+      <div class="why-card">
+        <img src="https://unpkg.com/lucide-static@latest/icons/thumbs-up.svg" alt="">
+        <h4>Exceptional Communication</h4>
+        <p>From prompt responses to regular updates throughout your project, we keep you informed every step of the way. Our customers love our responsiveness.</p>
+      </div>
+      <div class="why-card">
+        <img src="https://unpkg.com/lucide-static@latest/icons/sun.svg" alt="">
+        <h4>Creative Design Solutions</h4>
+        <p>We bring creative ideas to stay on budget while maximizing the beauty and functionality of your outdoor space. Every project is uniquely tailored to you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section id="reviews" style="background: var(--white);">
+  <div class="container">
+    <div style="text-align: center;" class="fade-in">
+      <span class="section-label">Testimonials</span>
+      <h2 class="section-title">What Our Clients Say</h2>
+      <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">Our 5.0-star rating speaks for itself. Here's what our customers have to say about working with us.</p>
+    </div>
+    <div class="reviews-grid fade-in">
+      <div class="review-card">
+        <div class="review-stars">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+        </div>
+        <p class="review-text">"Brian and his team did a fantastic job designing and building a new deck, fence and paving stone patio. He came in on budget and on schedule. The new additions helped us sell quicker than we expected!"</p>
+        <div class="review-author">— Randy</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+        </div>
+        <p class="review-text">"Brian and his team completed the project in 2 days without going over his original estimate. The retaining wall looks very professional and strong. I would not hesitate to hire his services again."</p>
+        <div class="review-author">— Aaron</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+        </div>
+        <p class="review-text">"We hired Brian for a backyard refresh which included installing paving stones, replacing fences and building a pergola. What we got was a competitive quote, a job completed on time and within budget, creative design ideas, and a clean job site. Brian really knows how to build!"</p>
+        <div class="review-author">— Lynda</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="container">
+    <div style="text-align: center;" class="fade-in">
+      <span class="section-label">Get In Touch</span>
+      <h2 class="section-title">Let's Build Something Beautiful</h2>
+      <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">Ready to transform your outdoor space? Contact us today for a free, no-obligation quote.</p>
+    </div>
+    <div class="contact-grid fade-in">
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+        <div class="contact-detail">
+          <img src="https://unpkg.com/lucide-static@latest/icons/phone.svg" alt="">
+          <div>
+            <div class="contact-detail-label">Phone</div>
+            <div class="contact-detail-value"><a href="tel:+16043381147" style="color: inherit; text-decoration: none;">(604) 338-1147</a></div>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <img src="https://unpkg.com/lucide-static@latest/icons/map-pin.svg" alt="">
+          <div>
+            <div class="contact-detail-label">Service Area</div>
+            <div class="contact-detail-value">Chilliwack, BC &amp; Fraser Valley</div>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="">
+          <div>
+            <div class="contact-detail-label">Business Hours</div>
+            <div class="contact-detail-value">
+              <div class="hours-grid">
+                <span class="hours-day">Mon–Sat</span>
+                <span class="hours-time">7:00 a.m. – 6:00 p.m.</span>
+                <span class="hours-day">Sunday</span>
+                <span class="hours-closed">Closed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1324882.4281084181!2d-123.33664741305162!3d49.5664194028243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54843f2aa4481b9f%3A0x6b846212befff2a8!2sBare%20Hardscapes%20and%20Design%20LTD.!5e0!3m2!1sen!2sca!4v1779854278363!5m2!1sen!2sca" width="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">BH<span>&</span>D</div>
+      <div class="footer-links">
+        <a href="#what-we-do">What We Do</a>
+        <a href="#services">Services</a>
+        <a href="#why-choose-us">Why Us</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-attribution">
+        Made with love by <a href="https://design.withviso.com?utm_source=bare-hardscapes.withviso.com&utm_medium=referral&utm_campaign=footer-link&utm_content=client-footer" target="_blank">Viso Solutions</a>
+      </div>
+      <div class="footer-copyright">
+        &copy; <span id="year"></span> Bare Hardscapes and Design LTD. All rights reserved.
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Set current year
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Mobile nav toggle
+const toggle = document.getElementById('mobileToggle');
+const mobileNav = document.getElementById('mobileNav');
+
+toggle.addEventListener('click', function() {
+  mobileNav.classList.toggle('open');
+  const icon = this.querySelector('img');
+  if (mobileNav.classList.contains('open')) {
+    icon.src = 'https://unpkg.com/lucide-static@latest/icons/x.svg';
+    icon.alt = 'Close';
+  } else {
+    icon.src = 'https://unpkg.com/lucide-static@latest/icons/menu.svg';
+    icon.alt = 'Menu';
+  }
+});
+
+// Close mobile nav on link click
+document.querySelectorAll('.mobile-nav-link').forEach(link => {
+  link.addEventListener('click', function() {
+    mobileNav.classList.remove('open');
+    toggle.querySelector('img').src = 'https://unpkg.com/lucide-static@latest/icons/menu.svg';
+  });
+});
+
+// Scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Close mobile nav on scroll
+window.addEventListener('scroll', function() {
+  if (mobileNav.classList.contains('open')) {
+    mobileNav.classList.remove('open');
+    toggle.querySelector('img').src = 'https://unpkg.com/lucide-static@latest/icons/menu.svg';
+  }
+});
+</script>
+</body>
+</html>

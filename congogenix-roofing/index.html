@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TBD8TFCF');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>CongoGenix Roofing | Lethbridge Roofing Contractor</title>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #111111;
+  --primary-dark: #000000;
+  --primary-light: #F5F5F5;
+  --accent: #D97706;
+  --accent-hover: #B45309;
+  --text: #1F2937;
+  --text-light: #6B7280;
+  --text-on-dark: #F9FAFB;
+  --bg: #FFFFFF;
+  --bg-alt: #F9FAFB;
+  --bg-dark: #111111;
+  --border: #E5E7EB;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow: 0 4px 24px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.12);
+  --font: 'Inter', -apple-system, sans-serif;
+  --header-h: 72px;
+  --banner-h: 44px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+section[id] { scroll-margin-top: calc(var(--header-h) + var(--banner-h)); }
+
+/* Header */
+header {
+  position: sticky; top: 0; z-index: 1000;
+  background: var(--primary);
+  height: var(--header-h);
+  display: flex; align-items: center;
+  padding: 0 24px;
+}
+.header-inner {
+  max-width: 1200px; width: 100%; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.logo img { height: 40px; width: auto; }
+.logo-text { font-size: 20px; font-weight: 700; color: #fff; letter-spacing: -0.5px; }
+nav { display: flex; align-items: center; gap: 8px; }
+nav a {
+  color: rgba(255,255,255,0.8); text-decoration: none;
+  font-size: 14px; font-weight: 500; padding: 8px 14px;
+  border-radius: var(--radius-sm); transition: all 0.2s;
+}
+nav a:hover { color: #fff; background: rgba(255,255,255,0.1); }
+.mobile-toggle { display: none; background: none; border: none; color: #fff; cursor: pointer; padding: 8px; }
+
+/* Claim Banner */
+.claim-banner {
+  position: sticky; top: var(--header-h); z-index: 999;
+  background: var(--primary); color: #fff;
+  text-align: center; padding: 10px 16px;
+  font-size: 14px; font-weight: 500;
+  height: var(--banner-h); display: flex; align-items: center; justify-content: center;
+}
+.claim-banner a { text-decoration: none; color: inherit; }
+.claim-banner u { text-decoration: underline; }
+
+/* Hero */
+.hero {
+  position: relative; min-height: 85vh;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background: url('https://images.pexels.com/photos/19895916/pexels-photo-19895916.png?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop') center center / cover no-repeat;
+}
+.hero-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.7); }
+.hero-content {
+  position: relative; z-index: 1;
+  text-align: center; max-width: 800px; padding: 0 24px;
+}
+.hero h1 {
+  font-size: clamp(36px, 6vw, 64px); font-weight: 800;
+  color: #fff; line-height: 1.1; margin-bottom: 16px;
+}
+.hero p {
+  font-size: clamp(16px, 2vw, 20px); color: rgba(255,255,255,0.85);
+  margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto;
+}
+.hero .btn {
+  display: inline-block; padding: 16px 40px;
+  background: var(--accent); color: #fff; text-decoration: none;
+  border-radius: var(--radius); font-weight: 600; font-size: 16px;
+  transition: background 0.2s, transform 0.2s;
+}
+.hero .btn:hover { background: var(--accent-hover); transform: translateY(-2px); }
+
+/* Sections */
+.section { padding: 96px 24px; }
+.section-alt { background: var(--bg-alt); }
+.section-dark { background: var(--bg-dark); color: var(--text-on-dark); }
+.section-inner { max-width: 1200px; margin: 0 auto; }
+
+.section-label {
+  display: inline-block; font-size: 13px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 2px;
+  color: var(--accent); margin-bottom: 8px;
+}
+.section-title {
+  font-size: clamp(28px, 4vw, 40px); font-weight: 700;
+  margin-bottom: 16px; line-height: 1.2;
+}
+.section-subtitle {
+  font-size: 16px; color: var(--text-light);
+  max-width: 600px; margin-bottom: 48px;
+}
+.section-dark .section-subtitle { color: rgba(255,255,255,0.6); }
+.text-center { text-align: center; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+/* What We Do */
+.whatwedo-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 48px; align-items: center;
+}
+.whatwedo-image {
+  border-radius: var(--radius); overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+.whatwedo-image img { width: 100%; height: 400px; object-fit: cover; display: block; }
+.whatwedo-text h3 { font-size: 24px; font-weight: 700; margin-bottom: 16px; }
+.whatwedo-text p { font-size: 16px; color: var(--text-light); margin-bottom: 20px; line-height: 1.7; }
+.whatwedo-text ul { list-style: none; padding: 0; }
+.whatwedo-text ul li { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; font-size: 15px; }
+.whatwedo-text ul li img { width: 20px; height: 20px; flex-shrink: 0; margin-top: 2px; }
+
+/* Services - Alternating Two-Column */
+.service-item {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 48px; align-items: center;
+  padding: 80px 0;
+}
+.service-item:first-child { padding-top: 0; }
+.service-item:last-child { padding-bottom: 0; }
+.service-item.reverse .service-image { order: 2; }
+.service-item.reverse .service-content { order: 1; }
+.service-image {
+  border-radius: var(--radius); overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+.service-image img { width: 100%; height: 380px; object-fit: cover; display: block; }
+.service-content .service-icon { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.service-content .service-icon img { width: 28px; height: 28px; }
+.service-content .service-icon h3 { font-size: 22px; font-weight: 700; }
+.service-content p { font-size: 15px; color: var(--text-light); line-height: 1.7; margin-bottom: 16px; }
+.service-content ul { list-style: none; padding: 0; }
+.service-content ul li {
+  display: flex; align-items: flex-start; gap: 10px;
+  margin-bottom: 10px; font-size: 14px;
+}
+.service-content ul li img { width: 18px; height: 18px; flex-shrink: 0; margin-top: 2px; }
+
+/* Why Choose Us */
+.why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+.why-card {
+  background: var(--bg); padding: 32px 24px;
+  border-radius: var(--radius); text-align: center;
+  border: 1px solid var(--border); transition: transform 0.3s, box-shadow 0.3s;
+}
+.why-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.section-dark .why-card { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); }
+.why-card img { width: 40px; height: 40px; margin-bottom: 16px; }
+.why-card h4 { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.why-card p { font-size: 14px; color: var(--text-light); line-height: 1.6; }
+.section-dark .why-card p { color: rgba(255,255,255,0.6); }
+
+/* Reviews */
+.reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+.review-card {
+  background: var(--bg); padding: 32px 24px;
+  border-radius: var(--radius); border: 1px solid var(--border);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.review-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.review-stars { display: flex; gap: 2px; margin-bottom: 12px; }
+.review-stars svg { width: 18px; height: 18px; }
+.review-text { font-size: 14px; line-height: 1.7; color: var(--text-light); margin-bottom: 16px; font-style: italic; }
+.review-author { font-weight: 600; font-size: 15px; color: var(--text); }
+
+/* Contact */
+.contact-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 48px; align-items: start;
+}
+.contact-info h3 { font-size: 22px; font-weight: 700; margin-bottom: 24px; }
+.contact-item { display: flex; gap: 12px; margin-bottom: 20px; }
+.contact-item img { width: 22px; height: 22px; flex-shrink: 0; margin-top: 2px; }
+.contact-item div { font-size: 15px; }
+.contact-item strong { display: block; font-size: 13px; color: var(--text-light); margin-bottom: 2px; }
+.hours-grid { display: grid; grid-template-columns: auto auto; gap: 6px 24px; margin-top: 8px; }
+.hours-grid .day { font-weight: 500; }
+.hours-grid .time { color: var(--text-light); }
+.contact-map { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.contact-map iframe { width: 100%; height: 400px; border: 0; display: block; }
+
+/* Footer */
+footer {
+  background: var(--primary-dark); color: rgba(255,255,255,0.7);
+  padding: 48px 24px 32px; text-align: center;
+}
+.footer-inner { max-width: 1200px; margin: 0 auto; }
+.footer-logo { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 16px; }
+.footer-logo img { height: 36px; width: auto; }
+.footer-logo span { font-size: 18px; font-weight: 700; color: #fff; }
+.footer-divider { width: 48px; height: 2px; background: var(--accent); margin: 16px auto; border: none; }
+.footer-text { font-size: 14px; margin-bottom: 12px; }
+.footer-attribution {
+  font-size: 12px; color: rgba(255,255,255,0.6);
+  margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1);
+}
+.footer-attribution a { color: rgba(255,255,255,0.6); text-decoration: none; }
+.footer-attribution a:hover { color: #fff; }
+
+/* Mobile Nav */
+.mobile-nav {
+  display: none;
+  position: fixed; top: var(--header-h); left: 0; right: 0;
+  background: var(--primary); padding: 16px 24px;
+  z-index: 999; border-top: 1px solid rgba(255,255,255,0.1);
+}
+.mobile-nav.open { display: block; }
+.mobile-nav a {
+  display: block; color: rgba(255,255,255,0.8); text-decoration: none;
+  padding: 12px 0; font-size: 16px; font-weight: 500;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.mobile-nav a:last-child { border-bottom: none; }
+
+/* Animations */
+.fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* Responsive */
+@media (max-width: 768px) {
+  :root { --header-h: 64px; --banner-h: 48px; }
+  header { padding: 0 16px; }
+  .logo img { height: 32px; }
+  .logo-text { font-size: 17px; }
+  nav.desktop-nav { display: none; }
+  .mobile-toggle { display: block; }
+  .hero { min-height: 70vh; }
+  .section { padding: 64px 16px; }
+  .whatwedo-grid { grid-template-columns: 1fr; gap: 32px; }
+  .whatwedo-image img { height: 260px; }
+  .service-item { grid-template-columns: 1fr; gap: 24px; padding: 48px 0; }
+  .service-item.reverse .service-image { order: 1; }
+  .service-item.reverse .service-content { order: 2; }
+  .service-image img { height: 240px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+  .contact-map iframe { height: 300px; }
+  .why-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .claim-banner { font-size: 12px; padding: 8px 12px; }
+}
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBD8TFCF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- Header -->
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <img src="/logo.png" alt="CongoGenix Roofing">
+      <span class="logo-text">CongoGenix</span>
+    </a>
+    <nav class="desktop-nav">
+      <a href="#services">Services</a>
+      <a href="#why-choose-us">Why Us</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="mobile-toggle" onclick="toggleMobileNav()" aria-label="Toggle menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- Claim Banner -->
+<div class="claim-banner">
+  <a href="https://design.withviso.com?utm_source=congogenix-roofing.withviso.com&utm_medium=referral&utm_campaign=banner-link&utm_content=client-banner">
+    Do you like the website? <u>Contact Viso</u> for your new website today
+  </a>
+</div>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#services" onclick="closeMobileNav()">Services</a>
+  <a href="#why-choose-us" onclick="closeMobileNav()">Why Us</a>
+  <a href="#reviews" onclick="closeMobileNav()">Reviews</a>
+  <a href="#contact" onclick="closeMobileNav()">Contact</a>
+</div>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Expert Roofing in Lethbridge</h1>
+    <p>Over 30 years of combined experience delivering quality roofing services — from torch-on flat roofs to architectural shingles. Locally owned and trusted by your community.</p>
+    <a href="#contact" class="btn">Get Your Free Estimate</a>
+  </div>
+</section>
+
+<!-- What We Do -->
+<section class="section" id="what-we-do">
+  <div class="section-inner">
+    <div class="whatwedo-grid">
+      <div class="whatwedo-image fade-in">
+        <img src="https://images.pexels.com/photos/31762405/pexels-photo-31762405.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="CongoGenix Roofing work" loading="lazy">
+      </div>
+      <div class="whatwedo-text fade-in">
+        <span class="section-label">About Us</span>
+        <h3>What We Do</h3>
+        <p>CongoGenix Roofing is a locally owned, family-operated roofing company serving Lethbridge and surrounding areas. With over 30 years of combined experience, we specialize in SBS torch-on flat roofing and architectural asphalt shingle installation and repairs. We are dedicated to safe work practices while providing exceptional quality at very affordable prices.</p>
+        <ul>
+          <li>
+            <img src="https://unpkg.com/lucide-static@latest/icons/shield-check.svg" alt="">
+            <span>Over 30 years combined experience in the industry</span>
+          </li>
+          <li>
+            <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+            <span>5.0-star rating from 52+ satisfied customers</span>
+          </li>
+          <li>
+            <img src="https://unpkg.com/lucide-static@latest/icons/hard-hat.svg" alt="">
+            <span>Journeyman certified with 5-year workmanship warranty</span>
+          </li>
+          <li>
+            <img src="https://unpkg.com/lucide-static@latest/icons/gauge.svg" alt="">
+            <span>Free estimates with competitive, transparent pricing</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="section section-alt" id="services">
+  <div class="section-inner">
+    <div class="text-center">
+      <span class="section-label">Our Services</span>
+      <h2 class="section-title">Professional Roofing Services</h2>
+      <p class="section-subtitle mx-auto">From complete roof replacements to targeted repairs, we handle all your roofing needs with expert craftsmanship and attention to detail.</p>
+    </div>
+
+    <!-- Service 1: SBS Torch-On Flat Roofing -->
+    <div class="service-item fade-in">
+      <div class="service-image">
+        <img src="https://images.pexels.com/photos/31762405/pexels-photo-31762405.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="SBS Torch-On Flat Roofing" loading="lazy">
+      </div>
+      <div class="service-content">
+        <div class="service-icon">
+          <img src="https://unpkg.com/lucide-static@latest/icons/building.svg" alt="">
+          <h3>SBS Torch-On Flat Roofing</h3>
+        </div>
+        <p>Expert torch-on membrane installation for flat and low-slope roofs. Our SBS-modified bitumen systems provide superior waterproofing and durability for commercial and residential buildings.</p>
+        <ul>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Professional SBS torch-on membrane installation</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Complete flat roof replacement and repairs</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Superior waterproofing and leak protection</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Durable long-lasting commercial-grade systems</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Service 2: Architectural Asphalt Shingles -->
+    <div class="service-item reverse fade-in">
+      <div class="service-image">
+        <img src="https://images.pexels.com/photos/12660749/pexels-photo-12660749.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Architectural Asphalt Shingles" loading="lazy">
+      </div>
+      <div class="service-content">
+        <div class="service-icon">
+          <img src="https://unpkg.com/lucide-static@latest/icons/home.svg" alt="">
+          <h3>Architectural Asphalt Shingles</h3>
+        </div>
+        <p>Premium architectural asphalt shingle installation that enhances your home's curb appeal while providing exceptional protection against the elements. We use high-quality materials built to last.</p>
+        <ul>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Premium architectural shingle installation</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Complete shingle tear-off and disposal</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> New roof construction and re-roofing</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Thorough cleanup including debris removal</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Service 3: Roof Installation & Repair -->
+    <div class="service-item fade-in">
+      <div class="service-image">
+        <img src="https://images.pexels.com/photos/9431615/pexels-photo-9431615.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Roof Installation and Repair" loading="lazy">
+      </div>
+      <div class="service-content">
+        <div class="service-icon">
+          <img src="https://unpkg.com/lucide-static@latest/icons/hammer.svg" alt="">
+          <h3>Roof Installation &amp; Repair</h3>
+        </div>
+        <p>Whether you need a complete roof replacement or targeted repairs for storm damage and leaks, our experienced team delivers prompt, professional service with transparent pricing and lasting results.</p>
+        <ul>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Complete roof installation and replacement</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Leak detection and emergency roof repairs</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Storm and wind damage restoration</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Thorough roof inspections with detailed estimates</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Service 4: Gutters, Soffit & Fascia -->
+    <div class="service-item reverse fade-in">
+      <div class="service-image">
+        <img src="https://images.pexels.com/photos/25907259/pexels-photo-25907259.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Gutters Soffit and Fascia" loading="lazy">
+      </div>
+      <div class="service-content">
+        <div class="service-icon">
+          <img src="https://unpkg.com/lucide-static@latest/icons/droplets.svg" alt="">
+          <h3>Gutters, Soffit &amp; Fascia</h3>
+        </div>
+        <p>Complete exterior water management solutions including 5-inch seamless gutter installation, soffit and fascia replacement. Protect your home's foundation and roofline with our professional services.</p>
+        <ul>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> 5-inch seamless gutter installation</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Gutter repairs and maintenance</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Soffit and fascia replacement</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Complete exterior drainage solutions</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="section" id="why-choose-us">
+  <div class="section-inner">
+    <div class="text-center">
+      <span class="section-label">Why Choose Us</span>
+      <h2 class="section-title">Built on Trust and Quality</h2>
+      <p class="section-subtitle mx-auto">Here's why homeowners and businesses in Lethbridge trust CongoGenix Roofing for their roofing needs.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card fade-in">
+        <img src="https://unpkg.com/lucide-static@latest/icons/shield-check.svg" alt="">
+        <h4>30+ Years Experience</h4>
+        <p>Our team brings decades of combined roofing expertise to every project, ensuring quality results you can count on.</p>
+      </div>
+      <div class="why-card fade-in">
+        <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="">
+        <h4>5-Star Rated</h4>
+        <p>With a perfect 5.0-star rating from over 50 satisfied customers, our reputation speaks for itself.</p>
+      </div>
+      <div class="why-card fade-in">
+        <img src="https://unpkg.com/lucide-static@latest/icons/hard-hat.svg" alt="">
+        <h4>Certified &amp; Warranted</h4>
+        <p>Journeyman certified roofers with a 5-year workmanship warranty on all completed projects for your peace of mind.</p>
+      </div>
+      <div class="why-card fade-in">
+        <img src="https://unpkg.com/lucide-static@latest/icons/gauge.svg" alt="">
+        <h4>Competitive Pricing</h4>
+        <p>We provide detailed, transparent quotes with no hidden costs and competitive rates that offer exceptional value.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section class="section section-alt" id="reviews">
+  <div class="section-inner">
+    <div class="text-center">
+      <span class="section-label">Testimonials</span>
+      <h2 class="section-title">What Our Customers Say</h2>
+      <p class="section-subtitle mx-auto">Don't just take our word for it — hear from our satisfied customers in Lethbridge.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card fade-in">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" fill="#D97706" stroke="#D97706" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg viewBox="0 0 24 24" fill="#D97706" stroke="#D97706" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg viewBox="0 0 24 24" fill="#D97706" stroke="#D97706" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg viewBox="0 0 24 24" fill="#D97706" stroke="#D97706" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg viewBox="0 0 24 24" fill="#D97706" stroke="#D97706" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+        </div>
+        <p class="review-text">"Highly recommend! Chad came out to look at our roof after purchasing a new home, and found it needed to be replaced. His team got the job done quickly and it looks great! Competitive pricing and great service."</p>
+        <div class="review-author">Dustin</div>
+      </div>
+      <div class="review-card fade-in">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" fill="#D97706" stroke="#D97706" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg viewBox="0 0 24 24" fill="#D97706" stroke="#D97706" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg viewBox="0 0 24 24" fill="#D97706" stroke="#D97706" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg viewBox="0 0 24 24" fill="#D97706" stroke="#D97706" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg viewBox="0 0 24 24" fill="#D97706" stroke="#D97706" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+        </div>
+        <p class="review-text">"The team was fast, professional, and cleaned up the area thoroughly using tarps on the ground. Chad was great to work with!"</p>
+        <div class="review-author">Shea</div>
+      </div>
+      <div class="review-card fade-in">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" fill="#D97706" stroke="#D97706" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg viewBox="0 0 24 24" fill="#D97706" stroke="#D97706" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg viewBox="0 0 24 24" fill="#D97706" stroke="#D97706" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg viewBox="0 0 24 24" fill="#D97706" stroke="#D97706" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          <svg viewBox="0 0 24 24" fill="#D97706" stroke="#D97706" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+        </div>
+        <p class="review-text">"I had a very good experience with CongoGenix Roofing. They were very professional, on time, and charged the exact estimate despite having to do a couple extras repairs. Would recommend them for any torch down roof, soffit, or gutter replacement."</p>
+        <div class="review-author">Mitchell</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="section" id="contact">
+  <div class="section-inner">
+    <div class="text-center">
+      <span class="section-label">Get In Touch</span>
+      <h2 class="section-title">Contact Us</h2>
+      <p class="section-subtitle mx-auto">Ready to start your roofing project? Give us a call or stop by. We offer free estimates and would love to hear from you.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info fade-in">
+        <h3>Contact Information</h3>
+        <div class="contact-item">
+          <img src="https://unpkg.com/lucide-static@latest/icons/map-pin.svg" alt="">
+          <div>
+            <strong>Address</strong>
+            411 Trackside Dr #4, Lethbridge, AB T1K 8H4
+          </div>
+        </div>
+        <div class="contact-item">
+          <img src="https://unpkg.com/lucide-static@latest/icons/phone.svg" alt="">
+          <div>
+            <strong>Phone</strong>
+            <a href="tel:+14039422951" style="color: inherit; text-decoration: none;">(403) 942-2951</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="">
+          <div>
+            <strong>Hours of Operation</strong>
+            <div class="hours-grid">
+              <span class="day">Monday</span><span class="time">8:00 am – 7:00 pm</span>
+              <span class="day">Tuesday</span><span class="time">8:00 am – 7:00 pm</span>
+              <span class="day">Wednesday</span><span class="time">8:00 am – 7:00 pm</span>
+              <span class="day">Thursday</span><span class="time">8:00 am – 7:00 pm</span>
+              <span class="day">Friday</span><span class="time">8:00 am – 7:00 pm</span>
+              <span class="day">Saturday</span><span class="time">8:00 am – 4:00 pm</span>
+              <span class="day">Sunday</span><span class="time">8:00 am – 4:00 pm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-map fade-in">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2595033.4506425895!2d-115.92743611521095!3d50.56741600641993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x536e87089917715f%3A0xcd020150e1bf5d5d!2sCongoGenix%20Roofing!5e0!3m2!1sen!2sca!4v1780099421534!5m2!1sen!2sca" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <img src="/logo.png" alt="CongoGenix Roofing">
+      <span>CongoGenix Roofing</span>
+    </div>
+    <hr class="footer-divider">
+    <p class="footer-text">411 Trackside Dr #4, Lethbridge, AB T1K 8H4</p>
+    <p class="footer-text">(403) 942-2951</p>
+    <p class="footer-text" style="font-size: 13px; color: rgba(255,255,255,0.5);">Locally owned &middot; Over 30 years experience &middot; 5.0 ★ rating</p>
+    <p class="footer-text" style="font-size: 13px; color: rgba(255,255,255,0.4);">&copy; <span id="year"></span> CongoGenix Roofing. All rights reserved.</p>
+    <div class="footer-attribution">
+      Made with love by <a href="https://design.withviso.com?utm_source=congogenix-roofing.withviso.com&utm_medium=referral&utm_campaign=footer-link&utm_content=client-footer">Viso Solutions</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Mobile nav
+function toggleMobileNav() {
+  document.getElementById('mobileNav').classList.toggle('open');
+}
+function closeMobileNav() {
+  document.getElementById('mobileNav').classList.remove('open');
+}
+
+// Fade-in animations on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.15 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  document.getElementById('year').textContent = new Date().getFullYear();
+});
+</script>
+</body>
+</html>
