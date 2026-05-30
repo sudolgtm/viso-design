@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TBD8TFCF');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Robinson Tree &amp; Landscaping Services Ltd. | Tree Service Burns Lake</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: #1a1a2e; line-height: 1.6; overflow-x: hidden; }
+    section[id] { scroll-margin-top: 120px; }
+
+    /* Header */
+    header {
+      position: sticky; top: 0; z-index: 1000;
+      background: #1a3a2a; color: #fff;
+      padding: 0 24px; height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    header .logo {
+      font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 800;
+      letter-spacing: 0.5px; display: flex; align-items: center; gap: 10px;
+    }
+    header .logo .logo-box {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 40px; height: 40px; border: 2px solid #4ade80;
+      border-radius: 8px; font-size: 0.85rem; font-weight: 700;
+      color: #4ade80; font-family: 'Inter', sans-serif;
+    }
+    nav { display: flex; align-items: center; gap: 28px; }
+    nav a { color: #d1d5db; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+    nav a:hover { color: #4ade80; }
+    .mobile-toggle { display: none; background: none; border: none; color: #fff; cursor: pointer; padding: 4px; }
+    .mobile-toggle img { width: 26px; height: 26px; filter: brightness(0) invert(1); }
+
+    /* Claim Banner */
+    .claim-banner {
+      position: sticky; top: 64px; z-index: 999;
+      background: #2d6a4f; color: #fff; text-align: center;
+      padding: 10px 24px; font-size: 0.9rem; font-weight: 500;
+      line-height: 1.4;
+    }
+    .claim-banner a { color: inherit; text-decoration: none; }
+    .claim-banner u { text-decoration: underline; }
+
+    /* Hero */
+    .hero {
+      position: relative; min-height: 85vh;
+      display: flex; align-items: center; justify-content: center;
+      background: url('https://images.pexels.com/photos/7812853/pexels-photo-7812853.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop') center/cover no-repeat;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(26,58,42,0.85) 0%, rgba(26,58,42,0.6) 100%);
+    }
+    .hero-content { position: relative; z-index: 1; text-align: center; color: #fff; max-width: 800px; padding: 0 24px; }
+    .hero-content h1 { font-family: 'Playfair Display', serif; font-size: 3.2rem; font-weight: 800; margin-bottom: 16px; line-height: 1.15; }
+    .hero-content p { font-size: 1.2rem; color: #d1d5db; margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .btn-primary {
+      display: inline-block; background: #4ade80; color: #1a3a2a;
+      padding: 14px 40px; border-radius: 8px; font-weight: 600; font-size: 1rem;
+      text-decoration: none; transition: all 0.2s; border: none; cursor: pointer;
+    }
+    .btn-primary:hover { background: #22c55e; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(74,222,128,0.3); }
+
+    /* Sections common */
+    .section { padding: 80px 24px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .section-title { text-align: center; margin-bottom: 56px; }
+    .section-title h2 { font-family: 'Playfair Display', serif; font-size: 2.4rem; color: #1a3a2a; margin-bottom: 12px; }
+    .section-title p { color: #6b7280; font-size: 1.05rem; max-width: 600px; margin: 0 auto; }
+
+    /* What We Do */
+    .what-we-do { background: #f9fafb; }
+    .wwd-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .wwd-grid img { width: 100%; border-radius: 16px; object-fit: cover; height: 400px; box-shadow: 0 8px 32px rgba(0,0,0,0.08); }
+    .wwd-text h3 { font-size: 1.6rem; color: #1a3a2a; margin-bottom: 16px; }
+    .wwd-text p { color: #4b5563; margin-bottom: 20px; font-size: 1.05rem; }
+    .wwd-text .btn-primary { margin-top: 8px; }
+
+    /* Services - alternating 2-column */
+    .services { background: #fff; }
+    .service-row {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
+      margin-bottom: 80px; padding-bottom: 80px; border-bottom: 1px solid #e5e7eb;
+    }
+    .service-row:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+    .service-row.reverse .service-image { order: 2; }
+    .service-row.reverse .service-info { order: 1; }
+    .service-image img { width: 100%; border-radius: 16px; object-fit: cover; height: 380px; box-shadow: 0 8px 32px rgba(0,0,0,0.08); }
+    .service-info h3 {
+      display: flex; align-items: center; gap: 12px;
+      font-size: 1.6rem; color: #1a3a2a; margin-bottom: 12px;
+    }
+    .service-info h3 img { width: 30px; height: 30px; }
+    .service-info p { color: #4b5563; margin-bottom: 16px; }
+    .service-info ul { list-style: none; }
+    .service-info ul li {
+      display: flex; align-items: center; gap: 10px;
+      color: #374151; margin-bottom: 8px; font-size: 0.95rem;
+    }
+    .service-info ul li img { width: 20px; height: 20px; flex-shrink: 0; }
+
+    /* Why Choose Us */
+    .why-choose { background: #f9fafb; }
+    .wcu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .wcu-card {
+      background: #fff; padding: 36px 28px; border-radius: 16px;
+      text-align: center; box-shadow: 0 4px 16px rgba(0,0,0,0.04); transition: transform 0.2s;
+    }
+    .wcu-card:hover { transform: translateY(-4px); }
+    .wcu-card img { width: 44px; height: 44px; margin-bottom: 16px; }
+    .wcu-card h4 { font-size: 1.15rem; color: #1a3a2a; margin-bottom: 10px; }
+    .wcu-card p { color: #6b7280; font-size: 0.95rem; }
+
+    /* Reviews */
+    .reviews {
+      background: linear-gradient(135deg, rgba(26,58,42,0.92) 0%, rgba(26,58,42,0.88) 100%),
+                  url('https://images.pexels.com/photos/12944764/pexels-photo-12944764.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop') center/cover no-repeat fixed;
+      color: #fff;
+    }
+    .reviews .section-title h2 { color: #fff; }
+    .reviews .section-title p { color: #d1d5db; }
+    .review-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .review-card {
+      background: rgba(255,255,255,0.08); backdrop-filter: blur(8px);
+      padding: 32px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1);
+    }
+    .review-stars { display: flex; gap: 2px; margin-bottom: 12px; }
+    .review-stars svg { width: 18px; height: 18px; }
+    .review-card p { color: #e5e7eb; font-size: 0.95rem; margin-bottom: 16px; line-height: 1.7; font-style: italic; }
+    .review-card .reviewer { font-weight: 600; color: #4ade80; font-size: 0.9rem; }
+
+    /* Contact */
+    .contact { background: #fff; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .contact-info h3 { font-size: 1.4rem; color: #1a3a2a; margin-bottom: 24px; }
+    .contact-item { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
+    .contact-item img { width: 24px; height: 24px; flex-shrink: 0; }
+    .contact-item span { color: #4b5563; font-size: 1rem; }
+    .contact-item .label { color: #6b7280; font-size: 0.85rem; font-weight: 500; }
+    .contact-map iframe { width: 100%; height: 380px; border-radius: 16px; border: 0; }
+
+    /* Footer */
+    footer {
+      background: #1a3a2a; color: #d1d5db; padding: 40px 24px 24px;
+      text-align: center;
+    }
+    footer .footer-logo {
+      font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 800;
+      color: #fff; margin-bottom: 16px;
+    }
+    footer .footer-logo .logo-box {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 36px; height: 36px; border: 2px solid #4ade80;
+      border-radius: 8px; font-size: 0.75rem; font-weight: 700;
+      color: #4ade80; font-family: 'Inter', sans-serif; margin-right: 8px;
+    }
+    footer p { font-size: 0.9rem; margin-bottom: 4px; }
+    footer .attribution {
+      margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.85rem;
+    }
+    footer .attribution a { color: #4ade80; text-decoration: none; }
+    footer .attribution a:hover { text-decoration: underline; }
+
+    /* Animations */
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* Mobile Nav */
+    .mobile-nav {
+      display: none; position: fixed; top: 64px; left: 0; right: 0;
+      background: #1a3a2a; padding: 16px 24px; z-index: 999;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .mobile-nav.open { display: block; }
+    .mobile-nav a {
+      display: block; color: #d1d5db; text-decoration: none;
+      padding: 12px 0; font-size: 1rem; border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .mobile-nav a:last-child { border-bottom: none; }
+    .mobile-nav a:hover { color: #4ade80; }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      nav.desktop { display: none; }
+      .mobile-toggle { display: block; }
+      .hero-content h1 { font-size: 2.2rem; }
+      .wwd-grid { grid-template-columns: 1fr; }
+      .service-row { grid-template-columns: 1fr; }
+      .service-row.reverse .service-image { order: 1; }
+      .service-row.reverse .service-info { order: 2; }
+      .wcu-grid { grid-template-columns: 1fr; }
+      .review-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .hero-content h1 { font-size: 1.8rem; }
+      .section { padding: 56px 16px; }
+      .section-title h2 { font-size: 1.8rem; }
+      .service-info h3 { font-size: 1.3rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBD8TFCF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <span class="logo-box">RT</span>
+      Robinson Tree
+    </div>
+    <nav class="desktop">
+      <a href="#what-we-do">What We Do</a>
+      <a href="#services">Services</a>
+      <a href="#why-choose">Why Choose Us</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="mobile-toggle" onclick="toggleMobileNav()" aria-label="Toggle menu">
+      <img src="https://unpkg.com/lucide-static@latest/icons/menu.svg" alt="Menu">
+    </button>
+  </header>
+
+  <!-- Claim Banner -->
+  <div class="claim-banner">
+    <a href="https://design.withviso.com?utm_source=robinson-tree-landscaping.withviso.com&utm_medium=referral&utm_campaign=banner-link&utm_content=client-banner" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">
+      Do you like the website? <u>Contact Viso</u> for your new website today
+    </a>
+  </div>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#what-we-do" onclick="closeMobileNav()">What We Do</a>
+    <a href="#services" onclick="closeMobileNav()">Services</a>
+    <a href="#why-choose" onclick="closeMobileNav()">Why Choose Us</a>
+    <a href="#reviews" onclick="closeMobileNav()">Reviews</a>
+    <a href="#contact" onclick="closeMobileNav()">Contact</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-content fade-in">
+      <h1>Professional Tree &amp; Landscaping Services in Burns Lake</h1>
+      <p>24/7 expert tree removal, stump grinding, and property maintenance you can trust. Fully licensed, insured, and LGBTQ+ friendly.</p>
+      <a href="#contact" class="btn-primary">Get a Free Estimate</a>
+    </div>
+  </section>
+
+  <!-- What We Do -->
+  <section class="section what-we-do" id="what-we-do">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>What We Do</h2>
+        <p>Robinson Tree &amp; Landscaping Services Ltd. provides professional tree care and property maintenance across Burns Lake and surrounding areas.</p>
+      </div>
+      <div class="wwd-grid fade-in">
+        <img src="https://images.pexels.com/photos/4206056/pexels-photo-4206056.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop" alt="Professional tree care service" loading="lazy">
+        <div class="wwd-text">
+          <h3>Your Complete Tree Care Specialists</h3>
+          <p>Led by Chase Robinson, our skilled crew delivers top-quality tree removal, stump grinding, and landscaping services with a focus on safety, cleanliness, and customer satisfaction. We operate 24 hours a day, 7 days a week — because tree emergencies don't keep business hours.</p>
+          <p>Whether you need a massive ponderosa pine removed, dangerous trees assessed, or your property tidied up, we bring the expertise and equipment to get the job done right.</p>
+          <a href="#services" class="btn-primary">Explore Our Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>Our Services</h2>
+        <p>Comprehensive tree and landscaping services backed by years of experience with a 4.7-star rating from our community.</p>
+      </div>
+
+      <!-- Service 1: Tree Removal -->
+      <div class="service-row fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/15407739/pexels-photo-15407739.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop" alt="Tree removal service" loading="lazy">
+        </div>
+        <div class="service-info">
+          <h3>
+            <img src="https://unpkg.com/lucide-static@latest/icons/trees.svg" alt="" aria-hidden="true">
+            Tree Removal
+          </h3>
+          <p>Safe, efficient removal of trees of all sizes — from small residential trees to massive pines in tight spaces. We handle every job with precision and care.</p>
+          <ul>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Large and dangerous tree removal</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Residential and commercial properties</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Fully insured with safety-first approach</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Thorough cleanup after every job</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Service 2: Stump Grinding -->
+      <div class="service-row reverse fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/31238872/pexels-photo-31238872.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop" alt="Stump grinding service" loading="lazy">
+        </div>
+        <div class="service-info">
+          <h3>
+            <img src="https://unpkg.com/lucide-static@latest/icons/shovel.svg" alt="" aria-hidden="true">
+            Stump Grinding &amp; Removal
+          </h3>
+          <p>Unsightly stumps taking up space? Our powerful stump grinding equipment removes them completely, leaving your yard clean, level, and ready for new use.</p>
+          <ul>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Professional stump grinding to below grade</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Complete debris removal included</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Restores lawn and landscape usability</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Quick and efficient service</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Service 3: Landscaping Cleanup -->
+      <div class="service-row fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/32632465/pexels-photo-32632465.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop" alt="Landscaping cleanup" loading="lazy">
+        </div>
+        <div class="service-info">
+          <h3>
+            <img src="https://unpkg.com/lucide-static@latest/icons/leaf.svg" alt="" aria-hidden="true">
+            Landscaping Cleanup
+          </h3>
+          <p>Transform your property with our thorough landscaping and cleanup services. We go above and beyond to leave your space looking better than we found it.</p>
+          <ul>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Full property cleanup and maintenance</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Brush chipping and debris hauling</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Hedge trimming and shrub care</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Lot clearing and brush removal</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Service 4: Tree Trimming & Pruning -->
+      <div class="service-row reverse fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/35089307/pexels-photo-35089307.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop" alt="Tree trimming and pruning" loading="lazy">
+        </div>
+        <div class="service-info">
+          <h3>
+            <img src="https://unpkg.com/lucide-static@latest/icons/tree-pine.svg" alt="" aria-hidden="true">
+            Tree Trimming &amp; Pruning
+          </h3>
+          <p>Keep your trees healthy, safe, and looking their best with professional trimming and pruning. Our crew knows exactly how to shape trees for optimal growth and curb appeal.</p>
+          <ul>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Expert pruning for tree health and safety</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Dangerous limb and branch removal</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Hedge shaping and ornamental pruning</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt="" aria-hidden="true"> Fire hazard reduction trimming</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section why-choose" id="why-choose">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>Why Choose Robinson Tree</h2>
+        <p>We don't just do the job — we go the extra mile. Here's why our customers keep coming back.</p>
+      </div>
+      <div class="wcu-grid">
+        <div class="wcu-card fade-in">
+          <img src="https://unpkg.com/lucide-static@latest/icons/thumbs-up.svg" alt="" aria-hidden="true">
+          <h4>Exceptional Cleanup</h4>
+          <p>We leave every property cleaner than we found it — even cleaning walkways and pedestrian areas. Our attention to detail sets us apart.</p>
+        </div>
+        <div class="wcu-card fade-in">
+          <img src="https://unpkg.com/lucide-static@latest/icons/users.svg" alt="" aria-hidden="true">
+          <h4>Skilled &amp; Professional Crew</h4>
+          <p>Led by Chase Robinson, our team brings years of experience, professionalism, and a commitment to doing the job right the first time.</p>
+        </div>
+        <div class="wcu-card fade-in">
+          <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="" aria-hidden="true">
+          <h4>24/7 Availability</h4>
+          <p>Tree emergencies don't wait. We're available around the clock, every day of the week, to handle urgent tree removal and safety issues.</p>
+        </div>
+        <div class="wcu-card fade-in">
+          <img src="https://unpkg.com/lucide-static@latest/icons/shield-check.svg" alt="" aria-hidden="true">
+          <h4>Competitive &amp; Fair Pricing</h4>
+          <p>We offer great value for money without cutting corners. Our pricing is transparent, competitive, and fair for the quality of work we deliver.</p>
+        </div>
+        <div class="wcu-card fade-in">
+          <img src="https://unpkg.com/lucide-static@latest/icons/star.svg" alt="" aria-hidden="true">
+          <h4>5-Star Reputation</h4>
+          <p>With a 4.7-star rating from over 30 reviews, our track record speaks for itself. Our customers consistently praise our quality and service.</p>
+        </div>
+        <div class="wcu-card fade-in">
+          <img src="https://unpkg.com/lucide-static@latest/icons/heart.svg" alt="" aria-hidden="true">
+          <h4>LGBTQ+ Friendly</h4>
+          <p>We proudly serve everyone in our community with respect and dignity. Robinson Tree is a welcoming, inclusive business for all.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section reviews" id="reviews">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>What Our Customers Say</h2>
+        <p>Don't just take our word for it — here's what our neighbours in Burns Lake have to say.</p>
+      </div>
+      <div class="review-grid">
+        <div class="review-card fade-in">
+          <div class="review-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          </div>
+          <p>"The experience I had was AAA, the work was done quickly with no issues. They cleaned up the mess and went above and beyond — even cleaned up the pedestrian walkway and left it better than when they arrived. First impressions are everything and they nailed it!"</p>
+          <span class="reviewer">— Jamie</span>
+        </div>
+        <div class="review-card fade-in">
+          <div class="review-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          </div>
+          <p>"Robinson Tree Services was excellent. Chase Robinson and his crew were hired to remove a very large ponderosa pine and limb some other very large pines. They were on time, competitively priced, and very clean and careful. They removed all debris and did no damage to my lawn."</p>
+          <span class="reviewer">— Sean</span>
+        </div>
+        <div class="review-card fade-in">
+          <div class="review-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          </div>
+          <p>"Super happy with Chase and his crew. Professional, courteous and their service is great value for money! 5 stars only because I can't give 10!"</p>
+          <span class="reviewer">— Leo</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>Contact Us</h2>
+        <p>Ready to get started? Reach out for a free estimate. We're available 24/7.</p>
+      </div>
+      <div class="contact-grid fade-in">
+        <div class="contact-info">
+          <h3>Get In Touch</h3>
+          <div class="contact-item">
+            <img src="https://unpkg.com/lucide-static@latest/icons/phone.svg" alt="Phone">
+            <div>
+              <div class="label">Phone</div>
+              <span>(778) 212-8733</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="Hours">
+            <div>
+              <div class="label">Business Hours</div>
+              <span>Open 24 hours — 7 days a week</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <img src="https://unpkg.com/lucide-static@latest/icons/map-pin.svg" alt="Location">
+            <div>
+              <div class="label">Service Area</div>
+              <span>Burns Lake, BC &amp; surrounding areas</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <img src="https://unpkg.com/lucide-static@latest/icons/heart.svg" alt="LGBTQ+ Friendly">
+            <div>
+              <div class="label">Inclusivity</div>
+              <span>LGBTQ+ Friendly — Everyone Welcome</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37397.38378751132!2d-126.59905433046876!3d54.1386854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537d8b0b703f1a79%3A0x8a2ad8963b2abfc8!2sRobinson%20Tree%20%26%20Landscaping%20Services%20Ltd.!5e0!3m2!1sen!2sca!4v1779853196707!5m2!1sen!2sca" width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-logo">
+        <span class="logo-box">RT</span>
+        Robinson Tree &amp; Landscaping Services Ltd.
+      </div>
+      <p>Professional tree care for Burns Lake and surrounding areas.</p>
+      <p>Serving our community 24/7.</p>
+      <p id="copyright"></p>
+      <div class="attribution">
+        Made with love by <a href="https://design.withviso.com?utm_source=robinson-tree-landscaping.withviso.com&utm_medium=referral&utm_campaign=footer-link&utm_content=client-footer" target="_blank" rel="noopener">Viso Solutions</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    function toggleMobileNav() {
+      document.getElementById('mobileNav').classList.toggle('open');
+    }
+    function closeMobileNav() {
+      document.getElementById('mobileNav').classList.remove('open');
+    }
+
+    // Scroll fade-in animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Dynamic copyright year
+    const year = new Date().getFullYear();
+    document.getElementById('copyright').textContent = `© ${year} Robinson Tree & Landscaping Services Ltd. All rights reserved.`;
+  </script>
+</body>
+</html>

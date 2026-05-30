@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Firstline Roofing | Lake Country Roofing Contractor</title>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TBD8TFCF');</script>
+  <!-- End Google Tag Manager -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #1a1a2e;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    section[id] { scroll-margin-top: 120px; }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #fff;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+      padding: 0 24px;
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+    }
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: #1a3a5c;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-mark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border: 2px solid #c0392b;
+      border-radius: 8px;
+      color: #c0392b;
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    nav { display: flex; align-items: center; gap: 32px; }
+    nav a {
+      text-decoration: none;
+      color: #444;
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: #c0392b; }
+    .nav-cta {
+      background: #c0392b;
+      color: #fff !important;
+      padding: 10px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: #a93226 !important; }
+    .mobile-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+    .mobile-toggle span {
+      width: 26px; height: 2.5px;
+      background: #1a3a5c;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 70px;
+      left: 0;
+      right: 0;
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      padding: 20px 24px;
+      flex-direction: column;
+      gap: 16px;
+      z-index: 999;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a {
+      text-decoration: none;
+      color: #444;
+      font-size: 17px;
+      font-weight: 500;
+      padding: 8px 0;
+    }
+
+    /* Claim Banner */
+    .claim-banner {
+      position: sticky;
+      top: 70px;
+      z-index: 999;
+      background: #1a3a5c;
+      color: #fff;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .claim-banner a { color: #fff; text-decoration: none; }
+    .claim-banner u { text-decoration: underline; }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('https://images.pexels.com/photos/12243107/pexels-photo-12243107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') center/cover no-repeat;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(26,58,92,0.85) 0%, rgba(26,58,92,0.6) 50%, rgba(192,57,43,0.3) 100%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 0 24px;
+    }
+    .hero h1 {
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .hero p {
+      font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+      opacity: 0.92;
+      margin-bottom: 32px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: #c0392b;
+      color: #fff;
+      padding: 16px 40px;
+      border-radius: 10px;
+      font-size: 17px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.25s, transform 0.2s;
+    }
+    .btn-primary:hover { background: #a93226; transform: translateY(-2px); }
+
+    /* Section common */
+    section { padding: 90px 24px; }
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .section-label {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #c0392b;
+      margin-bottom: 8px;
+    }
+    .section-title {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 700;
+      color: #1a3a5c;
+      margin-bottom: 16px;
+    }
+    .section-sub {
+      font-size: 1.1rem;
+      color: #666;
+      max-width: 640px;
+      margin-bottom: 48px;
+    }
+
+    /* What We Do */
+    #what-we-do {
+      background: #f8f9fa;
+    }
+    .what-we-do-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+    .what-we-do-image {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    }
+    .what-we-do-image img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      display: block;
+    }
+    .what-we-do-text h3 {
+      font-size: 1.6rem;
+      color: #1a3a5c;
+      margin-bottom: 16px;
+    }
+    .what-we-do-text p {
+      color: #555;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    /* Services - alternating two-column */
+    .service-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+      padding: 60px 0;
+    }
+    .service-block:not(:last-child) {
+      border-bottom: 1px solid #eee;
+    }
+    .service-block.reverse .service-image { order: 2; }
+    .service-block.reverse .service-text { order: 1; }
+    .service-image {
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+    }
+    .service-image img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      display: block;
+    }
+    .service-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      background: #fdecea;
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+    .service-icon img { width: 28px; height: 28px; }
+    .service-text h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #1a3a5c;
+      margin-bottom: 10px;
+    }
+    .service-text p {
+      color: #555;
+      font-size: 0.98rem;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .service-bullets { list-style: none; }
+    .service-bullets li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+      color: #444;
+    }
+    .service-bullets li img {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* Why Choose Us */
+    #why-choose-us {
+      background: #f8f9fa;
+    }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+      margin-top: 20px;
+    }
+    .benefit-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 36px 28px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .benefit-card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
+    .benefit-card .benefit-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      background: #fdecea;
+      border-radius: 50%;
+      margin-bottom: 16px;
+    }
+    .benefit-card .benefit-icon img { width: 30px; height: 30px; }
+    .benefit-card h4 { font-size: 1.15rem; font-weight: 700; color: #1a3a5c; margin-bottom: 8px; }
+    .benefit-card p { font-size: 0.94rem; color: #666; line-height: 1.6; }
+
+    /* Reviews */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 20px;
+    }
+    .review-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 32px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      border: 1px solid #f0f0f0;
+    }
+    .review-stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 12px;
+    }
+    .review-stars svg { width: 18px; height: 18px; }
+    .review-text {
+      font-size: 0.98rem;
+      color: #444;
+      line-height: 1.7;
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+    .review-name {
+      font-weight: 600;
+      color: #1a3a5c;
+      font-size: 0.95rem;
+    }
+
+    /* Contact */
+    #contact {
+      background: #1a3a5c;
+      color: #fff;
+    }
+    #contact .section-title { color: #fff; }
+    #contact .section-label { color: #e89890; }
+    #contact .section-sub { color: rgba(255,255,255,0.7); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+    }
+    .contact-info { display: flex; flex-direction: column; gap: 24px; }
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .contact-item img {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+      margin-top: 3px;
+      filter: brightness(0) invert(1);
+    }
+    .contact-item strong { display: block; font-size: 0.85rem; opacity: 0.7; margin-bottom: 2px; }
+    .contact-item span { font-size: 1rem; }
+    .contact-hours-grid {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 6px 20px;
+      font-size: 0.95rem;
+    }
+    .contact-hours-grid .day { opacity: 0.7; }
+    .contact-map {
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+    }
+    .contact-map iframe {
+      width: 100%;
+      height: 380px;
+      border: 0;
+      display: block;
+    }
+
+    /* Footer */
+    footer {
+      background: #0f2a44;
+      color: rgba(255,255,255,0.7);
+      text-align: center;
+      padding: 40px 24px;
+    }
+    footer .logo { justify-content: center; margin-bottom: 12px; color: #fff; }
+    footer .logo .logo-mark { border-color: #c0392b; color: #c0392b; }
+    footer .attribution {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 13px;
+    }
+    footer .attribution a {
+      color: #e89890;
+      text-decoration: none;
+    }
+    footer .attribution a:hover { text-decoration: underline; }
+
+    /* Scroll animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      section { padding: 60px 20px; }
+      .header-inner { height: 60px; }
+      .claim-banner { top: 60px; }
+      section[id] { scroll-margin-top: 110px; }
+      nav { display: none; }
+      .mobile-toggle { display: flex; }
+      .hero { min-height: 70vh; }
+      .what-we-do-grid { grid-template-columns: 1fr; gap: 30px; }
+      .what-we-do-image img { height: 250px; }
+      .service-block { grid-template-columns: 1fr; gap: 30px; }
+      .service-block.reverse .service-image { order: 1; }
+      .service-block.reverse .service-text { order: 2; }
+      .service-image img { height: 240px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 30px; }
+      .benefits-grid { grid-template-columns: 1fr; }
+      .reviews-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 2rem; }
+      .btn-primary { padding: 14px 28px; font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBD8TFCF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <span class="logo-mark">FR</span>
+        Firstline Roofing
+      </a>
+      <nav>
+        <a href="#what-we-do">What We Do</a>
+        <a href="#services">Services</a>
+        <a href="#why-choose-us">Why Us</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact" class="nav-cta">Get a Quote</a>
+      </nav>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#what-we-do" class="mobile-link">What We Do</a>
+    <a href="#services" class="mobile-link">Services</a>
+    <a href="#why-choose-us" class="mobile-link">Why Us</a>
+    <a href="#reviews" class="mobile-link">Reviews</a>
+    <a href="#contact" class="mobile-link">Get a Quote</a>
+  </div>
+
+  <!-- Claim Banner -->
+  <div class="claim-banner">
+    <a href="https://design.withviso.com?utm_source=firstline-roofing.withviso.com&utm_medium=referral&utm_campaign=banner-link&utm_content=client-banner">
+      Do you like the website? <u>Contact Viso</u> for your new website today
+    </a>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content fade-in">
+      <h1>Expert Roofing Services You Can Trust</h1>
+      <p>Professional roof installation, repairs, and maintenance for homes and businesses across Lake Country and the Central Okanagan.</p>
+      <a href="#contact" class="btn-primary">Get Your Free Estimate</a>
+    </div>
+  </section>
+
+  <!-- What We Do -->
+  <section id="what-we-do">
+    <div class="section-inner">
+      <div class="what-we-do-grid">
+        <div class="what-we-do-image fade-in">
+          <img src="https://images.pexels.com/photos/37677476/pexels-photo-37677476.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Firstline Roofing team working on a roof" loading="lazy">
+        </div>
+        <div class="what-we-do-text fade-in">
+          <span class="section-label">About Us</span>
+          <h3>Lake Country's Trusted Roofing Experts</h3>
+          <p>At Firstline Roofing, we are dedicated to delivering exceptional roofing solutions with unmatched attention to detail. Led by owner Jared — a skilled roofer who has won a roofing skills competition — our team brings professional expertise, fair pricing, and a commitment to quality that sets us apart. Whether you need a new roof installation or repairs, we treat every project like it's our own.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="section-inner">
+      <div style="text-align:center;">
+        <span class="section-label">Our Services</span>
+        <h2 class="section-title">Complete Roofing Solutions</h2>
+        <p class="section-sub" style="margin-left:auto;margin-right:auto;">From new installations to repairs and maintenance, we handle all your roofing needs with precision and care.</p>
+      </div>
+
+      <!-- Service 1: Roof Installation -->
+      <div class="service-block fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/31024904/pexels-photo-31024904.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Roof installation" loading="lazy">
+        </div>
+        <div class="service-text">
+          <div class="service-icon">
+            <img src="https://unpkg.com/lucide-static@latest/icons/hard-hat.svg" alt="">
+          </div>
+          <h3>Roof Installation</h3>
+          <p>Complete roof installation services for new construction and replacement projects. We use premium materials and proven techniques to ensure a durable, long-lasting roof that protects your investment.</p>
+          <ul class="service-bullets">
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Professional roof installation for new homes</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Complete roof replacement services</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Premium shingles and roofing materials</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Expert craftsmanship with warranty</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Service 2: Residential Roofing -->
+      <div class="service-block reverse fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/29114658/pexels-photo-29114658.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Residential roofing" loading="lazy">
+        </div>
+        <div class="service-text">
+          <div class="service-icon">
+            <img src="https://unpkg.com/lucide-static@latest/icons/home.svg" alt="">
+          </div>
+          <h3>Residential Roofing</h3>
+          <p>Protect your home with our expert residential roofing services. We work closely with homeowners to deliver beautiful, functional roofs that enhance curb appeal and provide lasting protection.</p>
+          <ul class="service-bullets">
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> New roof construction for custom homes</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Re-roofing and overlay services</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Attic ventilation and insulation</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Skylight and chimney flashing</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Service 3: Commercial Roofing -->
+      <div class="service-block fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/31579640/pexels-photo-31579640.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Commercial roofing" loading="lazy">
+        </div>
+        <div class="service-text">
+          <div class="service-icon">
+            <img src="https://unpkg.com/lucide-static@latest/icons/building.svg" alt="">
+          </div>
+          <h3>Commercial Roofing</h3>
+          <p>Reliable commercial roofing solutions for businesses and industrial properties. We understand the importance of minimizing downtime and deliver efficient, professional service.</p>
+          <ul class="service-bullets">
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Flat roof installation and repair</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Commercial re-roofing projects</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Roof coatings and waterproofing</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Preventative maintenance programs</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Service 4: Roof Repairs & Maintenance -->
+      <div class="service-block reverse fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/30194376/pexels-photo-30194376.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Roof repairs" loading="lazy">
+        </div>
+        <div class="service-text">
+          <div class="service-icon">
+            <img src="https://unpkg.com/lucide-static@latest/icons/wrench.svg" alt="">
+          </div>
+          <h3>Roof Repairs &amp; Maintenance</h3>
+          <p>Prompt, reliable roof repair services to address leaks, storm damage, and general wear. Regular maintenance extends the life of your roof and prevents costly problems down the road.</p>
+          <ul class="service-bullets">
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Leak detection and emergency repairs</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Storm damage restoration</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Gutter cleaning and maintenance</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Annual roof inspections</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section id="why-choose-us">
+    <div class="section-inner" style="text-align:center;">
+      <span class="section-label">Why Firstline Roofing</span>
+      <h2 class="section-title">Why Lake Country Chooses Us</h2>
+      <p class="section-sub" style="margin-left:auto;margin-right:auto;">We go above and beyond to deliver roofing excellence on every project.</p>
+      <div class="benefits-grid">
+        <div class="benefit-card fade-in">
+          <div class="benefit-icon">
+            <img src="https://unpkg.com/lucide-static@latest/icons/award.svg" alt="">
+          </div>
+          <h4>Skilled &amp; Certified</h4>
+          <p>Owner Jared has won a roofing skills competition, bringing award-winning expertise to every job.</p>
+        </div>
+        <div class="benefit-card fade-in">
+          <div class="benefit-icon">
+            <img src="https://unpkg.com/lucide-static@latest/icons/thumbs-up.svg" alt="">
+          </div>
+          <h4>Unmatched Attention to Detail</h4>
+          <p>Our customers consistently praise our meticulous approach and quality workmanship on every project.</p>
+        </div>
+        <div class="benefit-card fade-in">
+          <div class="benefit-icon">
+            <img src="https://unpkg.com/lucide-static@latest/icons/shield-check.svg" alt="">
+          </div>
+          <h4>Fair &amp; Competitive Pricing</h4>
+          <p>Quality roofing doesn't have to break the bank. We offer transparent, competitive pricing you can trust.</p>
+        </div>
+        <div class="benefit-card fade-in">
+          <div class="benefit-icon">
+            <img src="https://unpkg.com/lucide-static@latest/icons/phone.svg" alt="">
+          </div>
+          <h4>Always Available</h4>
+          <p>Jared always answers his phone and is ready to help with your roofing needs — no voicemail games.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews">
+    <div class="section-inner" style="text-align:center;">
+      <span class="section-label">Testimonials</span>
+      <h2 class="section-title">What Our Customers Say</h2>
+      <p class="section-sub" style="margin-left:auto;margin-right:auto;">Rated 5.0 stars from our customers in Lake Country and the Okanagan.</p>
+      <div class="reviews-grid">
+        <div class="review-card fade-in">
+          <div class="review-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f4b400" stroke="#f4b400" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f4b400" stroke="#f4b400" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f4b400" stroke="#f4b400" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f4b400" stroke="#f4b400" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f4b400" stroke="#f4b400" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          </div>
+          <p class="review-text">"Jared was absolutely incredible to deal with. Very professional, friendly and knowledgeable, and such excellent attention to detail. Would 100% recommend Firstline to my friends and family members."</p>
+          <span class="review-name">— Tamara</span>
+        </div>
+        <div class="review-card fade-in">
+          <div class="review-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f4b400" stroke="#f4b400" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f4b400" stroke="#f4b400" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f4b400" stroke="#f4b400" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f4b400" stroke="#f4b400" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f4b400" stroke="#f4b400" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          </div>
+          <p class="review-text">"Jared was very professional. His prices were fair and competitive. Jared always answered his phone and his attention to detail was superb. I'd definitely recommend him."</p>
+          <span class="review-name">— Victoria</span>
+        </div>
+        <div class="review-card fade-in">
+          <div class="review-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f4b400" stroke="#f4b400" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f4b400" stroke="#f4b400" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f4b400" stroke="#f4b400" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f4b400" stroke="#f4b400" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f4b400" stroke="#f4b400" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          </div>
+          <p class="review-text">"Jared always answered his phone and his attention to detail was superb. Would 100% recommend Firstline to my friends and family members."</p>
+          <span class="review-name">— A Happy Customer</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="section-inner">
+      <div style="text-align:center;">
+        <span class="section-label">Get In Touch</span>
+        <h2 class="section-title">Contact Firstline Roofing</h2>
+        <p class="section-sub" style="margin-left:auto;margin-right:auto;">Ready to start your roofing project? Give us a call or stop by — we're here to help.</p>
+      </div>
+      <div class="contact-grid" style="margin-top:40px;">
+        <div class="contact-info fade-in">
+          <div class="contact-item">
+            <img src="https://unpkg.com/lucide-static@latest/icons/map-pin.svg" alt="">
+            <div>
+              <strong>Address</strong>
+              <span>10390 Okanagan Centre Rd E<br>Lake Country, BC V4V 1K9</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <img src="https://unpkg.com/lucide-static@latest/icons/phone.svg" alt="">
+            <div>
+              <strong>Phone</strong>
+              <span>(250) 870-4173</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="">
+            <div>
+              <strong>Business Hours</strong>
+              <div class="contact-hours-grid">
+                <span class="day">Mon</span><span>7:00 a.m. – 7:00 p.m.</span>
+                <span class="day">Tue</span><span>7:00 a.m. – 7:00 p.m.</span>
+                <span class="day">Wed</span><span>7:30 a.m. – 7:00 p.m.</span>
+                <span class="day">Thu</span><span>7:00 a.m. – 7:00 p.m.</span>
+                <span class="day">Fri</span><span>7:00 a.m. – 7:00 p.m.</span>
+                <span class="day">Sat</span><span>7:00 a.m. – 7:00 p.m.</span>
+                <span class="day">Sun</span><span>7:00 a.m. – 7:00 p.m.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-map fade-in">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d329440.1040734495!2d-119.64754212160672!3d49.82834848679508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537def11fb743e0b%3A0xc7dde48011032e31!2sFirstline%20roofing!5e0!3m2!1sen!2sca!4v1780100283630!5m2!1sen!2sca" width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="section-inner">
+      <a href="#" class="logo">
+        <span class="logo-mark">FR</span>
+        Firstline Roofing
+      </a>
+      <p style="font-size:0.9rem;opacity:0.6;margin-top:8px;">Trusted roofing services for Lake Country &amp; the Okanagan</p>
+      <div class="attribution">
+        <p>Made with love by <a href="https://design.withviso.com?utm_source=firstline-roofing.withviso.com&utm_medium=referral&utm_campaign=footer-link&utm_content=client-footer">Viso Solutions</a></p>
+        <p style="margin-top:8px;font-size:12px;">&copy; <span id="year"></span> Firstline Roofing. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const toggle = document.getElementById('mobileToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    toggle.addEventListener('click', () => mobileNav.classList.toggle('open'));
+
+    // Close mobile nav on link click
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => mobileNav.classList.remove('open'));
+    });
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Dynamic copyright year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

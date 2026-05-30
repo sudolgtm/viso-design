@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TBD8TFCF');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Fractal Fern Landscape & Design | Kelowna Landscaping</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: #1a1a2e; line-height: 1.6; overflow-x: hidden; }
+
+    section[id] { scroll-margin-top: 130px; }
+
+    /* Header */
+    header {
+      position: sticky; top: 0; z-index: 1000;
+      background: #ffffff; box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+      padding: 0 24px; height: 64px; display: flex;
+      align-items: center; justify-content: space-between;
+    }
+    .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo-mark {
+      font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700;
+      color: #2d6a4f; border: 2px solid #2d6a4f;
+      padding: 4px 10px; border-radius: 4px; letter-spacing: 0.5px;
+    }
+    .logo-text { font-size: 16px; font-weight: 600; color: #1a1a2e; line-height: 1.2; }
+    .logo-text span { display: block; font-size: 11px; font-weight: 400; color: #666; }
+
+    .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+    .nav-links a {
+      text-decoration: none; color: #333; font-size: 14px; font-weight: 500;
+      transition: color 0.2s; position: relative;
+    }
+    .nav-links a:hover { color: #2d6a4f; }
+    .nav-links a::after {
+      content: ''; position: absolute; bottom: -4px; left: 0; width: 0;
+      height: 2px; background: #2d6a4f; transition: width 0.3s;
+    }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta {
+      background: #2d6a4f; color: #fff !important; padding: 8px 20px;
+      border-radius: 6px; font-weight: 600;
+    }
+    .nav-cta:hover { background: #1b4d36; }
+    .nav-cta::after { display: none !important; }
+
+    .mobile-toggle {
+      display: none; flex-direction: column; gap: 5px; cursor: pointer;
+      background: none; border: none; padding: 8px;
+    }
+    .mobile-toggle span {
+      width: 24px; height: 2px; background: #333; border-radius: 2px;
+      transition: all 0.3s;
+    }
+    .mobile-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .mobile-toggle.active span:nth-child(2) { opacity: 0; }
+    .mobile-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    /* Claim Banner */
+    .claim-banner {
+      position: sticky; top: 64px; z-index: 999;
+      background: #2d6a4f; color: #fff; text-align: center;
+      padding: 10px 24px; font-size: 14px;
+    }
+    .claim-banner a { color: #fff; text-decoration: none; }
+    .claim-banner u { text-decoration: underline; }
+
+    /* Hero */
+    .hero {
+      min-height: 85vh; display: flex; align-items: center; justify-content: center;
+      text-align: center; position: relative; overflow: hidden;
+      background: #1a1a2e;
+    }
+    .hero-bg {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; opacity: 0.6;
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(26,26,46,0.85) 0%, rgba(45,106,79,0.6) 100%);
+    }
+    .hero-content {
+      position: relative; z-index: 2; max-width: 800px; padding: 0 24px;
+    }
+    .hero h1 {
+      font-size: clamp(2.4rem, 6vw, 4.2rem); font-weight: 800;
+      color: #fff; margin-bottom: 16px; line-height: 1.15;
+    }
+    .hero p {
+      font-size: clamp(1rem, 2.5vw, 1.25rem); color: rgba(255,255,255,0.9);
+      margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto;
+    }
+    .btn-primary {
+      display: inline-block; background: #2d6a4f; color: #fff;
+      padding: 16px 40px; border-radius: 8px; text-decoration: none;
+      font-weight: 600; font-size: 16px; transition: all 0.3s;
+      border: 2px solid #2d6a4f;
+    }
+    .btn-primary:hover { background: #1b4d36; border-color: #1b4d36; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(45,106,79,0.3); }
+    .btn-secondary {
+      display: inline-block; background: transparent; color: #fff;
+      padding: 16px 40px; border-radius: 8px; text-decoration: none;
+      font-weight: 600; font-size: 16px; transition: all 0.3s;
+      border: 2px solid rgba(255,255,255,0.5); margin-left: 12px;
+    }
+    .btn-secondary:hover { border-color: #fff; transform: translateY(-2px); }
+
+    /* Section Common */
+    section { padding: 80px 24px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .section-label {
+      font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+      color: #2d6a4f; margin-bottom: 8px;
+    }
+    .section-title {
+      font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700;
+      color: #1a1a2e; margin-bottom: 16px;
+    }
+    .section-subtitle {
+      font-size: 1.05rem; color: #666; max-width: 640px; line-height: 1.7;
+    }
+
+    /* What We Do */
+    #what-we-do {
+      background: #f9fafb;
+    }
+    .wwd-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+      align-items: center; margin-top: 40px;
+    }
+    .wwd-image {
+      border-radius: 16px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    }
+    .wwd-image img { width: 100%; height: 380px; object-fit: cover; display: block; }
+    .wwd-content p { font-size: 1.05rem; color: #555; line-height: 1.8; margin-bottom: 20px; }
+
+    /* Services Alternating */
+    #services { background: #fff; }
+    .service-item {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 50px;
+      align-items: center; padding: 60px 0;
+    }
+    .service-item:not(:last-child) { border-bottom: 1px solid #eef0f3; }
+    .service-item.reverse .service-image { order: 2; }
+    .service-item.reverse .service-text { order: 1; }
+    .service-image {
+      border-radius: 16px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    }
+    .service-image img { width: 100%; height: 320px; object-fit: cover; display: block; }
+    .service-icon { margin-bottom: 16px; }
+    .service-icon img { width: 36px; height: 36px; }
+    .service-text h3 { font-size: 1.5rem; font-weight: 700; color: #1a1a2e; margin-bottom: 12px; }
+    .service-text p { color: #555; line-height: 1.7; margin-bottom: 16px; }
+    .service-features { list-style: none; }
+    .service-features li {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 6px 0; font-size: 0.95rem; color: #444;
+    }
+    .service-features li img { width: 20px; height: 20px; flex-shrink: 0; margin-top: 2px; }
+
+    /* Why Choose Us */
+    #why-choose-us {
+      background: linear-gradient(135deg, #f0f7f3 0%, #f9fafb 100%);
+    }
+    .wcu-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px; margin-top: 40px;
+    }
+    .wcu-card {
+      background: #fff; border-radius: 16px; padding: 36px 28px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.05); transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .wcu-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
+    .wcu-card img { width: 36px; height: 36px; margin-bottom: 16px; }
+    .wcu-card h4 { font-size: 1.15rem; font-weight: 600; color: #1a1a2e; margin-bottom: 8px; }
+    .wcu-card p { font-size: 0.95rem; color: #666; line-height: 1.6; }
+
+    /* Reviews */
+    #reviews {
+      background: #1a1a2e; color: #fff; position: relative; overflow: hidden;
+    }
+    #reviews::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(26,26,46,0.92) 0%, rgba(45,106,79,0.85) 100%);
+      z-index: 1;
+    }
+    #reviews .container { position: relative; z-index: 2; }
+    #reviews .section-title { color: #fff; }
+    #reviews .section-subtitle { color: rgba(255,255,255,0.8); }
+    .reviews-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px; margin-top: 40px;
+    }
+    .review-card {
+      background: rgba(255,255,255,0.08); backdrop-filter: blur(8px);
+      border-radius: 16px; padding: 32px; border: 1px solid rgba(255,255,255,0.1);
+    }
+    .review-stars { display: flex; gap: 3px; margin-bottom: 14px; }
+    .review-stars svg { width: 18px; height: 18px; }
+    .review-text { font-size: 0.95rem; line-height: 1.7; color: rgba(255,255,255,0.9); margin-bottom: 16px; font-style: italic; }
+    .review-author { font-weight: 600; font-size: 0.9rem; color: rgba(255,255,255,0.8); }
+
+    /* Contact */
+    #contact { background: #f9fafb; }
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 50px;
+      margin-top: 40px;
+    }
+    .contact-info { display: flex; flex-direction: column; gap: 24px; }
+    .contact-item { display: flex; gap: 16px; align-items: flex-start; }
+    .contact-item img { width: 24px; height: 24px; flex-shrink: 0; margin-top: 2px; }
+    .contact-item h4 { font-size: 0.9rem; font-weight: 600; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px; }
+    .contact-item p { font-size: 1rem; color: #333; }
+    .hours-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 24px; }
+    .hours-grid .day { font-weight: 500; }
+    .hours-grid .time { color: #555; }
+    .hours-grid .closed { color: #e74c3c; font-weight: 500; }
+    .contact-map { border-radius: 16px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
+    .contact-map iframe { width: 100%; height: 100%; min-height: 380px; border: 0; display: block; }
+
+    /* Footer */
+    footer {
+      background: #1a1a2e; color: rgba(255,255,255,0.7); padding: 40px 24px 30px;
+      text-align: center;
+    }
+    footer .logo-mark { color: #fff; border-color: rgba(255,255,255,0.3); display: inline-block; margin-bottom: 12px; }
+    footer p { font-size: 0.9rem; }
+    .footer-divider { width: 60px; height: 1px; background: rgba(255,255,255,0.15); margin: 20px auto; }
+    .footer-attribution { font-size: 0.82rem; color: rgba(255,255,255,0.7); }
+    .footer-attribution a { color: #95d5b2; text-decoration: none; }
+    .footer-attribution a:hover { text-decoration: underline; }
+
+    /* Animations */
+    .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* Mobile Nav */
+    .mobile-nav {
+      display: none; position: fixed; top: 64px; left: 0; right: 0;
+      background: #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      padding: 20px 24px; z-index: 999; flex-direction: column; gap: 16px;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a {
+      text-decoration: none; color: #333; font-size: 16px; font-weight: 500;
+      padding: 10px 0; border-bottom: 1px solid #f0f0f0;
+    }
+    .mobile-nav a:last-child { border-bottom: none; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .mobile-toggle { display: flex; }
+      .wwd-grid { grid-template-columns: 1fr; gap: 30px; }
+      .wwd-image img { height: 240px; }
+      .service-item { grid-template-columns: 1fr; gap: 24px; }
+      .service-item.reverse .service-image { order: 1; }
+      .service-item.reverse .service-text { order: 2; }
+      .service-image img { height: 220px; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .contact-map iframe { min-height: 300px; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      section { padding: 60px 20px; }
+      .hero { min-height: 70vh; }
+      .btn-secondary { margin-left: 0; margin-top: 12px; }
+      .hours-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      header { padding: 0 16px; }
+      .logo-text { font-size: 13px; }
+      .logo-text span { font-size: 10px; }
+      .service-text h3 { font-size: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBD8TFCF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- Header -->
+  <header>
+    <a href="#" class="logo">
+      <span class="logo-mark">FFLD</span>
+      <div class="logo-text">
+        Fractal Fern Landscape
+        <span>Design &amp; Build</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#what-we-do">What We Do</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why-choose-us">Why Us</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <button class="mobile-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Claim Banner -->
+  <div class="claim-banner">
+    <a href="https://design.withviso.com?utm_source=fractal-fern-landscape.withviso.com&utm_medium=referral&utm_campaign=banner-link&utm_content=client-banner">
+      Do you like the website? <u>Contact Viso</u> for your new website today
+    </a>
+  </div>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav">
+    <a href="#what-we-do">What We Do</a>
+    <a href="#services">Services</a>
+    <a href="#why-choose-us">Why Us</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact Us</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <img class="hero-bg" src="https://images.pexels.com/photos/37144291/pexels-photo-37144291.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Beautiful landscape" loading="lazy">
+    <div class="hero-overlay"></div>
+    <div class="hero-content fade-in">
+      <h1>Transform Your Outdoor Space Into a Masterpiece</h1>
+      <p>Kelowna's trusted landscaping and arborist experts — from custom garden design to professional tree care, we bring your vision to life with honesty, craftsmanship, and affordable pricing.</p>
+      <div>
+        <a href="#contact" class="btn-primary">Get a Free Quote</a>
+        <a href="#services" class="btn-secondary">Our Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Do -->
+  <section id="what-we-do">
+    <div class="container fade-in">
+      <span class="section-label">About Us</span>
+      <h2 class="section-title">What We Do</h2>
+      <p class="section-subtitle">We craft beautiful, functional outdoor spaces that our clients are proud to call their own.</p>
+      <div class="wwd-grid">
+        <div class="wwd-image">
+          <img src="https://images.pexels.com/photos/8811584/pexels-photo-8811584.jpeg?auto=compress&cs=tinysrgb&w=940" alt="Landscape design" loading="lazy">
+        </div>
+        <div class="wwd-content">
+          <p>Fractal Fern Landscape &amp; Design is a Kelowna-based landscaping and arborist company dedicated to transforming ordinary yards into extraordinary outdoor living spaces. Founded on principles of honesty, communication, and craftsmanship, we take pride in every project we undertake — big or small.</p>
+          <p>From custom meditation gardens and stone pathways to expert tree care and complete property transformations, our team brings professional expertise, modern equipment, and genuine passion to every job site. We don't just build landscapes — we build lasting relationships with our clients.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="container fade-in">
+      <span class="section-label">Our Expertise</span>
+      <h2 class="section-title">Services We Offer</h2>
+      <p class="section-subtitle">Comprehensive landscaping and arborist solutions tailored to your property's unique needs.</p>
+    </div>
+
+    <div class="container">
+      <!-- Service 1 -->
+      <div class="service-item fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/8811584/pexels-photo-8811584.jpeg?auto=compress&cs=tinysrgb&w=940" alt="Landscape design" loading="lazy">
+        </div>
+        <div class="service-text">
+          <div class="service-icon"><img src="https://unpkg.com/lucide-static@latest/icons/palette.svg" alt=""></div>
+          <h3>Landscape Design &amp; Installation</h3>
+          <p>From concept to completion, we design and install outdoor spaces that reflect your personal style and enhance your property's natural beauty.</p>
+          <ul class="service-features">
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Custom landscape design tailored to your vision</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Meditation gardens &amp; tranquil retreat spaces</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Drought-resistant planting &amp; native vegetation</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Complete property transformations</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Service 2 (reverse) -->
+      <div class="service-item reverse fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/35089307/pexels-photo-35089307.jpeg?auto=compress&cs=tinysrgb&w=940" alt="Arborist tree care" loading="lazy">
+        </div>
+        <div class="service-text">
+          <div class="service-icon"><img src="https://unpkg.com/lucide-static@latest/icons/tree-pine.svg" alt=""></div>
+          <h3>Arborist &amp; Tree Care Services</h3>
+          <p>Professional tree care and removal services to keep your property safe, healthy, and beautiful. Our certified arborist team handles it all.</p>
+          <ul class="service-features">
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Cedar pruning &amp; tree trimming</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Dead tree removal &amp; hazard mitigation</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Tree lowering &amp; precision limb work</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Fire hazard reduction &amp; clearing</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-item fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/3971211/pexels-photo-3971211.jpeg?auto=compress&cs=tinysrgb&w=940" alt="Yard cleanup" loading="lazy">
+        </div>
+        <div class="service-text">
+          <div class="service-icon"><img src="https://unpkg.com/lucide-static@latest/icons/sparkles.svg" alt=""></div>
+          <h3>Yard Cleanup &amp; Transformation</h3>
+          <p>Revitalize neglected or overgrown properties with our comprehensive yard cleanup and transformation services.</p>
+          <ul class="service-features">
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Full property cleanup &amp; debris removal</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Ground leveling &amp; site preparation</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Weed removal &amp; invasive plant control</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Haul-away &amp; worksite cleanup</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Service 4 (reverse) -->
+      <div class="service-item reverse fade-in">
+        <div class="service-image">
+          <img src="https://images.pexels.com/photos/450064/pexels-photo-450064.jpeg?auto=compress&cs=tinysrgb&w=940" alt="Stone pathway hardscaping" loading="lazy">
+        </div>
+        <div class="service-text">
+          <div class="service-icon"><img src="https://unpkg.com/lucide-static@latest/icons/map-pin.svg" alt=""></div>
+          <h3>Stone Pathways &amp; Hardscaping</h3>
+          <p>Enhance your outdoor space with beautiful, durable stone pathways, gravel work, and hardscaping features that stand the test of time.</p>
+          <ul class="service-features">
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Curved stone pathway installation</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Gravel work &amp; ground coverage</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Mulch beds &amp; planting areas</li>
+            <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Custom hardscape features</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section id="why-choose-us">
+    <div class="container fade-in">
+      <span class="section-label">Why Choose Us</span>
+      <h2 class="section-title">Built on Trust &amp; Craftsmanship</h2>
+      <p class="section-subtitle">We're not just landscapers — we're your neighbours who care about your property as much as you do.</p>
+      <div class="wcu-grid">
+        <div class="wcu-card fade-in">
+          <img src="https://unpkg.com/lucide-static@latest/icons/message-circle.svg" alt="">
+          <h4>Honest Communication</h4>
+          <p>We clearly explain what can and cannot be done — and why. No hidden agendas, just transparent advice you can trust.</p>
+        </div>
+        <div class="wcu-card fade-in">
+          <img src="https://unpkg.com/lucide-static@latest/icons/award.svg" alt="">
+          <h4>Exceptional Quality</h4>
+          <p>Every project receives meticulous attention to detail. We take pride in our work and it shows in every finished landscape.</p>
+        </div>
+        <div class="wcu-card fade-in">
+          <img src="https://unpkg.com/lucide-static@latest/icons/thumbs-up.svg" alt="">
+          <h4>Affordable Pricing</h4>
+          <p>Premium landscaping and arborist services at fair, transparent prices. Quality work shouldn't break the bank.</p>
+        </div>
+        <div class="wcu-card fade-in">
+          <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="">
+          <h4>Reliable &amp; Punctual</h4>
+          <p>We show up on time, work efficiently, and leave your property clean at the end of every day. Your schedule matters to us.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews">
+    <img src="https://images.pexels.com/photos/4944058/pexels-photo-4944058.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.3;z-index:0;" loading="lazy">
+    <div class="container fade-in">
+      <span class="section-label" style="color:#95d5b2;">Testimonials</span>
+      <h2 class="section-title">What Our Clients Say</h2>
+      <p class="section-subtitle">Don't just take our word for it — hear from our happy customers.</p>
+      <div class="reviews-grid">
+        <div class="review-card fade-in">
+          <div class="review-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f4b942" stroke="#f4b942" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f4b942" stroke="#f4b942" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f4b942" stroke="#f4b942" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f4b942" stroke="#f4b942" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f4b942" stroke="#f4b942" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          </div>
+          <p class="review-text">"This company did an exceptional job of transforming our neglected property into one anyone can be proud of. Their very cool machinery allowed them to access the yard through a narrow path and gate. Michael's gift for landscaping design gave us a yard we could never have imagined. Kudos, Fractal Fern!!!"</p>
+          <p class="review-author">- Valerie G.</p>
+        </div>
+        <div class="review-card fade-in">
+          <div class="review-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f4b942" stroke="#f4b942" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f4b942" stroke="#f4b942" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f4b942" stroke="#f4b942" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f4b942" stroke="#f4b942" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f4b942" stroke="#f4b942" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          </div>
+          <p class="review-text">"Matthew and his crew did an amazing job of landscaping my backyard! Matthew really listened to my ideas for a meditation garden and was able to make my vision come to life! Matthew and his team are hardworking and courteous professionals. They made sure the worksite was cleaned up at the end of each workday."</p>
+          <p class="review-author">- Karen S.</p>
+        </div>
+        <div class="review-card fade-in">
+          <div class="review-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f4b942" stroke="#f4b942" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f4b942" stroke="#f4b942" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f4b942" stroke="#f4b942" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f4b942" stroke="#f4b942" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f4b942" stroke="#f4b942" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+          </div>
+          <p class="review-text">"Great landscaping and yard works company. Helped with cedar pruning and removing a dead fruit tree in my yard. Excellent work, great communication and affordable pricing. Would highly recommend and will hire for future projects."</p>
+          <p class="review-author">- Naomi H.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container fade-in">
+      <span class="section-label">Get In Touch</span>
+      <h2 class="section-title">Contact Us</h2>
+      <p class="section-subtitle">Ready to transform your outdoor space? Reach out for a free consultation and quote.</p>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <img src="https://unpkg.com/lucide-static@latest/icons/map-pin.svg" alt="">
+            <div>
+              <h4>Address</h4>
+              <p>1890 Cooper Rd<br>Kelowna, BC V1Y 8B7</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <img src="https://unpkg.com/lucide-static@latest/icons/phone.svg" alt="">
+            <div>
+              <h4>Phone</h4>
+              <p><a href="tel:+12367006294" style="color:#2d6a4f;text-decoration:none;">(236) 700-6294</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <img src="https://unpkg.com/lucide-static@latest/icons/clock.svg" alt="">
+            <div style="width:100%;">
+              <h4>Business Hours</h4>
+              <div class="hours-grid">
+                <span class="day">Monday</span><span class="time">6 a.m. – 9 p.m.</span>
+                <span class="day">Tuesday</span><span class="time">6 a.m. – 9 p.m.</span>
+                <span class="day">Wednesday</span><span class="time">6 a.m. – 9 p.m.</span>
+                <span class="day">Thursday</span><span class="time">6 a.m. – 9 p.m.</span>
+                <span class="day">Friday</span><span class="time">6 a.m. – 9 p.m.</span>
+                <span class="day">Saturday</span><span class="time">6 a.m. – 9 p.m.</span>
+                <span class="day">Sunday</span><span class="time closed">Closed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10282.233285785742!2d-119.4744757!3d49.8883205!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa5112be7cb7ebe71%3A0x2a08cd99e1522caf!2sFractal%20Fern%20Landscape%20%26%20Design!5e0!3m2!1sen!2sca!4v1779852801967!5m2!1sen!2sca" width="100%" style="border:0;min-height:420px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <span class="logo-mark" style="font-size:20px;padding:3px 8px;">FFLD</span>
+      <p style="margin-top:12px;color:rgba(255,255,255,0.6);font-size:0.95rem;">Fractal Fern Landscape &amp; Design — Kelowna, BC</p>
+      <div class="footer-divider"></div>
+      <p style="font-size:0.85rem;color:rgba(255,255,255,0.4);">&copy; <span id="year"></span> Fractal Fern Landscape &amp; Design. All rights reserved.</p>
+      <div class="footer-attribution" style="margin-top:8px;">
+        Made with love by <a href="https://design.withviso.com?utm_source=fractal-fern-landscape.withviso.com&utm_medium=referral&utm_campaign=footer-link&utm_content=client-footer">Viso Solutions</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile toggle
+    const toggle = document.querySelector('.mobile-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('active');
+      mobileNav.classList.toggle('open');
+    });
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        toggle.classList.remove('active');
+        mobileNav.classList.remove('open');
+      });
+    });
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
