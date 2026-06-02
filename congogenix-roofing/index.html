@@ -6,9 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex">
 <title>CongoGenix Roofing | Lethbridge Roofing Contractor</title>
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="shortcut icon" href="/favicon.ico">
-<link rel="apple-touch-icon" href="/favicon.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -44,7 +42,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + var(--banner-h)); }
 /* Header */
 header {
   position: sticky; top: 0; z-index: 1000;
-  background: var(--primary);
+  background: #ffffff;
   height: var(--header-h);
   display: flex; align-items: center;
   padding: 0 24px;
@@ -55,20 +53,20 @@ header {
 }
 .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 .logo img { height: 40px; width: auto; }
-.logo-text { font-size: 20px; font-weight: 700; color: #fff; letter-spacing: -0.5px; }
+.logo-text { font-size: 20px; font-weight: 700; color: var(--primary); letter-spacing: -0.5px; }
 nav { display: flex; align-items: center; gap: 8px; }
 nav a {
-  color: rgba(255,255,255,0.8); text-decoration: none;
+  color: rgba(0,0,0,0.7); text-decoration: none;
   font-size: 14px; font-weight: 500; padding: 8px 14px;
   border-radius: var(--radius-sm); transition: all 0.2s;
 }
-nav a:hover { color: #fff; background: rgba(255,255,255,0.1); }
-.mobile-toggle { display: none; background: none; border: none; color: #fff; cursor: pointer; padding: 8px; }
+nav a:hover { color: var(--primary); background: rgba(0,0,0,0.05); }
+.mobile-toggle { display: none; background: none; border: none; color: var(--primary); cursor: pointer; padding: 8px; }
 
 /* Claim Banner */
 .claim-banner {
   position: sticky; top: var(--header-h); z-index: 999;
-  background: var(--primary); color: #fff;
+  background: var(--accent); color: #fff;
   text-align: center; padding: 10px 16px;
   font-size: 14px; font-weight: 500;
   height: var(--banner-h); display: flex; align-items: center; justify-content: center;
@@ -217,34 +215,34 @@ nav a:hover { color: #fff; background: rgba(255,255,255,0.1); }
 
 /* Footer */
 footer {
-  background: var(--primary-dark); color: rgba(255,255,255,0.7);
+  background: #ffffff; color: rgba(0,0,0,0.7);
   padding: 48px 24px 32px; text-align: center;
 }
 .footer-inner { max-width: 1200px; margin: 0 auto; }
 .footer-logo { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 16px; }
 .footer-logo img { height: 36px; width: auto; }
-.footer-logo span { font-size: 18px; font-weight: 700; color: #fff; }
+.footer-logo span { font-size: 18px; font-weight: 700; color: var(--primary); }
 .footer-divider { width: 48px; height: 2px; background: var(--accent); margin: 16px auto; border: none; }
 .footer-text { font-size: 14px; margin-bottom: 12px; }
 .footer-attribution {
-  font-size: 12px; color: rgba(255,255,255,0.6);
-  margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 12px; color: rgba(0,0,0,0.5);
+  margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(0,0,0,0.08);
 }
-.footer-attribution a { color: rgba(255,255,255,0.6); text-decoration: none; }
-.footer-attribution a:hover { color: #fff; }
+.footer-attribution a { color: rgba(0,0,0,0.5); text-decoration: none; }
+.footer-attribution a:hover { color: var(--primary); }
 
 /* Mobile Nav */
 .mobile-nav {
   display: none;
   position: fixed; top: var(--header-h); left: 0; right: 0;
-  background: var(--primary); padding: 16px 24px;
-  z-index: 999; border-top: 1px solid rgba(255,255,255,0.1);
+  background: #ffffff; padding: 16px 24px;
+  z-index: 999; border-top: 1px solid rgba(0,0,0,0.08);
 }
 .mobile-nav.open { display: block; }
 .mobile-nav a {
-  display: block; color: rgba(255,255,255,0.8); text-decoration: none;
+  display: block; color: rgba(0,0,0,0.7); text-decoration: none;
   padding: 12px 0; font-size: 16px; font-weight: 500;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 .mobile-nav a:last-child { border-bottom: none; }
 
@@ -319,7 +317,7 @@ footer {
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <h1>Expert Roofing in Lethbridge</h1>
-    <p>Over 30 years of combined experience delivering quality roofing services — from torch-on flat roofs to architectural shingles. Locally owned and trusted by your community.</p>
+    <p>Over 30 years of combined experience delivering quality roofing services — from metal roofing to architectural shingles. Locally owned and trusted by your community.</p>
     <a href="#contact" class="btn">Get Your Free Estimate</a>
   </div>
 </section>
@@ -334,7 +332,7 @@ footer {
       <div class="whatwedo-text fade-in">
         <span class="section-label">About Us</span>
         <h3>What We Do</h3>
-        <p>CongoGenix Roofing is a locally owned, family-operated roofing company serving Lethbridge and surrounding areas. With over 30 years of combined experience, we specialize in SBS torch-on flat roofing and architectural asphalt shingle installation and repairs. We are dedicated to safe work practices while providing exceptional quality at very affordable prices.</p>
+        <p>CongoGenix Roofing is a locally owned, family-operated roofing company serving Lethbridge and surrounding areas. With over 30 years of combined experience, we specialize in metal roofing and architectural asphalt shingle installation and repairs. We are dedicated to safe work practices while providing exceptional quality at very affordable prices.</p>
         <ul>
           <li>
             <img src="https://unpkg.com/lucide-static@latest/icons/shield-check.svg" alt="">
@@ -367,22 +365,22 @@ footer {
       <p class="section-subtitle mx-auto">From complete roof replacements to targeted repairs, we handle all your roofing needs with expert craftsmanship and attention to detail.</p>
     </div>
 
-    <!-- Service 1: SBS Torch-On Flat Roofing -->
+    <!-- Service 1: Metal Roofing -->
     <div class="service-item fade-in">
       <div class="service-image">
-        <img src="https://images.pexels.com/photos/31762405/pexels-photo-31762405.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="SBS Torch-On Flat Roofing" loading="lazy">
+        <img src="https://images.pexels.com/photos/18289258/pexels-photo-18289258.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Metal Roofing" loading="lazy">
       </div>
       <div class="service-content">
         <div class="service-icon">
-          <img src="https://unpkg.com/lucide-static@latest/icons/building.svg" alt="">
-          <h3>SBS Torch-On Flat Roofing</h3>
+          <img src="https://unpkg.com/lucide-static@latest/icons/zap.svg" alt="">
+          <h3>Metal Roofing</h3>
         </div>
-        <p>Expert torch-on membrane installation for flat and low-slope roofs. Our SBS-modified bitumen systems provide superior waterproofing and durability for commercial and residential buildings.</p>
+        <p>Premium metal roofing installation for residential and commercial properties. Our standing seam and metal panel systems offer unmatched durability, energy efficiency, and modern curb appeal.</p>
         <ul>
-          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Professional SBS torch-on membrane installation</li>
-          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Complete flat roof replacement and repairs</li>
-          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Superior waterproofing and leak protection</li>
-          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Durable long-lasting commercial-grade systems</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Standing seam metal roof installation</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Steel and aluminum roofing systems</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Energy-efficient reflective metal panels</li>
+          <li><img src="https://unpkg.com/lucide-static@latest/icons/check-circle.svg" alt=""> Custom metal flashings and trim</li>
         </ul>
       </div>
     </div>
@@ -390,7 +388,7 @@ footer {
     <!-- Service 2: Architectural Asphalt Shingles -->
     <div class="service-item reverse fade-in">
       <div class="service-image">
-        <img src="https://images.pexels.com/photos/12660749/pexels-photo-12660749.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Architectural Asphalt Shingles" loading="lazy">
+        <img src="https://images.pexels.com/photos/33404248/pexels-photo-33404248.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Architectural Asphalt Shingles" loading="lazy">
       </div>
       <div class="service-content">
         <div class="service-icon">
@@ -410,7 +408,7 @@ footer {
     <!-- Service 3: Roof Installation & Repair -->
     <div class="service-item fade-in">
       <div class="service-image">
-        <img src="https://images.pexels.com/photos/9431615/pexels-photo-9431615.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Roof Installation and Repair" loading="lazy">
+        <img src="https://images.pexels.com/photos/5264807/pexels-photo-5264807.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Roof Installation and Repair" loading="lazy">
       </div>
       <div class="service-content">
         <div class="service-icon">
@@ -430,7 +428,7 @@ footer {
     <!-- Service 4: Gutters, Soffit & Fascia -->
     <div class="service-item reverse fade-in">
       <div class="service-image">
-        <img src="https://images.pexels.com/photos/25907259/pexels-photo-25907259.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Gutters Soffit and Fascia" loading="lazy">
+        <img src="https://images.pexels.com/photos/10848363/pexels-photo-10848363.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Gutters Soffit and Fascia" loading="lazy">
       </div>
       <div class="service-content">
         <div class="service-icon">
@@ -586,8 +584,8 @@ footer {
     <hr class="footer-divider">
     <p class="footer-text">411 Trackside Dr #4, Lethbridge, AB T1K 8H4</p>
     <p class="footer-text">(403) 942-2951</p>
-    <p class="footer-text" style="font-size: 13px; color: rgba(255,255,255,0.5);">Locally owned &middot; Over 30 years experience &middot; 5.0 ★ rating</p>
-    <p class="footer-text" style="font-size: 13px; color: rgba(255,255,255,0.4);">&copy; <span id="year"></span> CongoGenix Roofing. All rights reserved.</p>
+    <p class="footer-text" style="font-size: 13px; color: rgba(0,0,0,0.5);">Locally owned &middot; Over 30 years experience &middot; 5.0 ★ rating</p>
+    <p class="footer-text" style="font-size: 13px; color: rgba(0,0,0,0.4);">&copy; <span id="year"></span> CongoGenix Roofing. All rights reserved.</p>
     <div class="footer-attribution">
       Made with love by <a href="https://design.withviso.com?utm_source=congogenix-roofing.withviso.com&utm_medium=referral&utm_campaign=footer-link&utm_content=client-footer">Viso Solutions</a>
     </div>
