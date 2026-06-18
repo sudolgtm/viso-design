@@ -28,8 +28,6 @@ nav a:hover { color: var(--primary); }
 .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
 .nav-toggle img { width: 28px; height: 28px; }
 
-.claim-banner { position: sticky; top: 72px; z-index: 999; background: var(--primary); color: #fff; text-align: center; padding: 10px 24px; font-size: 0.9rem; display: flex; align-items: center; justify-content: center; gap: 4px; flex-wrap: wrap; }
-.claim-banner u { text-decoration: underline; }
 
 .hero { position: relative; min-height: 85vh; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; overflow: hidden; }
 .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
@@ -121,8 +119,7 @@ footer { background: #111827; color: #9ca3af; padding: 40px 0; text-align: cente
 
 @media (max-width: 768px) {
   .header-inner { height: 64px; }
-  .claim-banner { top: 64px; font-size: 0.8rem; padding: 8px 16px; }
-  section[id] { scroll-margin-top: 124px; }
+  section[id] { scroll-margin-top: 64px; }
   nav { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 16px 24px; flex-direction: column; box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
   nav.open { display: flex; }
   nav a { margin: 0; padding: 12px 0; border-bottom: 1px solid var(--border); }
@@ -164,10 +161,6 @@ footer { background: #111827; color: #9ca3af; padding: 40px 0; text-align: cente
     </nav>
   </div>
 </header>
-
-<div class="claim-banner">
-  <a href="https://design.withviso.com?utm_source=choice-hvac.withviso.com&utm_medium=referral&utm_campaign=banner-link&utm_content=client-banner" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">Do you like the website? <u>Contact Viso</u> for your new website today</a>
-</div>
 
 <section class="hero" id="hero">
   <img class="hero-bg" src="https://images.pexels.com/photos/5414384/pexels-photo-5414384.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Different wrenches on a brown surface" loading="eager">
