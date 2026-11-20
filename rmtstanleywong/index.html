@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="robots" content="noindex">
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TBD8TFCF');</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Stanley Wong Massage | Registered Massage Therapy in Vancouver, BC</title>
 <meta name="description" content="Registered massage therapy in Vancouver with Stanley Wong, RMT. Therapeutic massage, sports recovery, and stress relief. Book online.">
+<link rel="canonical" href="https://rmtstanleywong.withviso.com/">
 <meta name="keywords" content="massage therapy Vancouver, Stanley Wong Massage, RMT Vancouver, registered massage therapist Vancouver, therapeutic massage, deep tissue massage, sports massage, Homer Street">
 <meta property="og:title" content="Stanley Wong Massage | Registered Massage Therapy in Vancouver, BC">
 <meta property="og:description" content="One-on-one registered massage therapy in Vancouver with Stanley Wong, RMT. Book online.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://rmtstanleywong.withviso.com/">
 <meta property="og:image" content="https://images.pexels.com/photos/6560303/pexels-photo-6560303.jpeg?auto=compress&cs=tinysrgb&w=1200">
 <meta name="theme-color" content="#4F6B57">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://images.pexels.com">
@@ -142,19 +145,11 @@
         gap: 20px;
     }
     .brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
-    .brand-mark {
-        width: 46px;
-        height: 46px;
-        border: 1.5px solid var(--primary);
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: var(--font-head);
-        font-size: 1.15rem;
-        font-weight: 600;
-        letter-spacing: 0.02em;
-        color: var(--primary);
+    .brand-logo {
+        display: block;
+        width: 56px;
+        height: 56px;
+        object-fit: contain;
         flex-shrink: 0;
     }
     .brand-text { display: flex; flex-direction: column; }
@@ -472,17 +467,9 @@
         display: inline-flex;
         align-items: center;
         gap: 12px;
-        border: 1px solid rgba(255,255,255,0.3);
-        padding: 10px 14px;
-        border-radius: 12px;
         margin-bottom: 20px;
     }
-    .footer-logo .brand-mark {
-        width: 40px; height: 40px;
-        border-color: rgba(255,255,255,0.55);
-        color: #fff;
-        font-size: 1rem;
-    }
+    .footer-logo-img { display: block; width: 46px; height: 46px; object-fit: contain; flex-shrink: 0; }
     .footer-logo .brand-name { color: #fff; font-size: 1rem; }
     .footer-logo .brand-sub { color: rgba(255,255,255,0.6); }
     .footer-brand p { font-size: 0.94rem; max-width: 340px; }
@@ -548,7 +535,7 @@
 
     @media (max-width: 560px) {
         .container { padding: 0 18px; }
-        .brand-mark { width: 40px; height: 40px; font-size: 1rem; }
+        .brand-logo { width: 44px; height: 44px; }
         .brand-name { font-size: 1rem; }
         .brand-sub { display: none; }
         .hero { min-height: 560px; }
@@ -565,6 +552,57 @@
     .reveal { opacity: 1 !important; transform: none !important; }
 </style>
 </noscript>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "@id": "https://rmtstanleywong.withviso.com/#business",
+  "name": "Stanley Wong Massage",
+  "url": "https://rmtstanleywong.withviso.com/",
+  "logo": "https://rmtstanleywong.withviso.com/assets/favicon.png",
+  "image": "https://rmtstanleywong.withviso.com/assets/stan.jpg",
+  "description": "Registered massage therapy in Vancouver with Stanley Wong, RMT. One-on-one treatment for neck and shoulder tension, low back and hip pain, sports recovery, and relaxation, in 30, 45, and 60 minute appointments.",
+  "telephone": "+1-778-990-0302",
+  "email": "stanleywongrmt@gmail.com",
+  "priceRange": "$$$",
+  "currenciesAccepted": "CAD",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "#410-658 Homer St",
+    "addressLocality": "Vancouver",
+    "addressRegion": "BC",
+    "postalCode": "V6B 2R4",
+    "addressCountry": "CA"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 49.2809141,
+    "longitude": -123.1137597
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Vancouver"
+  },
+  "sameAs": [
+    "https://stanleywongrmt.janeapp.com/"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Stanley Wong",
+    "jobTitle": "Registered Massage Therapist"
+  },
+  "availableService": [
+    { "@type": "MedicalTherapy", "name": "Therapeutic Massage" },
+    { "@type": "MedicalTherapy", "name": "Deep Tissue Work" },
+    { "@type": "MedicalTherapy", "name": "Relaxation Massage" },
+    { "@type": "MedicalTherapy", "name": "Sports & Activity Recovery" },
+    { "@type": "MedicalTherapy", "name": "Posture & Desk Tension" },
+    { "@type": "MedicalTherapy", "name": "Low Back & Hip Tightness" },
+    { "@type": "MedicalTherapy", "name": "Stress & Headache Relief" },
+    { "@type": "MedicalTherapy", "name": "Full-Body Maintenance" }
+  ]
+}
+</script>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBD8TFCF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -572,7 +610,7 @@
 <header class="header" id="siteHeader">
     <div class="container nav">
         <a href="#home" class="brand" aria-label="Stanley Wong Massage home">
-            <span class="brand-mark" aria-hidden="true">SW</span>
+            <img class="brand-logo" src="assets/stan-mark.png" alt="" width="256" height="256" aria-hidden="true">
             <span class="brand-text">
                 <span class="brand-name">Stanley Wong</span>
                 <span class="brand-sub">Massage Therapy</span>
@@ -882,7 +920,7 @@
         <div class="footer-top">
             <div class="footer-brand">
                 <a href="#home" class="footer-logo" aria-label="Stanley Wong Massage home">
-                    <span class="brand-mark" aria-hidden="true">SW</span>
+                    <img class="footer-logo-img" src="assets/stan-mark-light.png" alt="" width="256" height="256" aria-hidden="true">
                     <span class="brand-text">
                         <span class="brand-name">Stanley Wong</span>
                         <span class="brand-sub">Massage Therapy</span>
@@ -912,7 +950,7 @@
         </div>
         <div class="footer-bottom">
             <span>&copy; <span id="year"></span> Stanley Wong Massage. All rights reserved.</span>
-            <span class="footer-attribution">Made with love by <a href="https://design.withviso.com?utm_source=rmtstan.withviso.com&utm_medium=referral&utm_campaign=footer-link&utm_content=client-footer" target="_blank" rel="noopener">Viso Solutions</a></span>
+            <span class="footer-attribution">Made with love by <a href="https://design.withviso.com?utm_source=rmtstanleywong.withviso.com&utm_medium=referral&utm_campaign=footer-link&utm_content=client-footer" target="_blank" rel="noopener">Viso Solutions</a></span>
         </div>
     </div>
 </footer>
